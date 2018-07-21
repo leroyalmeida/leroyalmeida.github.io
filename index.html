@@ -2,53 +2,98 @@
 <html ⚡ lang="en">
   <head>
     <meta charset="utf-8" />
+    <title>Miguel Lorenzo Almeida - Product Experience Designer</title>
+    <meta name="description" content="Miguel Lorenzo Almeida, product experience designer passionate about building user-friendly digital products and brands. Based in Manila, Philippines.">
+    <meta name="keywords" content="designer, user experience, ux, ui, visual, product designer, Philippines, startup, Leroy Almeida, Filipino">
+    <meta name="robots" content="index,follow">
     <link rel="canonical" href="/index.html" />
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|IBM+Plex+Mono" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans" rel="stylesheet">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
-    <title>Miguel Lorenzo Almeida</title>
+
     <!-- link to html stylesheet -->
     <style amp-custom>
+      @font-face {
+        font-family: "apercu";
+        src: url("./css/fonts/apercu_regular_pro.otf");
+      }
+
+      @font-face {
+        font-family: "apercu";
+        src: url("./css/fonts/apercu_italic_pro.otf");
+        font-style: italic;
+      }
+
+      @font-face {
+        font-family: "apercu-mono";
+        src: url("./css/fonts/apercu_mono_pro.otf");  
+      }
+
+      @font-face {
+        font-family: "apercu";
+        src: url("./css/fonts/apercu_bold_pro.otf");
+        font-weight: bold;
+      }
+
+      @font-face {
+        font-family: "apercu";
+        src: url("./css/fonts/apercu_bold_italic_pro.otf");
+        font-weight: bold;
+        font-style: italic;
+      }
+
+      @font-face {
+        font-family: "apercu";
+        src: url("./css/fonts/apercu_medium_pro.otf");
+        font-weight: 500;
+      }
+
+      @font-face {
+        font-family: "apercu";
+        src: url("./css/fonts/apercu_medium_italic_pro.otf");
+        font-weight: 500;
+        font-style: italic;
+      }
+
       body {
         background-color: #fff;
         color: #000;
+        font-family: apercu, sans-serif;
       }
+
       div.wrap {
         display: block;
         width: 80%;
         max-width: 960px;
         margin: 0 auto;
       }
+
       nav ul, footer ul {
-        font-family: 'IBM Plex Mono', monospace;
         font-size: 1em;
         padding: 40px 0;
         list-style: none;
       }
+
       nav ul li, footer ul li {
         display: inline;
         margin-right: 20px;
       }
+
       a {
-        font-family: 'IBM Plex Mono', monospace;
+        font-family: apercu-mono, monospace;
         text-decoration: none;
-        color: #637381;
-        font-weight: bolder;
+        color: #2196F3;
+        font-weight: bold;
       }
-      p:hover a span{
+
+      a:hover span{
         background-size: 100% 100%;
       }
-      footer:hover a span{
-        background-size: 100% 100%;
-      }
+
       h1 {
         font-size: 2em;
-        font-family: 'IBM Plex Sans', sans-serif;
         margin-top:116px;
       }
       p {
         font-size: 1.2em;
-        font-family: 'IBM Plex Sans', sans-serif;
         line-height: 1.2em;
       }
 
@@ -70,20 +115,27 @@
         line-height: 1em;
       }
 
+      #header-line {
+        background: #FFEE77;
+        height: 12px;
+        width: 10%;
+        margin-top: 40px;
+        margin-bottom: 60px;
+        //margin-left: -730px;
+      }
+
       /* Medium devices (landscape tablets, 768px and up) */
       @media only screen and (min-width: 768px) {
         h1 {
           font-size: 3em;
-          font-family: 'IBM Plex Sans', sans-serif;
           margin-top:116px;
         }
         p {
           font-size: 1.5em;
-          font-family: 'IBM Plex Sans', sans-serif;
           line-height: 1.4em;
         }
         #name {
-          margin: 116px 0px 80px 0px;
+          margin: 116px 0px 20px 0px;
           line-height: 1em;
         }
       }
@@ -92,16 +144,14 @@
       @media only screen and (min-width: 992px) {
         h1 {
           font-size: 4.5em;
-          font-family: 'IBM Plex Sans', sans-serif;
           margin-top:116px;
         }
         p {
           font-size: 1.8em;
-          font-family: 'IBM Plex Sans', sans-serif;
           line-height: 1.4em;
         }
         #name {
-          margin: 116px 0px 80px 0px;
+          margin: 200px 0px 20px 0px;
           line-height: 1em;
         }
       }
@@ -114,14 +164,16 @@
       <div class="container">
         <div class="blurb">
           <h1 id="name">Miguel Lorenzo Almeida</h1>
-          <p>Product Experience Designer at <a href="accenture.com"><span class="darklighted">Accenture</span></a>, crafting experiences for different industries (currently, airlines and telco).</p>
-          <p>Previously at <a href="kalibrr.com"><span class="darklighted">Kalibrr</span></a>, working on skills-based job matching for the Philippines and Indonesia.</p>
+          <div id="header-line"></div>
+          <p>Product Experience Designer at <a href="https://accenture.com"><span class="darklighted">Accenture</span></a>, crafting experiences for different industries (currently, airlines and telco).</p>
+          <p>Previously at <a href="https://kalibrr.com"><span class="darklighted">Kalibrr</span></a>, working on skills-based job matching for the Philippines and Indonesia.</p>
         </div> <!-- /.blurb -->
       </div> <!-- /.container -->
       <footer>
         <ul>
           <li><a href="https://twitter.com/leroyalmeida23"><span class="darklighted">Twitter</span></a></li>
           <li><a href="https://www.linkedin.com/in/leroyalmeida/"><span class="darklighted">LinkedIn</span></a></li>
+          <li><a href="https://medium.com/@leroyalmeida23"><span class="darklighted">Medium</span></a></li>
           <li><a href="mailto:miguel.l.s.almeida@gmail.com"><span class="darklighted">Email</span></a></li>
         </ul>
       </footer>
