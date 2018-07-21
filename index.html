@@ -3,78 +3,126 @@
   <head>
     <meta charset="utf-8" />
     <link rel="canonical" href="/index.html" />
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|IBM+Plex+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans" rel="stylesheet">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
-    <title>Hank Quinland, Horrible Cop</title>
+    <title>Miguel Lorenzo Almeida</title>
     <!-- link to html stylesheet -->
     <style amp-custom>
+      body {
+        background-color: #fff;
+        color: #000;
+      }
       div.wrap {
-          margin: 60px auto;
-          width: 70%;
+        display: block;
+        width: 80%;
+        max-width: 960px;
+        margin: 0 auto;
       }
       nav ul, footer ul {
-          font-family:'Helvetica', 'Arial', 'Sans-Serif';
-          padding: 0px;
-          list-style: none;
-          font-weight: bold;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 1em;
+        padding: 40px 0;
+        list-style: none;
       }
       nav ul li, footer ul li {
-          display: inline;
-          margin-right: 20px;
+        display: inline;
+        margin-right: 20px;
       }
       a {
-          text-decoration: none;
-          color: #999;
+        font-family: 'IBM Plex Mono', monospace;
+        text-decoration: none;
+        color: #637381;
+        font-weight: bolder;
       }
-      a:hover {
-          text-decoration: underline;
+      p:hover a span{
+        background-size: 100% 100%;
+      }
+      footer:hover a span{
+        background-size: 100% 100%;
       }
       h1 {
-          font-size: 3em;
-          font-family:'Helvetica', 'Arial', 'Sans-Serif';
+        font-size: 2em;
+        font-family: 'IBM Plex Sans', sans-serif;
+        margin-top:116px;
       }
       p {
+        font-size: 1.2em;
+        font-family: 'IBM Plex Sans', sans-serif;
+        line-height: 1.2em;
+      }
+
+      .darklighted {
+        background-image: linear-gradient(180deg, transparent 75%, #FFEE77 0);
+        background-size: 0% 100%;
+        -moz-transition: 0.3s cubic-bezier(0.5, 0.60, 0.360, 1) background;
+        -o-transition: 0.3s cubic-bezier(0.5, 0.60, 0.360, 1) background;
+        -ms-transition: 0.3s cubic-bezier(0.5, 0.60, 0.360, 1) background;
+        -webkit-transition: 0.3s cubic-bezier(0.5, 0.60, 0.360, 1) background;
+        transition: 0.3s cubic-bezier(0.5, 0.60, 0.360, 1) background;
+        background-repeat: no-repeat;
+        padding-bottom: 0;
+      }
+
+      #name {
+        width: 100%;
+        margin: 80px 0px 40px 0px;
+        line-height: 1em;
+      }
+
+      /* Medium devices (landscape tablets, 768px and up) */
+      @media only screen and (min-width: 768px) {
+        h1 {
+          font-size: 3em;
+          font-family: 'IBM Plex Sans', sans-serif;
+          margin-top:116px;
+        }
+        p {
           font-size: 1.5em;
+          font-family: 'IBM Plex Sans', sans-serif;
           line-height: 1.4em;
-          color: #333;
-      }
-      footer {
-          border-top: 1px solid #d5d5d5;
-          font-size: .8em;
-      }
-
-      ul.posts { 
-          margin: 20px auto 40px; 
-          font-size: 1.5em;
+        }
+        #name {
+          margin: 116px 0px 80px 0px;
+          line-height: 1em;
+        }
       }
 
-      ul.posts li {
-          list-style: none;
+      /* Large devices (laptops/desktops, 992px and up) */
+      @media only screen and (min-width: 992px) {
+        h1 {
+          font-size: 4.5em;
+          font-family: 'IBM Plex Sans', sans-serif;
+          margin-top:116px;
+        }
+        p {
+          font-size: 1.8em;
+          font-family: 'IBM Plex Sans', sans-serif;
+          line-height: 1.4em;
+        }
+        #name {
+          margin: 116px 0px 80px 0px;
+          line-height: 1em;
+        }
       }
-
     </style>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
   </head>
   <body>
     <div class="wrap">
-      <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/cv">CV</a></li>
-          <li><a href="blog">Blog</a></li>
-        </ul>
-      </nav>
       <div class="container">
         <div class="blurb">
-          <h1>Hi there, I'm Hank Quinlan!</h1>
-          <p>I'm best known as the terrible cop from <em>A Touch of Evil</em>. Don't tust me. <a href="/about">Read more about my life...</a></p>
+          <h1 id="name">Miguel Lorenzo Almeida</h1>
+          <p>Product Experience Designer at <a href="accenture.com"><span class="darklighted">Accenture</span></a>, crafting experiences for different industries (currently, airlines and telco).</p>
+          <p>Previously at <a href="kalibrr.com"><span class="darklighted">Kalibrr</span></a>, working on skills-based job matching for the Philippines and Indonesia.</p>
         </div> <!-- /.blurb -->
       </div> <!-- /.container -->
       <footer>
         <ul>
-          <li><a href="mailto:leroyalmeida23@gmail.com">email</a></li>
-          <li><a href="https://leroyalmeida.github.com">github.com</a></li>
+          <li><a href="https://twitter.com/leroyalmeida23"><span class="darklighted">Twitter</span></a></li>
+          <li><a href="https://www.linkedin.com/in/leroyalmeida/"><span class="darklighted">LinkedIn</span></a></li>
+          <li><a href="mailto:miguel.l.s.almeida@gmail.com"><span class="darklighted">Email</span></a></li>
         </ul>
       </footer>
     </div>
