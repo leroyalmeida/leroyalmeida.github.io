@@ -2,16 +2,16 @@
 <html ⚡ lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Leroy Almeida, Product/UX Designer</title>
+    <title>Work by Leroy Almeida, Product/UX Designer</title>
 
     <meta name="description" content="Leroy Almeida is a product/UX designer from Manila, Philippines">
     <meta name="keywords" content="Portfolio, Designer, User Experience, UX, UI, Visual, Product Designer, Manila, Philippines, Strategy, Mobile, Web, Interface, Design, Mobile Design, Web Design, Interface Design, Interaction Design, Design Strategy, Web application, Application, TV, Device, Product, Internet, Software, Expert, Usability, Information Architecture, Redesign, Mockups">
     <meta name="robots" content="index,follow">
-    <link rel="canonical" href="https://leroyalmeida.com" />
+    <link rel="canonical" href="https://leroyalmeida.com/work" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Leroy Almeida, Product/UX Designer" />
+    <meta property="og:title" content="Work by Leroy Almeida, Product/UX Designer" />
     <meta property="og:url" content="https://leroyalmeida.com" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="Leroy Almeida is a product/UX designer from Manila, Philippines">
@@ -19,7 +19,7 @@
     
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Leroy Almeida, Product/UX Designer" />
+    <meta name="twitter:title" content="Work by Leroy Almeida, Product/UX Designer" />
     <meta name="twitter:description" content="Leroy Almeida is a product/UX designer from Manila, Philippines">
     <meta name="twitter:site" content="@leroyalmeida">
     <meta name="twitter:image" content="https://leroyalmeida.com/images/portfolio.jpg">
@@ -339,15 +339,92 @@
           <li><a href="/work"><span class="darklighted">Work</span></a></li>
         </ul>
       </nav>
-      <div class="container">
-        <div class="blurb">
-          <h1>Leroy Almeida</h1>
-          <div id="header-line"></div>
-          <h3>I help clients create great digital products and services by providing insight into design, business, technology, and people.</h3>
-          <p>My strengths encompass defining product vision, crafting compelling stories, and designing seamless, human-centered experiences across complex ecosystems. I enjoy interfacing with clients (Fortune 500s, government, start-ups, and non-profits), internal executives and product teams to bring innovative ideas to life.</p>
-          <p>Currently an Experience Designer at <a href="https://accenture.com"><span class="darklighted">Accenture</span></a>, I design digital products, websites, and services for different industries. Clients include a government employment agency, a government council, a leading telecommunications company, and a flag-carrier airlines company.</p>
-          <p>Previously a Product Designer at <a href="https://kalibrr.com"><span class="darklighted">Kalibrr</span></a> (Y Combinator Winter 2013), I help design a skills-based job matching platform for the Philippines, helped grow the SaaS-marketplace product from 100k to 1M+ users, and helped transition the product to local Indonesian territory.</p>
-        </div> <!-- /.blurb -->
+      <h2>Work</h2>
+      <div id="work-container">
+        <div class="work-card">  
+          <amp-img 
+              class="work-card-image" 
+              src="/images/QBE.webp" 
+              width="1200"
+              height="628"
+              layout="responsive"
+              alt=""></amp-img>
+          <div class="work-card-text">
+            <h4>
+                <a href="/qbe-mobile-app">QBE Foundation Mobile App</a>
+            </h4>
+            <p>A mobile app that to improve financial wellness of Filipinos</p>
+            <ul class="tags">
+              <li class="tag">interaction</li>
+              <li class="tag">visual</li>
+              <li class="tag">prototype</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="work-card">  
+          <amp-img 
+              class="work-card-image" 
+              src="/images/Kalibrr Indo Employers iMac.webp" 
+              width="1200"
+              height="628"
+              layout="responsive"
+              alt="QBE mobile app"></amp-img>
+          <div class="work-card-text">
+            <h4>
+                <a href="/kalibrr-indonesia-employers">Kalibrr Indonesia Employers</a>
+            </h4>
+            <p>A high-converting employer sign-up page for Kalibrr Indonesia</p>
+            <ul class="tags">
+              <li class="tag">research</li>
+              <li class="tag">design</li>
+              <li class="tag">prototype</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="work-card">  
+          <amp-img 
+              class="work-card-image" 
+              src="/images/Employer Dashboard Macbook.webp" 
+              width="1200"
+              height="628"
+              layout="responsive"
+              alt="QBE mobile app"></amp-img>
+          <div class="work-card-text">
+            <h4>
+                <a href="/kalibrr-employer-dashboard">Kalibrr Employer Dashboard</a>
+            </h4>
+            <p>Redesign increased total accepted candidates by 30%</p>
+            <ul class="tags">
+              <li class="tag">research</li>
+              <li class="tag">design</li>
+              <li class="tag">prototype</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="work-card">  
+          <amp-img 
+              class="work-card-image" 
+              src="/images/Job Board iPhone.webp" 
+              width="1200"
+              height="628"
+              layout="responsive"
+              alt="QBE mobile app"></amp-img>
+          <div class="work-card-text">
+            <h4>
+                <a href="/kalibrr-job-board">Kalibrr Job Board</a>
+            </h4>
+            <p>Redesign increased mobile job board applications by 38%</p>
+            <ul class="tags">
+              <li class="tag">research</li>
+              <li class="tag">design</li>
+              <li class="tag">prototype</li>
+            </ul>
+          </div>
+          
+        </div>    
       </div> <!-- /.container -->
       <footer>
         <ul>

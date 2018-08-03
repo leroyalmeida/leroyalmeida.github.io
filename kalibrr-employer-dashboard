@@ -2,27 +2,27 @@
 <html ⚡ lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Leroy Almeida, Product/UX Designer</title>
+    <title>Kalibrr Employer Dashboard | Leroy Almeida, Product/UX Designer</title>
 
-    <meta name="description" content="Leroy Almeida is a product/UX designer from Manila, Philippines">
-    <meta name="keywords" content="Portfolio, Designer, User Experience, UX, UI, Visual, Product Designer, Manila, Philippines, Strategy, Mobile, Web, Interface, Design, Mobile Design, Web Design, Interface Design, Interaction Design, Design Strategy, Web application, Application, TV, Device, Product, Internet, Software, Expert, Usability, Information Architecture, Redesign, Mockups">
+    <meta name="description" content="Redesign increased total accepted candidates by 30%">
+    <meta name="keywords" content="Kalibrr, Dashboard, Employer, Redesign, Portfolio, Designer, User Experience, UX, UI, Visual, Product Designer, Manila, Philippines, Strategy, Mobile, Web, Interface, Design, Mobile Design, Web Design, Interface Design, Interaction Design, Design Strategy, Web application, Application, TV, Device, Product, Internet, Software, Expert, Usability, Information Architecture, Redesign, Mockups">
     <meta name="robots" content="index,follow">
-    <link rel="canonical" href="https://leroyalmeida.com" />
+    <link rel="canonical" href="https://leroyalmeida.com/kalibrr-employer-dashboard" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Leroy Almeida, Product/UX Designer" />
-    <meta property="og:url" content="https://leroyalmeida.com" />
+    <meta property="og:title" content="Kalibrr Employer Dashboard | Leroy Almeida, Product/UX Designer" />
+    <meta property="og:url" content="https://leroyalmeida.com/kalibrr-employer-dashboard" />
     <meta property="og:type" content="website" />
-    <meta property="og:description" content="Leroy Almeida is a product/UX designer from Manila, Philippines">
-    <meta property="og:image" content="https://leroyalmeida.com/images/portfolio.jpg">
+    <meta property="og:description" content="Redesign increased total accepted candidates by 30%">
+    <meta property="og:image" content="https://leroyalmeida.com/images/QBE2.webp">
     
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Leroy Almeida, Product/UX Designer" />
-    <meta name="twitter:description" content="Leroy Almeida is a product/UX designer from Manila, Philippines">
+    <meta name="twitter:title" content="Kalibrr Employer Dashboard | Leroy Almeida, Product/UX Designer" />
+    <meta name="twitter:description" content="Redesign increased total accepted candidates by 30%">
     <meta name="twitter:site" content="@leroyalmeida">
-    <meta name="twitter:image" content="https://leroyalmeida.com/images/portfolio.jpg">
+    <meta name="twitter:image" content="https://leroyalmeida.com/images/QBE2.webp">
 
     <!-- favicon and apple icons -->
     <link rel="icon" href="/images/icons/favicon.ico">
@@ -198,7 +198,6 @@
         color: #fff;
         background: rgba(0,0,0,.8);
         padding: .25em .5em;
-        margin-top: .25em;
         text-transform: uppercase;
         font-family: cine-mono, monospace;
         list-style: none;
@@ -220,6 +219,11 @@
 
       .page-content h3 {
         padding-top: 1.5rem;
+      }
+
+      .page-image {
+        -webkit-box-shadow: 0 15px 35px rgba(64,52,52,.1);
+        box-shadow: 0 15px 35px rgba(64,52,52,.1);
       }
 
       /* Medium devices (landscape tablets, 768px and up) */
@@ -339,15 +343,41 @@
           <li><a href="/work"><span class="darklighted">Work</span></a></li>
         </ul>
       </nav>
-      <div class="container">
-        <div class="blurb">
-          <h1>Leroy Almeida</h1>
-          <div id="header-line"></div>
-          <h3>I help clients create great digital products and services by providing insight into design, business, technology, and people.</h3>
-          <p>My strengths encompass defining product vision, crafting compelling stories, and designing seamless, human-centered experiences across complex ecosystems. I enjoy interfacing with clients (Fortune 500s, government, start-ups, and non-profits), internal executives and product teams to bring innovative ideas to life.</p>
-          <p>Currently an Experience Designer at <a href="https://accenture.com"><span class="darklighted">Accenture</span></a>, I design digital products, websites, and services for different industries. Clients include a government employment agency, a government council, a leading telecommunications company, and a flag-carrier airlines company.</p>
-          <p>Previously a Product Designer at <a href="https://kalibrr.com"><span class="darklighted">Kalibrr</span></a> (Y Combinator Winter 2013), I help design a skills-based job matching platform for the Philippines, helped grow the SaaS-marketplace product from 100k to 1M+ users, and helped transition the product to local Indonesian territory.</p>
-        </div> <!-- /.blurb -->
+      <div class="page">
+        <div class="page-content">
+          <h2>Kalibrr Employer Dashboard</h2>
+
+          <amp-img 
+              class="page-image" 
+              src="/images/Employer Dashboard Macbook.webp" 
+              width="1200"
+              height="628"
+              layout="responsive"
+              alt="Mockup of the employer dashboard in a Macbook"></amp-img>
+          
+          <p class="page-description">The redesign focused on increasing the number of accepted candidates. To meet this goal, we improved how the platform notified recruiters of new job applications. We also made job management functions like editing, duplicating, and sharing the job to social media more accessible.</p>
+
+
+          <p class="page-description">The biggest contributing factor to increasing the number of accepted candidates was implementing a new “Leads” stage. From this stage, recruiters can view candidates in the Kalibrr database who haven’t applied but fit the job requirements.</p>
+
+          <p class="page-description">Results:</p>
+          <ul class="page-description">
+            <li>
+              The number of accepted candidates increased by 30%.
+            </li>
+            <li>
+              The number of accepted candidates per job increased by 7%.
+            </li>
+          </ul>
+
+          <amp-img 
+              class="page-image" 
+              src="/images/Employer Dashboard.webp" 
+              width="1200"
+              height="883"
+              layout="responsive"
+              alt="Screenshot of the employer dashboard"></amp-img>
+        </div>
       </div> <!-- /.container -->
       <footer>
         <ul>
