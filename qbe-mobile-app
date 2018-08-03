@@ -2,27 +2,27 @@
 <html ⚡ lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Leroy Almeida, Product/UX Designer</title>
+    <title>QBE Mobile App | Leroy Almeida, Product/UX Designer</title>
 
-    <meta name="description" content="Leroy Almeida is a product/UX designer from Manila, Philippines">
+    <meta name="description" content="A mobile app that to improve financial wellness of Filipinos">
     <meta name="keywords" content="Portfolio, Designer, User Experience, UX, UI, Visual, Product Designer, Manila, Philippines, Strategy, Mobile, Web, Interface, Design, Mobile Design, Web Design, Interface Design, Interaction Design, Design Strategy, Web application, Application, TV, Device, Product, Internet, Software, Expert, Usability, Information Architecture, Redesign, Mockups">
     <meta name="robots" content="index,follow">
-    <link rel="canonical" href="https://leroyalmeida.com" />
+    <link rel="canonical" href="https://leroyalmeida.com/qbe-mobile-app" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Leroy Almeida, Product/UX Designer" />
-    <meta property="og:url" content="https://leroyalmeida.com" />
+    <meta property="og:title" content="QBE Mobile App | Leroy Almeida, Product/UX Designer" />
+    <meta property="og:url" content="https://leroyalmeida.com/qbe-mobile-app" />
     <meta property="og:type" content="website" />
-    <meta property="og:description" content="Leroy Almeida is a product/UX designer from Manila, Philippines">
-    <meta property="og:image" content="https://leroyalmeida.com/images/portfolio.jpg">
+    <meta property="og:description" content="A mobile app that to improve financial wellness of Filipinos">
+    <meta property="og:image" content="https://leroyalmeida.com/images/QBE2.webp">
     
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Leroy Almeida, Product/UX Designer" />
-    <meta name="twitter:description" content="Leroy Almeida is a product/UX designer from Manila, Philippines">
+    <meta name="twitter:title" content="QBE Mobile App | Leroy Almeida, Product/UX Designer" />
+    <meta name="twitter:description" content="A mobile app that to improve financial wellness of Filipinos">
     <meta name="twitter:site" content="@leroyalmeida">
-    <meta name="twitter:image" content="https://leroyalmeida.com/images/portfolio.jpg">
+    <meta name="twitter:image" content="https://leroyalmeida.com/images/QBE2.webp">
 
     <!-- favicon and apple icons -->
     <link rel="icon" href="/images/icons/favicon.ico">
@@ -198,7 +198,6 @@
         color: #fff;
         background: rgba(0,0,0,.8);
         padding: .25em .5em;
-        margin-top: .25em;
         text-transform: uppercase;
         font-family: cine-mono, monospace;
         list-style: none;
@@ -220,6 +219,11 @@
 
       .page-content h3 {
         padding-top: 1.5rem;
+      }
+
+      .page-image {
+        -webkit-box-shadow: 0 15px 35px rgba(64,52,52,.1);
+        box-shadow: 0 15px 35px rgba(64,52,52,.1);
       }
 
       /* Medium devices (landscape tablets, 768px and up) */
@@ -339,15 +343,71 @@
           <li><a href="/work"><span class="darklighted">Work</span></a></li>
         </ul>
       </nav>
-      <div class="container">
-        <div class="blurb">
-          <h1>Leroy Almeida</h1>
-          <div id="header-line"></div>
-          <h3>I help clients create great digital products and services by providing insight into design, business, technology, and people.</h3>
-          <p>My strengths encompass defining product vision, crafting compelling stories, and designing seamless, human-centered experiences across complex ecosystems. I enjoy interfacing with clients (Fortune 500s, government, start-ups, and non-profits), internal executives and product teams to bring innovative ideas to life.</p>
-          <p>Currently an Experience Designer at <a href="https://accenture.com"><span class="darklighted">Accenture</span></a>, I design digital products, websites, and services for different industries. Clients include a government employment agency, a government council, a leading telecommunications company, and a flag-carrier airlines company.</p>
-          <p>Previously a Product Designer at <a href="https://kalibrr.com"><span class="darklighted">Kalibrr</span></a> (Y Combinator Winter 2013), I help design a skills-based job matching platform for the Philippines, helped grow the SaaS-marketplace product from 100k to 1M+ users, and helped transition the product to local Indonesian territory.</p>
-        </div> <!-- /.blurb -->
+      <div class="page">
+        <div class="page-content">
+          <h2>QBE Mobile App</h2>
+
+          <amp-img 
+              class="page-image" 
+              src="/images/QBE.webp" 
+              width="1200"
+              height="628"
+              layout="responsive"
+              alt="QBE mobile app"></amp-img>
+          
+          <p class="page-description">For three days, I worked with Sydney's Accenture Development Partnerships (ADP) project team to design and prototype a digital tool that will support the touchpoints between microfinance agents and their clients. The digital tool would enable the assessment and diagnosis of financial wellness of the clients, and will provide personalized recommendations and education to improve their financial wellbeing.</p>
+
+
+          <p class="page-description">The problem we wanted to solve is providing people at the bottom of the pyramid in developing countries across South East Asia a financial safety net for perils and risks they face in their day-to-day activities.</p>
+
+          <amp-img 
+              class="page-image" 
+              src="/images/QBE2.webp" 
+              width="1200"
+              height="628"
+              layout="responsive"
+              alt="Screen mockups of the mobile app"></amp-img>
+
+          <h3>Project background</h3>
+
+          <p class="page-description">The QBE Foundation engaged with World Vision Australia, VisionFund International (VFI), Community Economic Ventures Inc (CEVI) and Accenture Development Partnerships (ADP) to develop a micro-insurance initiative to support clients who live below the poverty line. This initiative would be first piloted in the Philippines.</p>
+          
+          <p class="page-description">The product and solution was driven with a human-centred design approach, commencing with immersive research into rural communities of Filipinos, and leading to an innovation workshop where experts in tech, insurance, and livelihood were invited to co-create solutions alongside attendees from our target market–rural Filipinos living below the poverty line.</p>
+
+          <amp-img 
+              class="page-image" 
+              src="/images/Insurance.webp" 
+              width="1200"
+              height="628"
+              layout="responsive"
+              alt="Screen mockups of the product recommendation"></amp-img>
+
+          <h3>Supported use cases</h3>
+          <ul class="page-description">
+            <li>
+              The microfinance agent can collect microfinance client information so that it can be used for client information retention.
+            </li>
+            <li>
+              The microfinance agent can collaboratively walk clients through a questionnaire, so that they can assess their financial wellness and livelihood.
+            </li>
+            <li>
+              The microfinance agent can communicate the visual and verbal recommendations made by the tool to the client, so that the client can determine which options are relevant to their wellbeing.
+            </li>
+            <li>
+              The microfinance agent can empower the client to pick and choose specific financial product options (especially around microinsurance, and microloans) from the recommendations that have been provided, so that a product package can be created for the client.
+            </li>
+
+          </ul>
+
+          <amp-img 
+              class="page-image" 
+              src="/images/Tutorial.webp" 
+              width="1200"
+              height="628"
+              layout="responsive"
+              alt="Screen mockups of the financial education lessons"></amp-img>
+          
+        </div>
       </div> <!-- /.container -->
       <footer>
         <ul>

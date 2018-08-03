@@ -2,27 +2,27 @@
 <html ⚡ lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Leroy Almeida, Product/UX Designer</title>
+    <title>Kalibrr Job Board | Leroy Almeida, Product/UX Designer</title>
 
-    <meta name="description" content="Leroy Almeida is a product/UX designer from Manila, Philippines">
-    <meta name="keywords" content="Portfolio, Designer, User Experience, UX, UI, Visual, Product Designer, Manila, Philippines, Strategy, Mobile, Web, Interface, Design, Mobile Design, Web Design, Interface Design, Interaction Design, Design Strategy, Web application, Application, TV, Device, Product, Internet, Software, Expert, Usability, Information Architecture, Redesign, Mockups">
+    <meta name="description" content="Redesign increased mobile job board applications by 38%">
+    <meta name="keywords" content="Kalibrr, Redesign, Mobile, Portfolio, Designer, User Experience, UX, UI, Visual, Product Designer, Manila, Philippines, Strategy, Mobile, Web, Interface, Design, Mobile Design, Web Design, Interface Design, Interaction Design, Design Strategy, Web application, Application, TV, Device, Product, Internet, Software, Expert, Usability, Information Architecture, Redesign, Mockups">
     <meta name="robots" content="index,follow">
-    <link rel="canonical" href="https://leroyalmeida.com" />
+    <link rel="canonical" href="https://leroyalmeida.com/kalibrr-job-board" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Leroy Almeida, Product/UX Designer" />
-    <meta property="og:url" content="https://leroyalmeida.com" />
+    <meta property="og:title" content="Kalibrr Job Board | Leroy Almeida, Product/UX Designer" />
+    <meta property="og:url" content="https://leroyalmeida.com/kalibrr-job-board" />
     <meta property="og:type" content="website" />
-    <meta property="og:description" content="Leroy Almeida is a product/UX designer from Manila, Philippines">
-    <meta property="og:image" content="https://leroyalmeida.com/images/portfolio.jpg">
+    <meta property="og:description" content="Redesign increased mobile job board applications by 38%">
+    <meta property="og:image" content="https://leroyalmeida.com/images/QBE2.webp">
     
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Leroy Almeida, Product/UX Designer" />
-    <meta name="twitter:description" content="Leroy Almeida is a product/UX designer from Manila, Philippines">
+    <meta name="twitter:title" content="Kalibrr Job Board | Leroy Almeida, Product/UX Designer" />
+    <meta name="twitter:description" content="Redesign increased mobile job board applications by 38%">
     <meta name="twitter:site" content="@leroyalmeida">
-    <meta name="twitter:image" content="https://leroyalmeida.com/images/portfolio.jpg">
+    <meta name="twitter:image" content="https://leroyalmeida.com/images/QBE2.webp">
 
     <!-- favicon and apple icons -->
     <link rel="icon" href="/images/icons/favicon.ico">
@@ -198,7 +198,6 @@
         color: #fff;
         background: rgba(0,0,0,.8);
         padding: .25em .5em;
-        margin-top: .25em;
         text-transform: uppercase;
         font-family: cine-mono, monospace;
         list-style: none;
@@ -220,6 +219,11 @@
 
       .page-content h3 {
         padding-top: 1.5rem;
+      }
+
+      .page-image {
+        -webkit-box-shadow: 0 15px 35px rgba(64,52,52,.1);
+        box-shadow: 0 15px 35px rgba(64,52,52,.1);
       }
 
       /* Medium devices (landscape tablets, 768px and up) */
@@ -339,15 +343,57 @@
           <li><a href="/work"><span class="darklighted">Work</span></a></li>
         </ul>
       </nav>
-      <div class="container">
-        <div class="blurb">
-          <h1>Leroy Almeida</h1>
-          <div id="header-line"></div>
-          <h3>I help clients create great digital products and services by providing insight into design, business, technology, and people.</h3>
-          <p>My strengths encompass defining product vision, crafting compelling stories, and designing seamless, human-centered experiences across complex ecosystems. I enjoy interfacing with clients (Fortune 500s, government, start-ups, and non-profits), internal executives and product teams to bring innovative ideas to life.</p>
-          <p>Currently an Experience Designer at <a href="https://accenture.com"><span class="darklighted">Accenture</span></a>, I design digital products, websites, and services for different industries. Clients include a government employment agency, a government council, a leading telecommunications company, and a flag-carrier airlines company.</p>
-          <p>Previously a Product Designer at <a href="https://kalibrr.com"><span class="darklighted">Kalibrr</span></a> (Y Combinator Winter 2013), I help design a skills-based job matching platform for the Philippines, helped grow the SaaS-marketplace product from 100k to 1M+ users, and helped transition the product to local Indonesian territory.</p>
-        </div> <!-- /.blurb -->
+      <div class="page">
+        <div class="page-content">
+          <h2>Kalibrr Job Board</h2>
+
+          <amp-img 
+              class="page-image" 
+              src="/images/Job Board iPhone.webp" 
+              width="1200"
+              height="628"
+              layout="responsive"
+              alt="Mockup of the Kalibrr mobile web job board"></amp-img>
+          
+          <p class="page-description">The objective of the redesign was to increase candidate job applications.</p>
+
+          <p class="page-description">Research showed that a lot of job views through mobile were not converting to applications. The use of a tabular layout was not mobile-friendly and, at that time, a growing majority of Kalibrr jobseekers were using their mobile phones to visit the website. This prompted a reconsideration of the table design pattern to something that would respond better to mobile phones: a card list layout.</p>
+
+          <p class="page-description">Below is a screenshot of the Kalibrr job board before the redesign.</p>
+          <amp-img 
+              class="page-image" 
+              src="/images/old job board.webp" 
+              width="600"
+              height="622"
+              layout="responsive"
+              alt="Screenshot of the old Kalibrr job board"></amp-img>
+
+          
+
+          <p class="page-description">User research also indicated that users were more prone to search via the search bar than to browse. Focusing on that behavior, we improved the search experience by adding auto-complete search suggestions to improve search accuracy.</p>
+
+          <p class="page-description">Additionally, we also improved the filters to allow multi-select filtering. This reduced the number of combinations a user had to try to get good search results.</p>
+
+          <p class="page-description">Results:</p>
+
+          <ul class="page-description">
+            <li>
+              Job applications from the job board increased by 19%
+            </li>
+            <li>
+              Job applications from the mobile job board increased by 38%.
+            </li>
+          </ul>
+
+          <amp-img 
+              class="page-image" 
+              src="/images/Job Board Screenshot.webp" 
+              width="1200"
+              height="3227"
+              layout="responsive"
+              alt="Screenshot of the Kalibrr job board"></amp-img>
+          
+        </div>
       </div> <!-- /.container -->
       <footer>
         <ul>
