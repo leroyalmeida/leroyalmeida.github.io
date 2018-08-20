@@ -116,7 +116,7 @@
       p, ul {
         font-size: 1em;
         line-height: 1.5em;
-        color: #637381;
+        color: rgba(0,0,0,.84);;
       }
 
       .darklighted {
@@ -133,18 +133,19 @@
 
       #header-line {
         background: #FFEE77;
-        height: 12px;
+        height: 4px;
         width: 10%;
         margin-top: 3em;
         margin-bottom: 3em;
       }
-      
-      #work-container > div {
-        list-style: none;
-        display: inline-block;
-        margin-bottom: 3em;
-        width: 100%;
-        height: auto;
+
+      #work-container {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row wrap;
       }
 
       .work-card{
@@ -153,13 +154,12 @@
         width: 100%;
         height: auto;
         position: relative;
+        margin: 8px;
       }
 
       .work-card:hover{
         box-shadow: 0 30px 70px rgba(64,52,52,.2);
         -webkit-box-shadow: 0 30px 70px rgba(64,52,52,.2);
-        width: 100%;
-        height: auto;
         position: relative;
         top:-0.25em;
       }
@@ -167,13 +167,11 @@
       .work-card-image {
         display: block;
         box-sizing: border-box;
-        width: 100%;
-        height: 100%;
         background: center center no-repeat;
       }
 
       .work-card-text {
-        padding: 1rem;
+        padding: 1em;
       }
 
       .work-card-text h3 {
@@ -210,8 +208,12 @@
         display: block;
       }
 
+      .page-section {
+        padding-top: 2em;
+      }
+
       .page-content ul{
-        padding-left: 1.5rem;
+        padding-left: 1.5em;
       }
 
       .page-description {
@@ -219,44 +221,25 @@
       }
 
       .page-content h3 {
-        padding-top: 1.5rem;
+        padding-top: 1.5em;
+      }
+
+      .page-image {
+        -webkit-box-shadow: 0 15px 35px rgba(64,52,52,.1);
+        box-shadow: 0 15px 35px rgba(64,52,52,.1);
+        margin-bottom: 2em;
       }
 
       /* Medium devices (landscape tablets, 768px and up) */
       @media only screen and (min-width: 768px) {
-        h1 {
-          font-size: 3.375em;
-        }
-
-        h2 {
-          font-size: 2.25em;
-        }
-
-        h3 {
-          font-size: 1.5em;
-          line-height: 1.5em;
-        }
-
-        p, ul {
-          font-size: 1em;
-          line-height: 1.5em;
-        }
-
         nav ul li, footer ul li {
           display: inline-block;
           margin-right: 20px;
           margin-top: 16px;
         }
 
-        #work-container > div {
-          width: 100%;
-          height: auto;
-          margin-right: 10px;
-        }
-
         .work-card{
-          width: 100%;
-          height: auto;
+          width: 40%;
         }
 
         .page {
@@ -276,33 +259,8 @@
 
       /* Large devices (laptops/desktops, 992px and up) */
       @media only screen and (min-width: 992px) {
-        h1 {
-          font-size: 3.375em;
-        }
-
-        h2 {
-          font-size: 2.25em;
-        }
-
-        h3 {
-          font-size: 1.5em;
-          line-height: 1.5em;
-        }
-
-        p, ul {
-          font-size: 1.2em;
-          line-height: 1.5em;
-        }
-
-        #work-container > div {
-          width: 48%;
-          height: auto;
-          margin-right: 10px;
-        }
-
         .work-card{
-          width: 100%;
-          height: auto;
+          width: 30%;
         }
 
         .page {
@@ -336,7 +294,7 @@
       <nav>
         <ul>
           <li><a href="/"><span class="darklighted">Home</span></a></li>
-          <li><a href="/work"><span class="darklighted">Work</span></a></li>
+          <li><a href="/work.html"><span class="darklighted">Work</span></a></li>
         </ul>
       </nav>
       <h2>Work</h2>
@@ -351,35 +309,217 @@
               alt=""></amp-img>
           <div class="work-card-text">
             <h4>
-                <a href="/qbe-mobile-app">QBE Foundation Mobile App</a>
+                <a href="/qbe-mobile-app">Microfinance App</a>
             </h4>
-            <p>A mobile app that to improve financial wellness of Filipinos</p>
-            <ul class="tags">
-              <li class="tag">interaction</li>
-              <li class="tag">visual</li>
-              <li class="tag">prototype</li>
-            </ul>
+            <p>Provide personalized recommendations and education to improve financial wellbeing</p>
           </div>
         </div>
         
         <div class="work-card">  
           <amp-img 
               class="work-card-image" 
-              src="/images/Kalibrr Indo Employers iMac.webp" 
+              src="/images/Accounts Dashboard.webp" 
+              width="1200"
+              height="628"
+              layout="responsive"
+              alt="Thumbnail of the Accounts Dashboard"></amp-img>
+          <div class="work-card-text">
+            <h4>
+                <a href="/kalibrr-accounts-dashboard">Accounts Dashboard</a>
+            </h4>
+            <p>Help customer success team advise their clients on what clients can do to maximize platform efficiency</p>
+          </div>
+        </div>
+        
+        <div class="work-card">  
+          <amp-img 
+              class="work-card-image" 
+              src="/images/Candidate List.webp" 
+              width="1200"
+              height="628"
+              layout="responsive"
+              alt="Thumbnail of the Candidate List feature"></amp-img>
+          <div class="work-card-text">
+            <h4>
+                <a href="/kalibrr-candidate-list">Candidate List</a>
+            </h4>
+            <p>Increase number of candidate applications accepted and improve candidate recommendations engine</p>
+          </div>
+        </div>
+        
+        <div class="work-card">  
+          <amp-img 
+              class="work-card-image" 
+              src="/images/Message Templates.webp" 
+              width="1200"
+              height="628"
+              layout="responsive"
+              alt="Thumbnail of message templates"></amp-img>
+          <div class="work-card-text">
+            <h4>
+                <a href="/kalibrr-message-templates">Message Templates</a>
+            </h4>
+            <p>Increase number of conversations made through the platform</p>
+          </div>
+        </div>
+        
+        <div class="work-card">  
+          <amp-img 
+              class="work-card-image" 
+              src="/images/Executive Dashboard.webp" 
+              width="1200"
+              height="628"
+              layout="responsive"
+              alt="Thumbnail of the Executive Dashboard"></amp-img>
+          <div class="work-card-text">
+            <h4>
+                <a href="/kalibrr-executive-dashboard">Executive Dashboard</a>
+            </h4>
+            <p>Assist management in making key decisions by visualizing trend and patterns in product metrics</p>
+          </div>
+        </div>
+        
+        <div class="work-card">  
+          <amp-img 
+              class="work-card-image" 
+              src="/images/Indonesia Employer Page.webp" 
+              width="1200"
+              height="628"
+              layout="responsive"
+              alt="Thumbnail of the Indonesia Employer Page"></amp-img>
+          <div class="work-card-text">
+            <h4>
+                <a href="/kalibrr-indonesia-employers">Indo Employer Page</a>
+            </h4>
+            <p>Grow the number of Indonesian businesses/employers on the platform</p>
+          </div>
+        </div>
+
+        <div class="work-card">  
+          <amp-img 
+              class="work-card-image" 
+              src="/images/Access Management.webp" 
+              width="1200"
+              height="628"
+              layout="responsive"
+              alt="Thumbnail of the Access Management feature"></amp-img>
+          <div class="work-card-text">
+            <h4>
+                <a href="/kalibrr-access-management">Access Management</a>
+            </h4>
+            <p>Customize levels of administrative, sensitive information, and permission granting privileges</p>
+          </div>
+        </div>
+
+        <!-- <div class="work-card">  
+          <amp-img 
+              class="work-card-image" 
+              src="/images/Employer Dashboard Macbook.webp" 
               width="1200"
               height="628"
               layout="responsive"
               alt="QBE mobile app"></amp-img>
           <div class="work-card-text">
             <h4>
-                <a href="/kalibrr-indonesia-employers">Kalibrr Indonesia Employers</a>
+                <a href="/kalibrr-recruiter-personas">Recruiter Personas</a>
             </h4>
-            <p>A high-converting employer sign-up page for Kalibrr Indonesia</p>
-            <ul class="tags">
-              <li class="tag">research</li>
-              <li class="tag">design</li>
-              <li class="tag">prototype</li>
-            </ul>
+            <p>Create alignment between Indonesia and Philippine teams over the users and clients we are serving</p>
+          </div>
+        </div> -->
+
+        <div class="work-card">  
+          <amp-img 
+              class="work-card-image" 
+              src="/images/Job Post Wizard.webp" 
+              width="1200"
+              height="628"
+              layout="responsive"
+              alt="Thumbnail of the job post wizard"></amp-img>
+          <div class="work-card-text">
+            <h4>
+                <a href="/kalibrr-job-post-wizard">Job Post Wizard</a>
+            </h4>
+            <p>Guide recruiters or employers in create engaging job posts, improve jobs recommendation engine</p>
+          </div>
+        </div>
+
+        <div class="work-card">  
+          <amp-img 
+              class="work-card-image" 
+              src="/images/NPS and CSAT Surveys.webp" 
+              width="1200"
+              height="628"
+              layout="responsive"
+              alt="Thumbnail of the NPS and CSAT surveys"></amp-img>
+          <div class="work-card-text">
+            <h4>
+                <a href="/kalibrr-nps-csat-surveys">NPS and CSAT Survey</a>
+            </h4>
+            <p>Create method of gathering feedback from businesses to inform product strategy</p>
+          </div>
+        </div>
+
+        <div class="work-card">  
+          <amp-img 
+              class="work-card-image" 
+              src="/images/Interview Scheduler.webp" 
+              width="1200"
+              height="628"
+              layout="responsive"
+              alt="QThumbnail of the Interview Scheduler feature"></amp-img>
+          <div class="work-card-text">
+            <h4>
+                <a href="/kalibrr-interview-scheduler">Interview Scheduler</a>
+            </h4>
+            <p>Decrease incidents of jobseekers not showing up to scheduled interviews</p>
+          </div>
+        </div>
+
+        <div class="work-card">  
+          <amp-img 
+              class="work-card-image" 
+              src="/images/Verification Badge.webp" 
+              width="1200"
+              height="628"
+              layout="responsive"
+              alt="The Kalibrr Verification Badge"></amp-img>
+          <div class="work-card-text">
+            <h4>
+                <a href="/kalibrr-employer-verification">Employer Verification</a>
+            </h4>
+            <p>Prevent employment scams and establish trust between jobseekers and employers</p>
+          </div>
+        </div>
+
+        <div class="work-card">  
+          <amp-img 
+              class="work-card-image" 
+              src="/images/Recruiter Emails.webp" 
+              width="1200"
+              height="628"
+              layout="responsive"
+              alt="Thumbnail of some recruiter emails"></amp-img>
+          <div class="work-card-text">
+            <h4>
+                <a href="/kalibrr-recruiter-journey-emails">Recruiter Emails</a>
+            </h4>
+            <p>Engage with recruiters at key points of their journey to increase their success at hiring via the platform</p>
+          </div>
+        </div>
+
+        <div class="work-card">  
+          <amp-img 
+              class="work-card-image" 
+              src="/images/Kalibrr Landing Page.webp" 
+              width="1200"
+              height="628"
+              layout="responsive"
+              alt="Thumbnail of the Kalibrr Landing Page"></amp-img>
+          <div class="work-card-text">
+            <h4>
+                <a href="/kalibrr-landing-page">Kalibrr Landing Page</a>
+            </h4>
+            <p>Get more jobseekers to sign-up and use the platform</p>
           </div>
         </div>
 
@@ -390,17 +530,12 @@
               width="1200"
               height="628"
               layout="responsive"
-              alt="QBE mobile app"></amp-img>
+              alt="Thumbnail of the Recruiter Dashboard"></amp-img>
           <div class="work-card-text">
             <h4>
-                <a href="/kalibrr-employer-dashboard">Kalibrr Employer Dashboard</a>
+                <a href="/kalibrr-recruiter-dashboard">Recruiter Dashboard</a>
             </h4>
-            <p>Redesign increased total accepted candidates by 30%</p>
-            <ul class="tags">
-              <li class="tag">research</li>
-              <li class="tag">design</li>
-              <li class="tag">prototype</li>
-            </ul>
+            <p>Increase number of job invites sent by recruiters to jobseekers</p>
           </div>
         </div>
         
@@ -411,17 +546,12 @@
               width="1200"
               height="628"
               layout="responsive"
-              alt="QBE mobile app"></amp-img>
+              alt="Thumbnail of the Job Board"></amp-img>
           <div class="work-card-text">
             <h4>
-                <a href="/kalibrr-job-board">Kalibrr Job Board</a>
+                <a href="/kalibrr-job-board">Job Board</a>
             </h4>
-            <p>Redesign increased mobile job board applications by 38%</p>
-            <ul class="tags">
-              <li class="tag">research</li>
-              <li class="tag">design</li>
-              <li class="tag">prototype</li>
-            </ul>
+            <p>Increase number of job post views and conversion of job applications</p>
           </div>
           
         </div>    
