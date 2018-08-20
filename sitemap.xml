@@ -9,33 +9,93 @@
 
 <url>
   <loc>https://leroyalmeida.com/</loc>
-  <lastmod>2018-08-03T01:44:59+00:00</lastmod>
+  <lastmod>2018-08-20T07:32:59+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://leroyalmeida.com/work</loc>
-  <lastmod>2018-08-03T01:44:59+00:00</lastmod>
+  <loc>https://leroyalmeida.com/work.html</loc>
+  <lastmod>2018-08-20T07:32:59+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://leroyalmeida.com/qbe-mobile-app</loc>
-  <lastmod>2018-08-03T01:44:59+00:00</lastmod>
+  <lastmod>2018-08-20T07:32:59+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://leroyalmeida.com/kalibrr-accounts-dashboard</loc>
+  <lastmod>2018-08-20T07:32:59+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://leroyalmeida.com/kalibrr-candidate-list</loc>
+  <lastmod>2018-08-20T07:32:59+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://leroyalmeida.com/kalibrr-message-templates</loc>
+  <lastmod>2018-08-20T07:32:59+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://leroyalmeida.com/kalibrr-executive-dashboard</loc>
+  <lastmod>2018-08-20T07:32:59+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://leroyalmeida.com/kalibrr-indonesia-employers</loc>
-  <lastmod>2018-08-03T01:44:59+00:00</lastmod>
+  <lastmod>2018-08-20T07:32:59+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://leroyalmeida.com/kalibrr-employer-dashboard</loc>
-  <lastmod>2018-08-03T01:44:59+00:00</lastmod>
+  <loc>https://leroyalmeida.com/kalibrr-access-management</loc>
+  <lastmod>2018-08-20T07:32:59+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://leroyalmeida.com/kalibrr-job-post-wizard</loc>
+  <lastmod>2018-08-20T07:32:59+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://leroyalmeida.com/kalibrr-nps-csat-surveys</loc>
+  <lastmod>2018-08-20T07:32:59+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://leroyalmeida.com/kalibrr-interview-scheduler</loc>
+  <lastmod>2018-08-20T07:32:59+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://leroyalmeida.com/kalibrr-employer-verification</loc>
+  <lastmod>2018-08-20T07:32:59+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://leroyalmeida.com/kalibrr-recruiter-journey-emails</loc>
+  <lastmod>2018-08-20T07:32:59+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://leroyalmeida.com/kalibrr-landing-page</loc>
+  <lastmod>2018-08-20T07:32:59+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://leroyalmeida.com/kalibrr-recruiter-dashboard</loc>
+  <lastmod>2018-08-20T07:32:59+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://leroyalmeida.com/kalibrr-job-board</loc>
-  <lastmod>2018-08-03T01:44:59+00:00</lastmod>
+  <lastmod>2018-08-20T07:32:59+00:00</lastmod>
   <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://leroyalmeida.com/work</loc>
+  <lastmod>2018-08-20T07:32:59+00:00</lastmod>
+  <priority>0.51</priority>
 </url>
 
 
