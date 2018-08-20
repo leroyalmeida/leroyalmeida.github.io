@@ -116,7 +116,7 @@
       p, ul {
         font-size: 1em;
         line-height: 1.5em;
-        color: #637381;
+        color: rgba(0,0,0,.84);;
       }
 
       .darklighted {
@@ -133,18 +133,19 @@
 
       #header-line {
         background: #FFEE77;
-        height: 12px;
+        height: 4px;
         width: 10%;
         margin-top: 3em;
         margin-bottom: 3em;
       }
-      
-      #work-container > div {
-        list-style: none;
-        display: inline-block;
-        margin-bottom: 3em;
-        width: 100%;
-        height: auto;
+
+      #work-container {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row wrap;
       }
 
       .work-card{
@@ -153,13 +154,12 @@
         width: 100%;
         height: auto;
         position: relative;
+        margin: 8px;
       }
 
       .work-card:hover{
         box-shadow: 0 30px 70px rgba(64,52,52,.2);
         -webkit-box-shadow: 0 30px 70px rgba(64,52,52,.2);
-        width: 100%;
-        height: auto;
         position: relative;
         top:-0.25em;
       }
@@ -167,13 +167,11 @@
       .work-card-image {
         display: block;
         box-sizing: border-box;
-        width: 100%;
-        height: 100%;
         background: center center no-repeat;
       }
 
       .work-card-text {
-        padding: 1rem;
+        padding: 1em;
       }
 
       .work-card-text h3 {
@@ -198,6 +196,7 @@
         color: #fff;
         background: rgba(0,0,0,.8);
         padding: .25em .5em;
+        margin-top: .25em;
         text-transform: uppercase;
         font-family: cine-mono, monospace;
         list-style: none;
@@ -209,8 +208,12 @@
         display: block;
       }
 
+      .page-section {
+        padding-top: 2em;
+      }
+
       .page-content ul{
-        padding-left: 1.5rem;
+        padding-left: 1.5em;
       }
 
       .page-description {
@@ -218,49 +221,25 @@
       }
 
       .page-content h3 {
-        padding-top: 1.5rem;
+        padding-top: 1.5em;
       }
 
       .page-image {
         -webkit-box-shadow: 0 15px 35px rgba(64,52,52,.1);
         box-shadow: 0 15px 35px rgba(64,52,52,.1);
+        margin-bottom: 2em;
       }
 
       /* Medium devices (landscape tablets, 768px and up) */
       @media only screen and (min-width: 768px) {
-        h1 {
-          font-size: 3.375em;
-        }
-
-        h2 {
-          font-size: 2.25em;
-        }
-
-        h3 {
-          font-size: 1.5em;
-          line-height: 1.5em;
-        }
-
-        p, ul {
-          font-size: 1em;
-          line-height: 1.5em;
-        }
-
         nav ul li, footer ul li {
           display: inline-block;
           margin-right: 20px;
           margin-top: 16px;
         }
 
-        #work-container > div {
-          width: 100%;
-          height: auto;
-          margin-right: 10px;
-        }
-
         .work-card{
-          width: 100%;
-          height: auto;
+          width: 40%;
         }
 
         .page {
@@ -280,33 +259,8 @@
 
       /* Large devices (laptops/desktops, 992px and up) */
       @media only screen and (min-width: 992px) {
-        h1 {
-          font-size: 3.375em;
-        }
-
-        h2 {
-          font-size: 2.25em;
-        }
-
-        h3 {
-          font-size: 1.5em;
-          line-height: 1.5em;
-        }
-
-        p, ul {
-          font-size: 1.2em;
-          line-height: 1.5em;
-        }
-
-        #work-container > div {
-          width: 48%;
-          height: auto;
-          margin-right: 10px;
-        }
-
         .work-card{
-          width: 100%;
-          height: auto;
+          width: 30%;
         }
 
         .page {
@@ -346,6 +300,7 @@
       <div class="page">
         <div class="page-content">
           <h2>Kalibrr Job Board</h2>
+          <div id="header-line"></div>
 
           <amp-img 
               class="page-image" 
@@ -355,7 +310,25 @@
               layout="responsive"
               alt="Mockup of the Kalibrr mobile web job board"></amp-img>
           
-          <p class="page-description">The objective of the redesign was to increase candidate job applications.</p>
+          <div class="page-section">
+            <h4>CHALLENGE</h4>
+            <p class="page-description">Increase number of job post views</p>
+          </div>
+
+          <div class="page-section">
+            <h4>DESIGN PROCESS</h4>
+            <p class="page-description"><strong>Duration: </strong>3 months</p>
+            <p class="page-description"><strong>Research: </strong>User feedback, user interviews, analytics</p>
+            <p class="page-description"><strong>Prototyping: </strong>Sketch mockups + Invision prototype</p>
+            <p class="page-description"><strong>Testing: </strong>In-person usability testing, iteration w/ stakeholders</p>
+            <p class="page-description"><strong>Strategy: </strong>Product strategy</p>
+            <p class="page-description"><strong>Visuals: </strong>Company branding</p>
+          </div>
+          
+          <div class="page-section">
+            <h4>RESULTS</h4>
+            <p class="page-description"><em>Job board applications increased by 20%. Mobile job board applications increased by 40%.</em></p>
+          </div>
 
           <p class="page-description">Research showed that a lot of job views through mobile were not converting to applications. The use of a tabular layout was not mobile-friendly and, at that time, a growing majority of Kalibrr jobseekers were using their mobile phones to visit the website. This prompted a reconsideration of the table design pattern to something that would respond better to mobile phones: a card list layout.</p>
 
@@ -374,16 +347,7 @@
 
           <p class="page-description">Additionally, we also improved the filters to allow multi-select filtering. This reduced the number of combinations a user had to try to get good search results.</p>
 
-          <p class="page-description">Results:</p>
-
-          <ul class="page-description">
-            <li>
-              Job applications from the job board increased by 19%
-            </li>
-            <li>
-              Job applications from the mobile job board increased by 38%.
-            </li>
-          </ul>
+          <p class="page-description">Below is a screenshot of the actual Kalibrr job board after the redesign.</p>
 
           <amp-img 
               class="page-image" 

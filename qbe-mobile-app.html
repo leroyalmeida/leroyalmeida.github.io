@@ -116,7 +116,7 @@
       p, ul {
         font-size: 1em;
         line-height: 1.5em;
-        color: #637381;
+        color: rgba(0,0,0,.84);;
       }
 
       .darklighted {
@@ -133,18 +133,19 @@
 
       #header-line {
         background: #FFEE77;
-        height: 12px;
+        height: 4px;
         width: 10%;
         margin-top: 3em;
         margin-bottom: 3em;
       }
-      
-      #work-container > div {
-        list-style: none;
-        display: inline-block;
-        margin-bottom: 3em;
-        width: 100%;
-        height: auto;
+
+      #work-container {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row wrap;
       }
 
       .work-card{
@@ -153,13 +154,12 @@
         width: 100%;
         height: auto;
         position: relative;
+        margin: 8px;
       }
 
       .work-card:hover{
         box-shadow: 0 30px 70px rgba(64,52,52,.2);
         -webkit-box-shadow: 0 30px 70px rgba(64,52,52,.2);
-        width: 100%;
-        height: auto;
         position: relative;
         top:-0.25em;
       }
@@ -167,13 +167,11 @@
       .work-card-image {
         display: block;
         box-sizing: border-box;
-        width: 100%;
-        height: 100%;
         background: center center no-repeat;
       }
 
       .work-card-text {
-        padding: 1rem;
+        padding: 1em;
       }
 
       .work-card-text h3 {
@@ -198,6 +196,7 @@
         color: #fff;
         background: rgba(0,0,0,.8);
         padding: .25em .5em;
+        margin-top: .25em;
         text-transform: uppercase;
         font-family: cine-mono, monospace;
         list-style: none;
@@ -209,8 +208,12 @@
         display: block;
       }
 
+      .page-section {
+        padding-top: 2em;
+      }
+
       .page-content ul{
-        padding-left: 1.5rem;
+        padding-left: 1.5em;
       }
 
       .page-description {
@@ -218,49 +221,25 @@
       }
 
       .page-content h3 {
-        padding-top: 1.5rem;
+        padding-top: 1.5em;
       }
 
       .page-image {
         -webkit-box-shadow: 0 15px 35px rgba(64,52,52,.1);
         box-shadow: 0 15px 35px rgba(64,52,52,.1);
+        margin-bottom: 2em;
       }
 
       /* Medium devices (landscape tablets, 768px and up) */
       @media only screen and (min-width: 768px) {
-        h1 {
-          font-size: 3.375em;
-        }
-
-        h2 {
-          font-size: 2.25em;
-        }
-
-        h3 {
-          font-size: 1.5em;
-          line-height: 1.5em;
-        }
-
-        p, ul {
-          font-size: 1em;
-          line-height: 1.5em;
-        }
-
         nav ul li, footer ul li {
           display: inline-block;
           margin-right: 20px;
           margin-top: 16px;
         }
 
-        #work-container > div {
-          width: 100%;
-          height: auto;
-          margin-right: 10px;
-        }
-
         .work-card{
-          width: 100%;
-          height: auto;
+          width: 40%;
         }
 
         .page {
@@ -280,33 +259,8 @@
 
       /* Large devices (laptops/desktops, 992px and up) */
       @media only screen and (min-width: 992px) {
-        h1 {
-          font-size: 3.375em;
-        }
-
-        h2 {
-          font-size: 2.25em;
-        }
-
-        h3 {
-          font-size: 1.5em;
-          line-height: 1.5em;
-        }
-
-        p, ul {
-          font-size: 1.2em;
-          line-height: 1.5em;
-        }
-
-        #work-container > div {
-          width: 48%;
-          height: auto;
-          margin-right: 10px;
-        }
-
         .work-card{
-          width: 100%;
-          height: auto;
+          width: 30%;
         }
 
         .page {
