@@ -16,7 +16,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:description" content="Redesign increased total accepted candidates by 30%">
     <meta property="og:image" content="https://leroyalmeida.com/images/QBE2.webp">
-    
+
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Kalibrr Employer Dashboard | Leroy Almeida, Product/UX Designer" />
@@ -39,7 +39,7 @@
       @font-face {
         font-family: "cine-mono";
         font-display: swap;
-        src: url("/css/fonts/GT-Cinetype-Mono.woff") format("woff");  
+        src: url("/css/fonts/GT-Cinetype-Mono.woff") format("woff");
       }
 
       @font-face {
@@ -85,9 +85,9 @@
       }
 
       a {
-        font-family: cine-mono, monospace;
+        font-family: cine, sans-serif;
         text-decoration: none;
-        color: #2196F3;
+        color: #302ECD;
       }
 
       a:hover span{
@@ -116,7 +116,7 @@
       p, ul {
         font-size: 1em;
         line-height: 1.5em;
-        color: #637381;
+        color: rgba(0,0,0,.84);;
       }
 
       .darklighted {
@@ -133,18 +133,19 @@
 
       #header-line {
         background: #FFEE77;
-        height: 12px;
+        height: 4px;
         width: 10%;
         margin-top: 3em;
         margin-bottom: 3em;
       }
-      
-      #work-container > div {
-        list-style: none;
-        display: inline-block;
-        margin-bottom: 3em;
-        width: 100%;
-        height: auto;
+
+      #work-container {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row wrap;
       }
 
       .work-card{
@@ -153,13 +154,12 @@
         width: 100%;
         height: auto;
         position: relative;
+        margin: 8px;
       }
 
       .work-card:hover{
         box-shadow: 0 30px 70px rgba(64,52,52,.2);
         -webkit-box-shadow: 0 30px 70px rgba(64,52,52,.2);
-        width: 100%;
-        height: auto;
         position: relative;
         top:-0.25em;
       }
@@ -167,13 +167,15 @@
       .work-card-image {
         display: block;
         box-sizing: border-box;
-        width: 100%;
-        height: 100%;
         background: center center no-repeat;
       }
 
       .work-card-text {
-        padding: 1rem;
+        padding: 1em;
+      }
+
+      .work-card-text p {
+        height:100px;
       }
 
       .work-card-text h3 {
@@ -195,9 +197,10 @@
       }
 
       .tag {
-        color: #fff;
-        background: rgba(0,0,0,.8);
+        color: rgba(0, 0, 0, 0.4);
+        background: rgba(244, 245, 249, 1);
         padding: .25em .5em;
+        margin-top: .25em;
         text-transform: uppercase;
         font-family: cine-mono, monospace;
         list-style: none;
@@ -209,8 +212,12 @@
         display: block;
       }
 
+      .page-section {
+        padding-top: 2em;
+      }
+
       .page-content ul{
-        padding-left: 1.5rem;
+        padding-left: 1.5em;
       }
 
       .page-description {
@@ -218,49 +225,25 @@
       }
 
       .page-content h3 {
-        padding-top: 1.5rem;
+        padding-top: 1.5em;
       }
 
       .page-image {
         -webkit-box-shadow: 0 15px 35px rgba(64,52,52,.1);
         box-shadow: 0 15px 35px rgba(64,52,52,.1);
+        margin-bottom: 2em;
       }
 
       /* Medium devices (landscape tablets, 768px and up) */
       @media only screen and (min-width: 768px) {
-        h1 {
-          font-size: 3.375em;
-        }
-
-        h2 {
-          font-size: 2.25em;
-        }
-
-        h3 {
-          font-size: 1.5em;
-          line-height: 1.5em;
-        }
-
-        p, ul {
-          font-size: 1em;
-          line-height: 1.5em;
-        }
-
         nav ul li, footer ul li {
           display: inline-block;
           margin-right: 20px;
           margin-top: 16px;
         }
 
-        #work-container > div {
-          width: 100%;
-          height: auto;
-          margin-right: 10px;
-        }
-
         .work-card{
-          width: 100%;
-          height: auto;
+          width: 40%;
         }
 
         .page {
@@ -280,33 +263,8 @@
 
       /* Large devices (laptops/desktops, 992px and up) */
       @media only screen and (min-width: 992px) {
-        h1 {
-          font-size: 3.375em;
-        }
-
-        h2 {
-          font-size: 2.25em;
-        }
-
-        h3 {
-          font-size: 1.5em;
-          line-height: 1.5em;
-        }
-
-        p, ul {
-          font-size: 1.2em;
-          line-height: 1.5em;
-        }
-
-        #work-container > div {
-          width: 48%;
-          height: auto;
-          margin-right: 10px;
-        }
-
         .work-card{
-          width: 100%;
-          height: auto;
+          width: 30%;
         }
 
         .page {
@@ -341,20 +299,21 @@
         <ul>
           <li><a href="/"><span class="darklighted">Home</span></a></li>
           <li><a href="/work"><span class="darklighted">Work</span></a></li>
+          <li><a href="/bookshelf/by-cover"><span class="darklighted">Bookshelf</span></a></li>
         </ul>
       </nav>
       <div class="page">
         <div class="page-content">
           <h2>Kalibrr Employer Dashboard</h2>
 
-          <amp-img 
-              class="page-image" 
-              src="/images/Employer Dashboard Macbook.webp" 
+          <amp-img
+              class="page-image"
+              src="/images/Employer Dashboard Macbook.webp"
               width="1200"
               height="628"
               layout="responsive"
               alt="Mockup of the employer dashboard in a Macbook"></amp-img>
-          
+
           <p class="page-description">The redesign focused on increasing the number of accepted candidates. To meet this goal, we improved how the platform notified recruiters of new job applications. We also made job management functions like editing, duplicating, and sharing the job to social media more accessible.</p>
 
 
@@ -370,9 +329,9 @@
             </li>
           </ul>
 
-          <amp-img 
-              class="page-image" 
-              src="/images/Employer Dashboard.webp" 
+          <amp-img
+              class="page-image"
+              src="/images/Employer Dashboard.webp"
               width="1200"
               height="883"
               layout="responsive"
