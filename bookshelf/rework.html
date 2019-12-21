@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html ⚡ lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Leroy's Notes on Rework</title>
+
+    <meta name="description" content="Are you adding value? Adding something is easy; adding value is hard. Is this thing you’re working on actually making your product more valuable for customers? Can they get more out of it than they did before? Sometimes things you think are adding value actually subtract from it. Too much ketchup can ruin the fries. Value is about balance.">
+    <meta name="keywords" content="Leroy, Almeida, Rework, summary, review, Book recommendations, Portfolio, Designer, User Experience, UX, UI, Visual, Product Designer, Manila, Philippines, Strategy, Mobile, Web, Interface, Design, Mobile Design, Web Design, Interface Design, Interaction Design, Design Strategy, Web application, Application, TV, Device, Product, Internet, Software, Expert, Usability, Information Architecture, Redesign, Mockups">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://leroyalmeida.com/bookshelf/rework" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Leroy's Notes on Rework" />
+    <meta property="og:url" content="https://leroyalmeida.com/bookshelf/rework" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Are you adding value? Adding something is easy; adding value is hard. Is this thing you’re working on actually making your product more valuable for customers? Can they get more out of it than they did before? Sometimes things you think are adding value actually subtract from it. Too much ketchup can ruin the fries. Value is about balance.">
+    <meta property="og:image" content="https://leroyalmeida.com/images/portfolio.jpg">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Leroy's Notes on Rework" />
+    <meta name="twitter:description" content="Are you adding value? Adding something is easy; adding value is hard. Is this thing you’re working on actually making your product more valuable for customers? Can they get more out of it than they did before? Sometimes things you think are adding value actually subtract from it. Too much ketchup can ruin the fries. Value is about balance.">
+    <meta name="twitter:site" content="@leroyalmeida">
+    <meta name="twitter:image" content="https://leroyalmeida.com/images/portfolio.jpg">
+
+    <!-- favicon and apple icons -->
+    <link rel="icon" href="/images/icons/favicon.ico">
+    <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png">
+
+    <!-- link to html stylesheet -->
+    <style amp-custom>
+      @font-face {
+        font-family: "cine";
+        font-display: swap;
+        src: url("/css/fonts/GT-Cinetype-Regular.woff") format("woff");
+      }
+
+      @font-face {
+        font-family: "cine-mono";
+        font-display: swap;
+        src: url("/css/fonts/GT-Cinetype-Mono.woff") format("woff");
+      }
+
+      @font-face {
+        font-family: "cine";
+        font-display: swap;
+        src: url("/css/fonts/GT-Cinetype-Bold.woff") format("woff");
+        font-weight: bold;
+      }
+
+      body {
+        background-color: #fff;
+        color: #000;
+        font-family: cine, sans-serif;
+      }
+
+      div.wrap {
+        display: block;
+        width: 80%;
+        max-width: 960px;
+        margin: 0 auto;
+      }
+
+      nav ul {
+        padding: 0 0 5em 0;
+        list-style: none;
+      }
+
+      nav ul li {
+        display: inline;
+        margin-right: 20px;
+        margin-top: 8px;
+      }
+
+      footer ul {
+        padding: 40px 0;
+        list-style: none;
+      }
+
+      footer ul li {
+        display: block;
+        margin-right: 20px;
+        margin-top: 8px;
+      }
+
+      a {
+        font-family: cine, sans-serif;
+        text-decoration: none;
+        color: #302ECD;
+      }
+
+      a:hover span{
+        background-size: 100% 100%;
+      }
+
+      h1 {
+        font-size: 3.375em;
+      }
+
+      h2 {
+        font-size: 2.25em;
+        font-weight: 500;
+      }
+
+      h3 {
+        font-size: 1.5em;
+        font-weight: 500;
+      }
+
+      h4 {
+        font-size: 1.2em;
+        margin: 0;
+      }
+
+      p, ul {
+        font-size: 1em;
+        line-height: 1.5em;
+        color: rgba(0,0,0,.84);;
+      }
+
+      .darklighted {
+        background-image: linear-gradient(180deg, transparent 75%, #FFEE77 0);
+        background-size: 0% 100%;
+        -moz-transition: 0.3s cubic-bezier(0.5, 0.60, 0.360, 1) background;
+        -o-transition: 0.3s cubic-bezier(0.5, 0.60, 0.360, 1) background;
+        -ms-transition: 0.3s cubic-bezier(0.5, 0.60, 0.360, 1) background;
+        -webkit-transition: 0.3s cubic-bezier(0.5, 0.60, 0.360, 1) background;
+        transition: 0.3s cubic-bezier(0.5, 0.60, 0.360, 1) background;
+        background-repeat: no-repeat;
+        padding-bottom: 0;
+      }
+
+      #header-line {
+        background: #FFEE77;
+        height: 4px;
+        width: 10%;
+        margin-top: 3em;
+        margin-bottom: 3em;
+      }
+
+      #work-container {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+      }
+
+      .work-card{
+        box-shadow: 0 30px 70px rgba(64,52,52,.1);
+        -webkit-box-shadow: 0 30px 70px rgba(64,52,52,.1);
+        width: 100%;
+        height: auto;
+        position: relative;
+        margin: 8px;
+      }
+
+      .work-card:hover{
+        box-shadow: 0 30px 70px rgba(64,52,52,.2);
+        -webkit-box-shadow: 0 30px 70px rgba(64,52,52,.2);
+        position: relative;
+        top:-0.25em;
+      }
+
+      .work-card-image {
+        display: block;
+        box-sizing: border-box;
+        background: center center no-repeat;
+      }
+
+      .work-card-text {
+        padding: 1em;
+      }
+
+      .work-card-text p {
+        height:100px;
+      }
+
+      .work-card-text h3 {
+        margin: 0;
+      }
+
+      .work-card-text a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      .tags {
+        margin: 0;
+        padding: 0;
+      }
+
+      .tag {
+        color: rgba(0, 0, 0, 0.4);
+        background: rgba(244, 245, 249, 1);
+        padding: .25em .5em;
+        margin-top: .25em;
+        text-transform: uppercase;
+        font-family: cine-mono, monospace;
+        list-style: none;
+        display: inline-block;
+      }
+
+      .page {
+        width: 100%;
+        display: block;
+      }
+
+      .page-section {
+        padding-top: 2em;
+      }
+
+      .page-content ul{
+        padding-left: 1.5em;
+      }
+
+      .page-description {
+        width: 100%;
+      }
+
+      .page-content h3 {
+        padding-top: 1.5em;
+      }
+
+      .page-image {
+        -webkit-box-shadow: 0 15px 35px rgba(64,52,52,.1);
+        box-shadow: 0 15px 35px rgba(64,52,52,.1);
+        margin-bottom: 2em;
+      }
+
+      /* Medium devices (landscape tablets, 768px and up) */
+      @media only screen and (min-width: 768px) {
+        nav ul li, footer ul li {
+          display: inline-block;
+          margin-right: 20px;
+          margin-top: 16px;
+        }
+
+        .work-card{
+          width: 40%;
+        }
+
+        .page {
+          -webkit-box-shadow: 0 30px 70px rgba(64,52,52,.1);
+          box-shadow: 0 30px 70px rgba(64,52,52,.1);
+          width: 100%;
+        }
+
+        .page-content {
+          padding: 2em;
+        }
+
+        .page-description {
+          width: 80%;
+        }
+      }
+
+      /* Large devices (laptops/desktops, 992px and up) */
+      @media only screen and (min-width: 992px) {
+        .work-card{
+          width: 30%;
+        }
+
+        .page {
+          width: 100%;
+        }
+      }
+    </style>
+
+    <!-- amp scripts -->
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  </head>
+  <body>
+    <amp-analytics type="googleanalytics">
+      <script type="application/json">
+      {
+        "vars": {
+          "account": "UA-122663238-1"
+        },
+        "triggers": {
+          "trackPageview": {
+            "on": "visible",
+            "request": "pageview"
+          }
+        }
+      }
+      </script>
+      </amp-analytics>
+    <div class="wrap">
+      <nav>
+        <ul>
+          <li><a href="/"><span class="darklighted">Home</span></a></li>
+          <li><a href="/bookshelf/by-cover"><span class="darklighted">Bookshelf</span></a></li>
+        </ul>
+      </nav>
+      <div class="container">
+        <h2>Rework</h2>
+        <h3>by Jason Fried, David Heinemeier Hansson</h3>
+        <div id="header-line"></div>
+
+        <a href="https://amzn.to/2RZ0fy8">
+          <amp-img
+              class="page-image"
+              src="/images/covers/rework.webp"
+              width="332"
+              height="500"
+              alt=""></amp-img>
+        </a>
+        <h4>Summary:</h4>
+        <ul>
+          <li>
+            <div>
+              Are you adding value? Adding something is easy; adding value is hard. Is this thing you’re working on actually making your product more valuable for customers? Can they get more out of it than they did before? Sometimes things you think are adding value actually subtract from it. Too much ketchup can ruin the fries. Value is about balance.
+            </div>
+          </li>
+        </ul>
+        <br>
+        <h4>Key takeaways:</h4>
+        <ul>
+          <li><div><strong>Other people’s failures are just that: other people’s failures.</strong></div></li><li><div>Success gives you real ammunition. When something succeeds, you know what worked—and you can do it again. And the next time, you’ll probably do it even better.</div></li><li><div><strong>Failure is not a prerequisite for success.</strong></div></li><li><div>People who failed before have the same amount of success as people who have never tried at all.* Success is the experience that actually counts.</div></li><li><div>Evolution doesn’t linger on past failures, it’s always building upon what worked. So should you.</div></li><li><div><strong>Plans are inconsistent with improvisation.</strong></div></li><li><div>Give up on the guesswork. Decide what you’re going to do this week, not this year. Figure out the next most important thing and do that. Make decisions right before you do something, not far in advance.</div></li><li><div>Working without a plan may seem scary. But blindly following a plan that has no relationship with reality is even scarier.</div></li><li><div>Don’t make assumptions about how big you should be ahead of time. Grow slow and see what feels right—premature hiring is the death of many companies. And avoid huge growth spurts too—they can cause you to skip right over your appropriate size.</div></li><li><div>Small is not just a stepping-stone. Small is a great destination in itself.</div></li><li><div>Once you get big, it’s really hard to shrink without firing people, damaging morale, and changing the entire way you do business.</div></li><li><div>Working more doesn’t mean you care more or get more done. It just means you work more.</div></li><li><div>No one makes sharp decisions when tired.</div></li><li><div><strong>To do great work, you need to feel that you’re making a difference. That you’re putting a meaningful dent in the universe. That you’re part of something important.</strong></div></li><li><div>The easiest, most straightforward way to create a great product or service is to make something you want to use.</div></li><li><div>Best of all, this “solve your own problem” approach lets you fall in love with what you’re making. You know the problem and the value of its solution intimately.</div></li><li><div>Ideas are cheap and plentiful. The original pitch idea is such a small part of a business that it’s almost negligible. The real question is how well you execute.</div></li><li><div><strong>The perfect time never arrives. You’re always too young or old or busy or broke or something else. If you constantly fret about timing things perfectly, they’ll never happen.</strong></div></li><li><div>As you get going, keep in mind why you’re doing what you’re doing. Great businesses have a point of view, not just a product or service. You have to believe in something. You need to have a backbone. You need to know what you’re willing to fight for. And then you need to show the world.</div></li><li><div>A strong stand is how you attract superfans. They point to you and defend you. And they spread the word further, wider, and more passionately than any advertising could.<br></div></li><li><div><strong>If no one’s upset by what you’re saying, you’re probably not pushing hard enough. (And you’re probably boring, too.)</strong></div></li><li><div>But we’re just as proud of what our products don’t do as we are of what they do.</div></li><li><div><strong>There’s a world of difference between truly standing for something and having a mission statement that says you stand for something.&nbsp;Standing for something isn’t just about writing it down. It’s about believing it and living it.</strong></div></li><li><div>No matter what kind of business you’re starting, take on as little outside cash as you can.<br></div></li><li><div>When you turn to outsiders for funding, you have to answer to them too.</div></li><li><div>You give up control. When you turn to outsiders for funding, you have to answer to them too.</div></li><li><div>“Cashing out” begins to trump building a quality business. Investors want their money back—and quickly (usually three to five years). Long-term sustainability goes out the window when those involved only want to cash out as soon as they can.</div></li><li><div>Customers move down the totem pole. You wind up building what investors want instead of what customers want.</div></li><li><div><strong>A business without a path to profit isn’t a business, it’s a hobby.</strong></div></li><li><div>Act like an actual business and you’ll have a much better shot at succeeding.</div></li><li><div>You should be thinking about how to make your project grow and succeed, not how you’re going to jump ship. If your whole strategy is based on leaving, chances are you won’t get far in the first place.</div></li><li><div>Embrace the idea of having less mass. Right now, you’re the smallest, the leanest, and the fastest you’ll ever be. From here on out, you’ll start accumulating mass. And the more massive an object, the more energy required to change its direction.</div></li><li><div>The more expensive it is to make a change, the less likely you are to make it.</div></li><li><div>But if you keep your mass low, you can quickly change anything: your entire business model, product, feature set, and/or marketing message. You can make mistakes and fix them quickly. You can change your priorities, product mix, or focus. And most important, you can change your mind.</div></li><li><div><strong>Less is a good thing. Constraints are advantages in disguise. Limited resources force you to make do with what you’ve got. There’s no room for waste. And that forces you to be creative.</strong></div></li><li><div>Build half a product, not a half-assed product</div></li><li><div>So sacrifice some of your darlings for the greater good. Cut your ambition in half. You’re better off with a kick-ass half than a half-assed whole.</div></li><li><div>Getting to great starts by cutting out stuff that’s merely good.</div></li><li><div>So figure out your epicenter. Which part of your equation can’t be removed? If you can continue to get by without this thing or that thing, then those things aren’t the epicenter. When you find it, you’ll know. Then focus all your energy on making it the best it can be. Everything else you do depends on that foundation. Ignore the details early on. Architects don’t worry about which tiles go in the shower or which brand of dishwasher to install in the kitchen until after the floor plan is finalized. So ignore the details—for a while. Nail the basics first and worry about the specifics later.</div></li><li><div><strong>When you put off decisions, they pile up. And piles end up ignored, dealt with in haste, or thrown out. As a result, the individual problems in those piles stay unresolved.&nbsp;Commit to making decisions. Don’t wait for the perfect solution. Decide and move forward.</strong></div></li><li><div><strong>When you get in that flow of making decision after decision, you build momentum and boost morale. Decisions are progress.</strong></div></li><li><div>Long projects zap morale. The longer it takes to develop, the less likely it is to launch. Make the call, make progress, and get something out now—while you’ve got the motivation and momentum to do so.<br></div></li><li><div>It’s the stuff you leave out that matters. So constantly look for things to remove, simplify, and streamline. Be a curator. Stick to what’s truly essential. Pare things down until you’re left with only the most important stuff. Then do it again. You can always add stuff back in later if you need to.<br></div></li><li><div>The core of your business should be built around things that won’t change. Things that people are going to want today and ten years from now. Those are the things you should invest in.<br></div></li><li><div>When is your product or service finished? When should you put it out on the market? When is it safe to let people have it? Probably a lot sooner than you’re comfortable with. Once your product does what it needs to do, get it out there.</div></li><li><div>When you impose a deadline, you gain clarity. It’s the best way to get to that gut instinct that tells you, “We don’t need this.”</div></li><li><div>Put off anything you don’t need for launch. Build the necessities now, worry about the luxuries later. If you really think about it, there’s a whole lot you don’t need on day one.</div></li><li><div>Don’t mistake this approach for skimping on quality, either. You still want to make something great. This approach just recognizes that the best way to get there is through iterations. Stop imagining what’s going to work. Find out for real.</div></li><li><div><strong>If you need to explain something, try getting real with it. Instead of describing what something looks like, draw it. Instead of explaining what something sounds like, hum it. Do everything you can to remove layers of abstraction. The problem with abstractions (like reports and documents) is that they create illusions of agreement.<br></strong></div></li><li><div><strong>Why are you doing this?</strong><br></div></li><li><div><strong>What problem are you solving? What’s the problem? Are customers confused? Are you confused? Is something not clear enough? Was something not possible before that should be possible now?</strong> Sometimes when you ask these questions, you’ll find you’re solving an imaginary problem. That’s when it’s time to stop and reevaluate what the hell you’re doing.</div></li><li><div><strong>Is this actually useful?</strong></div></li><li><div><strong>Are you adding value? Adding something is easy; adding value is hard.</strong> Is this thing you’re working on actually making your product more valuable for customers? Can they get more out of it than they did before? Sometimes things you think are adding value actually subtract from it. Too much ketchup can ruin the fries. Value is about balance.</div></li><li><div><strong>Will this change behavior? Is what you’re working on really going to change anything? Don’t add something unless it has a real impact on how people use your product.</strong></div></li><li><div>Is there an easier way? Whenever you’re working on something, ask, “Is there an easier way?” You’ll often find this easy way is more than good enough for now. Problems are usually pretty simple.</div></li><li><div>What could you be doing instead? What can’t you do because you’re doing this? This is especially important for small teams with constrained resources. That’s when prioritization is even more important.</div></li><li><div>Is it really worth it?</div></li><li><div>If you’re constantly staying late and working weekends, it’s not because there’s too much work to be done. It’s because you’re not getting enough done at work. And the reason is interruptions.</div></li><li><div>During alone time, give up instant messages, phone calls, e-mail, and meetings. Just shut up and get to work. Getting into that zone takes time and requires avoiding interruptions.</div></li><li><div>A better idea: Find a judo solution, one that delivers maximum efficiency with minimum effort. Judo solutions are all about getting the most out of doing the least. Whenever you face an obstacle, look for a way to judo it.</div></li><li><div><strong>Problems can usually be solved with simple, mundane solutions.</strong></div></li><li><div>When good enough gets the job done, go for it. It’s way better than wasting resources or, even worse, doing nothing because you can’t afford the complex solution. And remember, you can usually turn good enough into great later.</div></li><li><div><strong>Momentum fuels motivation. It keeps you going. It drives you. Without it, you can’t go anywhere. If you aren’t motivated by what you’re working on, it won’t be very good.&nbsp;The way you build momentum is by getting something done and then moving on to the next thing.</strong></div></li><li><div>So ask yourself, “What can we do in two weeks?” And then do it. Get it out there and let people use it, taste it, play it, or whatever. The quicker it’s in the hands of customers, the better off you’ll be.</div></li><li><div><strong>A lot of times it’s better to be a quitter than a hero.</strong></div></li><li><div>if anything takes one of us longer than two weeks, we’ve got to bring other people in to take a look. They might not do any work on the task, but at least they can review it quickly and give their two cents. Sometimes an obvious solution is staring you right in the face, but you can’t even see it.</div></li><li><div><strong>If you already spent too much time on something that wasn’t worth it, walk away.<br></strong></div></li><li><div><strong>What distinguishes people who are ten times more effective than the norm is not that they work ten times as hard; it’s that they use their creativity to come up with solutions that require one-tenth of the effort.</strong></div></li><li><div><strong>Break the big thing into smaller things. The smaller it is, the easier it is to estimate.</strong></div></li><ul><li><div>If something takes twice as long as you expected, better to have it be a small project that’s a couple weeks over rather than a long one that’s a couple months over.</div></li><li><div>Whenever you can, divide problems into smaller and smaller pieces until you’re able to deal with them completely and quickly.</div></li></ul><li><div>Prioritize visually. Put the most important thing at the top. When you’re done with that, the next thing on the list becomes the next most important thing. That way you’ll only have a single next most important thing to do at a time.</div></li><li><div>Big decisions are hard to make and hard to change. And once you make one, the tendency is to continue believing you made the right decision, even if you didn’t. You stop being objective.<br></div></li><li><div><strong>The more steam you put into going in one direction, the harder it is to change course.</strong></div></li><li><div>Make choices that are small enough that they’re effectively temporary. When you make tiny decisions, you can’t make big mistakes.</div></li><li><div><strong>Understanding is how you grow. You have to understand why something works or why something is the way it is.</strong></div></li><li><div><strong>Be influenced, but don’t steal.</strong></div></li><ul><li><div>How do you know if you’re copying someone? If someone else is doing the bulk of the work, you’re copying. Be influenced, but don’t steal.</div></li></ul><li><div><strong>Pour yourself into your product and everything around your product too: how you sell it, how you support it, how you explain it, and how you deliver it. Competitors can never copy the you in your product.</strong></div></li><li><div>If you think a competitor sucks, say so. When you do that, you’ll find that others who agree with you will rally to your side. Being the anti-______ is a great way to differentiate yourself and attract followers.<br></div></li><li><div>Having an enemy gives you a great story to tell customers, too. Taking a stand always stands out. People get stoked by conflict. They take sides. Passions are ignited. And that’s a good way to get people to take notice.</div></li><li><div>When you get suckered into an arms race, you wind up in a never-ending battle that costs you massive amounts of money, time, and drive. And it forces you to constantly be on the defensive, too. Defensive companies can’t think ahead; they can only think behind. They don’t lead; they follow.</div></li><li><div><strong>When you spend time worrying about someone else, you can’t spend that time improving yourself.</strong></div></li><li><div>Focus on competitors too much and you wind up diluting your own vision. Your chances of coming up with something fresh go way down when you keep feeding your brain other people’s ideas. You become reactionary instead of visionary. You wind up offering your competitor’s products with a different coat of paint.</div></li><li><div><strong>And you can’t beat someone who’s making the rules. You need to redefine the rules, not just build something slightly better.</strong></div></li><li><div>Start getting into the habit of saying no—even to many of your best ideas. Use the power of no to get your priorities straight. You rarely regret saying no. But you often wind up regretting saying yes.</div></li><li><div>Your goal is to make sure your product stays right for you. You’re the one who has to believe in it most. That way, you can say, “I think you’ll love it because I love it.”</div></li><li><div><strong>Scaring away new customers is worse than losing old customers.</strong></div></li><li><div>People and situations change. You can’t be everything to everyone. Companies need to be true to a type of customer more than a specific individual customer with changing needs.</div></li><li><div><strong>Being obscure is a great position to be in. Be happy you’re in the shadows. Use this time to make mistakes without the whole world hearing about them. Keep tweaking. Work out the kinks. Test random ideas. Try new things. No one knows you, so it’s no big deal if you mess up. Obscurity helps protect your ego and preserve your confidence.<br></strong></div></li><li><div>All companies have customers. Lucky companies have fans. But the most fortunate companies have audiences. An audience can be your secret weapon.</div></li><li><div>So build an audience. Speak, write, blog, tweet, make videos—whatever. Share information that’s valuable and you’ll slowly but surely build a loyal audience. Then when you need to get the word out, the right people will already be listening.</div></li><li><div>Teach and you’ll form a bond you just don’t get from traditional marketing tactics. Buying people’s attention with a magazine or online banner ad is one thing. Earning their loyalty by teaching them forms a whole different connection. They’ll trust you more. They’ll respect you more. Even if they don’t use your product, they can still be your fans.</div></li><li><div>There’s a beauty to imperfection. This is the essence of the Japanese principle of wabi-sabi. Wabi-sabi values character and uniqueness over a shiny facade. It teaches that cracks and scratches in things should be embraced. It’s also about simplicity. You strip things down and then use what you have.</div></li><li><div>Pare down to the essence, but don’t remove the poetry. Keep things clean and unencumbered but don’t sterilize.</div></li><li><div><strong>Do something meaningful. Be remarkable. Stand out. Be unforgettable.</strong></div></li><li><div>Make your product so good, so addictive, so “can’t miss” that giving customers a small, free taste makes them come back with cash in hand.</div></li><li><div>Marketing is something everyone in your company is doing 24/7/365.</div></li><li><div>Marketing isn’t just a few individual events. It’s the sum total of everything you do.</div></li><li><div><strong>Trade the dream of overnight success for slow, measured growth. It’s hard, but you have to be patient. You have to grind it out. You have to do it for a long time before the right people notice.</strong></div></li><li><div>If you lose someone, don’t replace him immediately. See how long you can get by without that person and that position. You’ll often discover you don’t need as many people as you think.</div></li><li><div>Similarly, if you lose someone, don’t replace him immediately. See how long you can get by without that person and that position. You’ll often discover</div></li><li><div><strong>Don’t hire for pleasure; hire to kill pain.<br></strong></div></li><li><div>The right time to hire is when there’s more work than you can handle for a sustained period of time. There should be things you can’t do anymore. You should notice the quality level slipping. That’s when you’re hurting. And that’s when it’s time to hire, not earlier.<br></div></li><li><div>You need an environment where everyone feels safe enough to be honest when things get tough. You need to know how far you can push someone. You need to know what people really mean when they say something.</div></li><li><div>There’s surprisingly little difference between a candidate with six months of experience and one with six years. The real difference comes from the individual’s dedication, personality, and intelligence.<br></div></li><li><div><strong>How long someone’s been doing it is overrated. What matters is how well they’ve been doing it.</strong><br></div></li><li><div><strong>With a small team, you need people who are going to do work, not delegate work. Everyone’s got to be producing. No one can be above the work.</strong></div></li><li><div>You want someone who’s capable of building something from scratch and seeing it through. Finding these people frees the rest of your team to work more and manage less.</div></li><li><div><strong>That’s because being a good writer is about more than writing. Clear writing is a sign of clear thinking. Great writers know how to communicate.</strong></div></li><li><div>When something goes wrong, someone is going to tell the story. You’ll be better off if it’s you. Otherwise, you create an opportunity for rumors, hearsay, and false information to spread.</div></li><li><div>People will respect you more if you are open, honest, public, and responsive during a crisis. Don’t hide behind spin or try to keep your bad news on the down low. You want your customers to be as informed as possible.</div></li><li><div>They’re used to being put on hold. They’re used to platitudes about “caring” that aren’t backed up.</div></li><li><div>The message should come from the top. The highest-ranking person available should take control in a forceful way.</div></li><li><div>Apologize the way a real person would and explain what happened in detail.</div></li><li><div>Everything you do before things go wrong matters far more than the actual words you use to apologize.</div></li><li><div>A good apology accepts responsibility. It has no conditional if phrase attached. It shows people that the buck stops with you. And then it provides real details about what happened and what you’re doing to prevent it from happening again. And it seeks a way to make things right.</div></li><li><div>Everyone on your team should be connected to your customers—maybe not every day, but at least a few times throughout the year.</div></li><li><div><strong>Culture is the byproduct of consistent behavior.</strong></div></li><li><div><strong>You can’t install a culture.</strong><br></div></li><li><div>Don’t make up problems you don’t have yet. It’s not a problem until it’s a real problem. Most of the things you worry about never happen anyway.</div></li><li><div>Rockstar environments develop out of trust, autonomy, and responsibility. They’re a result of giving people the privacy, workspace, and tools they deserve. Great environments show respect for the people who do the work and how they do it.</div></li><li><div><strong>When everything constantly needs approval, you create a culture of nonthinkers. You create a boss-versus-worker relationship that screams, “I don’t trust you.”</strong></div></li><li><div>Look at the costs and you quickly realize that failing to trust your employees is awfully expensive.<br></div></li><li><div><strong>Policies are organizational scar tissue. They are codified overreactions to situations that are unlikely to happen again. They are collective punishment for the misdeeds of an individual.</strong></div></li><li><div>There’s nothing wrong with sounding your own size. Being honest about who you are is smart business, too. Language is often your first impression—why start it off with a lie? Don’t be afraid to be you.</div></li><li><div>And when you’re writing, don’t think about all the people who may read your words. Think of one person. Then write for that one person. Writing for a mob leads to generalities and awkwardness.</div></li><li><div><strong>Write to be read, don’t write just to write.</strong></div></li><li><div>Need, must, can’t, easy, just, only, and fast. These words get in the way of healthy communication. They are red flags that introduce animosity, torpedo good discussions, and cause projects to be late.</div></li><li><div><strong>Very few things actually need to get done.</strong></div></li><li><div><strong>When you say “can’t,” you probably can.</strong></div></li><li><div><strong>We all have ideas. Ideas are immortal. They last forever. What doesn’t last forever is inspiration.</strong></div></li><li><div>Inspiration is a magical thing, a productivity multiplier, a motivator. But it won’t wait for you. Inspiration is a now thing. If it grabs you, grab it right back and put it to work.</div></li>
+      </ul>
+      </div> <!-- /.container -->
+      <footer>
+        <ul>
+          <li><a href="https://twitter.com/leroyalmeida23"><span class="darklighted">Twitter</span></a></li>
+          <li><a href="https://www.instagram.com/leroyalmeida/"><span class="darklighted">Instagram</span></a></li>
+          <li><a href="https://www.linkedin.com/in/leroyalmeida/"><span class="darklighted">LinkedIn</span></a></li>
+          <li><a href="https://medium.com/@leroyalmeida23"><span class="darklighted">Medium</span></a></li>
+          <li><a href="mailto:miguel.l.s.almeida@gmail.com"><span class="darklighted">Email</span></a></li>
+        </ul>
+      </footer>
+    </div>
+  </body>
+</html>
