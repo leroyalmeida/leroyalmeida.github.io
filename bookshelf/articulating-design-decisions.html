@@ -30,246 +30,660 @@
 
     <!-- link to html stylesheet -->
     <style amp-custom>
-      @font-face {
-        font-family: "cine";
-        font-display: swap;
-        src: url("/css/fonts/GT-Cinetype-Regular.woff") format("woff");
+
+      /*
+      * Skeleton V1.1
+      * Copyright 2011, Dave Gamache
+      * www.getskeleton.com
+      * Free to use under the MIT license.
+      * http://www.opensource.org/licenses/mit-license.php
+      * 8/17/2011
+      */
+
+
+      /* Table of Content
+      ==================================================
+      	#Reset & Basics
+      	#Basic Styles
+      	#Site Styles
+      	#Typography
+      	#Links
+      	#Lists
+      	#Images
+      	#Buttons
+      	#Tabs
+      	#Forms
+      	#Misc */
+
+
+      /* #Reset & Basics (Inspired by E. Meyers)
+      ================================================== */
+      	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+      		margin: 0;
+      		padding: 0;
+      		border: 0;
+      		font-size: 100%;
+      		font: inherit;
+      		vertical-align: baseline; }
+      	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+      		display: block; }
+      	body {
+      		line-height: 1; }
+      	ol, ul {
+      		list-style: none; }
+      	blockquote, q {
+      		quotes: none; }
+      	blockquote:before, blockquote:after,
+      	q:before, q:after {
+      		content: '';
+      		content: none; }
+      	table {
+      		border-collapse: collapse;
+      		border-spacing: 0; }
+
+
+      /* #Basic Styles
+      ================================================== */
+      	body {
+      		background: #fff;
+      		font: 13px cine, sans-serif;
+          line-height: 1.5;
+      		color: #0c0c0c;
+      		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+      		-webkit-text-size-adjust: 100%;
+       }
+
+
+      /* #Typography
+      ================================================== */
+      	h1, h2, h3, h4, h5, h6 {
+      		color: #000;
+      		font-family: cine, sans-serif;
+      		font-weight: normal; }
+      	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
+      	h1 { font-size: 40px; line-height: 50px; margin-bottom: 14px;}
+      	h2 { font-size: 30px; line-height: 40px; margin-bottom: 10px; }
+      	h3 { font-size: 24px; line-height: 34px; margin-bottom: 8px; }
+      	h4 { font-size: 16px; line-height: 30px; margin-bottom: 4px; }
+      	h5 { font-size: 14px; line-height: 24px; margin-bottom: 4px; }
+      	h6 { font-size: 12px; line-height: 21px; }
+      	.subheader { color: #0c0c0c; }
+
+      	p { margin: 0 0 20px 0; }
+      	p img { margin: 0; }
+      	p.lead { font-size: 21px; line-height: 27px; color: #0c0c0c;  }
+
+      	em { font-style: italic; }
+      	strong { font-weight: bold; color: #000; }
+      	small { font-size: 80%; }
+
+      /*	Blockquotes  */
+      	blockquote, blockquote p { font-size: 17px; line-height: 24px; color: #0c0c0c; font-style: italic; }
+      	blockquote { margin: 0 0 20px; padding: 9px 20px 0 19px; border-left: 1px solid #ddd; }
+      	blockquote cite { display: block; font-size: 12px; color: #555; }
+      	blockquote cite:before { content: "\2014 \0020"; }
+      	blockquote cite a, blockquote cite a:visited, blockquote cite a:visited { color: #555; }
+
+      	hr { border: solid #ddd; border-width: 1px 0 0; clear: both; margin: 10px 0 30px; height: 0; }
+
+
+      /* #Links
+      ================================================== */
+      	a, a:visited { color: #000; text-decoration: underline; outline: 0; }
+      	a:hover, a:focus { color: #003fff; }
+      	p a, p a:visited { line-height: inherit; }
+
+
+      /* #Lists
+      ================================================== */
+      ul, ol { margin-bottom: 20px; }
+      ul { list-style: disc outside; }
+      ol { list-style: decimal; }
+      ol, ul.square, ul.circle, ul.disc { margin-left: 30px; }
+      ul.square { list-style: square outside; }
+      ul.circle { list-style: circle outside; }
+      ul.disc { list-style: disc outside; }
+      ul ul, ul ol,
+      ol ol, ol ul { margin: 4px 0 5px 30px; }
+      ul ul li, ul ol li,
+      ol ol li, ol ul li { margin-bottom: 6px; }
+      li { line-height: 18px; margin-bottom: 12px; }
+      ul.large li { line-height: 21px; }
+      li p { line-height: 21px; }
+
+      /* #Images
+      ================================================== */
+
+      img.scale-with-grid {
+        max-width: 100%;
+        height: auto;
       }
 
-      @font-face {
-        font-family: "cine-mono";
-        font-display: swap;
-        src: url("/css/fonts/GT-Cinetype-Mono.woff") format("woff");
+      /*
+      * Skeleton V1.1
+      * Copyright 2011, Dave Gamache
+      * www.getskeleton.com
+      * Free to use under the MIT license.
+      * http://www.opensource.org/licenses/mit-license.php
+      * 8/17/2011
+      */
+
+
+      /* Table of Contents
+      ==================================================
+          #Base 960 Grid
+          #Tablet (Portrait)
+          #Mobile (Portrait)
+          #Mobile (Landscape)
+          #Clearing */
+
+
+
+      /* #Base 960 Grid
+      ================================================== */
+
+          .container                                  { position: relative; width: 960px; margin: 0 auto; padding: 0; }
+          .container .column,
+          .container .columns                         { float: left; display: inline; margin-left: 10px; margin-right: 10px; }
+          .row                                        { margin-bottom: 20px; }
+
+          /* Nested Column Classes */
+          .column.alpha, .columns.alpha               { margin-left: 0; }
+          .column.omega, .columns.omega               { margin-right: 0; }
+
+          /* Base Grid */
+          .container .one.column,
+          .container .one.columns                     { width: 40px;  }
+          .container .two.columns                     { width: 100px; }
+          .container .three.columns                   { width: 160px; }
+          .container .four.columns                    { width: 220px; }
+          .container .five.columns                    { width: 280px; }
+          .container .six.columns                     { width: 340px; }
+          .container .seven.columns                   { width: 400px; }
+          .container .eight.columns                   { width: 460px; }
+          .container .nine.columns                    { width: 520px; }
+          .container .ten.columns                     { width: 580px; }
+          .container .eleven.columns                  { width: 640px; }
+          .container .twelve.columns                  { width: 700px; }
+          .container .thirteen.columns                { width: 760px; }
+          .container .fourteen.columns                { width: 820px; }
+          .container .fifteen.columns                 { width: 880px; }
+          .container .sixteen.columns                 { width: 940px; }
+
+          .container .one-third.column                { width: 300px; }
+          .container .two-thirds.column               { width: 620px; }
+
+          /* Offsets */
+          .container .offset-by-one                   { padding-left: 60px;  }
+          .container .offset-by-two                   { padding-left: 120px; }
+          .container .offset-by-three                 { padding-left: 180px; }
+          .container .offset-by-four                  { padding-left: 240px; }
+          .container .offset-by-five                  { padding-left: 300px; }
+          .container .offset-by-six                   { padding-left: 360px; }
+          .container .offset-by-seven                 { padding-left: 420px; }
+          .container .offset-by-eight                 { padding-left: 480px; }
+          .container .offset-by-nine                  { padding-left: 540px; }
+          .container .offset-by-ten                   { padding-left: 600px; }
+          .container .offset-by-eleven                { padding-left: 660px; }
+          .container .offset-by-twelve                { padding-left: 720px; }
+          .container .offset-by-thirteen              { padding-left: 780px; }
+          .container .offset-by-fourteen              { padding-left: 840px; }
+          .container .offset-by-fifteen               { padding-left: 900px; }
+
+
+
+      /* #Tablet (Portrait)
+      ================================================== */
+
+          /* Note: Design for a width of 768px */
+
+          @media only screen and (min-width: 768px) and (max-width: 959px) {
+              .container                                  { width: 768px; }
+              .container .column,
+              .container .columns                         { margin-left: 10px; margin-right: 10px;  }
+              .column.alpha, .columns.alpha               { margin-left: 0; margin-right: 10px; }
+              .column.omega, .columns.omega               { margin-right: 0; margin-left: 10px; }
+              .alpha.omega                                { margin-left: 0; margin-right: 0; }
+
+              .container .one.column,
+              .container .one.columns                     { width: 28px; }
+              .container .two.columns                     { width: 76px; }
+              .container .three.columns                   { width: 124px; }
+              .container .four.columns                    { width: 172px; }
+              .container .five.columns                    { width: 220px; }
+              .container .six.columns                     { width: 268px; }
+              .container .seven.columns                   { width: 316px; }
+              .container .eight.columns                   { width: 364px; }
+              .container .nine.columns                    { width: 412px; }
+              .container .ten.columns                     { width: 460px; }
+              .container .eleven.columns                  { width: 508px; }
+              .container .twelve.columns                  { width: 556px; }
+              .container .thirteen.columns                { width: 604px; }
+              .container .fourteen.columns                { width: 652px; }
+              .container .fifteen.columns                 { width: 700px; }
+              .container .sixteen.columns                 { width: 748px; }
+
+              .container .one-third.column                { width: 236px; }
+              .container .two-thirds.column               { width: 492px; }
+
+              /* Offsets */
+              .container .offset-by-one                   { padding-left: 48px; }
+              .container .offset-by-two                   { padding-left: 96px; }
+              .container .offset-by-three                 { padding-left: 144px; }
+              .container .offset-by-four                  { padding-left: 192px; }
+              .container .offset-by-five                  { padding-left: 240px; }
+              .container .offset-by-six                   { padding-left: 288px; }
+              .container .offset-by-seven                 { padding-left: 336px; }
+              .container .offset-by-eight                 { padding-left: 384px; }
+              .container .offset-by-nine                  { padding-left: 432px; }
+              .container .offset-by-ten                   { padding-left: 480px; }
+              .container .offset-by-eleven                { padding-left: 528px; }
+              .container .offset-by-twelve                { padding-left: 576px; }
+              .container .offset-by-thirteen              { padding-left: 624px; }
+              .container .offset-by-fourteen              { padding-left: 672px; }
+              .container .offset-by-fifteen               { padding-left: 720px; }
+          }
+
+
+      /*  #Mobile (Portrait)
+      ================================================== */
+
+          /* Note: Design for a width of 320px */
+
+          @media only screen and (max-width: 767px) {
+              .container { width: 300px; }
+              .container .columns,
+              .container .column { margin: 0; }
+
+              .container .one.column,
+              .container .one.columns,
+              .container .two.columns,
+              .container .three.columns,
+              .container .four.columns,
+              .container .five.columns,
+              .container .six.columns,
+              .container .seven.columns,
+              .container .eight.columns,
+              .container .nine.columns,
+              .container .ten.columns,
+              .container .eleven.columns,
+              .container .twelve.columns,
+              .container .thirteen.columns,
+              .container .fourteen.columns,
+              .container .fifteen.columns,
+              .container .sixteen.columns,
+              .container .one-third.column,
+              .container .two-thirds.column  { width: 300px; }
+
+              /* Offsets */
+              .container .offset-by-one,
+              .container .offset-by-two,
+              .container .offset-by-three,
+              .container .offset-by-four,
+              .container .offset-by-five,
+              .container .offset-by-six,
+              .container .offset-by-seven,
+              .container .offset-by-eight,
+              .container .offset-by-nine,
+              .container .offset-by-ten,
+              .container .offset-by-eleven,
+              .container .offset-by-twelve,
+              .container .offset-by-thirteen,
+              .container .offset-by-fourteen,
+              .container .offset-by-fifteen { padding-left: 0; }
+
+          }
+
+
+      /* #Mobile (Landscape)
+      ================================================== */
+
+          /* Note: Design for a width of 480px */
+
+          @media only screen and (min-width: 480px) and (max-width: 767px) {
+              .container { width: 420px; }
+              .container .columns,
+              .container .column { margin: 0; }
+
+              .container .one.column,
+              .container .one.columns,
+              .container .two.columns,
+              .container .three.columns,
+              .container .four.columns,
+              .container .five.columns,
+              .container .six.columns,
+              .container .seven.columns,
+              .container .eight.columns,
+              .container .nine.columns,
+              .container .ten.columns,
+              .container .eleven.columns,
+              .container .twelve.columns,
+              .container .thirteen.columns,
+              .container .fourteen.columns,
+              .container .fifteen.columns,
+              .container .sixteen.columns,
+              .container .one-third.column,
+              .container .two-thirds.column { width: 420px; }
+          }
+
+
+      /* #Clearing
+      ================================================== */
+
+          /* Self Clearing Goodness */
+          .container:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+
+          /* Use clearfix class on parent to clear nested columns,
+          or wrap each row of columns in a <div class="row"> */
+          .clearfix:before,
+          .clearfix:after,
+          .row:before,
+          .row:after {
+            content: '\0020';
+            display: block;
+            overflow: hidden;
+            visibility: hidden;
+            width: 0;
+            height: 0; }
+          .row:after,
+          .clearfix:after {
+            clear: both; }
+          .row,
+          .clearfix {
+            zoom: 1; }
+
+          /* You can also use a <br class="clear" /> to clear columns */
+          .clear {
+            clear: both;
+            display: block;
+            overflow: hidden;
+            visibility: hidden;
+            width: 0;
+            height: 0;
+          }
+
+      /*
+      * Skeleton V1.1
+      * Copyright 2011, Dave Gamache
+      * www.getskeleton.com
+      * Free to use under the MIT license.
+      * http://www.opensource.org/licenses/mit-license.php
+      * 8/17/2011
+      */
+
+      /* Table of Content
+      ==================================================
+      	#Site Styles
+      	#Page Styles
+      	#Media Queries
+      	#Font-Face */
+
+      /* #Site Styles
+      ================================================== */
+
+      /* #Page Styles
+      ================================================== */
+
+      /* #Media Queries
+      ================================================== */
+
+      	/* Smaller than standard 960 (devices and browsers) */
+      	@media only screen and (max-width: 959px) {}
+
+      	/* Tablet Portrait size to standard 960 (devices and browsers) */
+      	@media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+      	/* All Mobile Sizes (devices and browser) */
+      	@media only screen and (max-width: 767px) {}
+
+      	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+      	@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+      	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+      	@media only screen and (max-width: 479px) {}
+
+
+      /* #Font-Face
+      ================================================== */
+      /* 	This is the proper syntax for an @font-face file
+      		Just create a "fonts" folder at the root,
+      		copy your FontName into code below and remove
+      		comment brackets */
+
+
+        @font-face {
+          font-family: "cine";
+          src: url("/css/fonts/GT-Cinetype-Regular.woff") format("woff");
+          font-weight: normal;
+          font-style: normal;
+          font-display: swap;
+        }
+
+        @font-face {
+          font-family: "cine-mono";
+          src: url("/css/fonts/GT-Cinetype-Mono.woff") format("woff");
+          font-weight: normal;
+          font-style: normal;
+          font-display: swap;
+        }
+
+        @font-face {
+          font-family: "cine";
+          src: url("/css/fonts/GT-Cinetype-Bold.woff") format("woff");
+          font-weight: bold;
+          font-style: normal;
+          font-display: swap;
+        }
+
+
+      .container {
+        padding-top: 64px;
       }
 
-      @font-face {
-        font-family: "cine";
-        font-display: swap;
-        src: url("/css/fonts/GT-Cinetype-Bold.woff") format("woff");
-        font-weight: bold;
+      ::selection {
+        background: #89a6ff;
+      }
+      ::-moz-selection {
+        background: #89a6ff;
       }
 
-      body {
-        background-color: #fff;
-        color: #000;
-        font-family: cine, sans-serif;
-      }
-
-      div.wrap {
-        display: block;
-        width: 80%;
-        max-width: 960px;
-        margin: 0 auto;
+      nav {
+        position: fixed;
+        width: 160px;
       }
 
       nav ul {
-        padding: 0 0 5em 0;
-        list-style: none;
+        float: left;
       }
 
       nav ul li {
-        display: inline;
-        margin-right: 20px;
-        margin-top: 8px;
-      }
-
-      footer ul {
-        padding: 40px 0;
-        list-style: none;
-      }
-
-      footer ul li {
         display: block;
-        margin-right: 20px;
-        margin-top: 8px;
+        margin-bottom: 8px;
       }
 
-      a {
-        font-family: cine, sans-serif;
+      nav ul li a,
+      nav ul li a:visited,
+      nav ul li a:active  {
+        font-size: 14px;
+        color: #000;
         text-decoration: none;
+        font-weight: bold;
+      }
+
+      nav ul li a:hover,
+      nav ul li a:focus {
         color: #302ECD;
       }
 
-      a:hover span{
-        background-size: 100% 100%;
+      li {
+        margin-bottom: 8px;
       }
 
-      h1 {
-        font-size: 3.375em;
+      #logo {
+        margin-bottom: 24px;
+        letter-spacing: -1px;
       }
 
-      h2 {
-        font-size: 2.25em;
-        font-weight: 500;
+      #logo a {
+        text-decoration: none;
       }
 
-      h3 {
-        font-size: 1.5em;
-        font-weight: 500;
+      .book-details {
+        margin-bottom: 32px;
       }
 
-      h4 {
-        font-size: 1.2em;
-        margin: 0;
+      .book-details  .clearfix {
+        clear: both;
       }
 
-      p, ul {
-        font-size: 1em;
-        line-height: 1.5em;
-        color: rgba(0,0,0,.84);;
+      .book-image {
+        float: left;
+        width: 25%;
       }
 
-      .darklighted {
-        background-image: linear-gradient(180deg, transparent 75%, #FFEE77 0);
-        background-size: 0% 100%;
-        -moz-transition: 0.3s cubic-bezier(0.5, 0.60, 0.360, 1) background;
-        -o-transition: 0.3s cubic-bezier(0.5, 0.60, 0.360, 1) background;
-        -ms-transition: 0.3s cubic-bezier(0.5, 0.60, 0.360, 1) background;
-        -webkit-transition: 0.3s cubic-bezier(0.5, 0.60, 0.360, 1) background;
-        transition: 0.3s cubic-bezier(0.5, 0.60, 0.360, 1) background;
-        background-repeat: no-repeat;
-        padding-bottom: 0;
+      .book-image img {
+        width: 90%;
       }
 
-      #header-line {
-        background: #FFEE77;
-        height: 4px;
-        width: 10%;
-        margin-top: 3em;
-        margin-bottom: 3em;
+      .book-details .details {
+        float: right;
+        width: 75%;
+      }
+      .book-details .detail .detail-category {
+        text-align: right;
+        vertical-align: top;
+        min-width: 105px;
+        font-weight: bold;
       }
 
-      #work-container {
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-flex-flow: row wrap;
+      .book-details .detail .detail-content {
+        vertical-align: top;
       }
 
-      .work-card{
-        box-shadow: 0 30px 70px rgba(64,52,52,.1);
-        -webkit-box-shadow: 0 30px 70px rgba(64,52,52,.1);
-        width: 100%;
-        height: auto;
-        position: relative;
-        margin: 8px;
-      }
-
-      .work-card:hover{
-        box-shadow: 0 30px 70px rgba(64,52,52,.2);
-        -webkit-box-shadow: 0 30px 70px rgba(64,52,52,.2);
-        position: relative;
-        top:-0.25em;
-      }
-
-      .work-card-image {
-        display: block;
-        box-sizing: border-box;
-        background: center center no-repeat;
-      }
-
-      .work-card-text {
-        padding: 1em;
-      }
-
-      .work-card-text p {
-        height:100px;
-      }
-
-      .work-card-text h3 {
-        margin: 0;
-      }
-
-      .work-card-text a::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-      }
-
-      .tags {
-        margin: 0;
-        padding: 0;
-      }
-
-      .tag {
-        color: rgba(0, 0, 0, 0.4);
-        background: rgba(244, 245, 249, 1);
-        padding: .25em .5em;
-        margin-top: .25em;
-        text-transform: uppercase;
-        font-family: cine-mono, monospace;
-        list-style: none;
-        display: inline-block;
-      }
-
-      .page {
-        width: 100%;
-        display: block;
-      }
-
-      .page-section {
-        padding-top: 2em;
-      }
-
-      .page-content ul{
-        padding-left: 1.5em;
-      }
-
-      .page-description {
-        width: 100%;
-      }
-
-      .page-content h3 {
-        padding-top: 1.5em;
-      }
-
-      .page-image {
-        -webkit-box-shadow: 0 15px 35px rgba(64,52,52,.1);
-        box-shadow: 0 15px 35px rgba(64,52,52,.1);
-        margin-bottom: 2em;
-      }
-
-      /* Medium devices (landscape tablets, 768px and up) */
-      @media only screen and (min-width: 768px) {
-        nav ul li, footer ul li {
-          display: inline-block;
-          margin-right: 20px;
-          margin-top: 16px;
+      /* Mobile */
+      @media only screen and (max-width: 767px) {
+        header h1 {
+          font-size: 32px;
+          line-height: 40px;
         }
 
-        .work-card{
-          width: 40%;
+        #logo {
+          text-align: center;
         }
 
-        .page {
-          -webkit-box-shadow: 0 30px 70px rgba(64,52,52,.1);
-          box-shadow: 0 30px 70px rgba(64,52,52,.1);
+
+        nav {
+          position: relative;
           width: 100%;
         }
 
-        .page-content {
-          padding: 2em;
+        nav ul {
+          width: 100%;
+          text-align: center;
         }
 
-        .page-description {
-          width: 80%;
+        nav ul li {
+          display: inline;
+          margin: 0 4px;
+        }
+
+        nav ul li a {
+          font-size: 16px;
         }
       }
 
-      /* Large devices (laptops/desktops, 992px and up) */
-      @media only screen and (min-width: 992px) {
-        .work-card{
-          width: 30%;
-        }
+      /* Mobile Landscape */
+      @media only screen and (min-width: 480px) and (max-width: 767px) {
+      }
 
-        .page {
-          width: 100%;
+      /* Non 960 */
+      @media only screen and (max-width: 959px) {
+          #logo {
+            margin-bottom: 16px;
+          }
+
+          nav .button {
+            padding: 8px 24px 16px;
+          }
+      }
+
+      /* iPad Portrait/Browser */
+      @media only screen and (min-width: 768px) and (max-width: 959px) {
+        nav {
+          width: 124px;
         }
+      }
+
+      /* Mobile/Browser */
+      @media only screen and (max-width: 767px) {}
+
+      /* Mobile Landscape/Browser */
+      @media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+      /* Anything smaller than standard 960 */
+      @media only screen and (max-width: 959px) {}
+
+
+      /* iPad Portrait Only */
+      @media only screen and (min-width: 768px) and (max-width: 959px) and (max-device-width: 1000px) {}
+
+      /* Mobile Only */
+      @media only screen and (max-width: 767px) and (max-device-width: 1000px) {}
+
+      /* Mobile Landscape Only */
+      @media only screen and (min-width: 480px) and (max-width: 767px) and (max-device-width: 1000px) {}
+
+      /* Anything smaller than standard 960 on a device */
+      @media only screen and (max-width: 959px) and (max-device-width: 1000px) {
+          .resize { display: none; }
+      }
+
+      table{
+        background:#fff;
+        border-collapse:collapse;
+        margin:5px 0 10px;
+      }
+
+      th, td{
+        padding:3px 10px;
+        text-align:left;
+        vertical-align:top;
+      }
+
+      tr.even td{
+        background:#f7f7f7;
+      }
+
+      th{
+        background:#edeff0;
+      }
+
+      .highlight {
+        margin-bottom: 20px;
+      }
+
+      div.highlight > pre {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding-left: 20px;
+        border-left: 1px solid #ccc;
+        overflow: auto;
+      }
+
+      code {
+        font-family: monospace;
+      }
+
+      p img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px;
+      }
+
+      sup {
+        vertical-align: super;
+        font-size: 8pt;
       }
     </style>
 
@@ -294,49 +708,61 @@
       }
       </script>
       </amp-analytics>
-    <div class="wrap">
-      <nav>
-        <ul>
-          <li><a href="/"><span class="darklighted">Home</span></a></li>
-          <li><a href="/bookshelf"><span class="darklighted">Bookshelf</span></a></li>
-        </ul>
-      </nav>
-      <div class="container">
-        <h2>Articulating Design Decisions: Communicate with Stakeholders, Keep Your Sanity, and Deliver the Best User Experience</h2>
-        <h3>by CHANGE_THIS_AUTHOR</h3>
-        <div id="header-line"></div>
-
-        <a href="https://amzn.to/38IwTd6">
-          <amp-img
-              class="page-image"
-              src="/images/covers/articulating-design-decisions.webp"
-              width="332"
-              height="500"
-              alt=""></amp-img>
-        </a>
-        <h4>Summary:</h4>
-        <ul>
-          <li>
-            <div>
-              Being articulate can make you successful in any area of life. The key to being articulate is to understand both the message you want to communicate and the response you want in return. The way to be articulate about design is to offer a message that communicates why we did what we did in order to help stakeholders see our reasoning. If we aren’t able to convince stakeholders that our solution is better, then either we aren’t doing a good job of communicating to them or we don’t understand their needs enough to create a design that solves the problem.
-            </div>
-          </li>
-        </ul>
-        <br>
-        <h4>Key takeaways:</h4>
+    <div class="container">
+      <div class="three columns">
+        <nav>
+          <h1 id="logo" >
+            <a href="/">Leroy Almeida</a>
+          </h1>
+          <ul>
+            <li><a href="/bookshelf">Bookshelf</a></li>
+            <li><a href="https://twitter.com/leroyalmeida23">Twitter</a></li>
+            <li><a href="https://www.linkedin.com/in/leroyalmeida/">LinkedIn</a></li>
+          </ul>
+        </nav>
+        &nbsp;
+      </div>
+      <div class="twelve columns offset-by-one">
+        <div class="book-details">
+          <div class="book-image">
+            <amp-img
+                class="page-image"
+                src="/images/covers/articulating-design-decisions.webp"
+                width="160"
+                height="240"
+                alt=""></amp-img>
+          </div>
+          <div class="details">
+            <table>
+              <tbody><tr class="detail">
+                <td class="detail-category">Title:</td>
+                <td class="detail-content">Articulating Design Decisions: Communicate with Stakeholders, Keep Your Sanity, and Deliver the Best User Experience</td>
+              </tr>
+              <tr class="detail">
+                <td class="detail-category">Author:</td>
+                <td class="detail-content">Tom Greever</td>
+              </tr>
+              <tr class="detail">
+                <td class="detail-category">Year Read:</td>
+                <td class="detail-content">2018</td>
+              </tr>
+              <tr class="detail">
+                <td class="detail-category">Buy This Book:</td>
+                <td class="detail-content"><a href="https://amzn.to/38IwTd6" target="_blank">Amazon</a></td>
+              </tr>
+              <tr class="detail">
+                <td class="detail-category">Summary</td>
+                <td class="detail-content">Being articulate can make you successful in any area of life. The key to being articulate is to understand both the message you want to communicate and the response you want in return. The way to be articulate about design is to offer a message that communicates why we did what we did in order to help stakeholders see our reasoning. If we aren’t able to convince stakeholders that our solution is better, then either we aren’t doing a good job of communicating to them or we don’t understand their needs enough to create a design that solves the problem.</td>
+              </tr>
+            </tbody></table>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <h4>Key Takeaways:</h4>
         <ul>
           <li><div>My designs had to do something for the client. They had to solve a problem. And if I couldn’t communicate that, I was bound to be wrong again.</div></li><li><div><strong>In life, there are no adults, only more experienced children.</strong></div></li><li><div>Being articulate can make you successful in any area of life. It can help you get almost anything you want: a job, a spouse, or a bargain. It is the ability to use your words, tone, and approach with people to communicate a specific message and elicit a specific response.</div></li><li><div><strong>The key to being articulate is to understand both the message you want to communicate and the response you want in return.</strong></div></li><li><div><strong>The way to be articulate about design is to offer a message that communicates why we did what we did in order to help stakeholders see our reasoning.</strong></div></li><li><div><strong>The difference between a good designer and a great designer is in their ability to not only solve the problem but also to articulate how their design solves it in a way that is compelling and fosters agreement.</strong></div></li><li><div>If we’re going to be successful at communicating with people about our designs we have to be able to answer these three questions about our work:</div></li><ul><li><div>What problem does it solve?</div></li><li><div>How does it affect the user?</div></li><ul><li><div>Make your best guess with the data you have, but then check your designs with real people and make notes.</div></li></ul><li><div>Why is it better than the alternative?</div></li><ul><li><div>Implicit in this question is that we know what the alternatives are, we’ve considered them or even tried them, and we’re prepared to explain why our solution is better.</div></li></ul></ul><li><div><strong>Your ability to be thoughtful about a problem and articulate any solution is more important than your ability to design the perfect solution every time.</strong></div></li><li><div><strong>Being articulate is more than just learning to say the right things, because nothing we say will have any affect if we don’t first consider the people that we’re communicating with.</strong></div></li><li><div>“I don’t like that man. I must get to know him better.” — Abraham Lincoln</div></li><li><div>The single most important thing you can do to improve communication between you and your stakeholders is to improve those relationships, earn trust, and establish a rapport that will speak more for you than the words that come out of your mouth in a meeting.</div></li><li><div>Most people tend to see other people’s behavior as a reflection of their particular personality traits whereas we see our own behavior as being primarily situational.</div></li><li><div>Finding ways to create connections with other people is an important step in understanding them.</div></li><li><div><strong>It’s often a best practice when working with executives to show both what’s possible in the short-term and what’s preferred for the future.</strong></div></li><li><div>We have to be better at asking people questions about themselves so they feel valued and are comfortable talking to us.</div></li><li><div>Offering people a glimpse into your own life is a great way to create a sense that they are just like you. No matter how they might respond to you in the moment, you may find that you have a lot in common.</div></li><li><div>So take the time to know a little bit about each person so that you can begin to see that their life doesn’t revolve around work. Don’t ask yes / no questions and don’t get so personal that you overstep normal social behavior. Keep it light, but let them tell you what they’re willing to tell.</div></li><li><div>If you find that you’re butting heads with the people in charge, it’s common that the stated goals or priorities for the project actually differ from the individual’s.</div></li><li><div><strong>Again, the point of asking questions is to get the other person to talk to you about what’s important to them. You just want to understand more about their perspective so that you have a better sense for how to respond to them, when needed.</strong> That’s how you create an awareness of the other person’s viewpoint and set yourself up for a better relationship, better communication, and better success in creating the best user experience.</div></li><li><div>The overall lesson is this: communication is much easier in good relationships. Good relationships take work.</div></li><li><div>Having good relationships really does make our designs more acceptable to the people that matter.</div></li><li><div>For each person, ask yourself:</div></li><ul><li><div>What do they care about the most?</div></li><li><div>What are their own personal goals for this design?</div></li><li><div>What do I already know they want or don’t want?</div></li></ul><li><div>People get invited to meetings because they have a unique perspective on our product even if they aren’t directly involved. In those cases, you have to decide how important their input is and engage them at an appropriate level.</div></li><li><div>Once you’ve considered all the people involved, write down what you expect they will object to along with your own counter points. Until you get really good at responding off-the-cuff, it can be difficult in the moment to remember how you were planning to respond. So write them down, make a list, and read and re-read that list over and over until you’re fully inundated with your best guess about how people will react to your designs.</div></li><li><div><strong>If we aren’t able to convince stakeholders that our solution is better, then either we aren’t doing a good job of communicating to them or we don’t understand their needs enough to create a design that solves the problem.</strong></div></li><li><div><strong>Data is very powerful (almost too powerful) and using it all the time can create an environment where no one wants to suggest anything different. You may stifle the conversation before it even gets started. So be prepared to defend your decisions with data, but don’t use it unless it’s necessary to make your case.</strong></div></li><li><div>During the course of working with stakeholders, your job is to figure out what makes them tick, what things they care about, and then come up with a plan for how you’ll respond to them in the moment. Writing down anticipated reactions, bringing alternative designs, and having data available are important parts of this process.</div></li><li><div>In design meetings, we want to be sure there are other people who are prepared to ask good questions, point out specific important elements, or otherwise support our proposed designs. We may not remember everything that needs to be communicated, so a ringer can jump in to cover anything we forgot. They can ask you a question that sets you up to provide a well-articulated answer. Sometimes the ringer will just reinforce what you already said.</div></li><li><div>I recommend being forthright with people about your need for support. It’s ok to ask people to be your ringer. It may seem underhanded, but the purpose is not to deceive people or bowl them over with unauthentic enthusiasm. The purpose of getting people to back you up is to build a case to demonstrate that other people agree with you.</div></li><li><div>Have them help you write down your justification for the decision so that everyone can speak with one voice about your rationale.</div></li><li><div><strong>Always remember that other people can help you accomplish what you want. Learn to build into those relationships and allow them to add value to the conversation. Find the people who can help you accomplish your vision, and set them up for success right alongside you.</strong></div></li><li><div>Even the smallest amount of preparation will help you know what to talk about. Always make a list.</div></li><li><div>The more you practice going through the content, the less your brain will have to think about the agenda and the more mental capacity you’ll have to be focused on being articulate and responding. You commit it to memory. We want to reduce our own cognitive load to the point that holding the meeting is a breeze. But also, design decisions can be particularly difficult to understand and there may be underlying reasons for your choices that you haven’t even uncovered yet.</div></li><li><div><strong>Practicing for a meeting is the usability test of being articulate</strong>: you get to run through everything and make sure it all works as expected. If not, there’s still time to tweak it before the meeting starts. So regardless of the importance, always practice your meetings.</div></li><li><div><strong>Design is really only good when it solves a problem.</strong></div></li><li><div><strong>Two things together—solving a problem and making it easy for users—will help us create truly great experiences. This is what makes a good design good.</strong></div></li><li><div>So there are three things that every UX project (or design) needs to be successful:</div></li><ul><li><div>It solves a problem</div></li><li><div>It’s easy for users</div></li><li><div>It’s supported by everyone</div></li></ul><li><div><strong>Empathy drives behavior. It is so much more than just understanding another person or seeing their perspective. It’s the ability to actually share in their feelings and experience so much that you have to help them.</strong> To get to know their viewpoint so intimately, that we feel their pain.</div></li><li><div>Causes us to care so much about the challenges of another person that we’re driven to action. Empathy is the ultimate form of understanding.</div></li><li><div>Depending on where the person sits in relation to you, it can be difficult to get to know them well enough to understand them and see their perspective. But our job is to identify these people and seek to understand them as best as we can.</div></li><ul><li><div>Team Influencers: the people on your direct team</div></li><li><div>Executive Influencers: the people who oversee your project</div></li><li><div>External Influencers: people outside of your team</div></li></ul><li><div>Because they value…, you should focus on…</div></li><ul><li><div>Because they value concise information, you should focus one etting to the point</div></li><li><div>Because they value growing the business, you should focus on accomplishing goals</div></li><li><div>Because they value solving problems, you should focus on describing the solution</div></li><li><div>Because they value building it once and minimizing re-work, you should focus on maximizing existing scope and re-using UI patterns</div></li><li><div>Because they value understanding all of the use cases up-front, you should focus on understanding the effort involved</div></li><li><div>Because they value efficiency and maintainable code, you should focus on communicating the value for the users or business&nbsp;</div></li><li><div>Because the focus on innovation and creativity, you should focus on finding new approaches to solving problems</div></li><li><div>Because the focus on meeting business goals, you should focus on connecting your designs to the business objectives</div></li><li><div>Because the focus on deadlines and staying on schedule, you should focus on&nbsp;possibly efficiencies of reusing design elements</div></li><li><div>Because the focus on managing scope and budgets, you should focus on managing expectations on any changes</div></li><li><div>Because the focus on keeping everyone in the loop, you should focus on updating them on your progress</div></li></ul><ul><li><div>Because the focus on brand consistency across the organization, you should focus on creating styles that match the brand or communicating any differences</div></li><li><div>Because the focus on consistent voice in copy and messaging, you should focus on making sure the copy you use is already approved or if it deviates, why</div></li><li><div>Because the focus on creating a product that provides value to customer and is sell-able, you should focus on specific value proposition in features or micro-interactions</div></li></ul><li><div><strong>The best advice I can give you is to tell you to just be yourself around people.</strong></div></li><li><div><strong>It’s also important to do things for other people to make them feel valued.</strong> Pretty much anything you do that is outside of the usual way your team communicates and relates to one another will make an impression on people that you care.</div></li><li><div>“Before anything else, preparation is the key to success.” – Alexander Graham Bell</div></li><li><div>Our goal should be to remove as much of the clutter, options, and roadblocks as possible so that their brains are freed to focus on the primary task of the meeting: getting approval for our designs.</div></li><li><div>Our goal is not to just have a meeting, but to make the meeting productive, valuable, and successful.</div></li><li><div>it’s worth the extra effort to discover and remove distractions for the sake of keeping the project moving than sacrificing the time and effort involved in bringing a conversation back to it’s core purpose.</div></li><li><div>Personality + role / values + observed reactions = predictable behavior!</div></li><li><div>Think about their particular role and make your best guess about how their viewpoint can help you. If you’re not sure, ask them directly what they hope to get out of it or how they see themselves contributing. It’s appropriate for you to tell people that you want to be sure you’re making the most of everyone’s time. Understanding their involvement helps you structure the agenda and sets you up to anticipate how things will play out.</div></li><li><div>What we really need is for them to agree with our solution, even after considering all of the alternatives. We can’t protect them from all the bad ideas that might be suggested. Instead, we arm them with the knowledge and language for why our decisions are best.</div></li><li><div>If you come to the meeting with no alternatives, your stakeholders are going to search the internet from their phone and propose the first option they find.</div></li><li><div><strong>I don’t recommend mentioning or pulling out the data unless you have to. Using data to bolster your position is helpful when people disagree or when they react to your designs with skepticism.<br></strong></div></li><li><div>One of the best things you can do to make sure that you’re articulate and that your stakeholders agree with your recommendations is to get other people to support you in your decisions. That is, you want to be sure there are other people in the room who will back you up, help you make your case, and tip the scales when it comes to the final decision.</div></li><li><div>It’s also necessary for you to seek out other people in the organization who have a stake in your project and may have some influence, clout, or reputation that you can lean on.</div></li><li><div>Most people understand the value of having an agenda for a meeting and it cannot be underestimated when meeting with stakeholders about designs either.</div></li><li><div>“No man ever listened himself out of a job.” – Calvin Coolidge</div></li><li><div><strong>The whole purpose of careful listening is to make sure we understand our stakeholders before responding.</strong></div></li><li><div><strong>Proper and articulate response requires that we use implicit skills like: listening without interrupting, hearing what they’re not saying, uncovering the actual problem they’re trying to solve, and then pausing before moving</strong></div></li><li><div>A proper and articulate response requires that we use implicit skills like: listening without interrupting, hearing what they’re not saying, uncovering the actual problem they’re trying to solve, and then pausing before moving on.</div></li><li><div>Implicit listening is applying skill in understanding what people are saying without outwardly doing anything specific to demonstrate that we hear them.</div></li><li><div>An implicit listener is one who can quickly organize what’s being said and derive meaning without any other external clues or further information.</div></li><li><div>They will make themselves more clear - as people talk, they naturally repeat themselves and rephrase what they mean in an effort to communicate clearly.</div></li><li><div>It gives them confidence that they were understood - the more people are able to say what they need to get a point across, the more confidence they’ll have that they did just that.</div></li><li><div>It demonstrates that you value what they’re saying - no matter what you say in response, allowing stakeholders to talk as much as they want communicates to them that you appreciate what they’re saying and you’re listening to every word.</div></li><li><div>What’s the subtext? What is the elephant in the room that no one really wants to mention? Often what people say and what they mean can be two completely different things.</div></li><li><div>Any time someone uses the word ‘interesting’ in a response to your designs, that’s a big clue that they disagree with your approach.</div></li><li><div>As I’ve mentioned before, there are other factors going on in every meeting that we simply don’t know about.</div></li><li><div>I couldn’t control how she choose to respond to my work. We have no choice but to hear what they’re not saying if we have any hope of knowing the best way to respond.</div></li><li><div>I should have dived deeper to understand his lack of enthusiasm before blindly moving forward on my own. These kinds of subtle cues are easy to miss and require a keen understanding of our stakeholders.</div></li><li><div><strong>While you’re listening to your stakeholder’s feedback, be sure to uncover the real problem they’re trying to solve. Often, our stakeholders see a need that isn’t being met with our designs and they may express it with a suggestion that isn’t the right solution.</strong></div></li><li><div>We have to be adept at listening to their solutions and connecting the dots in order to uncover the real problem.</div></li><li><div>“The right word may be effective, but no word was ever as effective as a rightly timed pause.” – Mark Twain</div></li><li><div>Pause</div></li><ul><li><div>First, you want to be sure they’re actually done talking. Make sure they haven’t just paused themselves. Sometimes people stop and then immediately think of something else or a better way of saying it. If there’s a better way for them to give you their feedback, you will want to hear it because people don’t always express it correctly the first time. Give them a chance to be articulate themselves.<br></div></li><li><div>Second, it gives you a chance to let the air settle; to let their words sit on everyone’s ears for just a moment. You’re letting the conversation simmer briefly, which gives you a chance to very quickly consider how to respond. You’re not jumping directly into a defensive posture, but instead taking a moment to consider what was said and form an appropriate response.<br></div></li><li><div>The third (and most important) benefit to pausing is that you communicate to the other person that what they said is important enough for you to really consider it and think about it. Since you didn’t jump directly to a conclusion that might conflict with theirs, you create a sense that what they just said was really valuable.</div></li></ul><li><div>All of these implicit listening skills should establish a framework for how you see and hear your stakeholder’s feedback. As you listen to them, you’re making a conscious, non-verbal effort to truly understand what they mean. These internalized activities allow you to better organize your thoughts so that you can find the most effective response.</div></li><li><div><strong>One of the best ways to listen to them is to write down what they say. Record everything, especially the items that need to be followed up on.</strong></div></li><li><div>Lack of notes is frequently responsible for miscommunications, repeat conversations, and changing requirements on many projects.</div></li><li><div><strong>When it comes to design, notes are critical because opinions and ideas about the right decision will change over time.</strong></div></li><li><div>Verbally saying something like, “Oh, I see your point. Let me write that down” earns trust and shows that you’re a safe person to talk to.</div></li><li><div>Taking notes is more than just remembering what was decided. It has intrinsic value above and beyond what you will actually do with the notes after the fact.</div></li><li><div>The best way to take notes is to ask another person to do it for you. This frees up your brain to be focused on listening and being articulate. If you’re trying to write down what people are saying, you’ll miss important parts of the conversation because things can move quickly.</div></li><li><div>Accessible: store your notes in a place that everyone can access.</div></li><li><div>Organized: Write your notes within each agenda item so that it stays connected to the design in question.</div></li><li><div>Specific: Write down the names of people who make the suggestion you’re noting, as well as the names of people who agree or disagree.</div></li><li><div>Definitive: When a decision is made, make that explicitly clear so that you can find it later if you need to remember it: “Final: drop down control should be a popover menu.”</div></li><li><div>Definitive: When a decision is made, make that explicitly clear so that you can find it later if you need to remember it:<br></div></li><li><div>Actionable: Be sure that nearly every item has a follow up action or person associated with it.<br></div></li><li><div>Referenced: Add links, urls, screen shots, or other reference material to your notes so that it’s easier to communicate what the point of the discussion was.</div></li><li><div>Forward-Looking: Aside from the agenda items that you need to cover right away, there are always other design decisions that will come up during the course of the conversation. You need a place in your notes to add items to be discussed at the next meeting, or in a different context.</div></li><li><div>The main purpose of asking questions is to get your stakeholders to explain what they mean so that you can be sure you understand.</div></li><ul><li><div>What problem are you trying to solve?<br></div></li><li><div>What are the advantages of doing it this way?</div></li><li><div>What do you suggest?</div></li><li><div>How will this affect our goals?</div></li><ul><li><div>Stakeholders often have our goals in mind, but they don’t always realize how what they’re saying is connected to them. You want them to directly connect your designs to the goals every time.</div></li></ul><li><div>What are the advantages of doing it this way?</div></li><ul><li><div>This gives them a neutral way of explaining why they think their suggestion is better without explicitly labeling one as better than the other.</div></li></ul><li><div>What do you suggest?</div></li><ul><li><div>Often stakeholders will say something needs to change without any idea about how that will be done.</div></li></ul><li><div>Where have you seen this before?</div></li><ul><li><div>Asking for reference material (other apps and websites) is one of the best ways of seeing their perspective</div></li></ul></ul><li><div><strong>Asking good questions shows that you’re listening. By repeating back to them what they said in your words and in the form of a question, you’re reinforcing that you understand. This creates more trust. The other person feels respected, valued, and understood.</strong><br></div></li><li><div>“The beginning of wisdom is the definition of terms.” — Socrates</div></li><li><div>The words we choose to talk about our designs can make or break the conversation. If we aren’t using the same vocabulary to talk about our work with other people, there will inevitably be misunderstanding, confusion, and missed expectations along the way.</div></li><li><div>Help our clients move from talking about what they like and don’t like (which are their preferences) to what works and what doesn’t (which is the effectiveness of the design).</div></li><li><div><strong>What we should do is re-phrase their response in the form of a question that forces them to talk about it in a way that’s more helpful. If you’re not sure, ask them directly. Encourage them to tell you what doesn’t work about your design.</strong> This means that you, too, must work hard to strike the word ‘like’ from your vocabulary and always place an emphasis on the utility and function of the design.</div></li><li><div>Getting our stakeholders to move from discussing their preference to describing the function of the application is a key skill in the process of articulating design decisions.</div></li><li><div>Leading with the phrase “What I hear you saying…” is the best approach to accomplishing this because it emphasizes that we are listening to them, understand what they said, and will now confirm it by expressing it in our own words. This is an opportunity to bridge the language gap: take what they said in their own words and translate it into something that will be more helpful in the design decision-making process.</div></li><li><div>We cannot communicate effectively with them unless we listen to them and fully understand what they’re saying.</div></li><li><div>There are several implicit ways we listen, such as letting them talk as much as they need to, trying to hear what isn’t being said, and working to uncover the real problem they’re addressing. After that, pause for a few seconds to be sure they’ve finished talking.</div></li><li><div>There are also several explicit skills we can apply to be better listeners of design feedback. We take good notes by writing down what was decided. We ask questions to clarify and tune our understanding. And we repeat and rephrase what stakeholders say to help establish a shared vocabulary and common ground.</div></li><li><div>No matter what we may think, we don’t usually have the final say when it comes to our designs. We have a significant amount of input into the process, but at the end of the day there is always someone else who can overrule us.</div></li><li><div><strong>When we recognize that we don’t have ultimate control over the final outcome, we make a mental shift that exposes just how much we need to communicate well in order to maintain the sanity of the user experience.</strong></div></li><li><div><strong>Your work is not your own.</strong></div></li><li><div><strong>You can’t control everything.</strong></div></li><li><div><strong>You need help from other people to create the best experience.</strong></div></li><li><div>We have to separate ourselves from our own ideas and ambitions in a way that allows other people to inform the project without being blind to their suggestions. We can’t think that we’re the only ones with good ideas, that we have all the best solutions, or that there is only one way (our way) to accomplish the goals.</div></li><li><div>There’s a delicate balance between believing that we have the best ideas, while also recognizing that they aren’t the only ideas.</div></li><li><div><strong>Any time you think that you’re right and they’re wrong, you should be cautious. It doesn’t mean you have to agree with them, it only means that you may need to re-evaluate the situation.</strong></div></li><li><div>There is no better way to foster this atmosphere of collaboration than to always lead with a YES.</div></li><li><div>We have learned that if we want to be involved in innovative and creative new things, we have to ‘lead with a yes.’”<br></div></li><li><div>“When someone offers you a challenge, don’t think of all the reasons why you can’t do it. Instead, say, ‘Yes!’ Then figure out how you’ll get it done.”</div></li><li><div>It’s a common problem for people to offer ideas without any responsibility. The more ownership you propose, the less likely you are to encounter resistance. It’s too easy for people on the outside to criticize what they have a limited view of. If you give people the chance to be part of the solution, they will either take you up on it or they will decline and retract their suggestion. In either case, you’ve remained positive and helped them to see that their opinions are valuable and appreciated.</div></li><li><div>As you develop your yes reflex, remember that it:</div></li><ul><li><div>Reinforces that you’re all on the same team and facilitates collaboration</div></li><li><div>Allows you to be open to new ideas, even if you’re not sure how it will work</div></li><li><div>Keeps the conversation open-ended, giving you time to find the appropriate response</div></li><li><div>Gives you the opportunity to consider ideas in light of limitations and resources</div></li><li><div>Shifts responsibility for new ideas onto others, allowing them to participate in the solution</div></li><li><div>Builds trust and confidence with stakeholders that you value their input</div></li></ul><li><div>The most useful tool you have in being charming is confidence. If you have confidence in yourself and your designs, people will trust you and give you the freedom to decide. When you lack confidence, you convey uncertainty, which leads stakeholders to question your solution.</div></li><li><div><strong>Confidence is a self-fulfilling prophecy.</strong> For example, children who think of themselves as the smartest in the room get the best grades. The same study found confidence had more to do with lifetime earnings than IQ. In short, it’s better to be confident than smart.</div></li><li><div>“Focus instead on making yourself laugh. Be self-amusing and have fun first, then look to share that enjoyment… By focusing on having a good time yourself you’ll generate a fun, positive attitude that will infect those around you and make you more charming.”</div></li><li><div>Humor is a great way to be charming, but that the goal is not to make other people laugh. “Focus instead on making yourself laugh. Be self-amusing and have fun first, then look to share that enjoyment… By focusing on having a good time yourself you’ll generate a fun, positive attitude that will infect those around you and make you more charming.”<br></div></li><li><div>When we align ourselves with the needs of others, we create a connection that can overcome any obstacles to our communication. Harbinger says this is about making someone feel as if they are the most important person in the world.</div></li><li><div><strong>Don’t start any sentence with “From a design perspective…” because that’s usually just another way of saying “from my perspective.” Remember, we don’t care about your perspective; we care about the user’s perspective.</strong></div></li><li><div>Even directly telling them you disagree can be a flash point for the conversation. If you need to disagree, find ways to communicate that disagreement as an alternate idea or a different perspective.<br></div></li><li><div><strong>Don’t talk about what you like or don’t like but instead focus on what works and what doesn’t work. Remember, our interest is in the usability and effectiveness of the application, not our own personal preferences.</strong></div></li><li><div>Finally, avoid using industry-specific jargon as much as possible. Instead, find words that the average person can understand to ensure that we’re all on the same page.<br></div></li><li><div>“Thanks for sharing your thoughts with us about this project. Your insights are really valuable and I appreciate you going through all that with us. I’m going to go back through all of your points so we can discuss them, but I want you to know that some of the things we decided on have an explanation that I think you’ll agree with once we start talking about it.”</div></li><li><div>“Thank you for sharing your feedback. I appreciate the opportunity to go through all of this with you because it’s important for us to be on the same page. I’d like to go back over everything you said because there are some important points where you need to be aware of our decisions in more detail and it will help you to see where we’re coming from.”</div></li><ul><li><div><strong>Thank</strong> - The first thing you should always do is thank them for the feedback they just provided.</div></li><li><div><strong>Repeat</strong> - Next, briefly summarize what they just said if you haven’t already.</div></li><li><div><strong>Prepare</strong> - Lastly, tell them that you’re about to respond to their feedback.</div></li></ul><li><div><strong>The practice of telling someone what they should or are likely to think is actually very effective.</strong></div></li><ul><li><div>“Thanks for pointing out the differences between the existing app and our new designs. You’re right that there are some important things we should consider and I want you to know we put a lot of thought into how we designed it, so I’d like to explain to you why we did what we did with the grid views.”</div></li><li><div>“Thanks for being upfront that you’re concerned about our implementation of the cart and checkout flow. I’m going to address each of your points because we had some very specific reasons for doing it this way that I want you to be aware of. I think you’ll agree that this is going to increase conversion once you understand our thought process.”</div></li><li><div>“Thanks for your viewpoint on the homepage. You’ve definitely given a lot of great feedback and I’d like to go through it all, if that’s ok. Our thinking about the layout had more to do with our long-term vision and some other initiatives that we expect to see down the road, so it’s important for you to know why we approached it in this way.”</div></li></ul><li><div><strong>Getting in the right frame of mind</strong> is about:</div></li><ul><li><div>Giving up control of the outcome so that we can allow other people to provide feedback on the project</div></li><li><div>Checking our ego at the door so that we can be open to other people’s ideas</div></li><li><div>Leading with a yes so that we create an atmosphere of agreement and cooperation</div></li><li><div>Learning to apply charm so that we can win people over with our own unique personality</div></li><li><div>Changing our vocabulary so that we avoid tainting our response with potential miscommunications</div></li><li><div>Forming a transitional phrase so that we can set the stage for what we’re about to say</div></li></ul><li><div>“Strategy is buying a bottle of fine wine when you take a lady out for dinner. Tactics is getting her to drink it.” – Frank Muir</div></li><li><div><strong>Objective → Strategy → Tactics → Messaging → Response</strong></div></li><li><div>At a high level, crafting a good response requires that we:</div></li><ul><li><div><strong>Define our strategy for responding.</strong> What will we say to make a compelling case?</div></li><li><div><strong>Employ tactics that will help us get there.</strong> How will we deliver the strategy?</div></li><li><div><strong>Identify common, relevant responses.</strong> What key messages are important in our context?</div></li><li><div><strong>Apply a common framework and ask for agreement.</strong> What do we want our stakeholders to do next?</div></li></ul><li><div><strong>Our first strategy for responding is to appeal to a nobler motive. Every time you respond to design feedback, you should always attempt to attach your decisions to a goal, metric, or other problem that you’re solving.</strong></div></li><ul><li><div>Imparts intelligence</div></li><li><div>Demonstrates intentionality</div></li><li><div>Expresses confidence</div></li><li><div>Shows respect</div></li></ul><li><div>The best way I know to practice being conscious of your decisions is to write them down.</div></li><li><div><strong>Our second strategy is to explicitly represent the user.</strong></div></li><ul><li><div>We want to be sure that our response includes examples, data, alternatives, comparisons, and any other tangible or visual demonstration of why our designs are the best choice for both the user and the business. Being able to keep that front-and-center is critical.</div></li></ul><li><div>Demonstrating your designs is the most important strategy you can have for articulating design decisions.</div></li><ul><li><div>I suggest five tactics to shape our response:</div></li><ul><li><div><strong>Show a comparison</strong></div></li><ul><li><div>Comparing the two side-by-side in the same view is a better technique because it allows everyone to see what was changed and plainly tells a story about which design solves the problem in the best way.</div></li></ul><li><div><strong>Propose an alternative</strong></div></li><ul><li><div>Track record of being able to gracefully propose alternatives will win you the respect of your stakeholders as a trusted partner who is always interested in making their product the best it can possibly be.</div></li></ul><li><div><strong>Give them a choice</strong></div></li><ul><li><div>Third tactic is to give them a choice between something you know they want and the new thing they’re suggesting. You want to present their suggestion alongside what they’ll lose if we go down that path. They have to make a sacrifice. This is very effective when the thing they’ll lose is more important than what they propose.</div></li></ul><li><div><strong>Ask others to weigh in</strong></div></li><ul><li><div><strong>Any time you can allow someone else to agree with you in a way that makes it their decision, do it that way.</strong></div></li><ul><li><div>When other people are able to agree with you (rather than directly disagreeing with the client), you maintain a positive atmosphere rather than a flat out accusation that one person is wrong. You’re deflecting the disagreement with the stakeholder by emphasizing the agreement from other people.</div></li></ul><li><div>Ask directly: call on one person by name and ask them directly what they think. If you ask the entire group for feedback, few people will speak out in disagreement with the other person.</div></li><li><div>Remain neutral: don’t ask for their feedback in a way that reveals your true feelings about the stakeholder’s suggestion. Instead, ask open ended (not yes/no) questions using language like opinion, viewpoint, or perspective.</div></li></ul><li><div><strong>Postpone the decision</strong></div></li><ul><li><div>Often, hasty decisions that seem like a good idea in the moment turn out to be poor choices when actually implemented. Build in some space for you to re-group and consider the best approach, even when you agree with what’s being proposed.</div></li></ul></ul></ul><ul><li><div>There is not one way to apply these tactics. You might choose to use one or all of them, depending on the situation. Your job is to decide which of these methods will create the best case for your designs and help you get agreement.</div></li></ul><li><div>Person’s suggestion snow balled into brainstorm and morphed into a solution that was so far removed from the problem it was hardly recognizable. That’s my opinion, of course, but while I was watching the conversation play out, I saw the inevitable conclusion</div></li><li><div>“He who wants to persuade should put his trust not in the right argument, but in the right word.” – Joseph Conrad</div></li><li><div>It can be difficult to know with certainty how a particular design will affect your goals, especially for smaller interactions that may not affect the overall use of the entire application. <strong>The point here is not to know with certainty. If we always knew with certainty what would definitely accomplish our goals, then we wouldn’t need to even meet. So have confidence that your experience leads you to believe with all reasonable certainty that this design is at least one step of a larger approach that will take you where you need to go.</strong></div></li><li><div>“Helps achieve a goal”</div></li><ul><li><div>Stakeholders always appreciate connecting your solution to the goals of the business. This is a solid way to make the case for your design through appealing to a nobler motive. This may very well be your answer to the question, “What problem does this solve?” because usually the problems we want to solve with the design are the same as the goals of the project or business overall.</div></li></ul><li><div>“Facilitates a primary use case”</div></li><ul><li><div>This may be the most obvious and common explanation for any design decision because everything we do is about designing around a particular use case, user story, or feature set.</div></li></ul><li><div>Pointing out which use cases are benefitted from the decision is a good way of demonstrating your thought process</div></li><li><div>Optimize the primary use case by minimizing and limiting secondary or edge cases.</div></li><li><div>One of the best ways to make a case for your designs is to directly connect it to the needs of the business. Three of the most common responses for appealing to the business are:</div></li><ul><li><div>“Helps achieve a goal”</div></li><li><div>“Facilitates a primary use case”</div></li><li><div>“Establishes branding"</div></li></ul><li><div>Often we have design reasons for why we did what we did. I find there are three common ways of describing my decision for design reasons:</div></li><ul><li><div>“Uses a common design pattern”</div></li><li><div>“Draws the user’s attention”</div></li><li><div>“Creates a flow for the user</div></li></ul><li><div>Design patterns are meant to provide consistency and set a user’s expectations about what interactions will take place. Beyond that, it’s fruitless to argue over which one works without solid research to suggest otherwise.</div></li><li><div>It’s important that we help our stakeholders understand the relationships between design elements and user action so they can see the rationale behind our decisions. We have to communicate that we’re not only putting things on the page in a way that looks good but that we’re trying to draw the user into the application and lead them to action with an appropriate placement of design elements. Our decisions are based on getting the user to act, which is the ultimate purpose of any website or app.</div></li><li><div>“Creates a flow for the user”</div></li><ul><li><div>A lot of time and effort goes into creating user flows. We can spend days or weeks with a wall full of post-its trying to find the best path for our users to navigate the application. That hierarchy gets expressed in our work and influences how we structure the entire design.</div></li></ul><li><div>Using data, user testing, and other research is perhaps the most compelling justification for our design decisions. I’ve found three common responses useful when research is used to inform our choices:</div></li><ul><li><div>“Validated by data”</div></li><li><div>“Revealed in user testing”</div></li><li><div>“Supported by other research”</div></li></ul><li><div><strong>“Supported by data” Using data to support your design decisions is the golden ticket to getting agreement because it is the most scientific way of demonstrating that your designs are having the intended effect.</strong></div></li><li><div>There are two types of data we can use to talk about our decisions. The first is existing data: data we already have on-hand that we can use to help us make decisions now. The second is reflective data, the data we collected after changing our design and comparing the before and after.<br></div></li><li><div><strong>What I mean is that data often tells us what the user did, but not why.</strong></div></li><li><div>We try to infer the why by looking at the what and this naturally involves making assumptions. If we make changes based on a wrong assumption, we end up with a design that is likely to cause more problems than it solves.</div></li><li><div>This is the problem with data: nearly everyone is convinced by it, yet it can be easily manipulated. The key thing to remember here, then, is that our goal is not simply to get agreement and have our way with the designs. Our goal is to create the best user experience and help our stakeholders achieve their goals.</div></li><li><div>The challenge with user observation as a justification for design decisions is that it can be very subjective, based on what you remember of the session, and difficult to document for the purpose of meeting with a client.</div></li><li><div><strong>The best way to communicate our insights from user testing sessions is to assemble a set of slides with quotes from a few select users and maybe even a video clip showing the problem areas.</strong></div></li><li><div>When using other external research to support your decisions:</div></li><ul><li><div>Make a habit of saving research to a separate document as you find it</div></li><li><div>Note the title, author, url / source, and date</div></li><li><div>Write a short summary of the post or a sentence about how it relates to your project</div></li><li><div>Provide the list of references to your stakeholders when they ask</div></li><li><div>Try to find research to support other viewpoints for a balanced understanding</div></li><li><div>Give your stakeholders the chance to consider it or respond with their own</div></li></ul><li><div>I’ve found three common response for dealing with limitations:</div></li><ul><li><div>“Not enough resources”</div></li><ul><li><div>Support: lack of support, infrastructure, or internal processes to handle the added requirements.</div></li><li><div>People: not enough designers or developers who can actually create it within the time and constraints given.</div></li><li><div>Money: insufficient budget for acquiring the services or technology needed to make it happen.</div></li><li><div>Time: not enough time to implement the designs, given the current requirements.</div></li><ul><li><div>In theory, we should never have to tell a stakeholder there isn’t enough time because our process is such that we always create appropriate levels of work during each cycle. In reality, we are always scaling back ideas to fit the current calendar.</div></li></ul></ul><li><div>“Limited by technology”</div></li><li><div>“Complies with a standard”</div></li></ul><li><div>In each case, we’re trying to demonstrate that the standards put in place for applications have a natural benefit to both our development process, as well as the portability and accessibility of the application long-term. These standards inform and influence our design decisions.<br></div></li><li><div>“Unless both sides win, no agreement can be permanent.” – Jimmy Carter</div></li><li><div>Framework:</div></li><ul><li><div>Identify the Problem</div></li><ul><li><div>Very briefly state the problem that your design addresses for the purpose of getting everyone on the same page.</div></li></ul></ul><ul><li><div>Describe your Solution</div></li><ul><li><div>Make a clear connection between what you did and how it addresses the issue. Without a clear solution, the design is useless and ineffective.</div></li></ul><li><div>Empathize with the User</div></li><ul><li><div>State how your solution solves the problem for a specific user by calling to mind the people you are building this application or website for.</div></li></ul><li><div>Appeal to the Business</div></li><ul><li><div>Describe how your decisions are meant to affect goals, metrics, or KPIs. Bring it up, tie them together, and demonstrate value.</div></li></ul><li><div>Lock-in Agreement</div></li></ul><ul><ul><li><div>Ask them directly, “Do you agree?” Put them in a position of needing to respond to you and keep the project moving forward.</div></li></ul></ul><li><div>Put them in a position of needing to respond to you before you move on. Further, it should be clear that you’re asking them for a specific response (agreement) and that you expect an answer.</div></li><li><div>Phrase your question so that your stakeholders want to provide you with the answer that you need. In other words, make it clear what the right choice is by the way you ask so they’re compelled to answer with agreement. You can do this by highlighting either the negative effect of disagreement or the positive benefits of agreeing.</div></li><li><div>Some of the things you’ll need to do immediately after the meeting:</div></li><ul><li><div><strong>Stick around to chat with people</strong></div></li><li><div><strong>Follow-up quickly with your notes</strong></div></li><ul><li><div>A quick follow up demonstrates that the meeting was a priority to you, so much so that you’re not going to do anything else until it’s settled.</div></li><li><div>Second, it values the participants because it shows that you’re doing the leg work, keeping them informed, and making the best use of their time.</div></li><li><div>Next, it shows that you’re listening. You’re not just going to throw away all their feedback: you wrote it down, are taking it seriously, and concretely communicating it to the entire team.</div></li><li><div>Lastly, it gets everyone on the same page about what was decided so there is no confusion going forward.</div></li><li><div>First, thank them for their time and participation.</div></li><li><div>Last, the follow-up should always focus on actions, next steps, or expectations. You want to always (as much as possible) communicate what’s going to happen next.</div></li></ul><li><div><strong>Apply filters and remove the fluff</strong></div></li><ul><li><div>What is this person’s intentions? Some people are just throwing out ideas casually</div></li><li><div>What is this person’s intentions?</div></li><li><div>What is everyone’s opinion of the person?</div></li><li><div>other people agree or disagree?</div></li><li><div>Do other people agree or disagree?</div></li><li><div>Is this person influential enough to matter?</div></li><li><div>Are they likely to bring it up again in the next meeting?</div></li><li><div>Overall, you must learn to filter out all the cruft that can cloud our decision making. It’s too easy to think that everyone’s opinions and ideas need to be incorporated into our designs, but that’s not true. It’s actually a dangerous path.</div></li></ul><li><div><strong>Seek out individuals that can help you</strong></div></li><ul><li><div>The purpose of these one-on-ones is to give people an opportunity to share their thoughts and opinions outside the constraints of a meeting where other people are listening.</div></li><li><div>You can use these interpersonal relationships to collect more information about the project, gain insights about team or company dynamics you might not otherwise know about, and build new relationships that can help you get what you need in the future.</div></li><li><div>You want to always be intentional about seeking these people out and finding ways to connect with them more regularly so they’re in the loop and have the opportunity to help influence your work.</div></li><li><div>It’s one thing for your boss to hear you defend your designs, but it’s quite another for him to hear other people outside your team agree with you.</div></li></ul><li><div><strong>Make decisions when there is ambiguity</strong></div></li><ul><li><div>Sometimes it’s not clear what we should do, but it’s almost always better to do something rather than nothing.</div></li><li><div><strong>If you’re faced with indecision or ambiguity, take the lead and make the decision for everyone.</strong></div></li><li><div>Find the choice that you believe is best and then communicate that to the team. Be specific, provide examples, and give them a deadline.</div></li></ul></ul><li><div><strong>I did two things to make her feel good about it in the moment: I asked questions and I wrote things down.</strong><br></div></li><li><div>Keep these tips in mind, once the meeting is adjourned:</div></li><ul><li><div>The time immediately after the meeting is a great opportunity to hear what people really think.</div></li><li><div>The faster you follow-up the more you communicate urgency, value, and decisiveness. Do it now.</div></li><li><div>Filter out any clutter or unnecessary recommendations from your notes that you know do not need to be followed up on.</div></li><li><div>Stick around to chat, follow people back to their desks, and get the last-minute buy-in you need to move forward.</div></li><li><div>If there’s ambiguity, make a decision and communicate it to everyone else. That may the only way to move things forward.</div></li></ul><li><div>The first step to addressing any problem like this is to understand why it happened in the first place and what could have been done to avoid it.</div></li><li><div>They have a specific need that isn’t being met Some people (especially executives) simply want to know that they thing they’re interested in is available and accessible to them.</div></li><li><div>They want to know they’re being heard It’s also possible that our stakeholders simply want to know that their ideas and suggestions are being heard and taken seriously.</div></li><li><div>There is a misunderstanding If you’re confused about your stakeholders insistence on changing something that you’ve recommended against, it’s possible that you’re simply not on the same page.</div></li><li><div>Your designs are not the best solution I know it’s hard to believe, but it’s possible that your design is actually not the best choice. In fact, you could be wrong.</div></li><li><div><strong>Just because we disagree does not mean that we’re right.</strong></div></li><li><div>It may not be easy, but it’s our reality. Our leaders and managers might know something, perhaps intuitively, that we don’t. They’ve been tasked with making the final call and sometimes we have to lean on them and go with their vision.</div></li><li><div>It’s not always the case that one person’s ‘bad idea’ will turn out poorly and ruin everything. Usually, it’s our poor execution of that idea that causes these changes to create chaos. Rather than try to fight it or do the hard work of making it better, we often just ‘give in’ shrug our shoulders and add the thing they want exactly like they proposed it.</div></li><li><div>Your job, as a communicator, is to lead that conversation to a place that will yield the best results for your application. You can do that by asking questions, understanding their perspective and listening: all the skills we’ve covered in these pages. Involve other people. Ask them how they would solve the same problem. Propose an alternative; even a bad alternative should start a conversation about solutions.</div></li><li><div>Seeing stakeholder requests as an opportunity for change or a challenge to solve for is a much healthier approach than groaning accommodation. Plan for these changes, because they will happen.</div></li><li><div><strong>The long-term goal of building trust with stakeholders is to come to a place where their default response is to assume that our choices are right, rather than questioning our decisions from the beginning.</strong></div></li><li><div>While being wrong might seem like it would tear down trust, it’s actually an opportunity to build more trust by admitting you made a mistake.</div></li><li><div>Tell them what needs to be done to correct the problem and outline a clear plan for doing so. Most stakeholders are results-oriented, so quickly admit your mistake but jump directly to the solution.</div></li><li><div>The problem still exists - While we try to solve problems, it’s not a given that our designs will always work as expected. If we find that the problem still exists, then we’re wrong and we need to change something.</div></li><li><div>Users don’t get it - Because we want our designs to be easy to use, we have to see that they’re actually making it easier for people. If not, we’re wrong!</div></li><li><div>“Half the world is composed of people who have something to say and can’t, and the other half who have nothing to say and keep on saying it.” – Robert Frost</div></li><li><div><strong>Parkinson’s law of triviality where people in a meeting will spend a disproportionate amount of time on issues that are not central to the project.</strong></div></li><li><div>Your ability to properly set, adjust, and communicate expectations is more important than your ability to crank out killer designs on a daily basis.</div></li><li><div><strong>The way you communicate with and manage relationships with stakeholders is critical to your success as a designer.</strong></div></li><li><div>Expressing a vision for what the future could look like to stakeholders gives us the opportunity earn their trust, demonstrate commitment, and get them</div></li><li><div>Expressing a vision for what the future could look like to stakeholders gives us the opportunity earn their trust, demonstrate commitment, and get them genuinely excited about what we’re doing.</div></li><li><div>when the goal is to create something completely new that didn’t exist before, it’s almost impossible to do that well without an external, aspirational creative that models how we might approach our own endeavors.</div></li><li><div>Ask yourself: how does the design of this thing apply to my current project? Is there something it does well that I can use? Start seeing everyday objects as opportunities for learning and inspiration in your own work.</div></li><li><div>That’s what we need to do regularly: learn to generate as many ideas as possible and iterate to make as many different versions as possible.</div></li><li><div>it can be a challenge to find the time to create things just for the purpose of inspiring others. But the long-term benefits of being purposeful about this direction is well worth it.</div></li><li><div>Do something that will allow your mind to be still, listening and thinking to what the future could be.</div></li><li><div>We all have better ideas when we’re relaxed: doing a simple task and letting our minds wander.</div></li><li><div>You need to find opportunities to get in with the right people who have the power to make your vision a reality. You can leverage your success in articulating design decisions to influence these decision-makers.</div></li><li><div><strong>You cannot and will not be able to really succeed as a designer unless you learn to talk to people in a way that makes sense to them because your designs do not speak for themselves.</strong></div></li>
-      </ul>
-      </div> <!-- /.container -->
-      <footer>
-        <ul>
-          <li><a href="https://twitter.com/leroyalmeida23"><span class="darklighted">Twitter</span></a></li>
-          <li><a href="https://www.instagram.com/leroyalmeida/"><span class="darklighted">Instagram</span></a></li>
-          <li><a href="https://www.linkedin.com/in/leroyalmeida/"><span class="darklighted">LinkedIn</span></a></li>
-          <li><a href="https://medium.com/@leroyalmeida23"><span class="darklighted">Medium</span></a></li>
-          <li><a href="mailto:miguel.l.s.almeida@gmail.com"><span class="darklighted">Email</span></a></li>
         </ul>
-      </footer>
-    </div>
+      </div>
+    </div> <!-- /.container -->
   </body>
 </html>

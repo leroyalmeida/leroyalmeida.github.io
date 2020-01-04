@@ -30,246 +30,660 @@
 
     <!-- link to html stylesheet -->
     <style amp-custom>
-      @font-face {
-        font-family: "cine";
-        font-display: swap;
-        src: url("/css/fonts/GT-Cinetype-Regular.woff") format("woff");
+
+      /*
+      * Skeleton V1.1
+      * Copyright 2011, Dave Gamache
+      * www.getskeleton.com
+      * Free to use under the MIT license.
+      * http://www.opensource.org/licenses/mit-license.php
+      * 8/17/2011
+      */
+
+
+      /* Table of Content
+      ==================================================
+        #Reset & Basics
+        #Basic Styles
+        #Site Styles
+        #Typography
+        #Links
+        #Lists
+        #Images
+        #Buttons
+        #Tabs
+        #Forms
+        #Misc */
+
+
+      /* #Reset & Basics (Inspired by E. Meyers)
+      ================================================== */
+        html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+          margin: 0;
+          padding: 0;
+          border: 0;
+          font-size: 100%;
+          font: inherit;
+          vertical-align: baseline; }
+        article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+          display: block; }
+        body {
+          line-height: 1; }
+        ol, ul {
+          list-style: none; }
+        blockquote, q {
+          quotes: none; }
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+          content: '';
+          content: none; }
+        table {
+          border-collapse: collapse;
+          border-spacing: 0; }
+
+
+      /* #Basic Styles
+      ================================================== */
+        body {
+          background: #fff;
+          font: 13px cine, sans-serif;
+          line-height: 1.5;
+          color: #0c0c0c;
+          -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+          -webkit-text-size-adjust: 100%;
+       }
+
+
+      /* #Typography
+      ================================================== */
+        h1, h2, h3, h4, h5, h6 {
+          color: #000;
+          font-family: cine, sans-serif;
+          font-weight: normal; }
+        h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
+        h1 { font-size: 40px; line-height: 50px; margin-bottom: 14px;}
+        h2 { font-size: 30px; line-height: 40px; margin-bottom: 10px; }
+        h3 { font-size: 24px; line-height: 34px; margin-bottom: 8px; }
+        h4 { font-size: 16px; line-height: 30px; margin-bottom: 4px; }
+        h5 { font-size: 14px; line-height: 24px; margin-bottom: 4px; }
+        h6 { font-size: 12px; line-height: 21px; }
+        .subheader { color: #0c0c0c; }
+
+        p { margin: 0 0 20px 0; }
+        p img { margin: 0; }
+        p.lead { font-size: 21px; line-height: 27px; color: #0c0c0c;  }
+
+        em { font-style: italic; }
+        strong { font-weight: bold; color: #000; }
+        small { font-size: 80%; }
+
+      /*	Blockquotes  */
+        blockquote, blockquote p { font-size: 17px; line-height: 24px; color: #0c0c0c; font-style: italic; }
+        blockquote { margin: 0 0 20px; padding: 9px 20px 0 19px; border-left: 1px solid #ddd; }
+        blockquote cite { display: block; font-size: 12px; color: #555; }
+        blockquote cite:before { content: "\2014 \0020"; }
+        blockquote cite a, blockquote cite a:visited, blockquote cite a:visited { color: #555; }
+
+        hr { border: solid #ddd; border-width: 1px 0 0; clear: both; margin: 10px 0 30px; height: 0; }
+
+
+      /* #Links
+      ================================================== */
+        a, a:visited { color: #000; text-decoration: underline; outline: 0; }
+        a:hover, a:focus { color: #003fff; }
+        p a, p a:visited { line-height: inherit; }
+
+
+      /* #Lists
+      ================================================== */
+      ul, ol { margin-bottom: 20px; }
+      ul { list-style: disc outside; }
+      ol { list-style: decimal; }
+      ol, ul.square, ul.circle, ul.disc { margin-left: 30px; }
+      ul.square { list-style: square outside; }
+      ul.circle { list-style: circle outside; }
+      ul.disc { list-style: disc outside; }
+      ul ul, ul ol,
+      ol ol, ol ul { margin: 4px 0 5px 30px; }
+      ul ul li, ul ol li,
+      ol ol li, ol ul li { margin-bottom: 6px; }
+      li { line-height: 18px; margin-bottom: 12px; }
+      ul.large li { line-height: 21px; }
+      li p { line-height: 21px; }
+
+      /* #Images
+      ================================================== */
+
+      img.scale-with-grid {
+        max-width: 100%;
+        height: auto;
       }
 
-      @font-face {
-        font-family: "cine-mono";
-        font-display: swap;
-        src: url("/css/fonts/GT-Cinetype-Mono.woff") format("woff");
+      /*
+      * Skeleton V1.1
+      * Copyright 2011, Dave Gamache
+      * www.getskeleton.com
+      * Free to use under the MIT license.
+      * http://www.opensource.org/licenses/mit-license.php
+      * 8/17/2011
+      */
+
+
+      /* Table of Contents
+      ==================================================
+          #Base 960 Grid
+          #Tablet (Portrait)
+          #Mobile (Portrait)
+          #Mobile (Landscape)
+          #Clearing */
+
+
+
+      /* #Base 960 Grid
+      ================================================== */
+
+          .container                                  { position: relative; width: 960px; margin: 0 auto; padding: 0; }
+          .container .column,
+          .container .columns                         { float: left; display: inline; margin-left: 10px; margin-right: 10px; }
+          .row                                        { margin-bottom: 20px; }
+
+          /* Nested Column Classes */
+          .column.alpha, .columns.alpha               { margin-left: 0; }
+          .column.omega, .columns.omega               { margin-right: 0; }
+
+          /* Base Grid */
+          .container .one.column,
+          .container .one.columns                     { width: 40px;  }
+          .container .two.columns                     { width: 100px; }
+          .container .three.columns                   { width: 160px; }
+          .container .four.columns                    { width: 220px; }
+          .container .five.columns                    { width: 280px; }
+          .container .six.columns                     { width: 340px; }
+          .container .seven.columns                   { width: 400px; }
+          .container .eight.columns                   { width: 460px; }
+          .container .nine.columns                    { width: 520px; }
+          .container .ten.columns                     { width: 580px; }
+          .container .eleven.columns                  { width: 640px; }
+          .container .twelve.columns                  { width: 700px; }
+          .container .thirteen.columns                { width: 760px; }
+          .container .fourteen.columns                { width: 820px; }
+          .container .fifteen.columns                 { width: 880px; }
+          .container .sixteen.columns                 { width: 940px; }
+
+          .container .one-third.column                { width: 300px; }
+          .container .two-thirds.column               { width: 620px; }
+
+          /* Offsets */
+          .container .offset-by-one                   { padding-left: 60px;  }
+          .container .offset-by-two                   { padding-left: 120px; }
+          .container .offset-by-three                 { padding-left: 180px; }
+          .container .offset-by-four                  { padding-left: 240px; }
+          .container .offset-by-five                  { padding-left: 300px; }
+          .container .offset-by-six                   { padding-left: 360px; }
+          .container .offset-by-seven                 { padding-left: 420px; }
+          .container .offset-by-eight                 { padding-left: 480px; }
+          .container .offset-by-nine                  { padding-left: 540px; }
+          .container .offset-by-ten                   { padding-left: 600px; }
+          .container .offset-by-eleven                { padding-left: 660px; }
+          .container .offset-by-twelve                { padding-left: 720px; }
+          .container .offset-by-thirteen              { padding-left: 780px; }
+          .container .offset-by-fourteen              { padding-left: 840px; }
+          .container .offset-by-fifteen               { padding-left: 900px; }
+
+
+
+      /* #Tablet (Portrait)
+      ================================================== */
+
+          /* Note: Design for a width of 768px */
+
+          @media only screen and (min-width: 768px) and (max-width: 959px) {
+              .container                                  { width: 768px; }
+              .container .column,
+              .container .columns                         { margin-left: 10px; margin-right: 10px;  }
+              .column.alpha, .columns.alpha               { margin-left: 0; margin-right: 10px; }
+              .column.omega, .columns.omega               { margin-right: 0; margin-left: 10px; }
+              .alpha.omega                                { margin-left: 0; margin-right: 0; }
+
+              .container .one.column,
+              .container .one.columns                     { width: 28px; }
+              .container .two.columns                     { width: 76px; }
+              .container .three.columns                   { width: 124px; }
+              .container .four.columns                    { width: 172px; }
+              .container .five.columns                    { width: 220px; }
+              .container .six.columns                     { width: 268px; }
+              .container .seven.columns                   { width: 316px; }
+              .container .eight.columns                   { width: 364px; }
+              .container .nine.columns                    { width: 412px; }
+              .container .ten.columns                     { width: 460px; }
+              .container .eleven.columns                  { width: 508px; }
+              .container .twelve.columns                  { width: 556px; }
+              .container .thirteen.columns                { width: 604px; }
+              .container .fourteen.columns                { width: 652px; }
+              .container .fifteen.columns                 { width: 700px; }
+              .container .sixteen.columns                 { width: 748px; }
+
+              .container .one-third.column                { width: 236px; }
+              .container .two-thirds.column               { width: 492px; }
+
+              /* Offsets */
+              .container .offset-by-one                   { padding-left: 48px; }
+              .container .offset-by-two                   { padding-left: 96px; }
+              .container .offset-by-three                 { padding-left: 144px; }
+              .container .offset-by-four                  { padding-left: 192px; }
+              .container .offset-by-five                  { padding-left: 240px; }
+              .container .offset-by-six                   { padding-left: 288px; }
+              .container .offset-by-seven                 { padding-left: 336px; }
+              .container .offset-by-eight                 { padding-left: 384px; }
+              .container .offset-by-nine                  { padding-left: 432px; }
+              .container .offset-by-ten                   { padding-left: 480px; }
+              .container .offset-by-eleven                { padding-left: 528px; }
+              .container .offset-by-twelve                { padding-left: 576px; }
+              .container .offset-by-thirteen              { padding-left: 624px; }
+              .container .offset-by-fourteen              { padding-left: 672px; }
+              .container .offset-by-fifteen               { padding-left: 720px; }
+          }
+
+
+      /*  #Mobile (Portrait)
+      ================================================== */
+
+          /* Note: Design for a width of 320px */
+
+          @media only screen and (max-width: 767px) {
+              .container { width: 300px; }
+              .container .columns,
+              .container .column { margin: 0; }
+
+              .container .one.column,
+              .container .one.columns,
+              .container .two.columns,
+              .container .three.columns,
+              .container .four.columns,
+              .container .five.columns,
+              .container .six.columns,
+              .container .seven.columns,
+              .container .eight.columns,
+              .container .nine.columns,
+              .container .ten.columns,
+              .container .eleven.columns,
+              .container .twelve.columns,
+              .container .thirteen.columns,
+              .container .fourteen.columns,
+              .container .fifteen.columns,
+              .container .sixteen.columns,
+              .container .one-third.column,
+              .container .two-thirds.column  { width: 300px; }
+
+              /* Offsets */
+              .container .offset-by-one,
+              .container .offset-by-two,
+              .container .offset-by-three,
+              .container .offset-by-four,
+              .container .offset-by-five,
+              .container .offset-by-six,
+              .container .offset-by-seven,
+              .container .offset-by-eight,
+              .container .offset-by-nine,
+              .container .offset-by-ten,
+              .container .offset-by-eleven,
+              .container .offset-by-twelve,
+              .container .offset-by-thirteen,
+              .container .offset-by-fourteen,
+              .container .offset-by-fifteen { padding-left: 0; }
+
+          }
+
+
+      /* #Mobile (Landscape)
+      ================================================== */
+
+          /* Note: Design for a width of 480px */
+
+          @media only screen and (min-width: 480px) and (max-width: 767px) {
+              .container { width: 420px; }
+              .container .columns,
+              .container .column { margin: 0; }
+
+              .container .one.column,
+              .container .one.columns,
+              .container .two.columns,
+              .container .three.columns,
+              .container .four.columns,
+              .container .five.columns,
+              .container .six.columns,
+              .container .seven.columns,
+              .container .eight.columns,
+              .container .nine.columns,
+              .container .ten.columns,
+              .container .eleven.columns,
+              .container .twelve.columns,
+              .container .thirteen.columns,
+              .container .fourteen.columns,
+              .container .fifteen.columns,
+              .container .sixteen.columns,
+              .container .one-third.column,
+              .container .two-thirds.column { width: 420px; }
+          }
+
+
+      /* #Clearing
+      ================================================== */
+
+          /* Self Clearing Goodness */
+          .container:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+
+          /* Use clearfix class on parent to clear nested columns,
+          or wrap each row of columns in a <div class="row"> */
+          .clearfix:before,
+          .clearfix:after,
+          .row:before,
+          .row:after {
+            content: '\0020';
+            display: block;
+            overflow: hidden;
+            visibility: hidden;
+            width: 0;
+            height: 0; }
+          .row:after,
+          .clearfix:after {
+            clear: both; }
+          .row,
+          .clearfix {
+            zoom: 1; }
+
+          /* You can also use a <br class="clear" /> to clear columns */
+          .clear {
+            clear: both;
+            display: block;
+            overflow: hidden;
+            visibility: hidden;
+            width: 0;
+            height: 0;
+          }
+
+      /*
+      * Skeleton V1.1
+      * Copyright 2011, Dave Gamache
+      * www.getskeleton.com
+      * Free to use under the MIT license.
+      * http://www.opensource.org/licenses/mit-license.php
+      * 8/17/2011
+      */
+
+      /* Table of Content
+      ==================================================
+        #Site Styles
+        #Page Styles
+        #Media Queries
+        #Font-Face */
+
+      /* #Site Styles
+      ================================================== */
+
+      /* #Page Styles
+      ================================================== */
+
+      /* #Media Queries
+      ================================================== */
+
+        /* Smaller than standard 960 (devices and browsers) */
+        @media only screen and (max-width: 959px) {}
+
+        /* Tablet Portrait size to standard 960 (devices and browsers) */
+        @media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+        /* All Mobile Sizes (devices and browser) */
+        @media only screen and (max-width: 767px) {}
+
+        /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+        @media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+        /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+        @media only screen and (max-width: 479px) {}
+
+
+      /* #Font-Face
+      ================================================== */
+      /* 	This is the proper syntax for an @font-face file
+          Just create a "fonts" folder at the root,
+          copy your FontName into code below and remove
+          comment brackets */
+
+
+        @font-face {
+          font-family: "cine";
+          src: url("/css/fonts/GT-Cinetype-Regular.woff") format("woff");
+          font-weight: normal;
+          font-style: normal;
+          font-display: swap;
+        }
+
+        @font-face {
+          font-family: "cine-mono";
+          src: url("/css/fonts/GT-Cinetype-Mono.woff") format("woff");
+          font-weight: normal;
+          font-style: normal;
+          font-display: swap;
+        }
+
+        @font-face {
+          font-family: "cine";
+          src: url("/css/fonts/GT-Cinetype-Bold.woff") format("woff");
+          font-weight: bold;
+          font-style: normal;
+          font-display: swap;
+        }
+
+
+      .container {
+        padding-top: 64px;
       }
 
-      @font-face {
-        font-family: "cine";
-        font-display: swap;
-        src: url("/css/fonts/GT-Cinetype-Bold.woff") format("woff");
-        font-weight: bold;
+      ::selection {
+        background: #89a6ff;
+      }
+      ::-moz-selection {
+        background: #89a6ff;
       }
 
-      body {
-        background-color: #fff;
-        color: #000;
-        font-family: cine, sans-serif;
-      }
-
-      div.wrap {
-        display: block;
-        width: 80%;
-        max-width: 960px;
-        margin: 0 auto;
+      nav {
+        position: fixed;
+        width: 160px;
       }
 
       nav ul {
-        padding: 0 0 5em 0;
-        list-style: none;
+        float: left;
       }
 
       nav ul li {
-        display: inline;
-        margin-right: 20px;
-        margin-top: 8px;
-      }
-
-      footer ul {
-        padding: 40px 0;
-        list-style: none;
-      }
-
-      footer ul li {
         display: block;
-        margin-right: 20px;
-        margin-top: 8px;
+        margin-bottom: 8px;
       }
 
-      a {
-        font-family: cine, sans-serif;
+      nav ul li a,
+      nav ul li a:visited,
+      nav ul li a:active  {
+        font-size: 14px;
+        color: #000;
         text-decoration: none;
+        font-weight: bold;
+      }
+
+      nav ul li a:hover,
+      nav ul li a:focus {
         color: #302ECD;
       }
 
-      a:hover span{
-        background-size: 100% 100%;
+      li {
+        margin-bottom: 8px;
       }
 
-      h1 {
-        font-size: 3.375em;
+      #logo {
+        margin-bottom: 24px;
+        letter-spacing: -1px;
       }
 
-      h2 {
-        font-size: 2.25em;
-        font-weight: 500;
+      #logo a {
+        text-decoration: none;
       }
 
-      h3 {
-        font-size: 1.5em;
-        font-weight: 500;
+      .book-details {
+        margin-bottom: 32px;
       }
 
-      h4 {
-        font-size: 1.2em;
-        margin: 0;
+      .book-details  .clearfix {
+        clear: both;
       }
 
-      p, ul {
-        font-size: 1em;
-        line-height: 1.5em;
-        color: rgba(0,0,0,.84);;
+      .book-image {
+        float: left;
+        width: 25%;
       }
 
-      .darklighted {
-        background-image: linear-gradient(180deg, transparent 75%, #FFEE77 0);
-        background-size: 0% 100%;
-        -moz-transition: 0.3s cubic-bezier(0.5, 0.60, 0.360, 1) background;
-        -o-transition: 0.3s cubic-bezier(0.5, 0.60, 0.360, 1) background;
-        -ms-transition: 0.3s cubic-bezier(0.5, 0.60, 0.360, 1) background;
-        -webkit-transition: 0.3s cubic-bezier(0.5, 0.60, 0.360, 1) background;
-        transition: 0.3s cubic-bezier(0.5, 0.60, 0.360, 1) background;
-        background-repeat: no-repeat;
-        padding-bottom: 0;
+      .book-image img {
+        width: 90%;
       }
 
-      #header-line {
-        background: #FFEE77;
-        height: 4px;
-        width: 10%;
-        margin-top: 3em;
-        margin-bottom: 3em;
+      .book-details .details {
+        float: right;
+        width: 75%;
+      }
+      .book-details .detail .detail-category {
+        text-align: right;
+        vertical-align: top;
+        min-width: 105px;
+        font-weight: bold;
       }
 
-      #work-container {
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-flex-flow: row wrap;
+      .book-details .detail .detail-content {
+        vertical-align: top;
       }
 
-      .work-card{
-        box-shadow: 0 30px 70px rgba(64,52,52,.1);
-        -webkit-box-shadow: 0 30px 70px rgba(64,52,52,.1);
-        width: 100%;
-        height: auto;
-        position: relative;
-        margin: 8px;
-      }
-
-      .work-card:hover{
-        box-shadow: 0 30px 70px rgba(64,52,52,.2);
-        -webkit-box-shadow: 0 30px 70px rgba(64,52,52,.2);
-        position: relative;
-        top:-0.25em;
-      }
-
-      .work-card-image {
-        display: block;
-        box-sizing: border-box;
-        background: center center no-repeat;
-      }
-
-      .work-card-text {
-        padding: 1em;
-      }
-
-      .work-card-text p {
-        height:100px;
-      }
-
-      .work-card-text h3 {
-        margin: 0;
-      }
-
-      .work-card-text a::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-      }
-
-      .tags {
-        margin: 0;
-        padding: 0;
-      }
-
-      .tag {
-        color: rgba(0, 0, 0, 0.4);
-        background: rgba(244, 245, 249, 1);
-        padding: .25em .5em;
-        margin-top: .25em;
-        text-transform: uppercase;
-        font-family: cine-mono, monospace;
-        list-style: none;
-        display: inline-block;
-      }
-
-      .page {
-        width: 100%;
-        display: block;
-      }
-
-      .page-section {
-        padding-top: 2em;
-      }
-
-      .page-content ul{
-        padding-left: 1.5em;
-      }
-
-      .page-description {
-        width: 100%;
-      }
-
-      .page-content h3 {
-        padding-top: 1.5em;
-      }
-
-      .page-image {
-        -webkit-box-shadow: 0 15px 35px rgba(64,52,52,.1);
-        box-shadow: 0 15px 35px rgba(64,52,52,.1);
-        margin-bottom: 2em;
-      }
-
-      /* Medium devices (landscape tablets, 768px and up) */
-      @media only screen and (min-width: 768px) {
-        nav ul li, footer ul li {
-          display: inline-block;
-          margin-right: 20px;
-          margin-top: 16px;
+      /* Mobile */
+      @media only screen and (max-width: 767px) {
+        header h1 {
+          font-size: 32px;
+          line-height: 40px;
         }
 
-        .work-card{
-          width: 40%;
+        #logo {
+          text-align: center;
         }
 
-        .page {
-          -webkit-box-shadow: 0 30px 70px rgba(64,52,52,.1);
-          box-shadow: 0 30px 70px rgba(64,52,52,.1);
+
+        nav {
+          position: relative;
           width: 100%;
         }
 
-        .page-content {
-          padding: 2em;
+        nav ul {
+          width: 100%;
+          text-align: center;
         }
 
-        .page-description {
-          width: 80%;
+        nav ul li {
+          display: inline;
+          margin: 0 4px;
+        }
+
+        nav ul li a {
+          font-size: 16px;
         }
       }
 
-      /* Large devices (laptops/desktops, 992px and up) */
-      @media only screen and (min-width: 992px) {
-        .work-card{
-          width: 30%;
-        }
+      /* Mobile Landscape */
+      @media only screen and (min-width: 480px) and (max-width: 767px) {
+      }
 
-        .page {
-          width: 100%;
+      /* Non 960 */
+      @media only screen and (max-width: 959px) {
+          #logo {
+            margin-bottom: 16px;
+          }
+
+          nav .button {
+            padding: 8px 24px 16px;
+          }
+      }
+
+      /* iPad Portrait/Browser */
+      @media only screen and (min-width: 768px) and (max-width: 959px) {
+        nav {
+          width: 124px;
         }
+      }
+
+      /* Mobile/Browser */
+      @media only screen and (max-width: 767px) {}
+
+      /* Mobile Landscape/Browser */
+      @media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+      /* Anything smaller than standard 960 */
+      @media only screen and (max-width: 959px) {}
+
+
+      /* iPad Portrait Only */
+      @media only screen and (min-width: 768px) and (max-width: 959px) and (max-device-width: 1000px) {}
+
+      /* Mobile Only */
+      @media only screen and (max-width: 767px) and (max-device-width: 1000px) {}
+
+      /* Mobile Landscape Only */
+      @media only screen and (min-width: 480px) and (max-width: 767px) and (max-device-width: 1000px) {}
+
+      /* Anything smaller than standard 960 on a device */
+      @media only screen and (max-width: 959px) and (max-device-width: 1000px) {
+          .resize { display: none; }
+      }
+
+      table{
+        background:#fff;
+        border-collapse:collapse;
+        margin:5px 0 10px;
+      }
+
+      th, td{
+        padding:3px 10px;
+        text-align:left;
+        vertical-align:top;
+      }
+
+      tr.even td{
+        background:#f7f7f7;
+      }
+
+      th{
+        background:#edeff0;
+      }
+
+      .highlight {
+        margin-bottom: 20px;
+      }
+
+      div.highlight > pre {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding-left: 20px;
+        border-left: 1px solid #ccc;
+        overflow: auto;
+      }
+
+      code {
+        font-family: monospace;
+      }
+
+      p img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px;
+      }
+
+      sup {
+        vertical-align: super;
+        font-size: 8pt;
       }
     </style>
 
@@ -294,49 +708,61 @@
       }
       </script>
       </amp-analytics>
-    <div class="wrap">
-      <nav>
-        <ul>
-          <li><a href="/"><span class="darklighted">Home</span></a></li>
-          <li><a href="/bookshelf"><span class="darklighted">Bookshelf</span></a></li>
-        </ul>
-      </nav>
-      <div class="container">
-        <h2>Creativity, Inc.: Overcoming the Unseen Forces That Stand in the Way of True Inspiration</h2>
-        <h3>by Ed Catmull, Amy Wallace</h3>
-        <div id="header-line"></div>
-
-        <a href="https://amzn.to/2rGZM93">
-          <amp-img
-              class="page-image"
-              src="/images/covers/creativity-inc.webp"
-              width="332"
-              height="500"
-              alt=""></amp-img>
-        </a>
-        <h4>Summary:</h4>
-        <ul>
-          <li>
-            <div>
-              Any hard problem should have many good minds simultaneously trying to solve it. A hallmark of a healthy creative culture is that its people feel free to share ideas, opinions, and criticisms. The most creative people are willing to work in the shadow of uncertainty. Candor, safety, research, self-assessment, and protecting the new are all mechanisms we can use to confront the unknown and to keep the chaos and fear to a minimum. The process is not the goal. Making the product great is the goal.
-            </div>
-          </li>
-        </ul>
-        <br>
-        <h4>Key takeaways:</h4>
+    <div class="container">
+      <div class="three columns">
+        <nav>
+          <h1 id="logo" >
+            <a href="/">Leroy Almeida</a>
+          </h1>
+          <ul>
+            <li><a href="/bookshelf">Bookshelf</a></li>
+            <li><a href="https://twitter.com/leroyalmeida23">Twitter</a></li>
+            <li><a href="https://www.linkedin.com/in/leroyalmeida/">LinkedIn</a></li>
+          </ul>
+        </nav>
+        &nbsp;
+      </div>
+      <div class="twelve columns offset-by-one">
+        <div class="book-details">
+          <div class="book-image">
+            <amp-img
+                class="page-image"
+                src="/images/covers/creativity-inc.webp"
+                width="160"
+                height="240"
+                alt=""></amp-img>
+          </div>
+          <div class="details">
+            <table>
+              <tbody><tr class="detail">
+                <td class="detail-category">Title:</td>
+                <td class="detail-content">Creativity, Inc.: Overcoming the Unseen Forces That Stand in the Way of True Inspiration</td>
+              </tr>
+              <tr class="detail">
+                <td class="detail-category">Author:</td>
+                <td class="detail-content">Ed Catmull, Amy Wallace</td>
+              </tr>
+              <tr class="detail">
+                <td class="detail-category">Year Read:</td>
+                <td class="detail-content">2017</td>
+              </tr>
+              <tr class="detail">
+                <td class="detail-category">Buy This Book:</td>
+                <td class="detail-content"><a href="https://amzn.to/2rGZM93" target="_blank">Amazon</a></td>
+              </tr>
+              <tr class="detail">
+                <td class="detail-category">Summary</td>
+                <td class="detail-content">Any hard problem should have many good minds simultaneously trying to solve it. A hallmark of a healthy creative culture is that its people feel free to share ideas, opinions, and criticisms. The most creative people are willing to work in the shadow of uncertainty. Candor, safety, research, self-assessment, and protecting the new are all mechanisms we can use to confront the unknown and to keep the chaos and fear to a minimum. The process is not the goal. Making the product great is the goal.</td>
+              </tr>
+            </tbody></table>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <h4>Key Takeaways:</h4>
         <ul>
           <li><div>When it comes to creative inspiration, job titles and hierarchy are meaningless.</div></li><li><div><strong>Unhindered communication was key, no matter what your position.</strong></div></li><li><div>ARPA’s mandate—to support smart people in a variety of areas—was carried out based on the unwavering presumption that researchers would try to do the right thing and, in ARPA’s view, overmanaging them was counterproductive.</div></li><li><div>The leaders of my department understood that to create a fertile laboratory, they had to assemble different kinds of thinkers and then encourage their autonomy. They had to offer feedback when needed but also had to be willing to stand back and give us room.</div></li><li><div>Once Alex brought me in, he left it to me to assemble a team. I have to give that to him: He had total confidence in the people he hired. This was something I admired and, later, sought to do myself.</div></li><li><div><strong>The lesson of ARPA had lodged in my brain: When faced with a challenge, get smarter.</strong></div></li><li><div><strong>Always take a chance on better, even if it seems threatening.</strong></div></li><li><div><strong>By ignoring my fear, I learned that the fear was groundless.</strong></div></li><li><div><strong>Any hard problem should have many good minds simultaneously trying to solve it.</strong></div></li><li><div>Being confident about the value of our innovation was not enough. We needed buy-in from the community we were trying to serve.</div></li><li><div><strong>For all the care you put into artistry, visual polish frequently doesn’t matter if you are getting the story right.</strong></div></li><li><div>“Whatever happens, we have to be loyal to each other.”</div></li><li><div>The responsibility for finding and fixing problems should be assigned to every employee, from the most senior manager to the lowliest person on the production line.<br></div></li><li><div>Instead of merely repeating an action, workers could suggest changes, call out problems, and—this next element seemed particularly important to me—feel the pride that came when they helped fix what was broken. This resulted in continuous improvement, driving out flaws and improving quality. In other words, the Japanese assembly line became a place where workers’ engagement strengthened the resulting product.<br></div></li><li><div><strong>You don’t have to ask permission to take responsibility.</strong></div></li><li><div>Whatever these forces are that make people do dumb things, they are powerful, they are often invisible, and they lurk even in the best of environments.</div></li><li><div>When downsides coexist with upsides, as they often do, people are reluctant to explore what’s bugging them, for fear of being labeled complainers.</div></li><li><div>Figuring out how to build a sustainable creative culture—one that didn’t just pay lip service to the importance of things like honesty, excellence, communication, originality, and self-assessment but really committed to them, no matter how uncomfortable that became—wasn’t a singular assignment.</div></li><li><div><strong>“Story Is King,”</strong></div></li><li><div><strong>“Trust the Process.”</strong></div></li><li><div><strong>If you give a good idea to a mediocre team, they will screw it up. If you give a mediocre idea to a brilliant team, they will either fix it or throw it away and come up with something better.</strong></div></li><li><div><strong>Even the smartest people can form an ineffective team if they are mismatched.</strong> That means it is better to focus on how a team is performing, not on the talents of the individuals within it. A good team is made up of people who complement each other.</div></li><li><div><strong>Getting the right people and the right chemistry is more important than getting the right idea.</strong></div></li><li><div><strong>Ideas come from people. Therefore, people are more important than ideas.</strong></div></li><li><div>To reiterate, it is the focus on people—their work habits, their talents, their values—that is absolutely central to any creative venture.</div></li><li><div><strong>Find, develop, and support good people, and they in turn will find, develop, and own good ideas.</strong></div></li><li><div>Quality is not a consequence of following some set of behaviors. Rather, it is a prerequisite and a mindset you must have before you decide what you are setting out to do.</div></li><li><div>“Quality is the best business plan.” What he meant was that quality is not a consequence of following some set of behaviors. Rather, it is a prerequisite and a mindset you must have before you decide what you are setting out to do.</div></li><li><div><strong>A hallmark of a healthy creative culture is that its people feel free to share ideas, opinions, and criticisms.</strong></div></li><li><div><strong>Braintrust is made up of people with a deep understanding of storytelling and, usually, people who have been through the process themselves.</strong></div></li><li><div><strong>Braintrust has no authority.</strong></div></li><li><div>We believe that ideas—and thus, films—only become great when they are challenged and tested.</div></li><li><div>You are not your idea, and if you identify too closely with your ideas, you will take offense when they are challenged.</div></li><li><div>“Part of the suffering involves giving up control”</div></li><li><div><strong>The key is to look at the viewpoints being offered, in any successful feedback group, as additive, not competitive. A competitive approach measures other ideas against your own, turning the discussion into a debate to be won or lost. An additive approach, on the other hand, starts with the understanding that each participant contributes something (even if it’s only an idea that fuels the discussion—and ultimately doesn’t work). The Braintrust is valuable because it broadens your perspective, allowing you to peer—at least briefly—through others’ eyes.</strong></div></li><li><div>A good note says what is wrong, what is missing, what isn’t clear, what makes no sense. A good note is offered at a timely moment, not too late to fix the problem. A good note doesn’t make demands; it doesn’t even have to include a proposed fix. But if it does, that fix is offered only to illustrate a potential solution, not to prescribe an answer. Most of all, though, a good note is specific.</div></li><li><div>The Braintrust is fueled by the idea that every note we give is in the service of a common goal: supporting and helping each other as we try to make better movies.</div></li><li><div><strong>“Here are the qualifications required: The people you choose must (a) make you think smarter and (b) put lots of solutions on the table in a short amount of time.</strong></div></li><li><div><strong>To be wrong as fast as you can is to sign up for aggressive, rapid learning.</strong></div></li><li><div>While we don’t want too many failures, we must think of the cost of failure as an investment in the future.</div></li><li><div>When experimentation is seen as necessary and productive, not as a frustrating waste of time, people will enjoy their work—even when it is confounding them.</div></li><li><div><strong>The more time you spend mapping out an approach, the more likely you are to get attached to it.</strong></div></li><li><div>When it comes to creative endeavors, the concept of zero failures is worse than useless. It is counterproductive.</div></li><li><div>Being too risk-averse causes many companies to stop innovating and to reject new ideas, which is the first step on the path to irrelevance.</div></li><li><div><strong>To be a truly creative company, you must start things that might fail.</strong></div></li><li><div>The criteria we use is that we step in if a director loses the confidence of his or her crew.</div></li><li><div><strong>If the crew is confused, then their leader is, too.</strong></div></li><li><div>But any failure at a creative company is a failure of many, not one.</div></li><li><div><strong>There are two parts to any failure: There is the event itself, with all its attendant disappointment, confusion, and shame, and then there is our reaction to it. It is this second part that we control.<br></strong></div></li><li><div>As leaders, we should think of ourselves as teachers and try to create companies in which teaching is seen as a valued way to contribute to the success of the whole.</div></li><li><div><strong>One of the most crucial responsibilities of leadership is creating a culture that rewards those who lift not just our stock prices but our aspirations as well.</strong></div></li><li><div>Instead of talking about whether it’s easier to lower a price than raise it, we should have been addressing more substantive issues such as how to meet the expectations of customers and how to keep investing in software development so that the customers who did buy our product could put it to better use.</div></li><li><div>Discussing failure and all its ripple effects is not merely an academic exercise. We face it because by seeking better understanding, we remove barriers to full creative engagement. One of the biggest barriers is fear, and while failure comes with the territory, fear shouldn’t have to. The goal, then, is to uncouple fear and failure—to create an environment in which making mistakes doesn’t strike terror into your employees’ hearts.</div></li><li><div>Fear and trust are powerful forces, and while they are not opposites, exactly, trust is the best tool for driving out fear. There will always be plenty to be afraid of, especially when you are doing something new. Trusting others doesn’t mean that they won’t make mistakes. It means that if they do (or if you do), you trust they will act to help solve it. Fear can be created quickly; trust can’t.</div></li><li><div>A manager’s default mode should not be secrecy. What is needed is a thoughtful consideration of the cost of secrecy weighed against the risks. When you instantly resort to secrecy, you are telling people they can’t be trusted. When you are candid, you are telling people that you trust them and that there is nothing to fear. To confide in employees is to give them a sense of ownership over the information.</div></li><li><div>When managers explain what their plan is without giving the reasons for it, people wonder what the “real” agenda is. There may be no hidden agenda, but you’ve succeeded in implying that there is one. Discussing the thought processes behind solutions aims the focus on the solutions, not on second-guessing.</div></li><li><div><strong>Management’s job is not to prevent risk but to build the ability to recover.</strong></div></li><li><div><strong>The key is to view conflict as essential, because that’s how we know the best ideas will be tested and survive.</strong></div></li><li><div>A good manager must always be on the lookout for areas in which balance has been lost.</div></li><li><div>Often say that managers of creative enterprises must hold lightly to goals and firmly to intentions. What does that mean? It means that we must be open to having our goals change as we learn new information or are surprised by things we thought we knew but didn’t. As long as our intentions—our values—remain constant, our goals can shift as needed.</div></li><li><div>I often say that managers of creative enterprises must hold lightly to goals and firmly to intentions. What does that mean? It means that we must be open to having our goals change as we learn new information or are surprised by things we thought we knew but didn’t. As long as our intentions—our values—remain constant, our goals can shift as needed.</div></li><li><div>Negative feedback may be fun, but it is far less brave than endorsing something unproven and providing room for it to grow.</div></li><li><div><strong>Internship programs are mechanisms for spotting talent and seeing if outsiders fit in. Moreover, new people bring an infusion of energy. To me, it seemed like a win-win.</strong></div></li><li><div>“In many ways, the work of a critic is easy,” Ego says. “We risk very little yet enjoy a position over those who offer up their work and their selves to our judgment. We thrive on negative criticism, which is fun to write and to read. But the bitter truth we critics must face is that in the grand scheme of things, the average piece of junk is probably more meaningful than our criticism designating it so. But there are times when a critic truly risks something, and that is in the discovery and defense of the new. The world is often unkind to new talent, new creations. The new needs friends.”</div></li><li><div><strong>The unpredictable is the ground on which creativity occurs.</strong></div></li><li><div>One trick I’ve learned is to force myself to make a list of what’s actually wrong. Usually, soon into making the list, I find I can group most of the issues into two or three larger all-encompassing problems. So it’s really not all that bad. Having a finite list of problems is much better than having an illogical feeling that everything is wrong.”</div></li><li><div>“I feel like the only reason we’re able to find some of these unique ideas, characters, and story twists is through discovery. And, by definition, ‘discovery’ means you don’t know the answer when you start. This could just be my Lutheran, Scandinavian upbringing, but I believe life should not be easy. We’re meant to push ourselves and try new things—which will definitely make us feel uncomfortable. Living through a few big catastrophes helps. After people survived A Bug’s Life and Toy Story 2, they realized the pressure led to some pretty cool ideas.”</div></li><li><div>When we put setbacks into two buckets—the “business as usual” bucket and the “holy cow” bucket—and use a different mindset for each, we are signing up for trouble. We become so caught up in our big problems that we ignore the little ones, failing to realize that some of our small problems will have long-term consequences—and are, therefore, big problems in the making.</div></li><li><div><strong>A culture that allows everyone, no matter their position, to stop the assembly line, both figuratively and literally, maximizes the creative engagement of people who want to help.</strong></div></li><li><div><strong>In other words, we must meet unexpected problems with unexpected responses.</strong></div></li><li><div>If all our careful planning cannot prevent problems, then our best method of response is to enable employees at every level to own the problems and have the confidence to fix them.</div></li><li><div><strong>If we allow more people to solve problems without permission, and if we tolerate (and don’t vilify) their mistakes, then we enable a much larger set of problems to be addressed.</strong></div></li><li><div>I know that a lot of our successes came because we had pure intentions and great talent, and we did a lot of things right, but I also believe that attributing our successes solely to our own intelligence, without acknowledging the role of accidental events, diminishes us. We must acknowledge the random events that went our way, because acknowledging our good fortune—and not telling ourselves that everything we did was some stroke of genius—lets us make more realistic assessments and decisions. The existence of luck also reminds us that our activities are less repeatable. Since change is inevitable, the question is: Do you act to stop it and try to protect yourself from it, or do you become the master of change by accepting it and being open to it? My view, of course, is that working with change is what creativity is about.</div></li><li><div>If you don’t try to uncover what is unseen and understand its nature, you will be ill prepared to lead.</div></li><li><div>Here’s what turns a successful hierarchy into one that impedes progress: when too many people begin, subconsciously, to equate their own value and that of others with where they fall in the pecking order.</div></li><li><div>In a healthy, creative culture, the people in the trenches feel free to speak up and bring to light differing views that can help give us clarity.</div></li><li><div>The better approach, I believe, is to accept that we can’t understand every facet of a complex environment and to focus, instead, on techniques to deal with combining different viewpoints. If we start with the attitude that different viewpoints are additive rather than competitive, we become more effective because our ideas or decisions are honed and tempered by that discourse.</div></li><li><div>That kind of openness is only possible in a culture that acknowledges its own blind spots. It’s only possible when managers understand that others see problems they don’t—and that they also see solutions.</div></li><li><div>You might say I’m an advocate for humility in leaders. But to be truly humble, those leaders must first understand how many of the factors that shape their lives and businesses are—and will always be—out of sight.</div></li><li><div>“We should be careful to get out of an experience only the wisdom that is in it—and stop there,” as Mark Twain once said, “lest we be like the cat that sits down on a hot stove-lid. She will never sit down on a hot stove-lid again—and that is well; but also she will never sit down on a cold one anymore.” The cat’s hindsight, in other words, distorts her view. The past should be our teacher, not our master.</div></li><li><div>“We are not merely recipients of external influences but are creatures built to receive influences that we ourselves enact; we are dynamically coupled with the world, not separate from it.”</div></li><li><div>We have to learn, over and over again, that the perceptions and experiences of others are vastly different than our own. In a creative environment, those differences can be assets. But when we don’t acknowledge and honor them, they can erode, rather than enrich, our creative work.<br></div></li><li><div>We’ve all experienced times when other people see the same event we see but remember it differently. (Typically, we think our view is the correct one.) The differences arise because of the ways our separate mental models shape what we see. I’ll say it again: Our mental models aren’t reality.</div></li><li><div><strong>The most creative people are willing to work in the shadow of uncertainty.</strong></div></li><li><div>Deluding ourselves about our roles in our own success. Candor, safety, research, self-assessment, and protecting the new are all mechanisms we can use to confront the unknown and to keep the chaos and fear to a minimum.</div></li><li><div><strong>Candor, safety, research, self-assessment, and protecting the new are all mechanisms we can use to confront the unknown and to keep the chaos and fear to a minimum.</strong></div></li><li><div>Our models of the world so distort what we perceive that they can make it hard to see what is right in front of us.</div></li><li><div>We don’t typically see the boundary between new information coming in from the outside and our old, established mental models—we perceive both together, as a unified experience.</div></li><li><div>When we unknowingly get caught up in our own interpretations, we become inflexible, less able to deal with the problems at hand.</div></li><li><div>People who work or live together—people like Dick and Anne, for example—have, by virtue of proximity and shared history, models of the world that are deeply (sometimes hopelessly) intertwined with one another.</div></li><li><div>Dailies are master classes in how to see and think more expansively,</div></li><li><div>The first step is to teach them that everyone at Pixar shows incomplete work, and everyone is free to make suggestions.</div></li><li><div>Dailies are designed to promote everyone’s ability to be open to others, in the recognition that individual creativity is magnified by the people around you.</div></li><li><div><strong>By making the struggles to solve the problems safe to discuss, then everyone learns from—and inspires—one another. The whole activity becomes socially rewarding and productive. To participate fully each morning requires empathy, clarity, generosity, and the ability to listen. Dailies are designed to promote everyone’s ability to be open to others, in the recognition that individual creativity is magnified by the people around you. The result: We see more clearly.</strong></div></li><li><div>Craft is what we are expected to know; art is the unexpected use of our craft.</div></li><li><div><strong>When filmmakers, industrial designers, software designers, or people in any other creative profession merely cut up and reassemble what has come before, it gives the illusion of creativity, but it is craft without art. Craft is what we are expected to know; art is the unexpected use of our craft.</strong></div></li><li><div>You’ll never stumble upon the unexpected if you stick only to the familiar. In my experience, when people go out on research trips, they always come back changed.</div></li><li><div>We are striving to tell you something impactful and true. When attempting to make good on that promise, no detail is too small.</div></li><li><div><strong>Limits force us to rethink how we are working and push us to new heights of creativity.</strong></div></li><li><div>My rule of thumb is that any time we impose limits or procedures, we should ask how they will aid in enabling people to respond creatively.</div></li><li><div>Our business model, our way of making films, and our technology continually changed, but by integrating them we let them drive each other.</div></li><li><div><strong>“Art challenges technology, technology inspires art.”</strong></div></li><li><div>Our specialized skills and mental models are challenged when we integrate with people who are different.</div></li><li><div>Just as looking at what is not the chair helps bring it into relief, pulling focus away from a particular problem (and, instead, looking at the environment around it) can lead to better solutions.</div></li><li><div><strong>A postmortem is a meeting held shortly after the completion of every movie in which we explore what did and didn’t work and attempt to consolidate lessons learned.</strong></div></li><li><div>Companies, like individuals, do not become exceptional by believing they are exceptional but by understanding the ways in which they aren’t exceptional.</div></li><li><div><strong>Postmortems are a rare opportunity to do analysis that simply wasn’t possible in the heat of the project.</strong></div></li><li><div><strong>The postmortem provides a forum for others to learn or challenge the logic behind certain decisions.</strong></div></li><li><div>But if people are given a forum in which to express their frustrations about the screw-ups in a respectful manner, then they are better able to let them go and move</div></li><li><div>If a postmortem is a chance to struggle openly with our problems, the “pre-postmortem” sets the stage for a successful struggle. I would even say that 90 percent of the value is derived from the preparation leading up to the postmortem.</div></li><li><div>A good postmortem arms people with the right questions to ask going forward.</div></li><li><div><strong>One technique I’ve used to soften the process is to ask everyone in the room to make two lists: the top five things that they would do again and the top five things that they wouldn’t do again.</strong></div></li><li><div>Analyzing it correctly is difficult, and it is dangerous to assume that you always know what it means. It is very easy to find false patterns in data. Instead, I prefer to think of data as one way of seeing, one of many tools we can use to look for what’s hidden. If we think data alone provides answers, then we have misapplied the tool.</div></li><li><div>Measure what you can, evaluate what you measure, and appreciate that you cannot measure the vast majority of what you do. And at least every once in a while, make time to take a step back and think about what you are doing.</div></li><li><div>It taught everyone at Pixar, no matter their title, to respect the work that their colleagues did. And it made us all beginners again.</div></li><li><div>Creativity involves missteps and imperfections. I wanted our people to get comfortable with that idea—that both the organization and its members should be willing, at times, to operate on the edge.</div></li><li><div>But the purpose of P.U. was never to turn programmers into artists or artists into belly dancers. Instead, it was to send a signal about how important it is for every one of us to keep learning new things. That, too, is a key part of remaining flexible: keeping our brains nimble by pushing ourselves to try things we haven’t tried before.</div></li><li><div>To have a “not know mind” is a goal of creative people. It means you are open to the new, just as children are.</div></li><li><div>Paying attention to the present moment without letting your thoughts and ideas about the past and the future get in the way is essential.</div></li><li><div>In my experience, creative people discover and realize their visions over time and through dedicated, protracted struggle.</div></li><li><div><strong>“The best way to predict the future is to invent it.”</strong></div></li><li><div>Invention, after all, is an active process that results from decisions we make; to change the world, we must bring new things into being.</div></li><li><div>“People want decisiveness, but they also want honesty about when you’ve effed up,” as Andrew says. “It’s a huge lesson: Include people in your problems, not just your solutions.”</div></li><li><div>If you’re going to undertake a creative project that requires working closely with other people, you must accept that collaboration brings complications.</div></li><li><div>“If you’re sailing across the ocean and your goal is to avoid weather and waves, then why the hell are you sailing?” he says. “You have to embrace that sailing means that you can’t control the elements and that there will be good days and bad days and that, whatever comes, you will deal with it because your goal is to eventually get to the other side. You will not be able to control exactly how you get across. That’s the game you’ve decided to be in. If your goal is to make it easier and simpler, then don’t get in the boat.”</div></li><li><div>Having faith that the elements of a movie are all there for us to find often sustains us during the search.</div></li><li><div>Managing a multiplicity of forces, not to mention hundreds of people with minds of their own, requires balance.</div></li><li><div><strong>If you are mindful, you are able to focus on the problem at hand without getting caught up in plans or processes. Mindfulness helps us accept the fleeting and subjective nature of our thoughts, to make peace with what we cannot control. Most important, it allows us to remain open to new ideas and to deal with our problems squarely.<br></strong></div></li><li><div>In order for three people to decide to get together offline and dream up solutions, we had to instill an ethos at Disney Animation that made that behavior okay whether or not they were successful.</div></li><li><div>In big organizations there are advantages to consistency, but I strongly believe that smaller groups within the larger whole should be allowed to differentiate themselves and operate according to their own rules, so long as those rules work. This fosters a sense of personal ownership and pride in the company that, to my mind, benefits the larger enterprise.</div></li><li><div>Quality meant that every aspect—not just the rendering and the storytelling but also the positioning and the marketing—needed to be done well, which meant being open to reasoned opinions, even when they contradicted our own.</div></li><li><div>When we have a problem, the leaders of the company don’t say, “What the hell are you guys going to do about it?” Instead there is talk of “our” problem and of what “we” can do to solve it together. My colleagues see themselves as part owners of the company and of the culture, because they are.</div></li><li><div>“It’ll be a day in which you tell us how to make Pixar better,” John said. “We’ll do no work that day. No visitors will be allowed. Everyone must attend.”</div></li><li><div>Then, to make sure something concrete emerged, the Working Group designed a set of “exit forms” to be filled out by each session’s participants. Red forms were for proposals, blue forms were for brainstorms, and yellow forms were for something we called “best practices”—ideas that were not action items per se but principles about how we should behave as a company. The forms were simple and specific: Each session got its own set, tailored specifically to the topic at hand, that asked a specific question.</div></li><li><div>It’s always easier to be candid with people you know than with strangers.</div></li><li><div><strong>“We need to heighten people’s awareness of what they do not know.”</strong> Among the ideas this group put on their exit forms: fostering more empathy between departments through a job-swapping program, establishing a lunch lottery that would match people at random to encourage new connections and friendships, and holding cross-departmental mixers designed to let far-flung colleagues get to know each other over a few beers.</div></li><li><div>“Hello Ed,” it read. “I just wanted to say a post–Notes Day thank you. The day was truly amazing, inspirational, informative and as I heard many times throughout the day, from many people, cathartic. If there was any cynicism anywhere, I didn’t see it. Coming away from it, I felt as though the company shrank a little. I met new people, got completely new points of view, and learned what other departments struggle with, and succeed with. I don’t know if a metric exists to measure the impact of Notes Day, but from where I was standing, it was huge. In the end, I think we all walked away with a sense of ownership over this amazing place, and its future. A ‘we’re all in this together’ feel. If nothing else, this is a huge victory. John’s openness, and courage to speak about his feedback, set an unbelievable bar. His admission put the entire company firmly behind him, and was one of the finest instances of ‘leading by example’ I can think of. I think we can all learn from that and accept our own introspection/feedback with a similar grace and humility. Thank you so much for creating an environment where this kind of discussion can happen.”</div></li><li><div>“Notes Day is the proof that Pixar cares about people as much as about finances.” And: “Do this again next year.”</div></li><li><div>First, there was a clear and focused goal.</div></li><li><div>Second, this was an idea championed by those at the highest levels of the company.</div></li><li><div>Third, and relatedly, Notes Day was led from within.</div></li><li><div>Notes brought problems to the surface—but we still had the hard work in front of us. Notes Day didn’t solve anything all by itself. But it shifted our culture—repaired it, even—in ways that will make us better as we go forward.</div></li><li><div><strong>PERSIST on telling your story. PERSIST on reaching your audience. PERSIST on staying true to your vision.…</strong></div></li><li><div>The truth is, as challenges emerge, mistakes will always be made, and our work is never done. We will always have problems, many of which are hidden from our view; we must work to uncover them and assess our own role in them, even if doing so means making ourselves uncomfortable; when we then come across a problem, we must marshal all our energies to solve it.</div></li><li><div>Unleashing creativity requires that we loosen the controls, accept risk, trust our colleagues, work to clear the path for them, and pay attention to anything that creates fear. Doing all these things won’t necessarily make the job of managing a creative culture easier. But ease isn’t the goal; excellence is.</div></li><li><div>In a creative company, separating your people into distinct silos—Project A over here, Project B over there—can be counterproductive.</div></li><li><div>Pitching is a way of testing material, taking its measure—and, importantly, strengthening it—by observing how it plays to an audience. But if the idea doesn’t fly, they are extremely adept at dropping it and moving on.</div></li><li><div>He knew how important it was to construct a story that connected with people.</div></li><li><div><strong>A characteristic of creative people is that they imagine making the impossible possible. That imagining—dreaming, noodling, audaciously rejecting what is (for the moment) true—is the way we discover what is new or important. Steve understood the value of science and law, but he also understood that complex systems respond in nonlinear, unpredictable ways. And that creativity, at its best, surprises us all.</strong></div></li><li><div>It is precisely by acting on our intentions and staying true to our values that we change the world.</div></li><li><div>Give a good idea to a mediocre team, and they will screw it up. Give a mediocre idea to a great team, and they will either fix it or come up with something better. If you get the team right, chances are that they’ll get the ideas right.</div></li><li><div>When looking to hire people, give their potential to grow more weight than their current skill level. What they will be capable of tomorrow is more important than what they can do today.</div></li><li><div><strong>Always try to hire people who are smarter than you. Always take a chance on better, even if it seems like a potential threat.</strong></div></li><li><div><strong>If there are people in your organization who feel they are not free to suggest ideas, you lose. Do not discount ideas from unexpected sources. Inspiration can, and does, come from anywhere.</strong></div></li><li><div>It isn’t enough merely to be open to ideas from others. Engaging the collective brainpower of the people you work with is an active, ongoing process. As a manager, you must coax ideas out of your staff and constantly push them to contribute.</div></li><li><div>There are many valid reasons why people aren’t candid with one another in a work environment. Your job is to search for those reasons and then address them.</div></li><li><div><strong>Likewise, if someone disagrees with you, there is a reason. Our first job is to understand the reasoning behind their conclusions.</strong></div></li><li><div>Further, if there is fear in an organization, there is a reason for it—our job is (a) to find what’s causing it, (b) to understand it, and (c) to try to root it out.</div></li><li><div>There is nothing quite as effective, when it comes to shutting down alternative viewpoints, as being convinced you are right.</div></li><li><div>In general, people are hesitant to say things that might rock the boat. Braintrust meetings, dailies, postmortems, and Notes Day are all efforts to reinforce the idea that it is okay to express yourself. All are mechanisms of self-assessment that seek to uncover what’s real.</div></li><li><div>If there is more truth in the hallways than in meetings, you have a problem.</div></li><li><div>Many managers feel that if they are not notified about problems before others are or if they are surprised in a meeting, then that is a sign of disrespect. Get over it.</div></li><li><div><strong>Careful “messaging” to downplay problems makes you appear to be lying, deluded, ignorant, or uncaring. Sharing problems is an act of inclusion that makes employees feel invested in the larger enterprise.</strong></div></li><li><div>The first conclusions we draw from our successes and failures are typically wrong. Measuring the outcome without evaluating the process is deceiving.</div></li><li><div>Do not fall for the illusion that by preventing errors, you won’t have errors to fix. The truth is, the cost of preventing errors is often far greater than the cost of fixing them.</div></li><li><div>Change and uncertainty are part of life. Our job is not to resist them but to build the capability to recover when unexpected events occur. If you don’t always try to uncover what is unseen and understand its nature, you will be ill prepared to lead.</div></li><li><div><strong>Similarly, it is not the manager’s job to prevent risks. It is the manager’s job to make it safe to take them.</strong></div></li><li><div>Failure isn’t a necessary evil. In fact, it isn’t evil at all. It is a necessary consequence of doing something new.</div></li><li><div><strong>Trust doesn’t mean that you trust that someone won’t screw up—it means you trust them even when they do screw up.</strong></div></li><li><div>The people ultimately responsible for implementing a plan must be empowered to make decisions when things go wrong, even before getting approval. Finding and fixing problems is everybody’s job. Anyone should be able to stop the production line.</div></li><li><div>The desire for everything to run smoothly is a false goal—it leads to measuring people by the mistakes they make rather than by their ability to solve problems.</div></li><li><div><strong>Don’t wait for things to be perfect before you share them with others. Show early and show often. It’ll be pretty when we get there, but it won’t be pretty along the way. And that’s as it should be.</strong></div></li><li><div>A company’s communication structure should not mirror its organizational structure. Everybody should be able to talk to anybody.</div></li><li><div>Be wary of making too many rules. Rules can simplify life for managers, but they can be demeaning to the 95 percent who behave well. Don’t create rules to rein in the other 5 percent—address abuses of common sense individually. This is more work but ultimately healthier.</div></li><li><div>Imposing limits can encourage a creative response. Excellent work can emerge from uncomfortable or seemingly untenable circumstances.</div></li><li><div><strong>Engaging with exceptionally hard problems forces us to think differently.</strong></div></li><li><div>An organization, as a whole, is more conservative and resistant to change than the individuals who comprise it. Do not assume that general agreement will lead to change—it takes substantial energy to move a group, even when all are on board.</div></li><li><div>The healthiest organizations are made up of departments whose agendas differ but whose goals are interdependent. If one agenda wins, we all lose.</div></li><li><div>Our job as managers in creative environments is to protect new ideas from those who don’t understand that in order for greatness to emerge, there must be phases of not-so-greatness. Protect the future, not the past.</div></li><li><div>New crises are not always lamentable—they test and demonstrate a company’s values. The process of problem-solving often bonds people together and keeps the culture in the present.</div></li><li><div><strong>Excellence, quality, and good should be earned words, attributed by others to us, not proclaimed by us about ourselves.</strong></div></li><li><div><strong>Do not accidentally make stability a goal. Balance is more important than stability.</strong></div></li><li><div><strong>Don’t confuse the process with the goal. Working on our processes to make them better, easier, and more efficient is an indispensable activity and something we should continually work on—but it is not the goal. Making the product great is the goal.</strong></div></li>
         </ul>
-      </div> <!-- /.container -->
-      <footer>
-        <ul>
-          <li><a href="https://twitter.com/leroyalmeida23"><span class="darklighted">Twitter</span></a></li>
-          <li><a href="https://www.instagram.com/leroyalmeida/"><span class="darklighted">Instagram</span></a></li>
-          <li><a href="https://www.linkedin.com/in/leroyalmeida/"><span class="darklighted">LinkedIn</span></a></li>
-          <li><a href="https://medium.com/@leroyalmeida23"><span class="darklighted">Medium</span></a></li>
-          <li><a href="mailto:miguel.l.s.almeida@gmail.com"><span class="darklighted">Email</span></a></li>
-        </ul>
-      </footer>
-    </div>
+      </div>
+    </div> <!-- /.container -->
   </body>
 </html>

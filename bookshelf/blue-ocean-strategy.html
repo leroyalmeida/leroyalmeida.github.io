@@ -30,246 +30,660 @@
 
     <!-- link to html stylesheet -->
     <style amp-custom>
-      @font-face {
-        font-family: "cine";
-        font-display: swap;
-        src: url("/css/fonts/GT-Cinetype-Regular.woff") format("woff");
+
+      /*
+      * Skeleton V1.1
+      * Copyright 2011, Dave Gamache
+      * www.getskeleton.com
+      * Free to use under the MIT license.
+      * http://www.opensource.org/licenses/mit-license.php
+      * 8/17/2011
+      */
+
+
+      /* Table of Content
+      ==================================================
+        #Reset & Basics
+        #Basic Styles
+        #Site Styles
+        #Typography
+        #Links
+        #Lists
+        #Images
+        #Buttons
+        #Tabs
+        #Forms
+        #Misc */
+
+
+      /* #Reset & Basics (Inspired by E. Meyers)
+      ================================================== */
+        html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+          margin: 0;
+          padding: 0;
+          border: 0;
+          font-size: 100%;
+          font: inherit;
+          vertical-align: baseline; }
+        article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+          display: block; }
+        body {
+          line-height: 1; }
+        ol, ul {
+          list-style: none; }
+        blockquote, q {
+          quotes: none; }
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+          content: '';
+          content: none; }
+        table {
+          border-collapse: collapse;
+          border-spacing: 0; }
+
+
+      /* #Basic Styles
+      ================================================== */
+        body {
+          background: #fff;
+          font: 13px cine, sans-serif;
+          line-height: 1.5;
+          color: #0c0c0c;
+          -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+          -webkit-text-size-adjust: 100%;
+       }
+
+
+      /* #Typography
+      ================================================== */
+        h1, h2, h3, h4, h5, h6 {
+          color: #000;
+          font-family: cine, sans-serif;
+          font-weight: normal; }
+        h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
+        h1 { font-size: 40px; line-height: 50px; margin-bottom: 14px;}
+        h2 { font-size: 30px; line-height: 40px; margin-bottom: 10px; }
+        h3 { font-size: 24px; line-height: 34px; margin-bottom: 8px; }
+        h4 { font-size: 16px; line-height: 30px; margin-bottom: 4px; }
+        h5 { font-size: 14px; line-height: 24px; margin-bottom: 4px; }
+        h6 { font-size: 12px; line-height: 21px; }
+        .subheader { color: #0c0c0c; }
+
+        p { margin: 0 0 20px 0; }
+        p img { margin: 0; }
+        p.lead { font-size: 21px; line-height: 27px; color: #0c0c0c;  }
+
+        em { font-style: italic; }
+        strong { font-weight: bold; color: #000; }
+        small { font-size: 80%; }
+
+      /*	Blockquotes  */
+        blockquote, blockquote p { font-size: 17px; line-height: 24px; color: #0c0c0c; font-style: italic; }
+        blockquote { margin: 0 0 20px; padding: 9px 20px 0 19px; border-left: 1px solid #ddd; }
+        blockquote cite { display: block; font-size: 12px; color: #555; }
+        blockquote cite:before { content: "\2014 \0020"; }
+        blockquote cite a, blockquote cite a:visited, blockquote cite a:visited { color: #555; }
+
+        hr { border: solid #ddd; border-width: 1px 0 0; clear: both; margin: 10px 0 30px; height: 0; }
+
+
+      /* #Links
+      ================================================== */
+        a, a:visited { color: #000; text-decoration: underline; outline: 0; }
+        a:hover, a:focus { color: #003fff; }
+        p a, p a:visited { line-height: inherit; }
+
+
+      /* #Lists
+      ================================================== */
+      ul, ol { margin-bottom: 20px; }
+      ul { list-style: disc outside; }
+      ol { list-style: decimal; }
+      ol, ul.square, ul.circle, ul.disc { margin-left: 30px; }
+      ul.square { list-style: square outside; }
+      ul.circle { list-style: circle outside; }
+      ul.disc { list-style: disc outside; }
+      ul ul, ul ol,
+      ol ol, ol ul { margin: 4px 0 5px 30px; }
+      ul ul li, ul ol li,
+      ol ol li, ol ul li { margin-bottom: 6px; }
+      li { line-height: 18px; margin-bottom: 12px; }
+      ul.large li { line-height: 21px; }
+      li p { line-height: 21px; }
+
+      /* #Images
+      ================================================== */
+
+      img.scale-with-grid {
+        max-width: 100%;
+        height: auto;
       }
 
-      @font-face {
-        font-family: "cine-mono";
-        font-display: swap;
-        src: url("/css/fonts/GT-Cinetype-Mono.woff") format("woff");
+      /*
+      * Skeleton V1.1
+      * Copyright 2011, Dave Gamache
+      * www.getskeleton.com
+      * Free to use under the MIT license.
+      * http://www.opensource.org/licenses/mit-license.php
+      * 8/17/2011
+      */
+
+
+      /* Table of Contents
+      ==================================================
+          #Base 960 Grid
+          #Tablet (Portrait)
+          #Mobile (Portrait)
+          #Mobile (Landscape)
+          #Clearing */
+
+
+
+      /* #Base 960 Grid
+      ================================================== */
+
+          .container                                  { position: relative; width: 960px; margin: 0 auto; padding: 0; }
+          .container .column,
+          .container .columns                         { float: left; display: inline; margin-left: 10px; margin-right: 10px; }
+          .row                                        { margin-bottom: 20px; }
+
+          /* Nested Column Classes */
+          .column.alpha, .columns.alpha               { margin-left: 0; }
+          .column.omega, .columns.omega               { margin-right: 0; }
+
+          /* Base Grid */
+          .container .one.column,
+          .container .one.columns                     { width: 40px;  }
+          .container .two.columns                     { width: 100px; }
+          .container .three.columns                   { width: 160px; }
+          .container .four.columns                    { width: 220px; }
+          .container .five.columns                    { width: 280px; }
+          .container .six.columns                     { width: 340px; }
+          .container .seven.columns                   { width: 400px; }
+          .container .eight.columns                   { width: 460px; }
+          .container .nine.columns                    { width: 520px; }
+          .container .ten.columns                     { width: 580px; }
+          .container .eleven.columns                  { width: 640px; }
+          .container .twelve.columns                  { width: 700px; }
+          .container .thirteen.columns                { width: 760px; }
+          .container .fourteen.columns                { width: 820px; }
+          .container .fifteen.columns                 { width: 880px; }
+          .container .sixteen.columns                 { width: 940px; }
+
+          .container .one-third.column                { width: 300px; }
+          .container .two-thirds.column               { width: 620px; }
+
+          /* Offsets */
+          .container .offset-by-one                   { padding-left: 60px;  }
+          .container .offset-by-two                   { padding-left: 120px; }
+          .container .offset-by-three                 { padding-left: 180px; }
+          .container .offset-by-four                  { padding-left: 240px; }
+          .container .offset-by-five                  { padding-left: 300px; }
+          .container .offset-by-six                   { padding-left: 360px; }
+          .container .offset-by-seven                 { padding-left: 420px; }
+          .container .offset-by-eight                 { padding-left: 480px; }
+          .container .offset-by-nine                  { padding-left: 540px; }
+          .container .offset-by-ten                   { padding-left: 600px; }
+          .container .offset-by-eleven                { padding-left: 660px; }
+          .container .offset-by-twelve                { padding-left: 720px; }
+          .container .offset-by-thirteen              { padding-left: 780px; }
+          .container .offset-by-fourteen              { padding-left: 840px; }
+          .container .offset-by-fifteen               { padding-left: 900px; }
+
+
+
+      /* #Tablet (Portrait)
+      ================================================== */
+
+          /* Note: Design for a width of 768px */
+
+          @media only screen and (min-width: 768px) and (max-width: 959px) {
+              .container                                  { width: 768px; }
+              .container .column,
+              .container .columns                         { margin-left: 10px; margin-right: 10px;  }
+              .column.alpha, .columns.alpha               { margin-left: 0; margin-right: 10px; }
+              .column.omega, .columns.omega               { margin-right: 0; margin-left: 10px; }
+              .alpha.omega                                { margin-left: 0; margin-right: 0; }
+
+              .container .one.column,
+              .container .one.columns                     { width: 28px; }
+              .container .two.columns                     { width: 76px; }
+              .container .three.columns                   { width: 124px; }
+              .container .four.columns                    { width: 172px; }
+              .container .five.columns                    { width: 220px; }
+              .container .six.columns                     { width: 268px; }
+              .container .seven.columns                   { width: 316px; }
+              .container .eight.columns                   { width: 364px; }
+              .container .nine.columns                    { width: 412px; }
+              .container .ten.columns                     { width: 460px; }
+              .container .eleven.columns                  { width: 508px; }
+              .container .twelve.columns                  { width: 556px; }
+              .container .thirteen.columns                { width: 604px; }
+              .container .fourteen.columns                { width: 652px; }
+              .container .fifteen.columns                 { width: 700px; }
+              .container .sixteen.columns                 { width: 748px; }
+
+              .container .one-third.column                { width: 236px; }
+              .container .two-thirds.column               { width: 492px; }
+
+              /* Offsets */
+              .container .offset-by-one                   { padding-left: 48px; }
+              .container .offset-by-two                   { padding-left: 96px; }
+              .container .offset-by-three                 { padding-left: 144px; }
+              .container .offset-by-four                  { padding-left: 192px; }
+              .container .offset-by-five                  { padding-left: 240px; }
+              .container .offset-by-six                   { padding-left: 288px; }
+              .container .offset-by-seven                 { padding-left: 336px; }
+              .container .offset-by-eight                 { padding-left: 384px; }
+              .container .offset-by-nine                  { padding-left: 432px; }
+              .container .offset-by-ten                   { padding-left: 480px; }
+              .container .offset-by-eleven                { padding-left: 528px; }
+              .container .offset-by-twelve                { padding-left: 576px; }
+              .container .offset-by-thirteen              { padding-left: 624px; }
+              .container .offset-by-fourteen              { padding-left: 672px; }
+              .container .offset-by-fifteen               { padding-left: 720px; }
+          }
+
+
+      /*  #Mobile (Portrait)
+      ================================================== */
+
+          /* Note: Design for a width of 320px */
+
+          @media only screen and (max-width: 767px) {
+              .container { width: 300px; }
+              .container .columns,
+              .container .column { margin: 0; }
+
+              .container .one.column,
+              .container .one.columns,
+              .container .two.columns,
+              .container .three.columns,
+              .container .four.columns,
+              .container .five.columns,
+              .container .six.columns,
+              .container .seven.columns,
+              .container .eight.columns,
+              .container .nine.columns,
+              .container .ten.columns,
+              .container .eleven.columns,
+              .container .twelve.columns,
+              .container .thirteen.columns,
+              .container .fourteen.columns,
+              .container .fifteen.columns,
+              .container .sixteen.columns,
+              .container .one-third.column,
+              .container .two-thirds.column  { width: 300px; }
+
+              /* Offsets */
+              .container .offset-by-one,
+              .container .offset-by-two,
+              .container .offset-by-three,
+              .container .offset-by-four,
+              .container .offset-by-five,
+              .container .offset-by-six,
+              .container .offset-by-seven,
+              .container .offset-by-eight,
+              .container .offset-by-nine,
+              .container .offset-by-ten,
+              .container .offset-by-eleven,
+              .container .offset-by-twelve,
+              .container .offset-by-thirteen,
+              .container .offset-by-fourteen,
+              .container .offset-by-fifteen { padding-left: 0; }
+
+          }
+
+
+      /* #Mobile (Landscape)
+      ================================================== */
+
+          /* Note: Design for a width of 480px */
+
+          @media only screen and (min-width: 480px) and (max-width: 767px) {
+              .container { width: 420px; }
+              .container .columns,
+              .container .column { margin: 0; }
+
+              .container .one.column,
+              .container .one.columns,
+              .container .two.columns,
+              .container .three.columns,
+              .container .four.columns,
+              .container .five.columns,
+              .container .six.columns,
+              .container .seven.columns,
+              .container .eight.columns,
+              .container .nine.columns,
+              .container .ten.columns,
+              .container .eleven.columns,
+              .container .twelve.columns,
+              .container .thirteen.columns,
+              .container .fourteen.columns,
+              .container .fifteen.columns,
+              .container .sixteen.columns,
+              .container .one-third.column,
+              .container .two-thirds.column { width: 420px; }
+          }
+
+
+      /* #Clearing
+      ================================================== */
+
+          /* Self Clearing Goodness */
+          .container:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+
+          /* Use clearfix class on parent to clear nested columns,
+          or wrap each row of columns in a <div class="row"> */
+          .clearfix:before,
+          .clearfix:after,
+          .row:before,
+          .row:after {
+            content: '\0020';
+            display: block;
+            overflow: hidden;
+            visibility: hidden;
+            width: 0;
+            height: 0; }
+          .row:after,
+          .clearfix:after {
+            clear: both; }
+          .row,
+          .clearfix {
+            zoom: 1; }
+
+          /* You can also use a <br class="clear" /> to clear columns */
+          .clear {
+            clear: both;
+            display: block;
+            overflow: hidden;
+            visibility: hidden;
+            width: 0;
+            height: 0;
+          }
+
+      /*
+      * Skeleton V1.1
+      * Copyright 2011, Dave Gamache
+      * www.getskeleton.com
+      * Free to use under the MIT license.
+      * http://www.opensource.org/licenses/mit-license.php
+      * 8/17/2011
+      */
+
+      /* Table of Content
+      ==================================================
+        #Site Styles
+        #Page Styles
+        #Media Queries
+        #Font-Face */
+
+      /* #Site Styles
+      ================================================== */
+
+      /* #Page Styles
+      ================================================== */
+
+      /* #Media Queries
+      ================================================== */
+
+        /* Smaller than standard 960 (devices and browsers) */
+        @media only screen and (max-width: 959px) {}
+
+        /* Tablet Portrait size to standard 960 (devices and browsers) */
+        @media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+        /* All Mobile Sizes (devices and browser) */
+        @media only screen and (max-width: 767px) {}
+
+        /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+        @media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+        /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+        @media only screen and (max-width: 479px) {}
+
+
+      /* #Font-Face
+      ================================================== */
+      /* 	This is the proper syntax for an @font-face file
+          Just create a "fonts" folder at the root,
+          copy your FontName into code below and remove
+          comment brackets */
+
+
+        @font-face {
+          font-family: "cine";
+          src: url("/css/fonts/GT-Cinetype-Regular.woff") format("woff");
+          font-weight: normal;
+          font-style: normal;
+          font-display: swap;
+        }
+
+        @font-face {
+          font-family: "cine-mono";
+          src: url("/css/fonts/GT-Cinetype-Mono.woff") format("woff");
+          font-weight: normal;
+          font-style: normal;
+          font-display: swap;
+        }
+
+        @font-face {
+          font-family: "cine";
+          src: url("/css/fonts/GT-Cinetype-Bold.woff") format("woff");
+          font-weight: bold;
+          font-style: normal;
+          font-display: swap;
+        }
+
+
+      .container {
+        padding-top: 64px;
       }
 
-      @font-face {
-        font-family: "cine";
-        font-display: swap;
-        src: url("/css/fonts/GT-Cinetype-Bold.woff") format("woff");
-        font-weight: bold;
+      ::selection {
+        background: #89a6ff;
+      }
+      ::-moz-selection {
+        background: #89a6ff;
       }
 
-      body {
-        background-color: #fff;
-        color: #000;
-        font-family: cine, sans-serif;
-      }
-
-      div.wrap {
-        display: block;
-        width: 80%;
-        max-width: 960px;
-        margin: 0 auto;
+      nav {
+        position: fixed;
+        width: 160px;
       }
 
       nav ul {
-        padding: 0 0 5em 0;
-        list-style: none;
+        float: left;
       }
 
       nav ul li {
-        display: inline;
-        margin-right: 20px;
-        margin-top: 8px;
-      }
-
-      footer ul {
-        padding: 40px 0;
-        list-style: none;
-      }
-
-      footer ul li {
         display: block;
-        margin-right: 20px;
-        margin-top: 8px;
+        margin-bottom: 8px;
       }
 
-      a {
-        font-family: cine, sans-serif;
+      nav ul li a,
+      nav ul li a:visited,
+      nav ul li a:active  {
+        font-size: 14px;
+        color: #000;
         text-decoration: none;
+        font-weight: bold;
+      }
+
+      nav ul li a:hover,
+      nav ul li a:focus {
         color: #302ECD;
       }
 
-      a:hover span{
-        background-size: 100% 100%;
+      li {
+        margin-bottom: 8px;
       }
 
-      h1 {
-        font-size: 3.375em;
+      #logo {
+        margin-bottom: 24px;
+        letter-spacing: -1px;
       }
 
-      h2 {
-        font-size: 2.25em;
-        font-weight: 500;
+      #logo a {
+        text-decoration: none;
       }
 
-      h3 {
-        font-size: 1.5em;
-        font-weight: 500;
+      .book-details {
+        margin-bottom: 32px;
       }
 
-      h4 {
-        font-size: 1.2em;
-        margin: 0;
+      .book-details  .clearfix {
+        clear: both;
       }
 
-      p, ul {
-        font-size: 1em;
-        line-height: 1.5em;
-        color: rgba(0,0,0,.84);;
+      .book-image {
+        float: left;
+        width: 25%;
       }
 
-      .darklighted {
-        background-image: linear-gradient(180deg, transparent 75%, #FFEE77 0);
-        background-size: 0% 100%;
-        -moz-transition: 0.3s cubic-bezier(0.5, 0.60, 0.360, 1) background;
-        -o-transition: 0.3s cubic-bezier(0.5, 0.60, 0.360, 1) background;
-        -ms-transition: 0.3s cubic-bezier(0.5, 0.60, 0.360, 1) background;
-        -webkit-transition: 0.3s cubic-bezier(0.5, 0.60, 0.360, 1) background;
-        transition: 0.3s cubic-bezier(0.5, 0.60, 0.360, 1) background;
-        background-repeat: no-repeat;
-        padding-bottom: 0;
+      .book-image img {
+        width: 90%;
       }
 
-      #header-line {
-        background: #FFEE77;
-        height: 4px;
-        width: 10%;
-        margin-top: 3em;
-        margin-bottom: 3em;
+      .book-details .details {
+        float: right;
+        width: 75%;
+      }
+      .book-details .detail .detail-category {
+        text-align: right;
+        vertical-align: top;
+        min-width: 105px;
+        font-weight: bold;
       }
 
-      #work-container {
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-flex-flow: row wrap;
+      .book-details .detail .detail-content {
+        vertical-align: top;
       }
 
-      .work-card{
-        box-shadow: 0 30px 70px rgba(64,52,52,.1);
-        -webkit-box-shadow: 0 30px 70px rgba(64,52,52,.1);
-        width: 100%;
-        height: auto;
-        position: relative;
-        margin: 8px;
-      }
-
-      .work-card:hover{
-        box-shadow: 0 30px 70px rgba(64,52,52,.2);
-        -webkit-box-shadow: 0 30px 70px rgba(64,52,52,.2);
-        position: relative;
-        top:-0.25em;
-      }
-
-      .work-card-image {
-        display: block;
-        box-sizing: border-box;
-        background: center center no-repeat;
-      }
-
-      .work-card-text {
-        padding: 1em;
-      }
-
-      .work-card-text p {
-        height:100px;
-      }
-
-      .work-card-text h3 {
-        margin: 0;
-      }
-
-      .work-card-text a::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-      }
-
-      .tags {
-        margin: 0;
-        padding: 0;
-      }
-
-      .tag {
-        color: rgba(0, 0, 0, 0.4);
-        background: rgba(244, 245, 249, 1);
-        padding: .25em .5em;
-        margin-top: .25em;
-        text-transform: uppercase;
-        font-family: cine-mono, monospace;
-        list-style: none;
-        display: inline-block;
-      }
-
-      .page {
-        width: 100%;
-        display: block;
-      }
-
-      .page-section {
-        padding-top: 2em;
-      }
-
-      .page-content ul{
-        padding-left: 1.5em;
-      }
-
-      .page-description {
-        width: 100%;
-      }
-
-      .page-content h3 {
-        padding-top: 1.5em;
-      }
-
-      .page-image {
-        -webkit-box-shadow: 0 15px 35px rgba(64,52,52,.1);
-        box-shadow: 0 15px 35px rgba(64,52,52,.1);
-        margin-bottom: 2em;
-      }
-
-      /* Medium devices (landscape tablets, 768px and up) */
-      @media only screen and (min-width: 768px) {
-        nav ul li, footer ul li {
-          display: inline-block;
-          margin-right: 20px;
-          margin-top: 16px;
+      /* Mobile */
+      @media only screen and (max-width: 767px) {
+        header h1 {
+          font-size: 32px;
+          line-height: 40px;
         }
 
-        .work-card{
-          width: 40%;
+        #logo {
+          text-align: center;
         }
 
-        .page {
-          -webkit-box-shadow: 0 30px 70px rgba(64,52,52,.1);
-          box-shadow: 0 30px 70px rgba(64,52,52,.1);
+
+        nav {
+          position: relative;
           width: 100%;
         }
 
-        .page-content {
-          padding: 2em;
+        nav ul {
+          width: 100%;
+          text-align: center;
         }
 
-        .page-description {
-          width: 80%;
+        nav ul li {
+          display: inline;
+          margin: 0 4px;
+        }
+
+        nav ul li a {
+          font-size: 16px;
         }
       }
 
-      /* Large devices (laptops/desktops, 992px and up) */
-      @media only screen and (min-width: 992px) {
-        .work-card{
-          width: 30%;
-        }
+      /* Mobile Landscape */
+      @media only screen and (min-width: 480px) and (max-width: 767px) {
+      }
 
-        .page {
-          width: 100%;
+      /* Non 960 */
+      @media only screen and (max-width: 959px) {
+          #logo {
+            margin-bottom: 16px;
+          }
+
+          nav .button {
+            padding: 8px 24px 16px;
+          }
+      }
+
+      /* iPad Portrait/Browser */
+      @media only screen and (min-width: 768px) and (max-width: 959px) {
+        nav {
+          width: 124px;
         }
+      }
+
+      /* Mobile/Browser */
+      @media only screen and (max-width: 767px) {}
+
+      /* Mobile Landscape/Browser */
+      @media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+      /* Anything smaller than standard 960 */
+      @media only screen and (max-width: 959px) {}
+
+
+      /* iPad Portrait Only */
+      @media only screen and (min-width: 768px) and (max-width: 959px) and (max-device-width: 1000px) {}
+
+      /* Mobile Only */
+      @media only screen and (max-width: 767px) and (max-device-width: 1000px) {}
+
+      /* Mobile Landscape Only */
+      @media only screen and (min-width: 480px) and (max-width: 767px) and (max-device-width: 1000px) {}
+
+      /* Anything smaller than standard 960 on a device */
+      @media only screen and (max-width: 959px) and (max-device-width: 1000px) {
+          .resize { display: none; }
+      }
+
+      table{
+        background:#fff;
+        border-collapse:collapse;
+        margin:5px 0 10px;
+      }
+
+      th, td{
+        padding:3px 10px;
+        text-align:left;
+        vertical-align:top;
+      }
+
+      tr.even td{
+        background:#f7f7f7;
+      }
+
+      th{
+        background:#edeff0;
+      }
+
+      .highlight {
+        margin-bottom: 20px;
+      }
+
+      div.highlight > pre {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding-left: 20px;
+        border-left: 1px solid #ccc;
+        overflow: auto;
+      }
+
+      code {
+        font-family: monospace;
+      }
+
+      p img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px;
+      }
+
+      sup {
+        vertical-align: super;
+        font-size: 8pt;
       }
     </style>
 
@@ -294,49 +708,61 @@
       }
       </script>
       </amp-analytics>
-    <div class="wrap">
-      <nav>
-        <ul>
-          <li><a href="/"><span class="darklighted">Home</span></a></li>
-          <li><a href="/bookshelf"><span class="darklighted">Bookshelf</span></a></li>
-        </ul>
-      </nav>
-      <div class="container">
-        <h2>Blue Ocean Strategy, Expanded Edition: How to Create Uncontested Market Space and Make the Competition Irrelevant</h2>
-        <h3>by W. Chan Kim and Renée A. Mauborgne</h3>
-        <div id="header-line"></div>
-
-        <a href="https://amzn.to/36I6YAC">
-          <amp-img
-              class="page-image"
-              src="/images/covers/blue-ocean-strategy.webp"
-              width="332"
-              height="500"
-              alt=""></amp-img>
-        </a>
-        <h4>Summary:</h4>
-        <ul>
-          <li>
-            <div>
-              Value innovation is the cornerstone of blue ocean strategy. We call it value innovation because instead of focusing on beating the competition, you focus on making the competition irrelevant by creating a leap in value for buyers and your company, thereby opening up new and uncontested market space.
-            </div>
-          </li>
-        </ul>
-        <br>
-        <h4>Key takeaways:</h4>
+    <div class="container">
+      <div class="three columns">
+        <nav>
+          <h1 id="logo" >
+            <a href="/">Leroy Almeida</a>
+          </h1>
+          <ul>
+            <li><a href="/bookshelf">Bookshelf</a></li>
+            <li><a href="https://twitter.com/leroyalmeida23">Twitter</a></li>
+            <li><a href="https://www.linkedin.com/in/leroyalmeida/">LinkedIn</a></li>
+          </ul>
+        </nav>
+        &nbsp;
+      </div>
+      <div class="twelve columns offset-by-one">
+        <div class="book-details">
+          <div class="book-image">
+            <amp-img
+                class="page-image"
+                src="/images/covers/blue-ocean-strategy.webp"
+                width="160"
+                height="240"
+                alt=""></amp-img>
+          </div>
+          <div class="details">
+            <table>
+              <tbody><tr class="detail">
+                <td class="detail-category">Title:</td>
+                <td class="detail-content">Blue Ocean Strategy, Expanded Edition: How to Create Uncontested Market Space and Make the Competition Irrelevant</td>
+              </tr>
+              <tr class="detail">
+                <td class="detail-category">Author:</td>
+                <td class="detail-content">W. Chan Kim and Renée A. Mauborgne</td>
+              </tr>
+              <tr class="detail">
+                <td class="detail-category">Year Read:</td>
+                <td class="detail-content">2018</td>
+              </tr>
+              <tr class="detail">
+                <td class="detail-category">Buy This Book:</td>
+                <td class="detail-content"><a href="https://amzn.to/36I6YAC" target="_blank">Amazon</a></td>
+              </tr>
+              <tr class="detail">
+                <td class="detail-category">Summary</td>
+                <td class="detail-content">Value innovation is the cornerstone of blue ocean strategy. We call it value innovation because instead of focusing on beating the competition, you focus on making the competition irrelevant by creating a leap in value for buyers and your company, thereby opening up new and uncontested market space.</td>
+              </tr>
+            </tbody></table>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <h4>Key Takeaways:</h4>
         <ul>
           <li><div>Their aim was not to outperform competitors. It was to offer a quantum leap in value that made the competition irrelevant.</div></li><li><div>Competition should not occupy the center of strategic thinking.</div></li><li><div>Industry structure is not given; it can be shaped.</div></li><li><div>Strategic creativity can be unlocked systematically.</div></li><li><div>Execution can be built into strategy formulation.</div></li><li><div>Commitment, trust, and voluntary cooperation are not merely attitudes or behaviors. They are intangible capital. They allow companies to stand apart in the speed, quality, and consistency of their execution and to implement strategic shifts fast at low cost.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Creating Blue Oceans</span></div></li><ul><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Blue oceans, in contrast, are defined by untapped market space, demand creation, and the opportunity for highly profitable growth.</span></div></li><li><div>But with supply exceeding demand in more industries, competing for a share of contracting markets, while necessary, will not be sufficient to sustain high performance.</div></li><li><div>People no longer insist, as in the past, that their laundry detergent be Tide. Nor will they necessarily stick to Colgate when Crest is on sale, and vice versa. In overcrowded industries, differentiating brands becomes harder in both economic upturns and downturns.</div></li><li><div>A strategic move is the set of managerial actions and decisions involved in making a major market-creating business offering.</div></li><li><div>We found that the creation and capturing of blue oceans were achieved by small and large companies, by young and old managers, by companies in attractive and unattractive industries, by new entrants and established incumbents, by private and public companies, by companies in B2B and B2C industries, and by companies of diverse national origins.</div></li><li><div>The companies caught in the red ocean followed a conventional approach, racing to beat the competition by building a defensible position within the existing industry order.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Value innovation is the cornerstone of blue ocean strategy. We call it value innovation because instead of focusing on beating the competition, you focus on making the competition irrelevant by creating a leap in value for buyers and your company, thereby opening up new and uncontested market space.</span></div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Value innovation places equal emphasis on value and innovation.</span></div></li><li><div>Value without innovation tends to focus on value creation on an incremental scale, something that improves value but is not sufficient to make you stand out in the marketplace.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Innovation without value tends to be technology-driven, market pioneering, or futuristic, often shooting beyond what buyers are ready to accept and pay for.</span></div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Value innovation occurs only when companies align innovation with utility, price, and cost positions.</span></div></li><li><div>Value innovation defies one of the most commonly accepted dogmas of competition-based strategy: the value-cost trade-off. It is conventionally believed that companies can either create greater value to customers at a higher cost or create reasonable value at a lower cost.</div></li><li><div>Cirque strategically priced its tickets against those of the theater, lifting the price point of the circus industry by several multiples while still pricing its productions to capture the mass of adult customers, who were used to theater prices.</div></li><li><div>By offering unprecedented utility, Cirque du Soleil created a blue ocean and invented a new form of live entertainment, one that is markedly different from both traditional circus and theater. At the same time, by eliminating many of the most costly elements of the circus, it dramatically reduced its cost structure, achieving both differentiation and low cost.</div></li><li><div>Value innovation is created in the region where a company’s actions favorably affect both its cost structure and its value proposition to buyers. Cost savings are made by eliminating and reducing the factors an industry competes on. Buyer value is lifted by raising and creating elements the industry has never offered. Over time, costs are reduced further as scale economies kick in due to the high sales volumes that superior value generates.</div></li><li><div>For value innovation to be a sustainable strategy, then, the alignment of the company’s utility, price, cost, and people is needed. It is this whole-system approach that makes value innovation strategic rather than operational or functional.</div></li><li><div>Value innovation is a distinct concept. It is about strategy that embraces the entire system of a company’s activities.23 Value innovation requires companies to orient the whole system toward achieving a leap in value for both buyers and themselves.</div></li><li><div>Red ocean versus blue ocean strategy Competition-based red ocean strategy assumes that an industry’s structural conditions are given and that firms are forced to compete within them, an assumption based on what the academics call the structuralist view, or environmental determinism.25 In contrast, value innovation is based on the view that market boundaries and industry structure are not given and can be reconstructed by the actions and beliefs of industry players.</div></li><li><div>Red ocean versus blue ocean strategy</div></li><li><div>Value innovation is based on the view that market boundaries and industry structure are not given and can be reconstructed by the actions and beliefs of industry players. We call this the reconstructionist view.</div></li><li><div>In the reconstructionist world, however, the strategic aim is to create new best-practice rules by breaking the existing value-cost trade-off and thereby creating a blue ocean.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">The eight principles of blue ocean strategy</span></div></li><ul><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Formulation Principles</span></div></li><ul><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Reconstruct market boundaries (Search risk)</span></div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Focus on the big picture, not the numbers (Planning risk)</span></div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Reach beyond the existing demand (Scale risk)</span></div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Get the strategic sequence right (Business model risk)</span></div></li></ul><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Execution Principles</span></div></li><ul><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Overcome key organisational hurdles (Organizational risk)</span></div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Build execution into strategy (Management risk)</span></div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Align the value, profit, and people propositions (Sustainability risk)</span></div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Renew blue oceans (Renewal risk)</span></div></li></ul></ul></ul><li><div>Analytical Tools and Frameworks</div></li><ul><li><div>Effective blue ocean strategy should be about risk minimization and not risk taking.</div></li><li><div>The Strategy Canvas</div></li><ul><li><div>Captures the current state of play in the known market space</div></li><li><div>Allows you to understand where the competition is currently investing, the factors the industry currently competes on in products, service, and delivery, and what customers receive from the existing competitive offerings on the market.</div></li><li><div>Value curve, the basic component of the strategy canvas, is a graphic depiction of a company’s relative performance across its industry’s factors of competition.</div></li></ul><li><div>To set a company on a strong, profitable growth trajectory in the face of industry conditions like these, it won’t work to benchmark competitors and try to outcompete them by offering a little more for a little less. Nor is conducting extensive customer research the path to blue oceans. Our research found that customers can scarcely imagine how to create uncontested market space.&nbsp;</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">To fundamentally shift the strategy canvas of an industry, you must begin by reorienting your strategic focus from competitors to alternatives, and from customers to noncustomers of the industry.</span> To pursue both value and low cost, you should resist the old logic of benchmarking competitors in the existing field and choosing between differentiation and cost leadership.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">The four actions framework</span></div></li><ul><li><div>Four key questions to challenge an industry’s strategic logic and business model:</div></li><ul><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Which of the factors that the industry takes for granted should be eliminated?</span></div></li><ul><li><div>Consider eliminating factors that companies in your industry have long competed on.</div></li></ul><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Which factors should be reduced well below the industry’s standard?</span></div></li><ul><li><div>Determine whether products or services have been overdesigned in the race to match and beat the competition.</div></li></ul><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Which factors should be raised well above the industry’s standard?</span></div></li><ul><li><div>Uncover and eliminate the compromises your industry forces customers to make.</div></li></ul><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Which factors should be created that the industry has never offered?</span></div></li><ul><li><div>Discover entirely new sources of value for buyers and to create new demand and shift the strategic pricing of the industry.</div></li></ul></ul><li><div>Sometimes there is a fundamental change in what buyers value, but companies that are focused on benchmarking one another do not act on, or even perceive, the change.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">It is by pursuing the first two questions (of eliminating and reducing) that you gain insight into how to drop your cost structure vis-à-vis competitors.</span></div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">The second two factors, by contrast, provide you with insight into how to lift buyer value and create new demand.</span></div></li></ul><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Three characteristics of a good blue ocean strategy: </span></div></li><ul><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Focus</span>&nbsp;- every great strategy has focus</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Divergence </span>- when a company’s strategy is formed reactively as it tries to keep &nbsp;up with competition, it loses its uniqueness</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Compelling tagline </span>- must not only deliver a clear message but also advertise an offering truthfully</div></li></ul><li><div>When a company’s value curve lacks focus, its cost structure will tend to be high and its business model complex in implementation and execution. When it lacks divergence, a company’s strategy is a me-too, with no reason to stand apart in the marketplace. When it lacks a compelling tagline that speaks to buyers, it is likely to be internally driven or a classic example of innovation for innovation’s sake with no great commercial potential and no natural take-off capability.</div></li><li><div>To value-innovate, the company must decide which factors to eliminate and reduce—and not only those to raise and create—to construct a divergent value curve.</div></li><li><div>The kind of language used in the strategy canvas gives insight as to whether a company’s strategic vision is built on an “outside-in” perspective, driven by the demand side, or an “inside-out” perspective that is operationally driven. Analyzing the language of the strategy canvas helps a company understand how far it is from creating industry demand.</div></li></ul><li><div>Reconstruct Market Boundaries</div></li><ul><li><div><strong>The first principle of blue ocean strategy is to reconstruct market boundaries to break from the competition and create blue oceans.</strong></div></li><li><div>This principle addresses the search risk many companies struggle with. The challenge is to successfully identify, out of the haystack of possibilities that exist, commercially compelling blue ocean opportunities. This challenge is key because managers cannot afford to be riverboat gamblers betting their strategy on intuition or on a random drawing.</div></li><li><div>Path 1: Look Across Alternative Industries</div></li><ul><li><div>In the broadest sense, a company competes not only with the other firms in its own industry but also with companies in those other industries that produce alternative products or services. Alternatives are broader than substitutes. Products or services that have different forms but offer the same functionality or core utility are often substitutes for each other. On the other hand, alternatives include products or services that have different functions and forms but the same purpose.</div></li><li><div>What are the alternative industries to your industry? Why do customers trade across them?</div></li></ul><li><div>Path 2: Look Across Strategic Groups within Industries</div></li><ul><li><div>Just as blue oceans can often be created by looking across alternative industries, so can they be unlocked by looking across strategic groups. The term refers to a group of companies within an industry that pursue a similar strategy. In most industries, the fundamental strategic differences among industry players are captured by a small number of strategic groups. Strategic groups can generally be ranked in a rough hierarchical order built on two dimensions: price and performance. Each jump in price tends to bring a corresponding jump in some dimensions of performance.</div></li><li><div>The key to creating a blue ocean across existing strategic groups is to break out of this narrow tunnel vision by understanding which factors determine customers’ decisions to trade up or down from one group to another.</div></li><li><div>What are the strategic groups in your industry? Why do customers trade up for the higher group, and why do they trade down for the lower one?</div></li></ul><li><div>Path 3: Look Across the Chain of Buyers</div></li><ul><li><div>In most industries, competitors converge around a common definition of who the target buyer is. In reality, though, there is a chain of “buyers” who are directly or indirectly involved in the buying decision. The purchasers who pay for the product or service may differ from the actual users, and in some cases there are important influencers as well. Although these three groups may overlap, they often differ. When they do, they frequently hold different definitions of value.</div></li><li><div>Challenging an industry’s conventional wisdom about which buyer group to target can lead to the discovery of a new blue ocean. By looking across buyer groups, companies can gain new insights into how to redesign their value curves to focus on a previously overlooked set of buyers.</div></li><li><div>What is the chain of buyers in your industry? Which buyer group does your industry typically focus on? If you shifted the buyer group of your industry, how could you unlock new value?</div></li></ul><li><div>Path 4: Look Across Complementary Product and Service Offerings</div></li><ul><li><div>Few products and services are used in a vacuum. In most cases, other products and services affect their value. But in most industries, rivals converge within the bounds of their industry’s product and service offerings.</div></li><li><div>Untapped value is often hidden in complementary products and services. The key is to define the total solution buyers seek when they choose a product or service. A simple way to do so is to think about what happens before, during, and after your product is used.</div></li><li><div>The strategy canvas of the US municipal bus industry, circa 2001</div></li><li><div>What is the context in which your product or service is used? What happens before, during, and after? Can you identify the pain points? How can you eliminate these pain points through a complementary product or service offering?</div></li></ul><li><div>Path 5: Look Across Functional or Emotional Appeal to Buyers</div></li><ul><li><div>Competition in an industry tends to converge not only on an accepted notion of the scope of its products and services but also on one of two possible bases of appeal. Some industries compete principally on price and function largely on calculations of utility; their appeal is rational. Other industries compete largely on feelings; their appeal is emotional.</div></li><li><div>Does your industry compete on functionality or emotional appeal? If you compete on emotional appeal, what elements can you strip out to make it functional? If you compete on functionality, what elements can be added to make it emotional?<br></div></li></ul><li><div>Path 6: Look Across Time</div></li><ul><li><div>All industries are subject to external trends that affect their businesses over time. Think of the rapid rise of the cloud or the global movement toward protecting the environment. Looking at these trends with the right perspective can show you how to create blue ocean opportunities.</div></li><li><div>By looking across time—from the value a market delivers today to the value it might deliver tomorrow—managers can actively shape their future and lay claim to a new blue ocean.</div></li><li><div>Three principles are critical to assessing trends across time. To form the basis of a blue ocean strategy, these trends must be <strong>decisive to your business</strong>, they must be <strong>irreversible</strong>, and they must <strong>have a clear trajectory</strong>.</div></li><li><div>What trends have a high probability of impacting your industry, are irreversible, and are evolving in a clear trajectory? How will these trends impact your industry? Given this, how can you open up unprecedented customer utility?</div></li></ul></ul><li><div>Focusing on the Big Picture</div></li><ul><li><div>In our research and consulting work, we have found that drawing a strategy canvas not only visualizes a company’s current strategic position in its marketplace but also helps it chart its future strategy. By building a company’s strategic planning process around a strategy canvas, a company and its managers focus their main attention on the big picture rather than becoming immersed in numbers and jargon and getting caught up in operational details.</div></li><li><div>Drawing a strategy canvas does three things.</div></li><ul><li><div>First, it shows the strategic profile of an industry by depicting very clearly the factors (and the possible future factors) that affect competition among industry players.</div></li><li><div>Second, it shows the strategic profile of current and potential competitors, identifying which factors they invest in strategically.</div></li><li><div>Finally, it shows the company’s strategic profile—or value curve—depicting how it invests in the factors of competition and how it might invest in them in the future.<br></div></li></ul><li><div>The four steps of visualizing strategy</div></li><ul><li><div>Step 1: Visual Awakening</div></li><ul><li><div>A common mistake is to discuss changes in strategy before resolving differences of opinion about the current state of play. Another problem is that executives are often reluctant to accept the need for change; they may have a vested interest in the status quo, or they may feel that time will eventually vindicate their previous choices.</div></li></ul></ul></ul><ul><ul><li><div>Step 2: Visual Exploration</div></li><ul><li><div>Getting the wake-up call is only the first step. The next step is to send a team into the field, putting managers face-to-face with what they must make sense of: how people use or don’t use their products or services.</div></li><li><div>Great strategic insights like this are less the product of genius than of getting into the field and challenging the boundaries of competition.</div></li><li><div>Obviously, the first port of call should be the customers. But you should not stop there. You should also go after noncustomers. And when the customer is not the same as the user, you need to extend your observations to the users,</div></li><li><div>You should not only talk to these people but also watch them in action. Identifying the array of complementary products and services that are consumed alongside your own may give you insight into bundling opportunities.</div></li><li><div>You need to look at how customers might find alternative ways of fulfilling the need that your product or service satisfies.</div></li></ul><li><div>Step 3: Visual Strategy Fair</div></li><ul><li><div>After two weeks of drawing and redrawing, the teams presented their strategy canvases at what we call a visual strategy fair.<br></div></li><li><div>The pictures were hung on the walls so that the audience could easily see them. After the twelve strategies were presented, each judge—an invited attendee—was given five sticky notes and told to put them next to his or her favorites. The judges could put all five on a single strategy if they found it that compelling. The transparency and immediacy of this approach freed it from the politics that sometimes seem endemic to the strategic planning process.</div></li></ul><li><div>Step 4: Visual Communication</div></li><ul><li><div>After the future strategy is set, the last step is to communicate it in a way that can be easily understood by any employee. EFS distributed the one-page picture showing its new and old strategic profiles so that every employee could see where the company stood and where it had to focus its efforts to create a compelling future.<br></div></li></ul></ul><li><div>Do your business unit heads lack an understanding of the other businesses in your corporate portfolio? Are your strategic best practices poorly communicated across your business units? Are your low-performing units quick to blame their competitive situations for their results? If the answer to any of these questions is yes, try drawing, and then sharing, the strategy canvases of your business units.<br></div></li><li><div><strong>A company’s pioneers are the businesses that offer unprecedented value. These are your blue ocean offerings, and they are the most powerful sources of profitable growth.</strong> These businesses have a mass following of customers. Their value curve diverges from the competition on the strategy canvas.</div></li><li><div>At the other extreme are settlers—businesses whose value curves conform to the basic shape of the industry’s. These are me-too businesses. Settlers will not generally contribute much to a company’s future growth. They are stuck within the red ocean.</div></li><li><div>The potential of migrators lies somewhere in between. Such businesses extend the industry’s curve by giving customers more for less, but they don’t alter its basic shape. These businesses offer improved value, but not innovative value. These are businesses whose strategies fall on the margin between red oceans and blue oceans.</div></li><li><div><strong>If both the current portfolio and the planned offerings consist mainly of settlers, the company has a low growth trajectory, is largely confined to red oceans, and needs to push for value innovation.</strong></div></li><li><div><strong>If current and planned offerings consist of a lot of migrators, reasonable growth can be expected. But the company is not exploiting its potential for growth, and it risks being marginalized by a company that value-innovates.</strong><br></div></li><li><div><strong>Revenue, profitability, market share, and customer satisfaction are all measures of a company’s current position. </strong>Contrary to what conventional strategic thinking suggests, those measures cannot point the way to the future; changes in the environment are too rapid. Today’s market share is a reflection of how well a business has performed historically.</div></li><li><div>They should use innovation because, without it, companies are stuck in the trap of competitive improvements. They should use value because innovative ideas will be profitable only if they are linked to what buyers are willing to pay for.</div></li><li><div>Chief executives should instead use value and innovation as the important parameters for managing their portfolio of businesses. They should use innovation because, without it, companies are stuck in the trap of competitive improvements. They should use value because innovative ideas will be profitable only if they are linked to what buyers are willing to pay for.</div></li></ul><li><div>Reach Beyond Existing Demand</div></li><ul><li><div>Instead of concentrating on customers, they need to look to noncustomers. And instead of focusing on customer differences, they need to build on powerful commonalities in what buyers value. That allows companies to reach beyond existing demand to unlock a new mass of customers that did not exist before.</div></li><li><div>Where is your locus of attention—on capturing a greater share of existing customers, or on converting noncustomers of the industry into new demand? Do you seek out key commonalities in what buyers value, or do you strive to embrace customer differences through finer customization and segmentation?</div></li><li><div><strong>To reach beyond existing demand, think noncustomers before customers; commonalities before differences; and desegmentation before pursuing finer segmentation.</strong></div></li><li><div><strong>Non-customers tend to offer far more insight into how to unlock and grow a blue ocean than do relatively content existing customers.</strong></div></li><li><div>The three tiers of noncustomers</div></li><ul><li><div>First tier: “Soon-to-be” non-customers who are on the edge of your market, waiting to jump ship.</div></li><ul><li><div>They sit on the edge of the market. They are buyers who minimally purchase an industry’s offering out of necessity but are mentally noncustomers of the industry. They are waiting to jump ship and leave the industry as soon as the opportunity presents itself. However, if offered a leap in value, not only would they stay, but also their frequency of purchases would multiply, unlocking enormous latent demand.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">What are the key reasons first-tier noncustomers want to jump ship and leave your industry?</span></div></li></ul></ul></ul><ul><ul><li><div>Second tier: “Refusing” non-customers who consciously choose against your market.</div></li><ul><li><div>These are buyers who have seen your industry’s offerings as an option to fulfill their needs but have voted against them.</div></li><li><div>These are refusing noncustomers, people who either do not use or cannot afford to use the current market offerings because they find the offerings unacceptable or beyond their means. Their needs are either dealt with by other means or ignored. Harboring within refusing noncustomers, however, is an ocean of untapped demand waiting to be released.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">What are the key reasons second-tier noncustomers refuse to use the products or services of your industry?</span></div></li></ul></ul></ul><ul><ul><li><div>Third tier: “Unexplored” non-customers who are in markets distant from yours.</div></li></ul></ul><ul><ul><ul><li><div>The third tier of noncustomers is the farthest away from an industry’s existing customers. Typically, these unexplored noncustomers have not been targeted or thought of as potential customers by any player in the industry. That’s because their needs and the business opportunities associated with them have somehow always been assumed to belong to other markets.<br></div></li></ul></ul><li><div>Because the scale of blue ocean opportunities that a specific tier of noncustomers can unlock varies across time and industries, you should focus on the tier that represents the biggest catchment that your organization has the capability to act on. But you should also explore whether there are overlapping commonalities across all three tiers of noncustomers.</div></li><li><div>What we suggest is that to maximize the scale of your blue ocean, you should first reach beyond existing demand to noncustomers and desegmentation opportunities as you formulate future strategies.</div></li><li><div>If no such opportunities can be found, you can then move on to further exploit differences among existing customers. But in making such a strategic move, you should be aware that you might end up landing in a smaller space. You should also be aware that when your competitors succeed in attracting the mass of noncustomers with a value innovation move, many of your existing customers may be attracted away because they too may be willing to put their differences aside to gain the offered leap in value.</div></li></ul><ul><li><div>It is not enough to maximize the size of the blue ocean you are creating. You must profit from it to create a sustainable win-win outcome.</div></li></ul><li><div>Getting the Strategic Sequence Right</div></li><ul><li><div><strong>Buyer utility: Does your offering unlock exceptional utility? Is there a compelling reason for the target mass of people to buy it?</strong><br></div></li><li><div><strong>Strategic price:&nbsp;Is your offering priced to attract the mass of target buyers so that they have a compelling ability to pay for your offering?</strong></div></li><ul><li><div>These first two steps address the revenue side of a company’s business model. They ensure that you create a leap in net buyer value, where net buyer value equals the utility buyers receive minus the price they pay for it.</div></li></ul><li><div><strong>Cost: Can you produce your offering at the target cost and still earn a healthy profit margin? Can you profit at the strategic price—the price easily accessible to the mass of target buyers?</strong></div></li></ul><ul><ul><li><div>You should not let costs drive prices. Nor should you scale down utility because high costs block your ability to profit at the strategic price. When the target cost cannot be met, you must either forgo the idea because the blue ocean won’t be profitable, or you must innovate your business model to hit the target cost.</div></li><li><div>The cost side of a company’s business model ensures that it creates a leap in value for itself in the form of profit—that is, the price of the offering minus the cost of production.<br></div></li></ul></ul>
-      </ul>
-      </div> <!-- /.container -->
-      <footer>
-        <ul>
-          <li><a href="https://twitter.com/leroyalmeida23"><span class="darklighted">Twitter</span></a></li>
-          <li><a href="https://www.instagram.com/leroyalmeida/"><span class="darklighted">Instagram</span></a></li>
-          <li><a href="https://www.linkedin.com/in/leroyalmeida/"><span class="darklighted">LinkedIn</span></a></li>
-          <li><a href="https://medium.com/@leroyalmeida23"><span class="darklighted">Medium</span></a></li>
-          <li><a href="mailto:miguel.l.s.almeida@gmail.com"><span class="darklighted">Email</span></a></li>
         </ul>
-      </footer>
-    </div>
+      </div>
+    </div> <!-- /.container -->
   </body>
 </html>
