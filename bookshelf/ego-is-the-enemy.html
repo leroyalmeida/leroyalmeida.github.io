@@ -30,246 +30,660 @@
 
     <!-- link to html stylesheet -->
     <style amp-custom>
-      @font-face {
-        font-family: "cine";
-        font-display: swap;
-        src: url("/css/fonts/GT-Cinetype-Regular.woff") format("woff");
+
+      /*
+      * Skeleton V1.1
+      * Copyright 2011, Dave Gamache
+      * www.getskeleton.com
+      * Free to use under the MIT license.
+      * http://www.opensource.org/licenses/mit-license.php
+      * 8/17/2011
+      */
+
+
+      /* Table of Content
+      ==================================================
+        #Reset & Basics
+        #Basic Styles
+        #Site Styles
+        #Typography
+        #Links
+        #Lists
+        #Images
+        #Buttons
+        #Tabs
+        #Forms
+        #Misc */
+
+
+      /* #Reset & Basics (Inspired by E. Meyers)
+      ================================================== */
+        html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+          margin: 0;
+          padding: 0;
+          border: 0;
+          font-size: 100%;
+          font: inherit;
+          vertical-align: baseline; }
+        article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+          display: block; }
+        body {
+          line-height: 1; }
+        ol, ul {
+          list-style: none; }
+        blockquote, q {
+          quotes: none; }
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+          content: '';
+          content: none; }
+        table {
+          border-collapse: collapse;
+          border-spacing: 0; }
+
+
+      /* #Basic Styles
+      ================================================== */
+        body {
+          background: #fff;
+          font: 13px cine, sans-serif;
+          line-height: 1.5;
+          color: #0c0c0c;
+          -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+          -webkit-text-size-adjust: 100%;
+       }
+
+
+      /* #Typography
+      ================================================== */
+        h1, h2, h3, h4, h5, h6 {
+          color: #000;
+          font-family: cine, sans-serif;
+          font-weight: normal; }
+        h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
+        h1 { font-size: 40px; line-height: 50px; margin-bottom: 14px;}
+        h2 { font-size: 30px; line-height: 40px; margin-bottom: 10px; }
+        h3 { font-size: 24px; line-height: 34px; margin-bottom: 8px; }
+        h4 { font-size: 16px; line-height: 30px; margin-bottom: 4px; }
+        h5 { font-size: 14px; line-height: 24px; margin-bottom: 4px; }
+        h6 { font-size: 12px; line-height: 21px; }
+        .subheader { color: #0c0c0c; }
+
+        p { margin: 0 0 20px 0; }
+        p img { margin: 0; }
+        p.lead { font-size: 21px; line-height: 27px; color: #0c0c0c;  }
+
+        em { font-style: italic; }
+        strong { font-weight: bold; color: #000; }
+        small { font-size: 80%; }
+
+      /*	Blockquotes  */
+        blockquote, blockquote p { font-size: 17px; line-height: 24px; color: #0c0c0c; font-style: italic; }
+        blockquote { margin: 0 0 20px; padding: 9px 20px 0 19px; border-left: 1px solid #ddd; }
+        blockquote cite { display: block; font-size: 12px; color: #555; }
+        blockquote cite:before { content: "\2014 \0020"; }
+        blockquote cite a, blockquote cite a:visited, blockquote cite a:visited { color: #555; }
+
+        hr { border: solid #ddd; border-width: 1px 0 0; clear: both; margin: 10px 0 30px; height: 0; }
+
+
+      /* #Links
+      ================================================== */
+        a, a:visited { color: #000; text-decoration: underline; outline: 0; }
+        a:hover, a:focus { color: #003fff; }
+        p a, p a:visited { line-height: inherit; }
+
+
+      /* #Lists
+      ================================================== */
+      ul, ol { margin-bottom: 20px; }
+      ul { list-style: disc outside; }
+      ol { list-style: decimal; }
+      ol, ul.square, ul.circle, ul.disc { margin-left: 30px; }
+      ul.square { list-style: square outside; }
+      ul.circle { list-style: circle outside; }
+      ul.disc { list-style: disc outside; }
+      ul ul, ul ol,
+      ol ol, ol ul { margin: 4px 0 5px 30px; }
+      ul ul li, ul ol li,
+      ol ol li, ol ul li { margin-bottom: 6px; }
+      li { line-height: 18px; margin-bottom: 12px; }
+      ul.large li { line-height: 21px; }
+      li p { line-height: 21px; }
+
+      /* #Images
+      ================================================== */
+
+      img.scale-with-grid {
+        max-width: 100%;
+        height: auto;
       }
 
-      @font-face {
-        font-family: "cine-mono";
-        font-display: swap;
-        src: url("/css/fonts/GT-Cinetype-Mono.woff") format("woff");
+      /*
+      * Skeleton V1.1
+      * Copyright 2011, Dave Gamache
+      * www.getskeleton.com
+      * Free to use under the MIT license.
+      * http://www.opensource.org/licenses/mit-license.php
+      * 8/17/2011
+      */
+
+
+      /* Table of Contents
+      ==================================================
+          #Base 960 Grid
+          #Tablet (Portrait)
+          #Mobile (Portrait)
+          #Mobile (Landscape)
+          #Clearing */
+
+
+
+      /* #Base 960 Grid
+      ================================================== */
+
+          .container                                  { position: relative; width: 960px; margin: 0 auto; padding: 0; }
+          .container .column,
+          .container .columns                         { float: left; display: inline; margin-left: 10px; margin-right: 10px; }
+          .row                                        { margin-bottom: 20px; }
+
+          /* Nested Column Classes */
+          .column.alpha, .columns.alpha               { margin-left: 0; }
+          .column.omega, .columns.omega               { margin-right: 0; }
+
+          /* Base Grid */
+          .container .one.column,
+          .container .one.columns                     { width: 40px;  }
+          .container .two.columns                     { width: 100px; }
+          .container .three.columns                   { width: 160px; }
+          .container .four.columns                    { width: 220px; }
+          .container .five.columns                    { width: 280px; }
+          .container .six.columns                     { width: 340px; }
+          .container .seven.columns                   { width: 400px; }
+          .container .eight.columns                   { width: 460px; }
+          .container .nine.columns                    { width: 520px; }
+          .container .ten.columns                     { width: 580px; }
+          .container .eleven.columns                  { width: 640px; }
+          .container .twelve.columns                  { width: 700px; }
+          .container .thirteen.columns                { width: 760px; }
+          .container .fourteen.columns                { width: 820px; }
+          .container .fifteen.columns                 { width: 880px; }
+          .container .sixteen.columns                 { width: 940px; }
+
+          .container .one-third.column                { width: 300px; }
+          .container .two-thirds.column               { width: 620px; }
+
+          /* Offsets */
+          .container .offset-by-one                   { padding-left: 60px;  }
+          .container .offset-by-two                   { padding-left: 120px; }
+          .container .offset-by-three                 { padding-left: 180px; }
+          .container .offset-by-four                  { padding-left: 240px; }
+          .container .offset-by-five                  { padding-left: 300px; }
+          .container .offset-by-six                   { padding-left: 360px; }
+          .container .offset-by-seven                 { padding-left: 420px; }
+          .container .offset-by-eight                 { padding-left: 480px; }
+          .container .offset-by-nine                  { padding-left: 540px; }
+          .container .offset-by-ten                   { padding-left: 600px; }
+          .container .offset-by-eleven                { padding-left: 660px; }
+          .container .offset-by-twelve                { padding-left: 720px; }
+          .container .offset-by-thirteen              { padding-left: 780px; }
+          .container .offset-by-fourteen              { padding-left: 840px; }
+          .container .offset-by-fifteen               { padding-left: 900px; }
+
+
+
+      /* #Tablet (Portrait)
+      ================================================== */
+
+          /* Note: Design for a width of 768px */
+
+          @media only screen and (min-width: 768px) and (max-width: 959px) {
+              .container                                  { width: 768px; }
+              .container .column,
+              .container .columns                         { margin-left: 10px; margin-right: 10px;  }
+              .column.alpha, .columns.alpha               { margin-left: 0; margin-right: 10px; }
+              .column.omega, .columns.omega               { margin-right: 0; margin-left: 10px; }
+              .alpha.omega                                { margin-left: 0; margin-right: 0; }
+
+              .container .one.column,
+              .container .one.columns                     { width: 28px; }
+              .container .two.columns                     { width: 76px; }
+              .container .three.columns                   { width: 124px; }
+              .container .four.columns                    { width: 172px; }
+              .container .five.columns                    { width: 220px; }
+              .container .six.columns                     { width: 268px; }
+              .container .seven.columns                   { width: 316px; }
+              .container .eight.columns                   { width: 364px; }
+              .container .nine.columns                    { width: 412px; }
+              .container .ten.columns                     { width: 460px; }
+              .container .eleven.columns                  { width: 508px; }
+              .container .twelve.columns                  { width: 556px; }
+              .container .thirteen.columns                { width: 604px; }
+              .container .fourteen.columns                { width: 652px; }
+              .container .fifteen.columns                 { width: 700px; }
+              .container .sixteen.columns                 { width: 748px; }
+
+              .container .one-third.column                { width: 236px; }
+              .container .two-thirds.column               { width: 492px; }
+
+              /* Offsets */
+              .container .offset-by-one                   { padding-left: 48px; }
+              .container .offset-by-two                   { padding-left: 96px; }
+              .container .offset-by-three                 { padding-left: 144px; }
+              .container .offset-by-four                  { padding-left: 192px; }
+              .container .offset-by-five                  { padding-left: 240px; }
+              .container .offset-by-six                   { padding-left: 288px; }
+              .container .offset-by-seven                 { padding-left: 336px; }
+              .container .offset-by-eight                 { padding-left: 384px; }
+              .container .offset-by-nine                  { padding-left: 432px; }
+              .container .offset-by-ten                   { padding-left: 480px; }
+              .container .offset-by-eleven                { padding-left: 528px; }
+              .container .offset-by-twelve                { padding-left: 576px; }
+              .container .offset-by-thirteen              { padding-left: 624px; }
+              .container .offset-by-fourteen              { padding-left: 672px; }
+              .container .offset-by-fifteen               { padding-left: 720px; }
+          }
+
+
+      /*  #Mobile (Portrait)
+      ================================================== */
+
+          /* Note: Design for a width of 320px */
+
+          @media only screen and (max-width: 767px) {
+              .container { width: 300px; }
+              .container .columns,
+              .container .column { margin: 0; }
+
+              .container .one.column,
+              .container .one.columns,
+              .container .two.columns,
+              .container .three.columns,
+              .container .four.columns,
+              .container .five.columns,
+              .container .six.columns,
+              .container .seven.columns,
+              .container .eight.columns,
+              .container .nine.columns,
+              .container .ten.columns,
+              .container .eleven.columns,
+              .container .twelve.columns,
+              .container .thirteen.columns,
+              .container .fourteen.columns,
+              .container .fifteen.columns,
+              .container .sixteen.columns,
+              .container .one-third.column,
+              .container .two-thirds.column  { width: 300px; }
+
+              /* Offsets */
+              .container .offset-by-one,
+              .container .offset-by-two,
+              .container .offset-by-three,
+              .container .offset-by-four,
+              .container .offset-by-five,
+              .container .offset-by-six,
+              .container .offset-by-seven,
+              .container .offset-by-eight,
+              .container .offset-by-nine,
+              .container .offset-by-ten,
+              .container .offset-by-eleven,
+              .container .offset-by-twelve,
+              .container .offset-by-thirteen,
+              .container .offset-by-fourteen,
+              .container .offset-by-fifteen { padding-left: 0; }
+
+          }
+
+
+      /* #Mobile (Landscape)
+      ================================================== */
+
+          /* Note: Design for a width of 480px */
+
+          @media only screen and (min-width: 480px) and (max-width: 767px) {
+              .container { width: 420px; }
+              .container .columns,
+              .container .column { margin: 0; }
+
+              .container .one.column,
+              .container .one.columns,
+              .container .two.columns,
+              .container .three.columns,
+              .container .four.columns,
+              .container .five.columns,
+              .container .six.columns,
+              .container .seven.columns,
+              .container .eight.columns,
+              .container .nine.columns,
+              .container .ten.columns,
+              .container .eleven.columns,
+              .container .twelve.columns,
+              .container .thirteen.columns,
+              .container .fourteen.columns,
+              .container .fifteen.columns,
+              .container .sixteen.columns,
+              .container .one-third.column,
+              .container .two-thirds.column { width: 420px; }
+          }
+
+
+      /* #Clearing
+      ================================================== */
+
+          /* Self Clearing Goodness */
+          .container:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+
+          /* Use clearfix class on parent to clear nested columns,
+          or wrap each row of columns in a <div class="row"> */
+          .clearfix:before,
+          .clearfix:after,
+          .row:before,
+          .row:after {
+            content: '\0020';
+            display: block;
+            overflow: hidden;
+            visibility: hidden;
+            width: 0;
+            height: 0; }
+          .row:after,
+          .clearfix:after {
+            clear: both; }
+          .row,
+          .clearfix {
+            zoom: 1; }
+
+          /* You can also use a <br class="clear" /> to clear columns */
+          .clear {
+            clear: both;
+            display: block;
+            overflow: hidden;
+            visibility: hidden;
+            width: 0;
+            height: 0;
+          }
+
+      /*
+      * Skeleton V1.1
+      * Copyright 2011, Dave Gamache
+      * www.getskeleton.com
+      * Free to use under the MIT license.
+      * http://www.opensource.org/licenses/mit-license.php
+      * 8/17/2011
+      */
+
+      /* Table of Content
+      ==================================================
+        #Site Styles
+        #Page Styles
+        #Media Queries
+        #Font-Face */
+
+      /* #Site Styles
+      ================================================== */
+
+      /* #Page Styles
+      ================================================== */
+
+      /* #Media Queries
+      ================================================== */
+
+        /* Smaller than standard 960 (devices and browsers) */
+        @media only screen and (max-width: 959px) {}
+
+        /* Tablet Portrait size to standard 960 (devices and browsers) */
+        @media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+        /* All Mobile Sizes (devices and browser) */
+        @media only screen and (max-width: 767px) {}
+
+        /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+        @media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+        /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+        @media only screen and (max-width: 479px) {}
+
+
+      /* #Font-Face
+      ================================================== */
+      /* 	This is the proper syntax for an @font-face file
+          Just create a "fonts" folder at the root,
+          copy your FontName into code below and remove
+          comment brackets */
+
+
+        @font-face {
+          font-family: "cine";
+          src: url("/css/fonts/GT-Cinetype-Regular.woff") format("woff");
+          font-weight: normal;
+          font-style: normal;
+          font-display: swap;
+        }
+
+        @font-face {
+          font-family: "cine-mono";
+          src: url("/css/fonts/GT-Cinetype-Mono.woff") format("woff");
+          font-weight: normal;
+          font-style: normal;
+          font-display: swap;
+        }
+
+        @font-face {
+          font-family: "cine";
+          src: url("/css/fonts/GT-Cinetype-Bold.woff") format("woff");
+          font-weight: bold;
+          font-style: normal;
+          font-display: swap;
+        }
+
+
+      .container {
+        padding-top: 64px;
       }
 
-      @font-face {
-        font-family: "cine";
-        font-display: swap;
-        src: url("/css/fonts/GT-Cinetype-Bold.woff") format("woff");
-        font-weight: bold;
+      ::selection {
+        background: #89a6ff;
+      }
+      ::-moz-selection {
+        background: #89a6ff;
       }
 
-      body {
-        background-color: #fff;
-        color: #000;
-        font-family: cine, sans-serif;
-      }
-
-      div.wrap {
-        display: block;
-        width: 80%;
-        max-width: 960px;
-        margin: 0 auto;
+      nav {
+        position: fixed;
+        width: 160px;
       }
 
       nav ul {
-        padding: 0 0 5em 0;
-        list-style: none;
+        float: left;
       }
 
       nav ul li {
-        display: inline;
-        margin-right: 20px;
-        margin-top: 8px;
-      }
-
-      footer ul {
-        padding: 40px 0;
-        list-style: none;
-      }
-
-      footer ul li {
         display: block;
-        margin-right: 20px;
-        margin-top: 8px;
+        margin-bottom: 8px;
       }
 
-      a {
-        font-family: cine, sans-serif;
+      nav ul li a,
+      nav ul li a:visited,
+      nav ul li a:active  {
+        font-size: 14px;
+        color: #000;
         text-decoration: none;
+        font-weight: bold;
+      }
+
+      nav ul li a:hover,
+      nav ul li a:focus {
         color: #302ECD;
       }
 
-      a:hover span{
-        background-size: 100% 100%;
+      li {
+        margin-bottom: 8px;
       }
 
-      h1 {
-        font-size: 3.375em;
+      #logo {
+        margin-bottom: 24px;
+        letter-spacing: -1px;
       }
 
-      h2 {
-        font-size: 2.25em;
-        font-weight: 500;
+      #logo a {
+        text-decoration: none;
       }
 
-      h3 {
-        font-size: 1.5em;
-        font-weight: 500;
+      .book-details {
+        margin-bottom: 32px;
       }
 
-      h4 {
-        font-size: 1.2em;
-        margin: 0;
+      .book-details  .clearfix {
+        clear: both;
       }
 
-      p, ul {
-        font-size: 1em;
-        line-height: 1.5em;
-        color: rgba(0,0,0,.84);;
+      .book-image {
+        float: left;
+        width: 25%;
       }
 
-      .darklighted {
-        background-image: linear-gradient(180deg, transparent 75%, #FFEE77 0);
-        background-size: 0% 100%;
-        -moz-transition: 0.3s cubic-bezier(0.5, 0.60, 0.360, 1) background;
-        -o-transition: 0.3s cubic-bezier(0.5, 0.60, 0.360, 1) background;
-        -ms-transition: 0.3s cubic-bezier(0.5, 0.60, 0.360, 1) background;
-        -webkit-transition: 0.3s cubic-bezier(0.5, 0.60, 0.360, 1) background;
-        transition: 0.3s cubic-bezier(0.5, 0.60, 0.360, 1) background;
-        background-repeat: no-repeat;
-        padding-bottom: 0;
+      .book-image img {
+        width: 90%;
       }
 
-      #header-line {
-        background: #FFEE77;
-        height: 4px;
-        width: 10%;
-        margin-top: 3em;
-        margin-bottom: 3em;
+      .book-details .details {
+        float: right;
+        width: 75%;
+      }
+      .book-details .detail .detail-category {
+        text-align: right;
+        vertical-align: top;
+        min-width: 105px;
+        font-weight: bold;
       }
 
-      #work-container {
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-flex-flow: row wrap;
+      .book-details .detail .detail-content {
+        vertical-align: top;
       }
 
-      .work-card{
-        box-shadow: 0 30px 70px rgba(64,52,52,.1);
-        -webkit-box-shadow: 0 30px 70px rgba(64,52,52,.1);
-        width: 100%;
-        height: auto;
-        position: relative;
-        margin: 8px;
-      }
-
-      .work-card:hover{
-        box-shadow: 0 30px 70px rgba(64,52,52,.2);
-        -webkit-box-shadow: 0 30px 70px rgba(64,52,52,.2);
-        position: relative;
-        top:-0.25em;
-      }
-
-      .work-card-image {
-        display: block;
-        box-sizing: border-box;
-        background: center center no-repeat;
-      }
-
-      .work-card-text {
-        padding: 1em;
-      }
-
-      .work-card-text p {
-        height:100px;
-      }
-
-      .work-card-text h3 {
-        margin: 0;
-      }
-
-      .work-card-text a::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-      }
-
-      .tags {
-        margin: 0;
-        padding: 0;
-      }
-
-      .tag {
-        color: rgba(0, 0, 0, 0.4);
-        background: rgba(244, 245, 249, 1);
-        padding: .25em .5em;
-        margin-top: .25em;
-        text-transform: uppercase;
-        font-family: cine-mono, monospace;
-        list-style: none;
-        display: inline-block;
-      }
-
-      .page {
-        width: 100%;
-        display: block;
-      }
-
-      .page-section {
-        padding-top: 2em;
-      }
-
-      .page-content ul{
-        padding-left: 1.5em;
-      }
-
-      .page-description {
-        width: 100%;
-      }
-
-      .page-content h3 {
-        padding-top: 1.5em;
-      }
-
-      .page-image {
-        -webkit-box-shadow: 0 15px 35px rgba(64,52,52,.1);
-        box-shadow: 0 15px 35px rgba(64,52,52,.1);
-        margin-bottom: 2em;
-      }
-
-      /* Medium devices (landscape tablets, 768px and up) */
-      @media only screen and (min-width: 768px) {
-        nav ul li, footer ul li {
-          display: inline-block;
-          margin-right: 20px;
-          margin-top: 16px;
+      /* Mobile */
+      @media only screen and (max-width: 767px) {
+        header h1 {
+          font-size: 32px;
+          line-height: 40px;
         }
 
-        .work-card{
-          width: 40%;
+        #logo {
+          text-align: center;
         }
 
-        .page {
-          -webkit-box-shadow: 0 30px 70px rgba(64,52,52,.1);
-          box-shadow: 0 30px 70px rgba(64,52,52,.1);
+
+        nav {
+          position: relative;
           width: 100%;
         }
 
-        .page-content {
-          padding: 2em;
+        nav ul {
+          width: 100%;
+          text-align: center;
         }
 
-        .page-description {
-          width: 80%;
+        nav ul li {
+          display: inline;
+          margin: 0 4px;
+        }
+
+        nav ul li a {
+          font-size: 16px;
         }
       }
 
-      /* Large devices (laptops/desktops, 992px and up) */
-      @media only screen and (min-width: 992px) {
-        .work-card{
-          width: 30%;
-        }
+      /* Mobile Landscape */
+      @media only screen and (min-width: 480px) and (max-width: 767px) {
+      }
 
-        .page {
-          width: 100%;
+      /* Non 960 */
+      @media only screen and (max-width: 959px) {
+          #logo {
+            margin-bottom: 16px;
+          }
+
+          nav .button {
+            padding: 8px 24px 16px;
+          }
+      }
+
+      /* iPad Portrait/Browser */
+      @media only screen and (min-width: 768px) and (max-width: 959px) {
+        nav {
+          width: 124px;
         }
+      }
+
+      /* Mobile/Browser */
+      @media only screen and (max-width: 767px) {}
+
+      /* Mobile Landscape/Browser */
+      @media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+      /* Anything smaller than standard 960 */
+      @media only screen and (max-width: 959px) {}
+
+
+      /* iPad Portrait Only */
+      @media only screen and (min-width: 768px) and (max-width: 959px) and (max-device-width: 1000px) {}
+
+      /* Mobile Only */
+      @media only screen and (max-width: 767px) and (max-device-width: 1000px) {}
+
+      /* Mobile Landscape Only */
+      @media only screen and (min-width: 480px) and (max-width: 767px) and (max-device-width: 1000px) {}
+
+      /* Anything smaller than standard 960 on a device */
+      @media only screen and (max-width: 959px) and (max-device-width: 1000px) {
+          .resize { display: none; }
+      }
+
+      table{
+        background:#fff;
+        border-collapse:collapse;
+        margin:5px 0 10px;
+      }
+
+      th, td{
+        padding:3px 10px;
+        text-align:left;
+        vertical-align:top;
+      }
+
+      tr.even td{
+        background:#f7f7f7;
+      }
+
+      th{
+        background:#edeff0;
+      }
+
+      .highlight {
+        margin-bottom: 20px;
+      }
+
+      div.highlight > pre {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding-left: 20px;
+        border-left: 1px solid #ccc;
+        overflow: auto;
+      }
+
+      code {
+        font-family: monospace;
+      }
+
+      p img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px;
+      }
+
+      sup {
+        vertical-align: super;
+        font-size: 8pt;
       }
     </style>
 
@@ -294,48 +708,61 @@
       }
       </script>
       </amp-analytics>
-    <div class="wrap">
-      <nav>
+    <div class="container">
+      <div class="three columns">
+        <nav>
+          <h1 id="logo" >
+            <a href="/">Leroy Almeida</a>
+          </h1>
+          <ul>
+            <li><a href="/bookshelf">Bookshelf</a></li>
+            <li><a href="https://twitter.com/leroyalmeida23">Twitter</a></li>
+            <li><a href="https://www.linkedin.com/in/leroyalmeida/">LinkedIn</a></li>
+          </ul>
+        </nav>
+        &nbsp;
+      </div>
+      <div class="twelve columns offset-by-one">
+        <div class="book-details">
+          <div class="book-image">
+            <amp-img
+                class="page-image"
+                src="/images/covers/ego-is-the-enemy.webp"
+                width="160"
+                height="240"
+                alt=""></amp-img>
+          </div>
+          <div class="details">
+            <table>
+              <tbody><tr class="detail">
+                <td class="detail-category">Title:</td>
+                <td class="detail-content">Ego Is the Enemy: The Fight to Master Our Greatest Opponent</td>
+              </tr>
+              <tr class="detail">
+                <td class="detail-category">Author:</td>
+                <td class="detail-content">Ryan Holiday</td>
+              </tr>
+              <tr class="detail">
+                <td class="detail-category">Year Read:</td>
+                <td class="detail-content">2019</td>
+              </tr>
+              <tr class="detail">
+                <td class="detail-category">Buy This Book:</td>
+                <td class="detail-content"><a href="https://amzn.to/2sxMZ8O" target="_blank">Amazon</a></td>
+              </tr>
+              <tr class="detail">
+                <td class="detail-category">Summary</td>
+                <td class="detail-content">Ego is the enemy of what you want and of what you have: Of mastering a craft. Of real creative insight. Of working well with others. Of building loyalty and support. Of longevity. Of repeating and retaining your success.</td>
+              </tr>
+            </tbody></table>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <h4>Key Takeaways:</h4>
         <ul>
-          <li><a href="/"><span class="darklighted">Home</span></a></li>
-          <li><a href="/bookshelf"><span class="darklighted">Bookshelf</span></a></li>
+          <li><div>Virtue begins with understanding and is fulfilled by courage.</div></li><li><div>We must begin by seeing ourselves and the world in a new way for the first time. Then we must fight to be different and fight to stay different—that’s the hard part.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">The first principle is that you must not fool yourself—and you are the easiest person to fool. —RICHARD FEYNMAN</span></div></li><li><div>The need to be better than, more than, recognized for, far past any reasonable utility—that’s ego.</div></li><li><div>True enough but of little value outside a clinical setting. The ego we see most commonly goes by a more casual definition: an unhealthy belief in</div></li><li><div>“Self-confidence becomes arrogance, assertiveness becomes obstinacy, and self-assurance becomes reckless abandon.”</div></li><li><div>Ego is the enemy of what you want and of what you have: Of mastering a craft. Of real creative insight. Of working well with others. Of building loyalty and support. Of longevity. Of repeating and retaining your success.</div></li><li><div>If ego is the voice that tells us we’re better than we really are, we can say ego inhibits true success by preventing a direct and honest connection to the world around</div></li><li><div>“If you start believing in your greatness, it is the death of your creativity.”</div></li><li><div>“Buildings that lie so exposed to the weather need a good foundation.”</div></li><li><div>“Abhor flatterers as you would deceivers; for both, if trusted, injure those who trust them.”</div></li><li><div>“Practice self-control,” he said, warning Demonicus not to fall under the sway of “temper, pleasure, and pain.”</div></li><li><div>"Of the arrogant even slaves can hardly endure” and “Be slow in deliberation, but be prompt to carry out your resolves”</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">“Be slow in deliberation, but be prompt to carry out your resolves”</span></div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">“Best thing which we have in ourselves is good judgment.”</span></div></li><li><div>Constantly train your intellect, he told him, “for the greatest thing in the smallest compass is a sound mind in a human body.”</div></li><li><div>true modesty, not the sham of insincere self-depreciation but the modesty of “moderation,” in the Greek sense. It is poise, not pose.</div></li><li><div>Among men who rise to fame and leadership two types are recognizable—those who are born with a belief in themselves and those in whom it is a slow growth dependent on actual achievement. To the men of the last type their own success is a constant surprise, and its fruits the more delicious, yet to be tested cautiously with a haunting sense of doubt whether it is not all a dream. In that doubt lies true modesty, not the sham of insincere self-depreciation but the modesty of “moderation,” in the Greek sense. It is poise, not pose.<br></div></li><li><div>If your belief in yourself is not dependent on actual achievement, then what is it dependent on?</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">“Talent is only the starting point.”</span></div></li><li><div>One might say that the ability to evaluate one’s own ability is the most important skill of all. Without it, improvement is impossible. And certainly ego makes it difficult every step of the way.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Arrogance and self-absorption inhibit growth. So does fantasy and “vision.”</span></div></li><li><div>What is rare is not raw talent, skill, or even confidence, but humility, diligence, and self-awareness.</div></li><li><div>For your work to have truth in it, it must come from truth.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Those who know do not speak. Those who speak do not know. —LAO TZU</span></div></li><li><div>In other words, she did what a lot of us do when we’re scared or overwhelmed by a project: she did everything but focus on</div></li><li><div>She did what a lot of us do when we’re scared or overwhelmed by a project: she did everything but focus on it.</div></li><li><div>Silence is strength—particularly early on in any journey.</div></li><li><div>What is scarce and rare? Silence. The ability to deliberately keep yourself out of the conversation and subsist without its validation.</div></li><li><div>Silence is the respite of the confident and the strong.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Never give reasons for you what think or do until you must.</span></div></li><li><div>Strategic flexibility is not the only benefit of silence while others chatter. It is also psychology.</div></li><li><div>“A man’s best treasure is a thrifty tongue.”</div></li><li><div>talking aloud to ourselves while we work through difficult problems has been shown to significantly decrease insight and breakthroughs.</div></li><li><div>Success requires a full 100 percent of our effort, and talk flitters part of that effort away before we can use it.</div></li><li><div>The only relationship between work and chatter is that one kills the other.</div></li><li><div>To be somebody or to do something. In life there is often a roll call. That’s when you will have to make a decision.”</div></li><li><div>“To be or to do? Which way will you go?”</div></li><li><div>Having authority is not the same as being an authority. Having the right and being right are not the same either.</div></li><li><div>Being promoted doesn’t necessarily mean you’re doing good work and it doesn’t mean you are worthy of promotion</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Impressing people is utterly different from being truly impressive.</span></div></li><li><div>This is what the ego does. It crosses out what matters and replaces it with what doesn’t.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">What is your purpose? What are you here to do?</span></div></li><li><div>What you choose to do with your time and what you choose to do for money works on you.</div></li><li><div>“A man is worked upon by what he works on,”</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">If your purpose is something larger than you—to accomplish something, to prove something to yourself—then suddenly everything becomes both easier and more difficult. Easier in the sense that you know now what it is you need to do and what is important to you. The other “choices” wash away, as they aren’t really choices at all. They’re distractions.</span></div></li><li><div>“What is it that I want to accomplish in life?”</div></li><li><div>Let No Man’s Ghost Come Back to Say My Training Let Me Down. —SIGN IN THE NEW YORK FIRE DEPARTMENT TRAINING ACADEMY</div></li><li><div>what separated Hammett from the others was his willingness to endure the type of instruction they wouldn’t.</div></li><li><div>Satriani explained that what separated Hammett from the others was his willingness to endure the type of instruction they wouldn’t.</div></li><li><div>The power of being a student is not just that it is an extended period of instruction, it also places the ego and ambition in someone else’s hands.</div></li><li><div>There is a sort of ego ceiling imposed—one knows that he is not better than the “master” he apprentices under.</div></li><li><div>An education can’t be “hacked”; there are no shortcuts besides hacking it every single day.</div></li><li><div>There is a sort of ego ceiling imposed—one knows that he is not better than the “master” he apprentices under. Not even close. You defer to them, you subsume yourself. You cannot fake or bullshit them.</div></li><li><div>Updating your appraisal of your talents in a downward direction is one of the most difficult things to do in life—but it is almost always a component of mastery.</div></li><li><div>The pretense of knowledge is our most dangerous vice, because it prevents us from getting any better. Studious self-assessment is the antidote.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Plus, minus, and equal. Each fighter, to become great, he said, needs to have someone better that they can learn from, someone lesser who they can teach, and someone equal that they can challenge themselves against.</span></div></li><li><div>Get real and continuous feedback about what they know and what they don’t know from every angle.</div></li><li><div>It purges out the ego that puffs us up, the fear that makes us doubt ourselves, and any laziness that might make us want to coast.</div></li><li><div>“False ideas about yourself destroy you. For me, I always stay a student. That’s what martial arts are about, and you have to use that humility as a tool. You put yourself beneath someone you trust.”</div></li><li><div>To become great and to stay great, they must all know what came before, what is going on now, and what comes next.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">A true student is like a sponge. Absorbing what goes on around him, filtering it, latching on to what he can hold.</span></div></li><li><div>A student is self-critical and self-motivated, always trying to improve his understanding so that he can move on to the next topic, the next challenge.</div></li><li><div>A real student is also his own teacher and his own critic. There is no room for ego there.</div></li><li><div>“It is impossible to learn that which one thinks one already knows,”</div></li><li><div>You can’t learn if you think you already know. You will not find the answers if you’re too conceited and self-assured to ask the questions. You cannot get better if you’re convinced you are the best.</div></li><li><div>To become what we ultimately hope to become often takes long periods of obscurity, of sitting and wrestling with some topic or paradox.</div></li><li><div>To become what we ultimately hope to become often takes long periods of obscurity, of sitting and wrestling with some topic or paradox. Humility is what keeps us there, concerned that we don’t know enough and that we must continue to study. Ego rushes to the end, rationalizes that patience is for losers (wrongly seeing it as a weakness), and assumes that we’re good enough to give our talents a go in the world.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">“When student is ready, the teacher appears.”</span></div></li><li><div>We not only need to take this harsh feedback, but actively solicit it, labor to seek out the negative precisely when our friends and family and brain are telling us that we’re doing great.</div></li><li><div>It took them years to become the person they became known as. It was a process of accumulation.</div></li><li><div>Passion typically masks a weakness. Its breathlessness and impetuousness and franticness are poor substitutes for discipline, for mastery, for strength and purpose and perseverance.</div></li><li><div>While the origins of passion may be earnest and good, its effects are comical and then monstrous.</div></li><li><div>What humans require in our ascent is purpose and realism. Purpose, you could say, is like passion with boundaries. Realism is detachment and perspective.</div></li><li><div>When we are young, or when our cause is young, we feel so intensely—passion like our hormones runs strongest in youth—that it seems wrong to take it slow. This is just our impatience. This is our inability to see that burning ourselves out or blowing ourselves up isn’t going to hurry the journey along.</div></li><li><div>Purpose deemphasizes the I. Purpose is about pursuing something outside yourself as opposed to pleasuring yourself.</div></li><li><div>“Great passions are maladies without hope,”</div></li><li><div>Get started with small steps, complete them, and look for feedback on how the next set can be better.</div></li><li><div>Clear the path for the people above you and you will eventually create a path for yourself.</div></li><li><div>When you are just starting out, we can be sure of a few fundamental realities: 1) You’re not nearly as good or as important as you think you are; 2) You have an attitude that needs to be readjusted; 3) Most of what you think you know or most of what you learned in books or in school is out of date or wrong.</div></li><li><div>There’s one fabulous way to work all that out of your system: attach yourself to people and organizations who are already successful and subsume your identity into theirs and move both forward simultaneously.</div></li><li><div>If he wanted to give his coach feedback or question a decision, he needed to do it in private and self-effacingly so as not to offend his superior. He learned how to be a rising star without threatening or alienating anyone.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Greatness comes from humble beginnings; it comes from grunt work. It means you’re the least important person in the room—until you change that with results.</span></div></li><li><div>Be lesser, do more.</div></li><li><div>The person who clears the path ultimately controls its direction, just as the canvas shapes the painting.</div></li><li><div>Our own path, whatever we aspire to, will in some ways be defined by the amount of nonsense we are willing to deal with.</div></li><li><div>When you want to do something—something big and important and meaningful—you will be subjected to treatment ranging from indifference to outright sabotage.</div></li><li><div>Those who have subdued their ego understand that it doesn’t degrade you when others treat you poorly; it degrades them.</div></li><li><div>You’re not able to change the system until after you’ve made it.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">A person who thinks all the time has nothing to think about except thoughts, so he loses touch with reality and lives in a world of illusions. —ALAN WATTS</span></div></li><li><div>What successful people do is curb such flights of fancy. They ignore the temptations that might make them feel important or skew their perspective.</div></li><li><div>what’s going on around you. Feast on it, adjust for it. There’s no one to perform for. There is just work to be done and lessons to be learned, in all that is around us.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">There’s no one to perform for. There is just work to be done and lessons to be learned, in all that is around us.</span></div></li><li><div>Living clearly and presently takes courage. Don’t live in the haze of the abstract, live with the tangible and real, even if—especially if—it’s uncomfortable.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">A proud man is always looking down on things and people; and, of course, as long as you are looking down, you cannot see something that is above you. —C. S. LEWIS</span></div></li><li><div>Pride leads to arrogance and then away from humility and connection with their fellow man.</div></li><li><div>“Whom the gods wish to destroy,” Cyril Connolly famously said, “they first call promising.”</div></li><li><div>“The first thing, Kurnos, which gods bestow on one they would annihilate, is pride.”</div></li><li><div>Our ability to learn, to adapt, to be flexible, to build relationships, all of this is dulled by pride. Most dangerously, this tends to happen either early in life or in the process—when we’re flushed with beginner’s conceit.</div></li><li><div>Pride takes a minor accomplishment and makes it feel like a major one.</div></li><li><div>“Vain men never hear anything but praise.”</div></li><li><div>What a pitiful thing it is when a man lets a little temporary success spoil him, warp his judgment, and he forgets what he is!”</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Receive feedback, maintain hunger, and chart a proper course in life. Pride dulls these senses.</span></div></li><li><div>We must prepare for pride and kill it early—or it will kill what we aspire to.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">“The first product of self-knowledge is humility,”</span></div></li><li><div>What am I missing right now that a more humble person might see?</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">We are still striving, and it is the strivers who should be our peers—not the proud and the accomplished. Without this understanding, pride takes our self-conception and puts it at odds with the reality of our station, which is that we still have so far to go, that there is still so much to be done.</span></div></li><li><div>“It’s not with ideas, my dear Degas, that one makes verse. It’s with words.”</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">To get where we want to go isn’t about brilliance, but continual effort.</span></div></li><li><div>(Do it if you’re going to do it.)</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">(The workmanship was better than the material.)</span></div></li><li><div>“When you are not practicing, remember, someone somewhere is practicing, and when you meet him he will win.”</div></li><li><div>There is no triumph without toil.</div></li><li><div>Work doesn’t want to be good. It is made so, despite the headwind.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Work is finding yourself alone at the track when the weather kept everyone else indoors. Work is pushing through the pain and crappy first drafts and prototypes. It is ignoring whatever plaudits others are getting, and more importantly, ignoring whatever plaudits you may be getting. Because there is work to be done. Work doesn’t want to be good. It is made so, despite the headwind.</span></div></li><li><div>What is truly ambitious is to face life and proceed with quiet confidence in spite of the distractions.</div></li><li><div>Why is success so ephemeral? Ego shortens it.</div></li><li><div>“Man is pushed by drives,” Viktor Frankl observed. “But he is pulled by values.”</div></li><li><div>Without the right values, success is brief.</div></li><li><div>“As our island of knowledge grows, so does the shore of our ignorance.”</div></li><li><div>That’s the worry and the risk—thinking that we’re set and secure, when in reality understanding and mastery is a fluid, continual process.</div></li><li><div>“Humility engenders learning because it beats back the arrogance that puts blinders on. It leaves you open for truths to reveal themselves. You don’t stand in your own way. . . . Do you know how you can tell when someone is truly humble? I believe there’s one simple test: because they consistently observe and listen, the humble improve. They don’t assume, ‘I know the way.’”</div></li><li><div>If you’re not still learning, you’re already dying.</div></li><li><div>Put yourself in rooms where you’re the least knowledgeable person.</div></li><li><div>As people progress, they must also understand how they learn and then set up processes to facilitate this continual education.</div></li><li><div>Berkshire Hathaway Letters to Shareholders, 2016 (Buffett, Warren)</div></li><li><div>“Standard of Performance.” That is: What should be done. When. How.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">It’s during your moment at the top that you can afford ego the least—because the stakes are so much higher, the margins for error are so much smaller. If anything, your ability to listen, to hear feedback, to improve and grow matter more now than ever before.</span></div></li><li><div>The founding of a company, making money in the market, or the formation of an idea is messy. Reducing it to a narrative retroactively creates a clarity that never was and never will be there.</div></li><li><div>When we are aspiring we must resist the impulse to reverse engineer success from other people’s stories.</div></li><li><div>“The way to do really big things seems to be to start with deceptively small things.”</div></li><li><div>don’t make a frontal attack out of ego; instead, you start with a small bet and iteratively scale your ambitions as you go.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">“Keep your identity small”</span></div></li><li><div>Make it about the work and the principles behind it—not about a glorious vision that makes a good headline.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">A great destiny, Seneca reminds us, is great slavery.</span></div></li><li><div>All of us waste precious life doing things we don’t like, to prove ourselves to people we don’t respect, and to get things we don’t want.</div></li><li><div>The farther you travel down that path of accomplishment, whatever it may be, the more often you meet other successful people who make you feel insignificant.</div></li><li><div>On an individual level, however, it’s absolutely critical that you know who you’re competing with and why, that you have a clear sense of the space you’re in.</div></li><li><div>Euthymia - sense of our own path and how to stay on it without getting distracted by all the others that intersect it.</div></li><li><div>The more you have and do, the harder maintaining fidelity to your purpose will be, but the more critically you will need to.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">One of the symptoms of approaching nervous breakdown is the belief that one’s work is terribly important. —BERTRAND RUSSELL</span></div></li><li><div>“He who indulges empty fears earns himself real fears,”</div></li><li><div>It is not enough to have great qualities; we should also have the management of them. —LA ROCHEFOUCAULD</div></li><li><div>System and work habits that got us where we are won’t necessarily keep us there.</div></li><li><div>Responsibility requires a readjustment and then increased clarity and purpose. First, setting the top-level goals and priorities of the organization and your life. Then enforcing and observing them. To produce results and only results.</div></li><li><div>If I am not for myself who will be for me? If I am only for myself, who am I? —HILLEL</div></li><li><div>Great teams tend to follow a trajectory.</div></li><li><div>When they start—before they have won—a team is innocent. If the conditions are right, they come together, they watch out for each other and work together toward their collective goal. This stage, he calls the “Innocent Climb.”</div></li><li><div>After a team starts to win and media attention begins, the simple bonds that joined the individuals together begin to fray. Players calculate their own importance. Chests swell. Frustrations emerge. Egos appear. The Innocent Climb, Pat Riley says, is almost always followed by the “Disease of Me.” It can “strike any winning team in any year and at any moment,” and does with alarming regularity.</div></li><li><div>it’s beginning to think that we’re better, that we’re special, that our problems and experiences are so incredibly different from everyone else’s that no one could possibly understand. It’s an attitude that has sunk far better people, teams, and causes than ours.</div></li><li><div>Ego needs honors in order to be validated. Confidence, on the other hand, is able to wait and focus on the task at hand regardless of external recognition.</div></li><li><div>We never earn the right to be greedy or to pursue our interests at the expense of everyone else. To think otherwise is not only egotistical, it’s counterproductive.</div></li><li><div>One of the most dangerous ironies of success—it can make us someone we never wanted to be in the first place. The Disease of Me can corrupt the most innocent climb.</div></li><li><div>“You’re becoming who you are going to be and so you might as well not be an asshole.”</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Play for the name on the front of the jersey, he says, and they’ll remember the name on the back.</span></div></li><li><div>A monk is a man who is separated from all and who is in harmony with all. —EVAGRIUS PONTICUS</div></li><li><div>Sympatheia—a connectedness with the cosmos.</div></li><li><div>“oceanic feeling.” A sense of belonging to something larger, of realizing that “human things are an infinitesimal point in the immensity.”</div></li><li><div>Questions: Who am I? What am I doing? What is my role in this world? Nothing draws us away from those questions like material success—when we are always busy, stressed, put upon, distracted, reported to, relied on, apart from. When we’re wealthy and told that we’re important or powerful.</div></li><li><div>When we lack a connection to anything larger or bigger than us, it’s like a piece of our soul is gone. Like we’ve detached ourselves from the traditions we hail from, whatever that happens to be (a craft, a sport, a brotherhood or sisterhood, a family). Ego blocks us from the beauty and history in the world. It stands in the way.</div></li><li><div>“When I look up in the universe, I know I’m small, but I’m also big. I’m big because I’m connected to the universe and the universe is connected to me.”</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Yes, we are small. We are also a piece of this great universe and a process.</span></div></li><li><div>Creativity is a matter of receptiveness and recognition. This cannot happen if you’re convinced the world revolves around you.</div></li><li><div>By removing the ego—even temporarily—we can access what’s left standing in relief. By widening our perspective, more comes into view.</div></li><li><div>“You can’t solve . . . tasks with charisma.”</div></li><li><div>Sobriety is the counterweight that must balance out success. Especially if things keep getting better and better.</div></li><li><div>“It requires a strong constitution to withstand repeated attacks of prosperity.”</div></li><li><div>We know what decisions we must make to avoid that ignominious, even pathetic end: protecting our sobriety, eschewing greed and paranoia, staying humble, retaining our sense of purpose, connecting to the larger world around us.</div></li><li><div>Because even if we manage ourselves well, prosperity holds no guarantees.</div></li><li><div>It is because mankind are disposed to sympathize more entirely with our joy than with our sorrow, that we make parade of our riches, and conceal our poverty. Nothing is so mortifying as to be obliged to expose our distress to the view of the public, and to feel, that though our situation is open to the eyes of all mankind, no mortal conceives for us the half of what we suffer. —ADAM SMITH</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Failure and adversity are relative and unique to each of us.</span></div></li><li><div>Almost without exception, this is what life does: it takes our plans and dashes them to pieces. Sometimes once, sometimes lots of times.</div></li><li><div>If success is ego intoxication, then failure can be a devastating ego blow—turning slips into falls and little troubles into great unravelings.</div></li><li><div>“Almost always, your road to victory goes through a place called ‘failure.’”</div></li><li><div>In order to taste success again, we’ve got to understand what led to this moment (or these years) of difficulty, what went wrong and why. We must deal with the situation in order to move past it. We’ll need to accept it and to push through it.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">You can do most everything right and still find yourself in deep shit.</span></div></li><li><div>People who have already been through a lot find themselves stuck with more. Life isn’t fair.</div></li><li><div>When we face difficulty, particularly public difficulty (doubters, scandals, losses), our friend the ego will show its true colors.</div></li><li><div>the great failing is “to see yourself as more than you are and to value yourself at less than your true worth.”</div></li><li><div>adhering to a set of internal metrics that allowed them to evaluate and gauge their progress while everyone on the outside was too distracted by supposed signs of failure or weakness.</div></li><li><div>“The future bears down upon each one of us with all the hazards of the unknown.” The only way out is through.</div></li><li><div>This is what we’re aspiring to—much more than mere success. What matters is that we can respond to what life throws at us. And how we make it through.</div></li><li><div>Humble and strong people don’t have the same trouble with these troubles that egotists do. There are fewer complaints and far less self-immolation. Instead, there’s stoic—even cheerful—resilience. Pity isn’t necessary. Their identity isn’t threatened. They can get by without constant validation.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Vivre sans temps mort. (Live without wasted time.) —PARISIAN POLITICAL SLOGAN</span></div></li><li><div>According to Greene, there are two types of time in our lives: dead time, when people are passive and waiting, and alive time, when people are learning and acting and utilizing every second. Every moment of failure, every moment or situation that we did not deliberately choose or control, presents this choice: Alive time. Dead time.</div></li><li><div>This moment is not your life. But it is a moment in your life. How will you use it?</div></li><li><div>In life, we all get stuck with dead time. Its occurrence isn’t in our control. Its use, on the other hand, is.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">What matters to an active man is to do the right thing; whether the right thing comes to pass should not bother him. —GOETHE</span></div></li><li><div>In life, there will be times when we do everything right, perhaps even perfectly. Yet the results will somehow be negative: failure, disrespect, jealousy, or even a resounding yawn from the world.</div></li><li><div>Will we work hard for something that can be taken away from us? Will we invest time and energy even if an outcome is not guaranteed? With the right motives we’re willing to proceed. With ego, we’re not.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">The less attached we are to outcomes the better. When fulfilling our own standards is what fills us with pride and self-respect. When the effort—not the results, good or bad—is enough.</span></div></li><li><div>When fulfilling our own standards is what fills us with pride and self-respect. When the effort—not the results, good or bad—is enough.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">“Success is peace of mind, which is a direct result of self-satisfaction in knowing you made the effort to do your best to become the best that you are capable of becoming.”</span></div></li><li><div>“Ambition,” Marcus Aurelius reminded himself, “means tying your well-being to what other people say or do . . . Sanity means tying it to your own actions.”</div></li><li><div>Do your work. Do it well. Then “let go and let God.“</div></li><li><div>The world is, after all, indifferent to what we humans “want.” If we persist in wanting, in needing, we are simply setting ourselves up for resentment or worse.</div></li><li><div>we can’t let externals determine whether something was worth it or not.</div></li><li><div>There are many ways to hit bottom. Almost everyone does in their own way, at some point.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Duris dura franguntur. Hard things are broken by hard things.</span></div></li><li><div>The bigger the ego the harder the fall.</div></li><li><div>“we cannot be humble except by enduring humiliations.”</div></li><li><div>many significant life changes come from moments in which we are thoroughly demolished, in which everything we thought we knew about the world is rendered false.</div></li><li><div>How do I make sense of this? How do I move onward and upward? Is this the bottom, or is there more to come? Someone told me my problems, so how do I fix them? How did I let this happen? How can it never happen again?</div></li><li><div>A look at history finds that these events seem to be defined by three traits: 1. They almost always came at the hands of some outside force or person. 2. They often involved things we already knew about ourselves, but were too scared to admit. 3. From the ruin came the opportunity for great progress and improvement.</div></li><li><div>“The world breaks every one and afterward many are strong at the broken places. But those that will not break it kills.”</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">The world can show you the truth, but no one can force you to accept it.</span></div></li><li><div>the only way you can appreciate your progress is to stand on the edge of the hole you dug for yourself, look down inside it, and smile fondly at the bloody claw prints that marked your journey up the walls.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">It can ruin your life only if it ruins your character. —MARCUS AURELIUS</span></div></li><li><div>Ego kills what we love. Sometimes, it comes close to killing us too.</div></li><li><div>Only ego thinks embarrassment or failure are more than what they are. History is full of people who suffered abject humiliations yet recovered to have long and impressive careers.</div></li><li><div>When we lose, we have a choice: Are we going to make this a lose-lose situation for ourselves and everyone involved? Or will it be a lose . . . and then win?</div></li><li><div>About your value as a human being. When success begins to slip from your fingers—for whatever reason—the response isn’t to grip and claw so hard that you shatter</div></li><li><div>With wisdom, we understand that these positions are transitory, not statements about your value as a human being.</div></li><li><div>“He who fears death will never do anything worthy of a living man,”</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">He who will do anything to avoid failure will almost certainly do something worthy of a failure.</span></div></li><li><div>If your reputation can’t absorb a few blows, it wasn’t worth anything in the first place.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">The only real failure is abandoning your principles.</span></div></li><li><div>I never look back, except to find out about mistakes . . . I only see danger in thinking back about things you are proud of. —ELISABETH NOELLE-NEUMANN</div></li><li><div>You’re not as good as you think. You don’t have it all figured out. Stay focused. Do better.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">The scoreboard was not the judge of whether he or the team had achieved success—that wasn’t what constituted “winning.”</span></div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">This is characteristic of how great people think. It’s not that they find failure in every success. They just hold themselves to a standard that exceeds what society might consider to be objective success.</span></div></li><li><div>It can feel like self-inflicted torture sometimes. But it does force you to always keep going, and always improve.</div></li><li><div>“Vain men never hear anything but praise.” It can only see what’s going well, not what isn’t.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Winning is not enough. People can get lucky and win. People can be assholes and win. Anyone can win. But not everyone is the best possible version of themselves.</span></div></li><li><div>Your potential, the absolute best you’re capable of—that’s the metric to measure yourself against.</div></li><li><div>When you take ego out of the equation, other people’s opinions and external markers won’t matter as much. That’s more difficult, but ultimately a formula for resilience.</div></li><li><div>There are two different occasions upon which we examine our own conduct, and endeavour to view it in the light in which the impartial spectator would view it: first, when we are about to act; and secondly, after we have acted. Our views are apt to be very partial in both cases; but they are apt to be most partial when it is of most importance that they should be otherwise.</div></li><li><div>When we are about to act, the eagerness of passion will seldom allow us to consider what we are doing, with the candour of an indifferent person. . . .</div></li><li><div>When the action is over, indeed, and the passions which prompted it have subsided, we can enter more coolly into the sentiments of the indifferent spectator.</div></li><li><div>Holding your ego against a standard (inner or indifferent or whatever you want to call it) makes it less and less likely that excess or wrongdoing is going to be tolerated by you.</div></li><li><div>It’s not about what you can get away with, it’s about what you should or shouldn’t do.</div></li><li><div>A person who judges himself based on his own standards doesn’t crave the spotlight the same way as someone who lets applause dictate success.</div></li><li><div>Not that we are endlessly pursuing more, as if we’re racked with greed, but instead, we’re inching our way toward real improvement, with discipline rather than disposition.</div></li><li><div>We want to continue to improve. Ego blocks that, so we subsume it and smash it with continually higher standards. Not that we are endlessly pursuing more, as if we’re racked with greed, but instead, we’re inching our way toward real improvement, with discipline rather than disposition.</div></li><li><div>And why should we feel anger at the world? As if the world would notice! —EURIPIDES</div></li><li><div>Attempting to destroy something out of hate or ego often ensures that it will be preserved and disseminated forever.</div></li><li><div>What defines great leaders like Douglass is that instead of hating their enemies, they feel a sort of pity and empathy for them.</div></li><li><div>“We begin to love our enemies and love those persons that hate us whether in collective life or individual life by looking at ourselves.”</div></li><li><div>“Hate at any point is a cancer that gnaws away at the very vital center of your life and your existence. It is like eroding acid that eats away the best and the objective center of your life.”</div></li><li><div>What do you dislike? Whose name fills you with revulsion and rage? Now ask: Have these strong feelings really helped you accomplish anything?</div></li><li><div>In failure or adversity, it’s so easy to hate. Hate defers blame. It makes someone else responsible. It’s a distraction too; we don’t do much else when we’re busy getting revenge or investigating the wrongs that have supposedly been done to us.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">I don’t like work—no man does—but I like what is in the work—the chance to find yourself. —JOSEPH CONRAD</span></div></li><li><div>“People learn from their failures. Seldom do they learn anything from success.”</div></li><li><div>“See much, study much, suffer much, that is the path to wisdom.”</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">All great men and women went through difficulties to get to where they are, all of them made mistakes. They found within those experiences some benefit—even if it was simply the realization that they were not infallible and that things would not always go their way. </span>They found that self-awareness was the way out and through—if they hadn’t, they wouldn’t have gotten better and they wouldn’t have been able to rise again.</div></li><li><div>Not to aspire or seek out of ego. To have success without ego. To push through failure with strength, not ego.</div></li><li><div>Training was like sweeping the floor. Just because we’ve done it once, doesn’t mean the floor is clean forever. Every day the dust comes back. Every day we must sweep.</div></li><li><div>But for the grace of God go I. But for the grace of God, that could be any of us.</div></li><li><div>we all have potential within us. We all have goals and accomplishments that we know we can achieve—whether it’s starting a company, finishing a creative work, making a run at a championship, or getting to the top of your respective field. These are worthy aims. A broken person will not get there.</div></li><li><div>Ego, like any drug, might be indulged at first in a misguided attempt to get an edge or to take one off. The problem is how quickly it becomes an end unto itself.</div></li><li><div>I had expected something conclusive and fatal and now I realized that what was coming to him was not a sudden pay-off but a process, a disease he had caught in the epidemic that swept over his birthplace like a plague; a cancer that was slowly eating him away, the symptoms developing and intensifying: success, loneliness, fear. Fear of all the bright young men, the newer, fresher Sammy Glicks that would spring up to harass him, to threaten him and finally overtake him.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Any fool can learn from experience. The trick is to learn from other people’s experience.</span></div></li><li><div>We don’t “so much gain the knowledge of things by the words, as words by the experience [we have] of things.”</div></li><li><div>But no less impressive an accomplishment: being better people, being happier people, being balanced people, being content people, being humble and selfless people. Or better yet, all of these traits together. And what is most obvious but most ignored is that perfecting the personal regularly leads to success as a professional, but rarely the other way around.</div></li><li><div>Working to refine our habitual thoughts, working to clamp down on destructive impulses, these are not simply the moral requirements of any decent person. They will make us more successful; they will help us navigate the treacherous waters that ambition will require us to travel. And they are also their own reward.</div></li>
         </ul>
-      </nav>
-      <div class="container">
-        <h2>Ego Is the Enemy: The Fight to Master Our Greatest Opponent</h2>
-        <h3>by Ryan Holiday</h3>
-        <div id="header-line"></div>
-
-        <a href="https://amzn.to/2sxMZ8O">
-          <amp-img
-              class="page-image"
-              src="/images/covers/ego-is-the-enemy.webp"
-              width="332"
-              height="500"
-              alt=""></amp-img>
-        </a>
-
-        <h4>Summary:</h4>
-        <ul>
-          <li>
-            <div>
-              Ego is the enemy of what you want and of what you have: Of mastering a craft. Of real creative insight. Of working well with others. Of building loyalty and support. Of longevity. Of repeating and retaining your success.
-            </div>
-          </li>
-        </ul>
-        <br>
-        <h4>Key takeaways:</h4>
-        <ul><li><div>Virtue begins with understanding and is fulfilled by courage.</div></li><li><div>We must begin by seeing ourselves and the world in a new way for the first time. Then we must fight to be different and fight to stay different—that’s the hard part.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">The first principle is that you must not fool yourself—and you are the easiest person to fool. —RICHARD FEYNMAN</span></div></li><li><div>The need to be better than, more than, recognized for, far past any reasonable utility—that’s ego.</div></li><li><div>True enough but of little value outside a clinical setting. The ego we see most commonly goes by a more casual definition: an unhealthy belief in</div></li><li><div>“Self-confidence becomes arrogance, assertiveness becomes obstinacy, and self-assurance becomes reckless abandon.”</div></li><li><div>Ego is the enemy of what you want and of what you have: Of mastering a craft. Of real creative insight. Of working well with others. Of building loyalty and support. Of longevity. Of repeating and retaining your success.</div></li><li><div>If ego is the voice that tells us we’re better than we really are, we can say ego inhibits true success by preventing a direct and honest connection to the world around</div></li><li><div>“If you start believing in your greatness, it is the death of your creativity.”</div></li><li><div>“Buildings that lie so exposed to the weather need a good foundation.”</div></li><li><div>“Abhor flatterers as you would deceivers; for both, if trusted, injure those who trust them.”</div></li><li><div>“Practice self-control,” he said, warning Demonicus not to fall under the sway of “temper, pleasure, and pain.”</div></li><li><div>"Of the arrogant even slaves can hardly endure” and “Be slow in deliberation, but be prompt to carry out your resolves”</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">“Be slow in deliberation, but be prompt to carry out your resolves”</span></div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">“Best thing which we have in ourselves is good judgment.”</span></div></li><li><div>Constantly train your intellect, he told him, “for the greatest thing in the smallest compass is a sound mind in a human body.”</div></li><li><div>true modesty, not the sham of insincere self-depreciation but the modesty of “moderation,” in the Greek sense. It is poise, not pose.</div></li><li><div>Among men who rise to fame and leadership two types are recognizable—those who are born with a belief in themselves and those in whom it is a slow growth dependent on actual achievement. To the men of the last type their own success is a constant surprise, and its fruits the more delicious, yet to be tested cautiously with a haunting sense of doubt whether it is not all a dream. In that doubt lies true modesty, not the sham of insincere self-depreciation but the modesty of “moderation,” in the Greek sense. It is poise, not pose.<br></div></li><li><div>If your belief in yourself is not dependent on actual achievement, then what is it dependent on?</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">“Talent is only the starting point.”</span></div></li><li><div>One might say that the ability to evaluate one’s own ability is the most important skill of all. Without it, improvement is impossible. And certainly ego makes it difficult every step of the way.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Arrogance and self-absorption inhibit growth. So does fantasy and “vision.”</span></div></li><li><div>What is rare is not raw talent, skill, or even confidence, but humility, diligence, and self-awareness.</div></li><li><div>For your work to have truth in it, it must come from truth.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Those who know do not speak. Those who speak do not know. —LAO TZU</span></div></li><li><div>In other words, she did what a lot of us do when we’re scared or overwhelmed by a project: she did everything but focus on</div></li><li><div>She did what a lot of us do when we’re scared or overwhelmed by a project: she did everything but focus on it.</div></li><li><div>Silence is strength—particularly early on in any journey.</div></li><li><div>What is scarce and rare? Silence. The ability to deliberately keep yourself out of the conversation and subsist without its validation.</div></li><li><div>Silence is the respite of the confident and the strong.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Never give reasons for you what think or do until you must.</span></div></li><li><div>Strategic flexibility is not the only benefit of silence while others chatter. It is also psychology.</div></li><li><div>“A man’s best treasure is a thrifty tongue.”</div></li><li><div>talking aloud to ourselves while we work through difficult problems has been shown to significantly decrease insight and breakthroughs.</div></li><li><div>Success requires a full 100 percent of our effort, and talk flitters part of that effort away before we can use it.</div></li><li><div>The only relationship between work and chatter is that one kills the other.</div></li><li><div>To be somebody or to do something. In life there is often a roll call. That’s when you will have to make a decision.”</div></li><li><div>“To be or to do? Which way will you go?”</div></li><li><div>Having authority is not the same as being an authority. Having the right and being right are not the same either.</div></li><li><div>Being promoted doesn’t necessarily mean you’re doing good work and it doesn’t mean you are worthy of promotion</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Impressing people is utterly different from being truly impressive.</span></div></li><li><div>This is what the ego does. It crosses out what matters and replaces it with what doesn’t.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">What is your purpose? What are you here to do?</span></div></li><li><div>What you choose to do with your time and what you choose to do for money works on you.</div></li><li><div>“A man is worked upon by what he works on,”</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">If your purpose is something larger than you—to accomplish something, to prove something to yourself—then suddenly everything becomes both easier and more difficult. Easier in the sense that you know now what it is you need to do and what is important to you. The other “choices” wash away, as they aren’t really choices at all. They’re distractions.</span></div></li><li><div>“What is it that I want to accomplish in life?”</div></li><li><div>Let No Man’s Ghost Come Back to Say My Training Let Me Down. —SIGN IN THE NEW YORK FIRE DEPARTMENT TRAINING ACADEMY</div></li><li><div>what separated Hammett from the others was his willingness to endure the type of instruction they wouldn’t.</div></li><li><div>Satriani explained that what separated Hammett from the others was his willingness to endure the type of instruction they wouldn’t.</div></li><li><div>The power of being a student is not just that it is an extended period of instruction, it also places the ego and ambition in someone else’s hands.</div></li><li><div>There is a sort of ego ceiling imposed—one knows that he is not better than the “master” he apprentices under.</div></li><li><div>An education can’t be “hacked”; there are no shortcuts besides hacking it every single day.</div></li><li><div>There is a sort of ego ceiling imposed—one knows that he is not better than the “master” he apprentices under. Not even close. You defer to them, you subsume yourself. You cannot fake or bullshit them.</div></li><li><div>Updating your appraisal of your talents in a downward direction is one of the most difficult things to do in life—but it is almost always a component of mastery.</div></li><li><div>The pretense of knowledge is our most dangerous vice, because it prevents us from getting any better. Studious self-assessment is the antidote.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Plus, minus, and equal. Each fighter, to become great, he said, needs to have someone better that they can learn from, someone lesser who they can teach, and someone equal that they can challenge themselves against.</span></div></li><li><div>Get real and continuous feedback about what they know and what they don’t know from every angle.</div></li><li><div>It purges out the ego that puffs us up, the fear that makes us doubt ourselves, and any laziness that might make us want to coast.</div></li><li><div>“False ideas about yourself destroy you. For me, I always stay a student. That’s what martial arts are about, and you have to use that humility as a tool. You put yourself beneath someone you trust.”</div></li><li><div>To become great and to stay great, they must all know what came before, what is going on now, and what comes next.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">A true student is like a sponge. Absorbing what goes on around him, filtering it, latching on to what he can hold.</span></div></li><li><div>A student is self-critical and self-motivated, always trying to improve his understanding so that he can move on to the next topic, the next challenge.</div></li><li><div>A real student is also his own teacher and his own critic. There is no room for ego there.</div></li><li><div>“It is impossible to learn that which one thinks one already knows,”</div></li><li><div>You can’t learn if you think you already know. You will not find the answers if you’re too conceited and self-assured to ask the questions. You cannot get better if you’re convinced you are the best.</div></li><li><div>To become what we ultimately hope to become often takes long periods of obscurity, of sitting and wrestling with some topic or paradox.</div></li><li><div>To become what we ultimately hope to become often takes long periods of obscurity, of sitting and wrestling with some topic or paradox. Humility is what keeps us there, concerned that we don’t know enough and that we must continue to study. Ego rushes to the end, rationalizes that patience is for losers (wrongly seeing it as a weakness), and assumes that we’re good enough to give our talents a go in the world.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">“When student is ready, the teacher appears.”</span></div></li><li><div>We not only need to take this harsh feedback, but actively solicit it, labor to seek out the negative precisely when our friends and family and brain are telling us that we’re doing great.</div></li><li><div>It took them years to become the person they became known as. It was a process of accumulation.</div></li><li><div>Passion typically masks a weakness. Its breathlessness and impetuousness and franticness are poor substitutes for discipline, for mastery, for strength and purpose and perseverance.</div></li><li><div>While the origins of passion may be earnest and good, its effects are comical and then monstrous.</div></li><li><div>What humans require in our ascent is purpose and realism. Purpose, you could say, is like passion with boundaries. Realism is detachment and perspective.</div></li><li><div>When we are young, or when our cause is young, we feel so intensely—passion like our hormones runs strongest in youth—that it seems wrong to take it slow. This is just our impatience. This is our inability to see that burning ourselves out or blowing ourselves up isn’t going to hurry the journey along.</div></li><li><div>Purpose deemphasizes the I. Purpose is about pursuing something outside yourself as opposed to pleasuring yourself.</div></li><li><div>“Great passions are maladies without hope,”</div></li><li><div>Get started with small steps, complete them, and look for feedback on how the next set can be better.</div></li><li><div>Clear the path for the people above you and you will eventually create a path for yourself.</div></li><li><div>When you are just starting out, we can be sure of a few fundamental realities: 1) You’re not nearly as good or as important as you think you are; 2) You have an attitude that needs to be readjusted; 3) Most of what you think you know or most of what you learned in books or in school is out of date or wrong.</div></li><li><div>There’s one fabulous way to work all that out of your system: attach yourself to people and organizations who are already successful and subsume your identity into theirs and move both forward simultaneously.</div></li><li><div>If he wanted to give his coach feedback or question a decision, he needed to do it in private and self-effacingly so as not to offend his superior. He learned how to be a rising star without threatening or alienating anyone.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Greatness comes from humble beginnings; it comes from grunt work. It means you’re the least important person in the room—until you change that with results.</span></div></li><li><div>Be lesser, do more.</div></li><li><div>The person who clears the path ultimately controls its direction, just as the canvas shapes the painting.</div></li><li><div>Our own path, whatever we aspire to, will in some ways be defined by the amount of nonsense we are willing to deal with.</div></li><li><div>When you want to do something—something big and important and meaningful—you will be subjected to treatment ranging from indifference to outright sabotage.</div></li><li><div>Those who have subdued their ego understand that it doesn’t degrade you when others treat you poorly; it degrades them.</div></li><li><div>You’re not able to change the system until after you’ve made it.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">A person who thinks all the time has nothing to think about except thoughts, so he loses touch with reality and lives in a world of illusions. —ALAN WATTS</span></div></li><li><div>What successful people do is curb such flights of fancy. They ignore the temptations that might make them feel important or skew their perspective.</div></li><li><div>what’s going on around you. Feast on it, adjust for it. There’s no one to perform for. There is just work to be done and lessons to be learned, in all that is around us.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">There’s no one to perform for. There is just work to be done and lessons to be learned, in all that is around us.</span></div></li><li><div>Living clearly and presently takes courage. Don’t live in the haze of the abstract, live with the tangible and real, even if—especially if—it’s uncomfortable.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">A proud man is always looking down on things and people; and, of course, as long as you are looking down, you cannot see something that is above you. —C. S. LEWIS</span></div></li><li><div>Pride leads to arrogance and then away from humility and connection with their fellow man.</div></li><li><div>“Whom the gods wish to destroy,” Cyril Connolly famously said, “they first call promising.”</div></li><li><div>“The first thing, Kurnos, which gods bestow on one they would annihilate, is pride.”</div></li><li><div>Our ability to learn, to adapt, to be flexible, to build relationships, all of this is dulled by pride. Most dangerously, this tends to happen either early in life or in the process—when we’re flushed with beginner’s conceit.</div></li><li><div>Pride takes a minor accomplishment and makes it feel like a major one.</div></li><li><div>“Vain men never hear anything but praise.”</div></li><li><div>What a pitiful thing it is when a man lets a little temporary success spoil him, warp his judgment, and he forgets what he is!”</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Receive feedback, maintain hunger, and chart a proper course in life. Pride dulls these senses.</span></div></li><li><div>We must prepare for pride and kill it early—or it will kill what we aspire to.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">“The first product of self-knowledge is humility,”</span></div></li><li><div>What am I missing right now that a more humble person might see?</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">We are still striving, and it is the strivers who should be our peers—not the proud and the accomplished. Without this understanding, pride takes our self-conception and puts it at odds with the reality of our station, which is that we still have so far to go, that there is still so much to be done.</span></div></li><li><div>“It’s not with ideas, my dear Degas, that one makes verse. It’s with words.”</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">To get where we want to go isn’t about brilliance, but continual effort.</span></div></li><li><div>(Do it if you’re going to do it.)</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">(The workmanship was better than the material.)</span></div></li><li><div>“When you are not practicing, remember, someone somewhere is practicing, and when you meet him he will win.”</div></li><li><div>There is no triumph without toil.</div></li><li><div>Work doesn’t want to be good. It is made so, despite the headwind.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Work is finding yourself alone at the track when the weather kept everyone else indoors. Work is pushing through the pain and crappy first drafts and prototypes. It is ignoring whatever plaudits others are getting, and more importantly, ignoring whatever plaudits you may be getting. Because there is work to be done. Work doesn’t want to be good. It is made so, despite the headwind.</span></div></li><li><div>What is truly ambitious is to face life and proceed with quiet confidence in spite of the distractions.</div></li><li><div>Why is success so ephemeral? Ego shortens it.</div></li><li><div>“Man is pushed by drives,” Viktor Frankl observed. “But he is pulled by values.”</div></li><li><div>Without the right values, success is brief.</div></li><li><div>“As our island of knowledge grows, so does the shore of our ignorance.”</div></li><li><div>That’s the worry and the risk—thinking that we’re set and secure, when in reality understanding and mastery is a fluid, continual process.</div></li><li><div>“Humility engenders learning because it beats back the arrogance that puts blinders on. It leaves you open for truths to reveal themselves. You don’t stand in your own way. . . . Do you know how you can tell when someone is truly humble? I believe there’s one simple test: because they consistently observe and listen, the humble improve. They don’t assume, ‘I know the way.’”</div></li><li><div>If you’re not still learning, you’re already dying.</div></li><li><div>Put yourself in rooms where you’re the least knowledgeable person.</div></li><li><div>As people progress, they must also understand how they learn and then set up processes to facilitate this continual education.</div></li><li><div>Berkshire Hathaway Letters to Shareholders, 2016 (Buffett, Warren)</div></li><li><div>“Standard of Performance.” That is: What should be done. When. How.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">It’s during your moment at the top that you can afford ego the least—because the stakes are so much higher, the margins for error are so much smaller. If anything, your ability to listen, to hear feedback, to improve and grow matter more now than ever before.</span></div></li><li><div>The founding of a company, making money in the market, or the formation of an idea is messy. Reducing it to a narrative retroactively creates a clarity that never was and never will be there.</div></li><li><div>When we are aspiring we must resist the impulse to reverse engineer success from other people’s stories.</div></li><li><div>“The way to do really big things seems to be to start with deceptively small things.”</div></li><li><div>don’t make a frontal attack out of ego; instead, you start with a small bet and iteratively scale your ambitions as you go.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">“Keep your identity small”</span></div></li><li><div>Make it about the work and the principles behind it—not about a glorious vision that makes a good headline.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">A great destiny, Seneca reminds us, is great slavery.</span></div></li><li><div>All of us waste precious life doing things we don’t like, to prove ourselves to people we don’t respect, and to get things we don’t want.</div></li><li><div>The farther you travel down that path of accomplishment, whatever it may be, the more often you meet other successful people who make you feel insignificant.</div></li><li><div>On an individual level, however, it’s absolutely critical that you know who you’re competing with and why, that you have a clear sense of the space you’re in.</div></li><li><div>Euthymia - sense of our own path and how to stay on it without getting distracted by all the others that intersect it.</div></li><li><div>The more you have and do, the harder maintaining fidelity to your purpose will be, but the more critically you will need to.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">One of the symptoms of approaching nervous breakdown is the belief that one’s work is terribly important. —BERTRAND RUSSELL</span></div></li><li><div>“He who indulges empty fears earns himself real fears,”</div></li><li><div>It is not enough to have great qualities; we should also have the management of them. —LA ROCHEFOUCAULD</div></li><li><div>System and work habits that got us where we are won’t necessarily keep us there.</div></li><li><div>Responsibility requires a readjustment and then increased clarity and purpose. First, setting the top-level goals and priorities of the organization and your life. Then enforcing and observing them. To produce results and only results.</div></li><li><div>If I am not for myself who will be for me? If I am only for myself, who am I? —HILLEL</div></li><li><div>Great teams tend to follow a trajectory.</div></li><li><div>When they start—before they have won—a team is innocent. If the conditions are right, they come together, they watch out for each other and work together toward their collective goal. This stage, he calls the “Innocent Climb.”</div></li><li><div>After a team starts to win and media attention begins, the simple bonds that joined the individuals together begin to fray. Players calculate their own importance. Chests swell. Frustrations emerge. Egos appear. The Innocent Climb, Pat Riley says, is almost always followed by the “Disease of Me.” It can “strike any winning team in any year and at any moment,” and does with alarming regularity.</div></li><li><div>it’s beginning to think that we’re better, that we’re special, that our problems and experiences are so incredibly different from everyone else’s that no one could possibly understand. It’s an attitude that has sunk far better people, teams, and causes than ours.</div></li><li><div>Ego needs honors in order to be validated. Confidence, on the other hand, is able to wait and focus on the task at hand regardless of external recognition.</div></li><li><div>We never earn the right to be greedy or to pursue our interests at the expense of everyone else. To think otherwise is not only egotistical, it’s counterproductive.</div></li><li><div>One of the most dangerous ironies of success—it can make us someone we never wanted to be in the first place. The Disease of Me can corrupt the most innocent climb.</div></li><li><div>“You’re becoming who you are going to be and so you might as well not be an asshole.”</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Play for the name on the front of the jersey, he says, and they’ll remember the name on the back.</span></div></li><li><div>A monk is a man who is separated from all and who is in harmony with all. —EVAGRIUS PONTICUS</div></li><li><div>Sympatheia—a connectedness with the cosmos.</div></li><li><div>“oceanic feeling.” A sense of belonging to something larger, of realizing that “human things are an infinitesimal point in the immensity.”</div></li><li><div>Questions: Who am I? What am I doing? What is my role in this world? Nothing draws us away from those questions like material success—when we are always busy, stressed, put upon, distracted, reported to, relied on, apart from. When we’re wealthy and told that we’re important or powerful.</div></li><li><div>When we lack a connection to anything larger or bigger than us, it’s like a piece of our soul is gone. Like we’ve detached ourselves from the traditions we hail from, whatever that happens to be (a craft, a sport, a brotherhood or sisterhood, a family). Ego blocks us from the beauty and history in the world. It stands in the way.</div></li><li><div>“When I look up in the universe, I know I’m small, but I’m also big. I’m big because I’m connected to the universe and the universe is connected to me.”</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Yes, we are small. We are also a piece of this great universe and a process.</span></div></li><li><div>Creativity is a matter of receptiveness and recognition. This cannot happen if you’re convinced the world revolves around you.</div></li><li><div>By removing the ego—even temporarily—we can access what’s left standing in relief. By widening our perspective, more comes into view.</div></li><li><div>“You can’t solve . . . tasks with charisma.”</div></li><li><div>Sobriety is the counterweight that must balance out success. Especially if things keep getting better and better.</div></li><li><div>“It requires a strong constitution to withstand repeated attacks of prosperity.”</div></li><li><div>We know what decisions we must make to avoid that ignominious, even pathetic end: protecting our sobriety, eschewing greed and paranoia, staying humble, retaining our sense of purpose, connecting to the larger world around us.</div></li><li><div>Because even if we manage ourselves well, prosperity holds no guarantees.</div></li><li><div>It is because mankind are disposed to sympathize more entirely with our joy than with our sorrow, that we make parade of our riches, and conceal our poverty. Nothing is so mortifying as to be obliged to expose our distress to the view of the public, and to feel, that though our situation is open to the eyes of all mankind, no mortal conceives for us the half of what we suffer. —ADAM SMITH</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Failure and adversity are relative and unique to each of us.</span></div></li><li><div>Almost without exception, this is what life does: it takes our plans and dashes them to pieces. Sometimes once, sometimes lots of times.</div></li><li><div>If success is ego intoxication, then failure can be a devastating ego blow—turning slips into falls and little troubles into great unravelings.</div></li><li><div>“Almost always, your road to victory goes through a place called ‘failure.’”</div></li><li><div>In order to taste success again, we’ve got to understand what led to this moment (or these years) of difficulty, what went wrong and why. We must deal with the situation in order to move past it. We’ll need to accept it and to push through it.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">You can do most everything right and still find yourself in deep shit.</span></div></li><li><div>People who have already been through a lot find themselves stuck with more. Life isn’t fair.</div></li><li><div>When we face difficulty, particularly public difficulty (doubters, scandals, losses), our friend the ego will show its true colors.</div></li><li><div>the great failing is “to see yourself as more than you are and to value yourself at less than your true worth.”</div></li><li><div>adhering to a set of internal metrics that allowed them to evaluate and gauge their progress while everyone on the outside was too distracted by supposed signs of failure or weakness.</div></li><li><div>“The future bears down upon each one of us with all the hazards of the unknown.” The only way out is through.</div></li><li><div>This is what we’re aspiring to—much more than mere success. What matters is that we can respond to what life throws at us. And how we make it through.</div></li><li><div>Humble and strong people don’t have the same trouble with these troubles that egotists do. There are fewer complaints and far less self-immolation. Instead, there’s stoic—even cheerful—resilience. Pity isn’t necessary. Their identity isn’t threatened. They can get by without constant validation.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Vivre sans temps mort. (Live without wasted time.) —PARISIAN POLITICAL SLOGAN</span></div></li><li><div>According to Greene, there are two types of time in our lives: dead time, when people are passive and waiting, and alive time, when people are learning and acting and utilizing every second. Every moment of failure, every moment or situation that we did not deliberately choose or control, presents this choice: Alive time. Dead time.</div></li><li><div>This moment is not your life. But it is a moment in your life. How will you use it?</div></li><li><div>In life, we all get stuck with dead time. Its occurrence isn’t in our control. Its use, on the other hand, is.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">What matters to an active man is to do the right thing; whether the right thing comes to pass should not bother him. —GOETHE</span></div></li><li><div>In life, there will be times when we do everything right, perhaps even perfectly. Yet the results will somehow be negative: failure, disrespect, jealousy, or even a resounding yawn from the world.</div></li><li><div>Will we work hard for something that can be taken away from us? Will we invest time and energy even if an outcome is not guaranteed? With the right motives we’re willing to proceed. With ego, we’re not.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">The less attached we are to outcomes the better. When fulfilling our own standards is what fills us with pride and self-respect. When the effort—not the results, good or bad—is enough.</span></div></li><li><div>When fulfilling our own standards is what fills us with pride and self-respect. When the effort—not the results, good or bad—is enough.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">“Success is peace of mind, which is a direct result of self-satisfaction in knowing you made the effort to do your best to become the best that you are capable of becoming.”</span></div></li><li><div>“Ambition,” Marcus Aurelius reminded himself, “means tying your well-being to what other people say or do . . . Sanity means tying it to your own actions.”</div></li><li><div>Do your work. Do it well. Then “let go and let God.“</div></li><li><div>The world is, after all, indifferent to what we humans “want.” If we persist in wanting, in needing, we are simply setting ourselves up for resentment or worse.</div></li><li><div>we can’t let externals determine whether something was worth it or not.</div></li><li><div>There are many ways to hit bottom. Almost everyone does in their own way, at some point.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Duris dura franguntur. Hard things are broken by hard things.</span></div></li><li><div>The bigger the ego the harder the fall.</div></li><li><div>“we cannot be humble except by enduring humiliations.”</div></li><li><div>many significant life changes come from moments in which we are thoroughly demolished, in which everything we thought we knew about the world is rendered false.</div></li><li><div>How do I make sense of this? How do I move onward and upward? Is this the bottom, or is there more to come? Someone told me my problems, so how do I fix them? How did I let this happen? How can it never happen again?</div></li><li><div>A look at history finds that these events seem to be defined by three traits: 1. They almost always came at the hands of some outside force or person. 2. They often involved things we already knew about ourselves, but were too scared to admit. 3. From the ruin came the opportunity for great progress and improvement.</div></li><li><div>“The world breaks every one and afterward many are strong at the broken places. But those that will not break it kills.”</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">The world can show you the truth, but no one can force you to accept it.</span></div></li><li><div>the only way you can appreciate your progress is to stand on the edge of the hole you dug for yourself, look down inside it, and smile fondly at the bloody claw prints that marked your journey up the walls.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">It can ruin your life only if it ruins your character. —MARCUS AURELIUS</span></div></li><li><div>Ego kills what we love. Sometimes, it comes close to killing us too.</div></li><li><div>Only ego thinks embarrassment or failure are more than what they are. History is full of people who suffered abject humiliations yet recovered to have long and impressive careers.</div></li><li><div>When we lose, we have a choice: Are we going to make this a lose-lose situation for ourselves and everyone involved? Or will it be a lose . . . and then win?</div></li><li><div>About your value as a human being. When success begins to slip from your fingers—for whatever reason—the response isn’t to grip and claw so hard that you shatter</div></li><li><div>With wisdom, we understand that these positions are transitory, not statements about your value as a human being.</div></li><li><div>“He who fears death will never do anything worthy of a living man,”</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">He who will do anything to avoid failure will almost certainly do something worthy of a failure.</span></div></li><li><div>If your reputation can’t absorb a few blows, it wasn’t worth anything in the first place.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">The only real failure is abandoning your principles.</span></div></li><li><div>I never look back, except to find out about mistakes . . . I only see danger in thinking back about things you are proud of. —ELISABETH NOELLE-NEUMANN</div></li><li><div>You’re not as good as you think. You don’t have it all figured out. Stay focused. Do better.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">The scoreboard was not the judge of whether he or the team had achieved success—that wasn’t what constituted “winning.”</span></div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">This is characteristic of how great people think. It’s not that they find failure in every success. They just hold themselves to a standard that exceeds what society might consider to be objective success.</span></div></li><li><div>It can feel like self-inflicted torture sometimes. But it does force you to always keep going, and always improve.</div></li><li><div>“Vain men never hear anything but praise.” It can only see what’s going well, not what isn’t.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Winning is not enough. People can get lucky and win. People can be assholes and win. Anyone can win. But not everyone is the best possible version of themselves.</span></div></li><li><div>Your potential, the absolute best you’re capable of—that’s the metric to measure yourself against.</div></li><li><div>When you take ego out of the equation, other people’s opinions and external markers won’t matter as much. That’s more difficult, but ultimately a formula for resilience.</div></li><li><div>There are two different occasions upon which we examine our own conduct, and endeavour to view it in the light in which the impartial spectator would view it: first, when we are about to act; and secondly, after we have acted. Our views are apt to be very partial in both cases; but they are apt to be most partial when it is of most importance that they should be otherwise.</div></li><li><div>When we are about to act, the eagerness of passion will seldom allow us to consider what we are doing, with the candour of an indifferent person. . . .</div></li><li><div>When the action is over, indeed, and the passions which prompted it have subsided, we can enter more coolly into the sentiments of the indifferent spectator.</div></li><li><div>Holding your ego against a standard (inner or indifferent or whatever you want to call it) makes it less and less likely that excess or wrongdoing is going to be tolerated by you.</div></li><li><div>It’s not about what you can get away with, it’s about what you should or shouldn’t do.</div></li><li><div>A person who judges himself based on his own standards doesn’t crave the spotlight the same way as someone who lets applause dictate success.</div></li><li><div>Not that we are endlessly pursuing more, as if we’re racked with greed, but instead, we’re inching our way toward real improvement, with discipline rather than disposition.</div></li><li><div>We want to continue to improve. Ego blocks that, so we subsume it and smash it with continually higher standards. Not that we are endlessly pursuing more, as if we’re racked with greed, but instead, we’re inching our way toward real improvement, with discipline rather than disposition.</div></li><li><div>And why should we feel anger at the world? As if the world would notice! —EURIPIDES</div></li><li><div>Attempting to destroy something out of hate or ego often ensures that it will be preserved and disseminated forever.</div></li><li><div>What defines great leaders like Douglass is that instead of hating their enemies, they feel a sort of pity and empathy for them.</div></li><li><div>“We begin to love our enemies and love those persons that hate us whether in collective life or individual life by looking at ourselves.”</div></li><li><div>“Hate at any point is a cancer that gnaws away at the very vital center of your life and your existence. It is like eroding acid that eats away the best and the objective center of your life.”</div></li><li><div>What do you dislike? Whose name fills you with revulsion and rage? Now ask: Have these strong feelings really helped you accomplish anything?</div></li><li><div>In failure or adversity, it’s so easy to hate. Hate defers blame. It makes someone else responsible. It’s a distraction too; we don’t do much else when we’re busy getting revenge or investigating the wrongs that have supposedly been done to us.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">I don’t like work—no man does—but I like what is in the work—the chance to find yourself. —JOSEPH CONRAD</span></div></li><li><div>“People learn from their failures. Seldom do they learn anything from success.”</div></li><li><div>“See much, study much, suffer much, that is the path to wisdom.”</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">All great men and women went through difficulties to get to where they are, all of them made mistakes. They found within those experiences some benefit—even if it was simply the realization that they were not infallible and that things would not always go their way. </span>They found that self-awareness was the way out and through—if they hadn’t, they wouldn’t have gotten better and they wouldn’t have been able to rise again.</div></li><li><div>Not to aspire or seek out of ego. To have success without ego. To push through failure with strength, not ego.</div></li><li><div>Training was like sweeping the floor. Just because we’ve done it once, doesn’t mean the floor is clean forever. Every day the dust comes back. Every day we must sweep.</div></li><li><div>But for the grace of God go I. But for the grace of God, that could be any of us.</div></li><li><div>we all have potential within us. We all have goals and accomplishments that we know we can achieve—whether it’s starting a company, finishing a creative work, making a run at a championship, or getting to the top of your respective field. These are worthy aims. A broken person will not get there.</div></li><li><div>Ego, like any drug, might be indulged at first in a misguided attempt to get an edge or to take one off. The problem is how quickly it becomes an end unto itself.</div></li><li><div>I had expected something conclusive and fatal and now I realized that what was coming to him was not a sudden pay-off but a process, a disease he had caught in the epidemic that swept over his birthplace like a plague; a cancer that was slowly eating him away, the symptoms developing and intensifying: success, loneliness, fear. Fear of all the bright young men, the newer, fresher Sammy Glicks that would spring up to harass him, to threaten him and finally overtake him.</div></li><li><div><span style="font-weight: bold;" data-mce-style="font-weight: bold;">Any fool can learn from experience. The trick is to learn from other people’s experience.</span></div></li><li><div>We don’t “so much gain the knowledge of things by the words, as words by the experience [we have] of things.”</div></li><li><div>But no less impressive an accomplishment: being better people, being happier people, being balanced people, being content people, being humble and selfless people. Or better yet, all of these traits together. And what is most obvious but most ignored is that perfecting the personal regularly leads to success as a professional, but rarely the other way around.</div></li><li><div>Working to refine our habitual thoughts, working to clamp down on destructive impulses, these are not simply the moral requirements of any decent person. They will make us more successful; they will help us navigate the treacherous waters that ambition will require us to travel. And they are also their own reward.</div></li></ul>
-      </div> <!-- /.container -->
-      <footer>
-        <ul>
-          <li><a href="https://twitter.com/leroyalmeida23"><span class="darklighted">Twitter</span></a></li>
-          <li><a href="https://www.instagram.com/leroyalmeida/"><span class="darklighted">Instagram</span></a></li>
-          <li><a href="https://www.linkedin.com/in/leroyalmeida/"><span class="darklighted">LinkedIn</span></a></li>
-          <li><a href="https://medium.com/@leroyalmeida23"><span class="darklighted">Medium</span></a></li>
-          <li><a href="mailto:miguel.l.s.almeida@gmail.com"><span class="darklighted">Email</span></a></li>
-        </ul>
-      </footer>
-    </div>
+      </div>
+    </div> <!-- /.container -->
   </body>
 </html>
