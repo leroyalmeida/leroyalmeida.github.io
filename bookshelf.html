@@ -7,12 +7,12 @@
     <meta name="description" content="Books recommendations and notes from Leroy Almeida">
     <meta name="keywords" content="Leroy, Almeida, Book recommendations, Portfolio, Designer, User Experience, UX, UI, Visual, Product Designer, Manila, Philippines, Strategy, Mobile, Web, Interface, Design, Mobile Design, Web Design, Interface Design, Interaction Design, Design Strategy, Web application, Application, TV, Device, Product, Internet, Software, Expert, Usability, Information Architecture, Redesign, Mockups">
     <meta name="robots" content="index,follow">
-    <link rel="canonical" href="https://leroyalmeida.com/bookshelf" />
+    <link rel="canonical" href="https://leroyalmeida.com/bookshelf/by-title" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
 
     <!-- Open Graph -->
     <meta property="og:title" content="Bookshelf" />
-    <meta property="og:url" content="https://leroyalmeida.com/bookshelf" />
+    <meta property="og:url" content="https://leroyalmeida.com/bookshelf/by-title" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="Books recommendations and notes from Leroy Almeida">
     <meta property="og:image" content="https://leroyalmeida.com/images/portfolio.jpg">
@@ -30,251 +30,663 @@
 
     <!-- link to html stylesheet -->
     <style amp-custom>
-      @font-face {
-        font-family: "cine";
-        font-display: swap;
-        src: url("/css/fonts/GT-Cinetype-Regular.woff") format("woff");
+
+      /*
+      * Skeleton V1.1
+      * Copyright 2011, Dave Gamache
+      * www.getskeleton.com
+      * Free to use under the MIT license.
+      * http://www.opensource.org/licenses/mit-license.php
+      * 8/17/2011
+      */
+
+
+      /* Table of Content
+      ==================================================
+      	#Reset & Basics
+      	#Basic Styles
+      	#Site Styles
+      	#Typography
+      	#Links
+      	#Lists
+      	#Images
+      	#Buttons
+      	#Tabs
+      	#Forms
+      	#Misc */
+
+
+      /* #Reset & Basics (Inspired by E. Meyers)
+      ================================================== */
+      	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+      		margin: 0;
+      		padding: 0;
+      		border: 0;
+      		font-size: 100%;
+      		font: inherit;
+      		vertical-align: baseline; }
+      	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+      		display: block; }
+      	body {
+      		line-height: 1; }
+      	ol, ul {
+      		list-style: none; }
+      	blockquote, q {
+      		quotes: none; }
+      	blockquote:before, blockquote:after,
+      	q:before, q:after {
+      		content: '';
+      		content: none; }
+      	table {
+      		border-collapse: collapse;
+      		border-spacing: 0; }
+
+
+      /* #Basic Styles
+      ================================================== */
+      	body {
+      		background: #fff;
+      		font: 13px cine, sans-serif;
+          line-height: 1.5;
+      		color: #0c0c0c;
+      		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+      		-webkit-text-size-adjust: 100%;
+       }
+
+
+      /* #Typography
+      ================================================== */
+      	h1, h2, h3, h4, h5, h6 {
+      		color: #000;
+      		font-family: cine, sans-serif;
+      		font-weight: normal; }
+      	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
+      	h1 { font-size: 40px; line-height: 50px; margin-bottom: 14px;}
+      	h2 { font-size: 30px; line-height: 40px; margin-bottom: 10px; }
+      	h3 { font-size: 24px; line-height: 34px; margin-bottom: 8px; }
+      	h4 { font-size: 16px; line-height: 30px; margin-bottom: 4px; }
+      	h5 { font-size: 14px; line-height: 24px; margin-bottom: 4px; }
+      	h6 { font-size: 12px; line-height: 21px; }
+      	.subheader { color: #0c0c0c; }
+
+      	p { margin: 0 0 20px 0; }
+      	p img { margin: 0; }
+      	p.lead { font-size: 21px; line-height: 27px; color: #0c0c0c;  }
+
+      	em { font-style: italic; }
+      	strong { font-weight: bold; color: #000; }
+      	small { font-size: 80%; }
+
+      /*	Blockquotes  */
+      	blockquote, blockquote p { font-size: 17px; line-height: 24px; color: #0c0c0c; font-style: italic; }
+      	blockquote { margin: 0 0 20px; padding: 9px 20px 0 19px; border-left: 1px solid #ddd; }
+      	blockquote cite { display: block; font-size: 12px; color: #555; }
+      	blockquote cite:before { content: "\2014 \0020"; }
+      	blockquote cite a, blockquote cite a:visited, blockquote cite a:visited { color: #555; }
+
+      	hr { border: solid #ddd; border-width: 1px 0 0; clear: both; margin: 10px 0 30px; height: 0; }
+
+
+      /* #Links
+      ================================================== */
+      	a, a:visited { color: #000; text-decoration: underline; outline: 0; }
+      	a:hover, a:focus { color: #003fff; }
+      	p a, p a:visited { line-height: inherit; }
+
+
+      /* #Lists
+      ================================================== */
+      ul, ol { margin-bottom: 20px; }
+      ul { list-style: disc outside; }
+      ol { list-style: decimal; }
+      ol, ul.square, ul.circle, ul.disc { margin-left: 30px; }
+      ul.square { list-style: square outside; }
+      ul.circle { list-style: circle outside; }
+      ul.disc { list-style: disc outside; }
+      ul ul, ul ol,
+      ol ol, ol ul { margin: 4px 0 5px 30px; }
+      ul ul li, ul ol li,
+      ol ol li, ol ul li { margin-bottom: 6px; }
+      li { line-height: 18px; margin-bottom: 12px; }
+      ul.large li { line-height: 21px; }
+      li p { line-height: 21px; }
+
+      /* #Images
+      ================================================== */
+
+      img.scale-with-grid {
+        max-width: 100%;
+        height: auto;
       }
 
-      @font-face {
-        font-family: "cine-mono";
-        font-display: swap;
-        src: url("/css/fonts/GT-Cinetype-Mono.woff") format("woff");
+      /*
+      * Skeleton V1.1
+      * Copyright 2011, Dave Gamache
+      * www.getskeleton.com
+      * Free to use under the MIT license.
+      * http://www.opensource.org/licenses/mit-license.php
+      * 8/17/2011
+      */
+
+
+      /* Table of Contents
+      ==================================================
+          #Base 960 Grid
+          #Tablet (Portrait)
+          #Mobile (Portrait)
+          #Mobile (Landscape)
+          #Clearing */
+
+
+
+      /* #Base 960 Grid
+      ================================================== */
+
+          .container                                  { position: relative; width: 960px; margin: 0 auto; padding: 0; }
+          .container .column,
+          .container .columns                         { float: left; display: inline; margin-left: 10px; margin-right: 10px; }
+          .row                                        { margin-bottom: 20px; }
+
+          /* Nested Column Classes */
+          .column.alpha, .columns.alpha               { margin-left: 0; }
+          .column.omega, .columns.omega               { margin-right: 0; }
+
+          /* Base Grid */
+          .container .one.column,
+          .container .one.columns                     { width: 40px;  }
+          .container .two.columns                     { width: 100px; }
+          .container .three.columns                   { width: 160px; }
+          .container .four.columns                    { width: 220px; }
+          .container .five.columns                    { width: 280px; }
+          .container .six.columns                     { width: 340px; }
+          .container .seven.columns                   { width: 400px; }
+          .container .eight.columns                   { width: 460px; }
+          .container .nine.columns                    { width: 520px; }
+          .container .ten.columns                     { width: 580px; }
+          .container .eleven.columns                  { width: 640px; }
+          .container .twelve.columns                  { width: 700px; }
+          .container .thirteen.columns                { width: 760px; }
+          .container .fourteen.columns                { width: 820px; }
+          .container .fifteen.columns                 { width: 880px; }
+          .container .sixteen.columns                 { width: 940px; }
+
+          .container .one-third.column                { width: 300px; }
+          .container .two-thirds.column               { width: 620px; }
+
+          /* Offsets */
+          .container .offset-by-one                   { padding-left: 60px;  }
+          .container .offset-by-two                   { padding-left: 120px; }
+          .container .offset-by-three                 { padding-left: 180px; }
+          .container .offset-by-four                  { padding-left: 240px; }
+          .container .offset-by-five                  { padding-left: 300px; }
+          .container .offset-by-six                   { padding-left: 360px; }
+          .container .offset-by-seven                 { padding-left: 420px; }
+          .container .offset-by-eight                 { padding-left: 480px; }
+          .container .offset-by-nine                  { padding-left: 540px; }
+          .container .offset-by-ten                   { padding-left: 600px; }
+          .container .offset-by-eleven                { padding-left: 660px; }
+          .container .offset-by-twelve                { padding-left: 720px; }
+          .container .offset-by-thirteen              { padding-left: 780px; }
+          .container .offset-by-fourteen              { padding-left: 840px; }
+          .container .offset-by-fifteen               { padding-left: 900px; }
+
+
+
+      /* #Tablet (Portrait)
+      ================================================== */
+
+          /* Note: Design for a width of 768px */
+
+          @media only screen and (min-width: 768px) and (max-width: 959px) {
+              .container                                  { width: 768px; }
+              .container .column,
+              .container .columns                         { margin-left: 10px; margin-right: 10px;  }
+              .column.alpha, .columns.alpha               { margin-left: 0; margin-right: 10px; }
+              .column.omega, .columns.omega               { margin-right: 0; margin-left: 10px; }
+              .alpha.omega                                { margin-left: 0; margin-right: 0; }
+
+              .container .one.column,
+              .container .one.columns                     { width: 28px; }
+              .container .two.columns                     { width: 76px; }
+              .container .three.columns                   { width: 124px; }
+              .container .four.columns                    { width: 172px; }
+              .container .five.columns                    { width: 220px; }
+              .container .six.columns                     { width: 268px; }
+              .container .seven.columns                   { width: 316px; }
+              .container .eight.columns                   { width: 364px; }
+              .container .nine.columns                    { width: 412px; }
+              .container .ten.columns                     { width: 460px; }
+              .container .eleven.columns                  { width: 508px; }
+              .container .twelve.columns                  { width: 556px; }
+              .container .thirteen.columns                { width: 604px; }
+              .container .fourteen.columns                { width: 652px; }
+              .container .fifteen.columns                 { width: 700px; }
+              .container .sixteen.columns                 { width: 748px; }
+
+              .container .one-third.column                { width: 236px; }
+              .container .two-thirds.column               { width: 492px; }
+
+              /* Offsets */
+              .container .offset-by-one                   { padding-left: 48px; }
+              .container .offset-by-two                   { padding-left: 96px; }
+              .container .offset-by-three                 { padding-left: 144px; }
+              .container .offset-by-four                  { padding-left: 192px; }
+              .container .offset-by-five                  { padding-left: 240px; }
+              .container .offset-by-six                   { padding-left: 288px; }
+              .container .offset-by-seven                 { padding-left: 336px; }
+              .container .offset-by-eight                 { padding-left: 384px; }
+              .container .offset-by-nine                  { padding-left: 432px; }
+              .container .offset-by-ten                   { padding-left: 480px; }
+              .container .offset-by-eleven                { padding-left: 528px; }
+              .container .offset-by-twelve                { padding-left: 576px; }
+              .container .offset-by-thirteen              { padding-left: 624px; }
+              .container .offset-by-fourteen              { padding-left: 672px; }
+              .container .offset-by-fifteen               { padding-left: 720px; }
+          }
+
+
+      /*  #Mobile (Portrait)
+      ================================================== */
+
+          /* Note: Design for a width of 320px */
+
+          @media only screen and (max-width: 767px) {
+              .container { width: 300px; }
+              .container .columns,
+              .container .column { margin: 0; }
+
+              .container .one.column,
+              .container .one.columns,
+              .container .two.columns,
+              .container .three.columns,
+              .container .four.columns,
+              .container .five.columns,
+              .container .six.columns,
+              .container .seven.columns,
+              .container .eight.columns,
+              .container .nine.columns,
+              .container .ten.columns,
+              .container .eleven.columns,
+              .container .twelve.columns,
+              .container .thirteen.columns,
+              .container .fourteen.columns,
+              .container .fifteen.columns,
+              .container .sixteen.columns,
+              .container .one-third.column,
+              .container .two-thirds.column  { width: 300px; }
+
+              /* Offsets */
+              .container .offset-by-one,
+              .container .offset-by-two,
+              .container .offset-by-three,
+              .container .offset-by-four,
+              .container .offset-by-five,
+              .container .offset-by-six,
+              .container .offset-by-seven,
+              .container .offset-by-eight,
+              .container .offset-by-nine,
+              .container .offset-by-ten,
+              .container .offset-by-eleven,
+              .container .offset-by-twelve,
+              .container .offset-by-thirteen,
+              .container .offset-by-fourteen,
+              .container .offset-by-fifteen { padding-left: 0; }
+
+          }
+
+
+      /* #Mobile (Landscape)
+      ================================================== */
+
+          /* Note: Design for a width of 480px */
+
+          @media only screen and (min-width: 480px) and (max-width: 767px) {
+              .container { width: 420px; }
+              .container .columns,
+              .container .column { margin: 0; }
+
+              .container .one.column,
+              .container .one.columns,
+              .container .two.columns,
+              .container .three.columns,
+              .container .four.columns,
+              .container .five.columns,
+              .container .six.columns,
+              .container .seven.columns,
+              .container .eight.columns,
+              .container .nine.columns,
+              .container .ten.columns,
+              .container .eleven.columns,
+              .container .twelve.columns,
+              .container .thirteen.columns,
+              .container .fourteen.columns,
+              .container .fifteen.columns,
+              .container .sixteen.columns,
+              .container .one-third.column,
+              .container .two-thirds.column { width: 420px; }
+          }
+
+
+      /* #Clearing
+      ================================================== */
+
+          /* Self Clearing Goodness */
+          .container:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+
+          /* Use clearfix class on parent to clear nested columns,
+          or wrap each row of columns in a <div class="row"> */
+          .clearfix:before,
+          .clearfix:after,
+          .row:before,
+          .row:after {
+            content: '\0020';
+            display: block;
+            overflow: hidden;
+            visibility: hidden;
+            width: 0;
+            height: 0; }
+          .row:after,
+          .clearfix:after {
+            clear: both; }
+          .row,
+          .clearfix {
+            zoom: 1; }
+
+          /* You can also use a <br class="clear" /> to clear columns */
+          .clear {
+            clear: both;
+            display: block;
+            overflow: hidden;
+            visibility: hidden;
+            width: 0;
+            height: 0;
+          }
+
+      /*
+      * Skeleton V1.1
+      * Copyright 2011, Dave Gamache
+      * www.getskeleton.com
+      * Free to use under the MIT license.
+      * http://www.opensource.org/licenses/mit-license.php
+      * 8/17/2011
+      */
+
+      /* Table of Content
+      ==================================================
+      	#Site Styles
+      	#Page Styles
+      	#Media Queries
+      	#Font-Face */
+
+      /* #Site Styles
+      ================================================== */
+
+      /* #Page Styles
+      ================================================== */
+
+      /* #Media Queries
+      ================================================== */
+
+      	/* Smaller than standard 960 (devices and browsers) */
+      	@media only screen and (max-width: 959px) {}
+
+      	/* Tablet Portrait size to standard 960 (devices and browsers) */
+      	@media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+      	/* All Mobile Sizes (devices and browser) */
+      	@media only screen and (max-width: 767px) {}
+
+      	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+      	@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+      	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+      	@media only screen and (max-width: 479px) {}
+
+
+      /* #Font-Face
+      ================================================== */
+      /* 	This is the proper syntax for an @font-face file
+      		Just create a "fonts" folder at the root,
+      		copy your FontName into code below and remove
+      		comment brackets */
+
+
+        @font-face {
+          font-family: "cine";
+          src: url("/css/fonts/GT-Cinetype-Regular.woff") format("woff");
+          font-weight: normal;
+          font-style: normal;
+          font-display: swap;
+        }
+
+        @font-face {
+          font-family: "cine-mono";
+          src: url("/css/fonts/GT-Cinetype-Mono.woff") format("woff");
+          font-weight: normal;
+          font-style: normal;
+          font-display: swap;
+        }
+
+        @font-face {
+          font-family: "cine";
+          src: url("/css/fonts/GT-Cinetype-Bold.woff") format("woff");
+          font-weight: bold;
+          font-style: normal;
+          font-display: swap;
+        }
+
+
+      .container {
+        padding-top: 64px;
       }
 
-      @font-face {
-        font-family: "cine";
-        font-display: swap;
-        src: url("/css/fonts/GT-Cinetype-Bold.woff") format("woff");
-        font-weight: bold;
+      ::selection {
+        background: #89a6ff;
+      }
+      ::-moz-selection {
+        background: #89a6ff;
       }
 
-      body {
-        background-color: #fff;
-        color: #000;
-        font-family: cine, sans-serif;
-      }
-
-      div.wrap {
-        display: block;
-        width: 80%;
-        max-width: 960px;
-        margin: 0 auto;
+      nav {
+        position: fixed;
+        width: 160px;
       }
 
       nav ul {
-        padding: 0 0 5em 0;
-        list-style: none;
+        float: left;
       }
 
       nav ul li {
-        display: inline;
-        margin-right: 20px;
-        margin-top: 8px;
-      }
-
-      footer ul {
-        padding: 40px 0;
-        list-style: none;
-      }
-
-      footer ul li {
         display: block;
-        margin-right: 20px;
-        margin-top: 8px;
+        margin-bottom: 8px;
       }
 
-      a {
-        font-family: cine, sans-serif;
+      nav ul li a,
+      nav ul li a:visited,
+      nav ul li a:active  {
+        font-size: 14px;
+        color: #000;
         text-decoration: none;
+        font-weight: bold;
+      }
+
+      nav ul li a:hover,
+      nav ul li a:focus {
         color: #302ECD;
       }
 
-      a:hover span{
-        background-size: 100% 100%;
+      li {
+        margin-bottom: 8px;
       }
 
-      h1 {
-        font-size: 3.375em;
+      #logo {
+        margin-bottom: 24px;
+        letter-spacing: -1px;
       }
 
-      h2 {
-        font-size: 2.25em;
-        font-weight: 500;
+      #logo a {
+        text-decoration: none;
       }
 
-      h3 {
-        font-size: 1.5em;
-        font-weight: 500;
+      .book-details {
+        margin: 32px 0;
       }
 
-      h4 {
-        font-size: 1.2em;
-        margin: 0;
+      .book-details  .clearfix {
+        clear: both;
       }
 
-      p, ul {
-        font-size: 1em;
-        line-height: 1.5em;
-        color: rgba(0,0,0,.84);;
-      }
-
-      .darklighted {
-        background-image: linear-gradient(180deg, transparent 75%, #FFEE77 0);
-        background-size: 0% 100%;
-        -moz-transition: 0.3s cubic-bezier(0.5, 0.60, 0.360, 1) background;
-        -o-transition: 0.3s cubic-bezier(0.5, 0.60, 0.360, 1) background;
-        -ms-transition: 0.3s cubic-bezier(0.5, 0.60, 0.360, 1) background;
-        -webkit-transition: 0.3s cubic-bezier(0.5, 0.60, 0.360, 1) background;
-        transition: 0.3s cubic-bezier(0.5, 0.60, 0.360, 1) background;
-        background-repeat: no-repeat;
-        padding-bottom: 0;
-      }
-
-      #header-line {
-        background: #FFEE77;
-        height: 4px;
-        width: 10%;
-        margin-top: 3em;
-        margin-bottom: 3em;
-      }
-
-      #book-container {
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-flex-flow: row wrap;
-      }
-
-      .book-card{
-        box-shadow: 0 30px 70px rgba(64,52,52,.1);
-        -webkit-box-shadow: 0 30px 70px rgba(64,52,52,.1);
+      .book-image {
+        float: left;
         width: 25%;
-        height: auto;
-        position: relative;
-        margin: 8px;
       }
 
-      .book-card:hover{
-        box-shadow: 0 30px 70px rgba(64,52,52,.2);
-        -webkit-box-shadow: 0 30px 70px rgba(64,52,52,.2);
-        position: relative;
-        top:-0.25em;
+      .book-image img {
+        width: 90%;
       }
 
-      .book-card-image {
-        display: block;
-        box-sizing: border-box;
-        background: center center no-repeat;
+      .book-details .details {
+        float: right;
+        width: 75%;
+      }
+      .book-details .detail .detail-category {
+        text-align: right;
+        vertical-align: top;
+        min-width: 105px;
+        font-weight: bold;
       }
 
-      .book-card-image-disabled {
-        filter: grayscale(1);
-        opacity: 0.45;
+      .book-details .detail .detail-content {
+        vertical-align: top;
       }
 
-      /* .book-card-text {
-        padding: 1em;
-      }
-
-      .book-card-text p {
-        height:100px;
-      }
-
-      .book-card-text h3 {
-        margin: 0;
-      } */
-
-      .book-card-text a::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-      }
-
-      .tags {
-        margin: 0;
-        padding: 0;
-      }
-
-      .tag {
-        color: rgba(0, 0, 0, 0.4);
-        background: rgba(244, 245, 249, 1);
-        padding: .25em .5em;
-        margin-top: .25em;
-        text-transform: uppercase;
-        font-family: cine-mono, monospace;
-        list-style: none;
-        display: inline-block;
-      }
-
-      .page {
-        width: 100%;
-        display: block;
-      }
-
-      .page-section {
-        padding-top: 2em;
-      }
-
-      .page-content ul{
-        padding-left: 1.5em;
-      }
-
-      .page-description {
-        width: 100%;
-      }
-
-      .page-content h3 {
-        padding-top: 1.5em;
-      }
-
-      .page-image {
-        -webkit-box-shadow: 0 15px 35px rgba(64,52,52,.1);
-        box-shadow: 0 15px 35px rgba(64,52,52,.1);
-        margin-bottom: 2em;
-      }
-
-      /* Medium devices (landscape tablets, 768px and up) */
-      @media only screen and (min-width: 768px) {
-        nav ul li, footer ul li {
-          display: inline-block;
-          margin-right: 20px;
-          margin-top: 16px;
+      /* Mobile */
+      @media only screen and (max-width: 767px) {
+        header h1 {
+          font-size: 32px;
+          line-height: 40px;
         }
 
-        .book-card{
-          width: 25%;
+        #logo {
+          text-align: center;
         }
 
-        .page {
-          -webkit-box-shadow: 0 30px 70px rgba(64,52,52,.1);
-          box-shadow: 0 30px 70px rgba(64,52,52,.1);
+
+        nav {
+          position: relative;
           width: 100%;
         }
 
-        .page-content {
-          padding: 2em;
+        nav ul {
+          width: 100%;
+          text-align: center;
         }
 
-        .page-description {
-          width: 80%;
+        nav ul li {
+          display: inline;
+          margin: 0 4px;
+        }
+
+        nav ul li a {
+          font-size: 16px;
         }
       }
 
-      /* Large devices (laptops/desktops, 992px and up) */
-      @media only screen and (min-width: 992px) {
-        .book-card{
-          width: 15%;
-        }
+      /* Mobile Landscape */
+      @media only screen and (min-width: 480px) and (max-width: 767px) {
+      }
 
-        .page {
-          width: 100%;
+      /* Non 960 */
+      @media only screen and (max-width: 959px) {
+          #logo {
+            margin-bottom: 16px;
+          }
+
+          nav .button {
+            padding: 8px 24px 16px;
+          }
+      }
+
+      /* iPad Portrait/Browser */
+      @media only screen and (min-width: 768px) and (max-width: 959px) {
+        nav {
+          width: 124px;
         }
+      }
+
+      /* Mobile/Browser */
+      @media only screen and (max-width: 767px) {}
+
+      /* Mobile Landscape/Browser */
+      @media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+      /* Anything smaller than standard 960 */
+      @media only screen and (max-width: 959px) {}
+
+
+      /* iPad Portrait Only */
+      @media only screen and (min-width: 768px) and (max-width: 959px) and (max-device-width: 1000px) {}
+
+      /* Mobile Only */
+      @media only screen and (max-width: 767px) and (max-device-width: 1000px) {}
+
+      /* Mobile Landscape Only */
+      @media only screen and (min-width: 480px) and (max-width: 767px) and (max-device-width: 1000px) {}
+
+      /* Anything smaller than standard 960 on a device */
+      @media only screen and (max-width: 959px) and (max-device-width: 1000px) {
+          .resize { display: none; }
+      }
+
+      table{
+        background:#fff;
+        border-collapse:collapse;
+        margin:5px 0 10px;
+
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
+      th, td{
+        padding:3px 10px;
+        text-align:left;
+        vertical-align:top;
+      }
+
+      tr.even td{
+        background:#f7f7f7;
+      }
+
+      th{
+        background:#edeff0;
+      }
+
+      .highlight {
+        margin-bottom: 20px;
+      }
+
+      div.highlight > pre {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding-left: 20px;
+        border-left: 1px solid #ccc;
+        overflow: auto;
+      }
+
+      code {
+        font-family: monospace;
+      }
+
+      p img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px;
+      }
+
+      sup {
+        vertical-align: super;
+        font-size: 8pt;
       }
     </style>
 
@@ -299,421 +711,67 @@
       }
       </script>
       </amp-analytics>
-    <div class="wrap">
-      <nav>
-        <ul>
-          <li><a href="/"><span class="darklighted">Home</span></a></li>
-          <li><a href="/bookshelf/by-title"><span class="darklighted">Bookshelf</span></a></li>
-        </ul>
-      </nav>
-      <h2>Bookshelf</h2>
-      <!-- <nav>
-        <ul>
-          <li><a href="/bookshelf/by-cover"><span class="darklighted">Covers</span></a></li>
-          <li><a href="/bookshelf/by-title"><span class="darklighted">Titles</span></a></li>
-        </ul>
-      </nav> -->
-      <div id="book-container">
-        <div class="book-card">
-          <amp-img
-              class="book-card-image"
-              src="/images/covers/playing-to-win.webp"
-              width="332"
-              height="500"
-              layout="responsive"
-              alt=""></amp-img>
-          <div class="book-card-text">
-                <a href="/bookshelf/playing-to-win"></a>
-          </div>
+      <div class="container">
+        <div class="three columns">
+          <nav>
+            <h1 id="logo" >
+              <a href="/">Leroy Almeida</a>
+            </h1>
+            <ul>
+              <li><a href="/bookshelf/by-title">Bookshelf</a></li>
+              <li><a href="https://twitter.com/leroyalmeida23">Twitter</a></li>
+              <li><a href="https://www.linkedin.com/in/leroyalmeida/">LinkedIn</a></li>
+            </ul>
+          </nav>
+          &nbsp;
         </div>
-
-        <div class="book-card">
-          <amp-img
-              class="book-card-image-disabled"
-              src="/images/covers/netflixed.webp"
-              width="332"
-              height="500"
-              layout="responsive"
-              alt=""></amp-img>
-              <div class="book-card-text">
-                    <!-- <a href="/bookshelf/thinking-in-systems"></a> -->
-              </div>
+        <div class="twelve columns offset-by-one">
+          <h1>Bookshelf</h1>
+          <div id="header-line"></div>
+          <p>Below is a list of books that I’ve read in the last couple of years. Some of them link to my notes and highlights. My all time favorites are bolded.</p>
+          <h2>2019</h2>
+          <ul>
+            <li><a href="/bookshelf/playing-to-win">Playing to Win: How Strategy Really Works</a> by A.G Lafely, Roger Martin</li>
+            <li><strong><a href="/bookshelf/thinking-in-systems">Thinking in Systems: A Primer</a></strong> by Donella H. Meadows</li>
+            <li><strong><a href="/bookshelf/alchemy">Alchemy: The Dark Art and Curious Science of Creating Magic in Brands, Business, and Life</a></strong> by Rory Sutherland</li>
+            <li><strong>7 Powers: The Foundations of Business Strategy</strong> by Hamilton Helmer</li>
+            <li><strong><a href="/bookshelf/the-inner-game-of-tennis">The Inner Game of Tennis: The Classic Guide to the Mental Side of Peak Performance</a></strong> by W. Timothy Gallwey.
+            <li><a href="/bookshelf/ego-is-the-enemy">Ego is the Enemy: The Fight to Master Our Greatest Opponent</a> by Ryan Holiday.
+            <li><a href="/bookshelf/zero-to-one">Zero to One: Notes on Startups, or How to Build the Future</a> by Peter Thiel, Blake Masters.
+            <li><a href="/bookshelf/so-good-they-cant-ignore-you">So Good They Can't Ignore You: Why Skills Trump Passion in the Quest for Work You Love</a> by Cal Newport</li>
+            <li>Great by Choice: Uncertainty, Chaos, and Luck--Why Some Thrive Despite Them All by Jim Collins, Morten T. Hansen</li>
+            <li>Growth Hacker Marketing: A Primer on the Future of PR, Marketing, and Advertising by Ryan Holiday</li>
+            <li><a href="/bookshelf/the-shape-of-design">The Shape of Design</a> by Frank Chimero</li>
+            <li><a href="/bookshelf/the-subtle-art-of-not-giving-a-fuck">The Subtle Art of Not Giving a F*ck: A Counterintuitive Approach to Living a Good Life</a> by Mark Manson</li>
+            <li>Business Model Generation: A Handbook for Visionaries, Game Changers, and Challengers by Alexander Osterwalder and Yves Pigneur</li>
+            <li><a href="/bookshelf/the-culture-map">The Culture Map: Breaking Through the Invisible Boundaries of Global Business</a> by Erin Meyer</li>
+          </ul>
+          <h2>2018</h2>
+          <ul>
+            <li><a href="/bookshelf/when-breath-becomes-air">When Breath Becomes Air</a> by Paul Kalanithi</li>
+            <li>It Doesn't Have To Be Crazy At Work by Jason Fried, David Heinemeier Hansson</li>
+            <li>A Geek in Japan: Discovering the Land of Manga, Anime, Zen, and the Tea Ceremony by Hector Garcia</li>
+            <li><a href="/bookshelf/rework">Rework</a> by Jason Fried, David Heinemeier Hansson</li>
+            <li>Hacking Growth: How Today's Fastest-Growing Companies Drive Breakout Success by Sean Ellis, Morgan Brown</li>
+            <li>Machine Learning for Designers by Patrick Hebron</li>
+            <li><a href="/bookshelf/articulating-design-decisions">Articulating Design Decisions: Communicate with Stakeholders, Keep Your Sanity, and Deliver the Best User Experience</a> by Tom Greever</li>
+            <li><a href="/bookshelf/blue-ocean-strategy">Blue Ocean Strategy, Expanded Edition: How to Create Uncontested Market Space and Make the Competition Irrelevant</a> by W. Chan Kim, Renée A. Mauborgne</li>
+            <li>Originals: How Non-Conformists Move the World by Adam Grant</li>
+            <li><strong><a href="/bookshelf/the-hard-thing-about-hard-things">The Hard Thing About Hard Things: Building a Business When There Are No Easy Answers</a></strong> by Ben Horowitz</li>
+            <li>Sapiens: A Brief History of Humankind by Nuval Yoah Harari</li>
+          </ul>
+          <h2>2017</h2>
+          <ul>
+            <li><a href="/bookshelf/steal-like-an-artist">Steal Like an Artist: 10 Things Nobody Told You About Being Creative</a> by Austin Kleon</li>
+            <li><a href="/bookshelf/intercom-on-product-management">Intercom on Product Management</a> by Des Traynor, John Collins</li>
+            <li><a href="/bookshelf/vagabonding">Vagabonding: An Uncommon Guide to the Art of Long-Term World Travel</a> by Rolf Potts</li>
+            <li><a href="/bookshelf/intercom-on-jobs-to-be-done">Intercom on Jobs-to-be-Done</a> by Des Traynor, Paul Adams</li>
+            <li>The 4-Hour Chef: The Simple Path to Cooking Like a Pro, Learning Anything, and Living the Good Life by Tim Ferriss</li>
+            <li>The 4-Hour Workweek: Escape 9-5, Live Anywhere, and Join the New Rich by Tim Ferriss</li>
+            <li><a href="/bookshelf/drive">Drive: The Surprising Truth About What Motivates Us</a> by Daniel Pink</li>
+            <li><strong><a href="/bookshelf/creativity-inc">Creativity, Inc.: Overcoming the Unseen Forces That Stand in the Way of True Inspiration</a></strong> by Edwin Catmull, Amy Wallace</li>
+          </ul>
         </div>
-
-        <div class="book-card">
-          <amp-img
-              class="book-card-image"
-              src="/images/covers/thinking-in-systems.webp"
-              width="332"
-              height="500"
-              layout="responsive"
-              alt=""></amp-img>
-              <div class="book-card-text">
-                    <a href="/bookshelf/thinking-in-systems"></a>
-              </div>
-        </div>
-
-        <div class="book-card">
-          <amp-img
-              class="book-card-image"
-              src="/images/covers/alchemy.webp"
-              width="332"
-              height="500"
-              layout="responsive"
-              alt=""></amp-img>
-              <div class="book-card-text">
-                    <a href="/bookshelf/alchemy"></a>
-              </div>
-        </div>
-
-        <!-- <div class="book-card">
-          <amp-img
-              class="book-card-image"
-              src="/images/covers/7-powers.webp"
-              width="332"
-              height="500"
-              layout="responsive"
-              alt=""></amp-img>
-          <div class="book-card-text">
-                <a href="/bookshelf/7-powers"></a>
-          </div>
-        </div> -->
-
-        <div class="book-card">
-          <amp-img
-              class="book-card-image"
-              src="/images/covers/the-inner-game-of-tennis.webp"
-              width="332"
-              height="500"
-              layout="responsive"
-              alt=""></amp-img>
-          <div class="book-card-text">
-                <a href="/bookshelf/the-inner-game-of-tennis"></a>
-          </div>
-        </div>
-
-        <div class="book-card">
-          <amp-img
-              class="book-card-image"
-              src="/images/covers/ego-is-the-enemy.webp"
-              width="332"
-              height="500"
-              layout="responsive"
-              alt=""></amp-img>
-          <div class="book-card-text">
-                <a href="/bookshelf/ego-is-the-enemy"></a>
-          </div>
-        </div>
-
-        <div class="book-card">
-          <amp-img
-              class="book-card-image"
-              src="/images/covers/zero-to-one.webp"
-              width="332"
-              height="500"
-              layout="responsive"
-              alt=""></amp-img>
-          <div class="book-card-text">
-                <a href="/bookshelf/zero-to-one"></a>
-          </div>
-        </div>
-
-        <div class="book-card">
-          <amp-img
-              class="book-card-image"
-              src="/images/covers/so-good-they-cant-ignore-you.webp"
-              width="332"
-              height="500"
-              layout="responsive"
-              alt=""></amp-img>
-          <div class="book-card-text">
-                <a href="/bookshelf/so-good-they-cant-ignore-you"></a>
-          </div>
-        </div>
-
-        <div class="book-card">
-          <amp-img
-              class="book-card-image-disabled"
-              src="/images/covers/great-by-choice.webp"
-              width="332"
-              height="500"
-              layout="responsive"
-              alt=""></amp-img>
-          <div class="book-card-text">
-                <!-- <a href="/bookshelf/great-by-choice"></a> -->
-          </div>
-        </div>
-
-        <div class="book-card">
-          <amp-img
-              class="book-card-image-disabled"
-              src="/images/covers/hacking-growth.webp"
-              width="332"
-              height="500"
-              layout="responsive"
-              alt=""></amp-img>
-          <div class="book-card-text">
-                <!-- <a href="/bookshelf/hacking-growth"></a> -->
-          </div>
-        </div>
-
-        <div class="book-card">
-          <amp-img
-              class="book-card-image"
-              src="/images/covers/growth-hacker-marketing.webp"
-              width="332"
-              height="500"
-              layout="responsive"
-              alt=""></amp-img>
-          <div class="book-card-text">
-                <a href="/bookshelf/growth-hacker-marketing"></a>
-          </div>
-        </div>
-
-        <div class="book-card">
-          <amp-img
-              class="book-card-image"
-              src="/images/covers/the-shape-of-design.webp"
-              width="332"
-              height="500"
-              layout="responsive"
-              alt=""></amp-img>
-          <div class="book-card-text">
-                <a href="/bookshelf/the-shape-of-design"></a>
-          </div>
-        </div>
-
-        <div class="book-card">
-          <amp-img
-              class="book-card-image"
-              src="/images/covers/the-culture-map.webp"
-              width="332"
-              height="500"
-              layout="responsive"
-              alt=""></amp-img>
-              <div class="book-card-text">
-                    <a href="/bookshelf/the-culture-map"></a>
-              </div>
-        </div>
-
-        <div class="book-card">
-          <amp-img
-              class="book-card-image"
-              src="/images/covers/the-subtle-art-of-not-giving-a-fuck.webp"
-              width="332"
-              height="500"
-              layout="responsive"
-              alt=""></amp-img>
-              <div class="book-card-text">
-                    <a href="/bookshelf/the-subtle-art-of-not-giving-a-fuck"></a>
-              </div>
-        </div>
-
-        <div class="book-card">
-          <amp-img
-              class="book-card-image"
-              src="/images/covers/when-breath-becomes-air.webp"
-              width="332"
-              height="500"
-              layout="responsive"
-              alt=""></amp-img>
-              <div class="book-card-text">
-                    <a href="/bookshelf/when-breath-becomes-air"></a>
-              </div>
-        </div>
-
-        <div class="book-card">
-          <amp-img
-              class="book-card-image"
-              src="/images/covers/rework.webp"
-              width="332"
-              height="500"
-              layout="responsive"
-              alt=""></amp-img>
-              <div class="book-card-text">
-                    <a href="/bookshelf/rework"></a>
-              </div>
-        </div>
-
-        <div class="book-card">
-          <amp-img
-              class="book-card-image"
-              src="/images/covers/articulating-design-decisions.webp"
-              width="332"
-              height="500"
-              layout="responsive"
-              alt=""></amp-img>
-              <div class="book-card-text">
-                    <a href="/bookshelf/articulating-design-decisions"></a>
-              </div>
-        </div>
-
-        <div class="book-card">
-          <amp-img
-              class="book-card-image"
-              src="/images/covers/steal-like-an-artist.webp"
-              width="332"
-              height="500"
-              layout="responsive"
-              alt=""></amp-img>
-              <div class="book-card-text">
-                    <a href="/bookshelf/steal-like-an-artist"></a>
-              </div>
-        </div>
-
-        <div class="book-card">
-          <amp-img
-              class="book-card-image"
-              src="/images/covers/blue-ocean-strategy.webp"
-              width="332"
-              height="500"
-              layout="responsive"
-              alt=""></amp-img>
-              <div class="book-card-text">
-                    <a href="/bookshelf/blue-ocean-strategy"></a>
-              </div>
-        </div>
-
-        <div class="book-card">
-          <amp-img
-              class="book-card-image"
-              src="/images/covers/intercom-on-product-management.webp"
-              width="332"
-              height="500"
-              layout="responsive"
-              alt=""></amp-img>
-              <div class="book-card-text">
-                    <a href="/bookshelf/intercom-on-product-management"></a>
-              </div>
-        </div>
-
-        <div class="book-card">
-          <amp-img
-              class="book-card-image-disabled"
-              src="/images/covers/it-doesnt-have-to-be-crazy-at-work.webp"
-              width="332"
-              height="500"
-              layout="responsive"
-              alt=""></amp-img>
-              <div class="book-card-text">
-                    <!-- <a href="/bookshelf/thinking-in-systems"></a> -->
-              </div>
-        </div>
-
-        <div class="book-card">
-          <amp-img
-              class="book-card-image"
-              src="/images/covers/a-geek-in-japan.webp"
-              width="332"
-              height="500"
-              layout="responsive"
-              alt=""></amp-img>
-              <div class="book-card-text">
-                    <!-- <a href="/bookshelf/a-geek-in-japan"></a> -->
-              </div>
-        </div>
-
-        <div class="book-card">
-          <amp-img
-              class="book-card-image"
-              src="/images/covers/vagabonding.webp"
-              width="332"
-              height="500"
-              layout="responsive"
-              alt=""></amp-img>
-              <div class="book-card-text">
-                    <a href="/bookshelf/vagabonding"></a>
-              </div>
-        </div>
-
-        <div class="book-card">
-          <amp-img
-              class="book-card-image"
-              src="/images/covers/intercom-on-jobs-to-be-done.webp"
-              width="332"
-              height="500"
-              layout="responsive"
-              alt=""></amp-img>
-              <div class="book-card-text">
-                    <a href="/bookshelf/intercom-on-jobs-to-be-done"></a>
-              </div>
-        </div>
-
-        <div class="book-card">
-          <amp-img
-              class="book-card-image"
-              src="/images/covers/the-hard-thing-about-hard-things.webp"
-              width="332"
-              height="500"
-              layout="responsive"
-              alt=""></amp-img>
-              <div class="book-card-text">
-                    <a href="/bookshelf/the-hard-thing-about-hard-things"></a>
-              </div>
-        </div>
-
-        <div class="book-card">
-          <amp-img
-              class="book-card-image-disabled"
-              src="/images/covers/the-four-hour-chef.webp"
-              width="332"
-              height="500"
-              layout="responsive"
-              alt=""></amp-img>
-              <div class="book-card-text">
-                    <!-- <a href="/bookshelf/the-four-hour-chef"></a> -->
-              </div>
-        </div>
-
-        <div class="book-card">
-          <amp-img
-              class="book-card-image-disabled"
-              src="/images/covers/the-four-hour-workweek.webp"
-              width="332"
-              height="500"
-              layout="responsive"
-              alt=""></amp-img>
-              <div class="book-card-text">
-                    <!-- <a href="/bookshelf/the-four-hour-workweek"></a> -->
-              </div>
-        </div>
-
-        <div class="book-card">
-          <amp-img
-              class="book-card-image"
-              src="/images/covers/drive.webp"
-              width="332"
-              height="500"
-              layout="responsive"
-              alt=""></amp-img>
-              <div class="book-card-text">
-                    <a href="/bookshelf/drive"></a>
-              </div>
-        </div>
-
-        <div class="book-card">
-          <amp-img
-              class="book-card-image"
-              src="/images/covers/creativity-inc.webp"
-              width="332"
-              height="500"
-              layout="responsive"
-              alt=""></amp-img>
-              <div class="book-card-text">
-                    <a href="/bookshelf/creativity-inc"></a>
-              </div>
-        </div>
-
       </div> <!-- /.container -->
-      <footer>
-        <ul>
-          <li><a href="https://twitter.com/leroyalmeida23"><span class="darklighted">Twitter</span></a></li>
-          <li><a href="https://www.instagram.com/leroyalmeida/"><span class="darklighted">Instagram</span></a></li>
-          <li><a href="https://www.linkedin.com/in/leroyalmeida/"><span class="darklighted">LinkedIn</span></a></li>
-          <li><a href="https://medium.com/@leroyalmeida23"><span class="darklighted">Medium</span></a></li>
-          <li><a href="mailto:miguel.l.s.almeida@gmail.com"><span class="darklighted">Email</span></a></li>
-        </ul>
-      </footer>
-    </div>
   </body>
 </html>
