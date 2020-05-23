@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ⚡ lang="en">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <title>Work</title>
@@ -29,7 +29,7 @@
     <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png">
 
     <!-- link to html stylesheet -->
-    <style amp-custom>
+    <style>
 
       /*
       * Skeleton V1.1
@@ -689,7 +689,7 @@
         font-size: 8pt;
       }
 
-      /* .figma-container {
+      .figma-container {
         position: relative;
         overflow: hidden;
         padding-top: 56.25%;
@@ -701,32 +701,11 @@
         left: 0;
         width: 100%;
         height: 100%;
-        border: 0; */
+        border: 0;
       }
     </style>
-
-    <!-- amp scripts -->
-    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
-    <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
   </head>
   <body>
-    <amp-analytics type="googleanalytics">
-      <script type="application/json">
-      {
-        "vars": {
-          "account": "UA-122663238-1"
-        },
-        "triggers": {
-          "trackPageview": {
-            "on": "visible",
-            "request": "pageview"
-          }
-        }
-      }
-      </script>
-      </amp-analytics>
       <div class="container">
         <div class="three columns">
           <nav>
@@ -746,18 +725,18 @@
           <h2>Work</h2>
           <div id="header-line"></div>
           <p>Below are select projects I've worked on over the years.</p>
-          <amp-iframe
-              class="figma"
-              width="700"
-              height="520"
-              sandbox="allow-scripts allow-same-origin"
-              layout="responsive"
-              frameborder="0"
-              src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F9nCo2EiX2jJCtjfiqYr9Ss%2FPAL%3Fnode-id%3D9%253A1%26scaling%3Dscale-down-width&chrome=DOCUMENTATION"
-              >
-              <amp-img placeholder layout="nodisplay"
-                src=""></amp-img>
-          </amp-iframe>
+          <div class="figma-container">
+            <iframe
+                class="figma"
+                width="700"
+                height="520"
+                layout="responsive"
+                src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F9nCo2EiX2jJCtjfiqYr9Ss%2FPhilippine-Airlines%3Fnode-id%3D9%253A1%26scaling%3Dscale-down-width%26hotspot-hints%3D0&chrome=DOCUMENTATION"
+                >
+                <amp-img placeholder layout="nodisplay"
+                  src=""></amp-img>
+            <iframe>
+          </div>
         </div>
       </div> <!-- /.container -->
   </body>
