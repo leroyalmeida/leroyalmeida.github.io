@@ -9,127 +9,172 @@
 
 <url>
   <loc>https://leroyalmeida.com/</loc>
-  <lastmod>2019-12-30T08:30:58+00:00</lastmod>
+  <lastmod>2020-06-14T12:18:26+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://leroyalmeida.com/bookshelf</loc>
-  <lastmod>2019-12-30T08:30:58+00:00</lastmod>
+  <loc>https://leroyalmeida.com/work</loc>
+  <lastmod>2020-06-14T12:18:26+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://leroyalmeida.com/bookshelf/by-title</loc>
-  <lastmod>2019-12-30T08:30:58+00:00</lastmod>
+  <loc>https://leroyalmeida.com/bookshelf</loc>
+  <lastmod>2020-06-14T12:18:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://leroyalmeida.com/work/redesigning-philippine-airlines-website</loc>
+  <lastmod>2020-06-14T12:18:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://leroyalmeida.com/work/redesigning-kalibrr-job-board</loc>
+  <lastmod>2020-06-14T12:18:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://leroyalmeida.com/work/kalibrr-interview-scheduler</loc>
+  <lastmod>2020-06-14T12:18:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://leroyalmeida.com/bookshelf/thinking-in-bets</loc>
+  <lastmod>2020-06-14T12:18:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://leroyalmeida.com/bookshelf/boyd</loc>
+  <lastmod>2020-06-14T12:18:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://leroyalmeida.com/bookshelf/nudge</loc>
+  <lastmod>2020-06-14T12:18:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://leroyalmeida.com/bookshelf/influence</loc>
+  <lastmod>2020-06-14T12:18:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://leroyalmeida.com/bookshelf/misbehaving</loc>
+  <lastmod>2020-06-14T12:18:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://leroyalmeida.com/bookshelf/range</loc>
+  <lastmod>2020-06-14T12:18:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://leroyalmeida.com/bookshelf/finite-and-infinite-games</loc>
+  <lastmod>2020-06-14T12:18:26+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://leroyalmeida.com/bookshelf/playing-to-win</loc>
-  <lastmod>2019-12-30T08:30:58+00:00</lastmod>
+  <lastmod>2020-06-14T12:18:26+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://leroyalmeida.com/bookshelf/thinking-in-systems</loc>
-  <lastmod>2019-12-30T08:30:58+00:00</lastmod>
+  <lastmod>2020-06-14T12:18:26+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://leroyalmeida.com/bookshelf/alchemy</loc>
-  <lastmod>2019-12-30T08:30:58+00:00</lastmod>
+  <lastmod>2020-06-14T12:18:26+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://leroyalmeida.com/bookshelf/the-inner-game-of-tennis</loc>
-  <lastmod>2019-12-30T08:30:58+00:00</lastmod>
+  <lastmod>2020-06-14T12:18:26+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://leroyalmeida.com/bookshelf/ego-is-the-enemy</loc>
-  <lastmod>2019-12-30T08:30:58+00:00</lastmod>
+  <lastmod>2020-06-14T12:18:26+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://leroyalmeida.com/bookshelf/zero-to-one</loc>
-  <lastmod>2019-12-30T08:30:58+00:00</lastmod>
+  <lastmod>2020-06-14T12:18:26+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://leroyalmeida.com/bookshelf/so-good-they-cant-ignore-you</loc>
-  <lastmod>2019-12-30T08:30:58+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://leroyalmeida.com/bookshelf/growth-hacker-marketing</loc>
-  <lastmod>2019-12-30T08:30:58+00:00</lastmod>
+  <lastmod>2020-06-14T12:18:26+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://leroyalmeida.com/bookshelf/the-shape-of-design</loc>
-  <lastmod>2019-12-30T08:30:58+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://leroyalmeida.com/bookshelf/the-culture-map</loc>
-  <lastmod>2019-12-30T08:30:58+00:00</lastmod>
+  <lastmod>2020-06-14T12:18:26+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://leroyalmeida.com/bookshelf/the-subtle-art-of-not-giving-a-fuck</loc>
-  <lastmod>2019-12-30T08:30:58+00:00</lastmod>
+  <lastmod>2020-06-14T12:18:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://leroyalmeida.com/bookshelf/the-culture-map</loc>
+  <lastmod>2020-06-14T12:18:26+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://leroyalmeida.com/bookshelf/when-breath-becomes-air</loc>
-  <lastmod>2019-12-30T08:30:58+00:00</lastmod>
+  <lastmod>2020-06-14T12:18:26+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://leroyalmeida.com/bookshelf/rework</loc>
-  <lastmod>2019-12-30T08:30:58+00:00</lastmod>
+  <lastmod>2020-06-14T12:18:26+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://leroyalmeida.com/bookshelf/articulating-design-decisions</loc>
-  <lastmod>2019-12-30T08:30:58+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://leroyalmeida.com/bookshelf/steal-like-an-artist</loc>
-  <lastmod>2019-12-30T08:30:58+00:00</lastmod>
+  <lastmod>2020-06-14T12:18:26+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://leroyalmeida.com/bookshelf/blue-ocean-strategy</loc>
-  <lastmod>2019-12-30T08:30:58+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://leroyalmeida.com/bookshelf/intercom-on-product-management</loc>
-  <lastmod>2019-12-30T08:30:58+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://leroyalmeida.com/bookshelf/vagabonding</loc>
-  <lastmod>2019-12-30T08:30:58+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://leroyalmeida.com/bookshelf/intercom-on-jobs-to-be-done</loc>
-  <lastmod>2019-12-30T08:30:58+00:00</lastmod>
+  <lastmod>2020-06-14T12:18:26+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://leroyalmeida.com/bookshelf/the-hard-thing-about-hard-things</loc>
-  <lastmod>2019-12-30T08:30:58+00:00</lastmod>
+  <lastmod>2020-06-14T12:18:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://leroyalmeida.com/bookshelf/steal-like-an-artist</loc>
+  <lastmod>2020-06-14T12:18:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://leroyalmeida.com/bookshelf/intercom-on-product-management</loc>
+  <lastmod>2020-06-14T12:18:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://leroyalmeida.com/bookshelf/vagabonding</loc>
+  <lastmod>2020-06-14T12:18:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://leroyalmeida.com/bookshelf/intercom-on-jobs-to-be-done</loc>
+  <lastmod>2020-06-14T12:18:26+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://leroyalmeida.com/bookshelf/drive</loc>
-  <lastmod>2019-12-30T08:30:58+00:00</lastmod>
+  <lastmod>2020-06-14T12:18:26+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://leroyalmeida.com/bookshelf/creativity-inc</loc>
-  <lastmod>2019-12-30T08:30:58+00:00</lastmod>
+  <lastmod>2020-06-14T12:18:26+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
