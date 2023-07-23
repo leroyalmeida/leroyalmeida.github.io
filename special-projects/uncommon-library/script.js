@@ -75,7 +75,7 @@ $(document).ready(function () {
                       <div class="book__back" style="border-color:`+row.color+`;top:`+row.w*1.5+`rem;left:`+row.w*1.5+`rem;"></div>
                       <div class="book__spine" style="background-color:`+row.color+`; height:`+row.w*1.5+`rem;"></div>
                       <div class="book__front" style="background-color:`+row.color+`;border-bottom:solid .2rem `+row.color+`;border-right:solid .2rem `+row.color+`;">
-                          <img src="`+row.img+`" style="height: inherit;">
+                          <img src="`+row.img+`" style="height: inherit;" title="`+row.name+` by `+row.author+`">
                       </div>
                   </a>
               </div>`)
