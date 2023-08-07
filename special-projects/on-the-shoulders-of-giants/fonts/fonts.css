@@ -1,13 +1,21 @@
 @font-face {
+    /* font-family: 'GT Alpina Typewriter';
+    src: url('GT-Alpina-Typewriter-Light.otf');
+        font-style: normal;
+        font-weight: 400; */
     font-family: 'Elma Trio Regular';
-    src: url('../fonts/Elma\ Trio\ Regular.woff2') format('woff');
+    src: url('Elma\ Trio\ Regular.woff2') format(woff2);
         font-style: normal;
         font-weight: 400;
 }
 
 @font-face {
-font-family: 'GT Alpina Typewriter';
-src: url('../fonts/GT-Alpina-Typewriter-Light.otf') format('woff');
-    font-style: normal;
-    font-weight: 300;
+    /* font-family: 'GT Alpina Typewriter';
+    src: url('GT-Alpina-Typewriter-Light-Italic-Trial.otf');
+        font-style: italic;
+        font-weight: 400; */
+    font-family: 'Elma Trio Regular';
+    src: url('Elma\ Trio\ Regular.woff2') format(woff2);
+        font-style: italic;
+        font-weight: 400;
 }

@@ -113,6 +113,7 @@ body {
 button {
     font-family: "Elma Trio Regular", Helvetica, sans-serif;
     /* font-family: "GT Alpina Typewriter", Helvetica, sans-serif; */
+    text-transform: uppercase;
     background: transparent;
     border-radius: 12px;
     border: solid rgb(229,229,229);
@@ -225,6 +226,7 @@ iframe {
 header {
     text-align: center;
     margin-top: 5em;
+    /* text-transform: uppercase; */
 }
 
 header h1 {
@@ -234,6 +236,10 @@ header h1 {
 header p {
     margin-top: 4px;
     color: #94A3B8;
+}
+
+h2 {
+    text-transform: uppercase;
 }
 
 p {
