@@ -95,8 +95,8 @@ textarea {
 
 
 html {
-    font-family: "Elma Trio Regular", Helvetica, sans-serif;
-    /* font-family: "GT Alpina Typewriter", Helvetica, sans-serif; */
+    /* font-family: "Elma Trio Regular", Helvetica, sans-serif; */
+    font-family: "GT Alpina Typewriter", Helvetica, sans-serif;
     font-feature-settings: normal;
     font-kerning: auto;
     font-optical-sizing: auto;
@@ -111,8 +111,8 @@ body {
 }
 
 button {
-    font-family: "Elma Trio Regular", Helvetica, sans-serif;
-    /* font-family: "GT Alpina Typewriter", Helvetica, sans-serif; */
+    /* font-family: "Elma Trio Regular", Helvetica, sans-serif; */
+    font-family: "GT Alpina Typewriter", Helvetica, sans-serif;
     text-transform: uppercase;
     background: transparent;
     border-radius: 12px;
