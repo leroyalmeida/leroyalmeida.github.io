@@ -10,8 +10,7 @@
 }
 
 :root {
-  /* Framer Replication Tokens */
-  --bg-color: #FFF;
+  --bg-color: #FFFFFF;
   --text-color: #334155; /* Slate 700 */
   --heading-color: #334155; /* Slate 700 for main header */
   --label-color: #94a3b8; /* Bluish Gray for labels */
@@ -23,7 +22,7 @@
   --label-font: "Geist Mono", monospace;
   --heading-font: "Alpha Lyrae", "Geist", sans-serif;
   
-  --max-width: 810px; /* Based on min-width 810px breakpoint */
+  --max-width: 600px;
 }
 
 
@@ -32,8 +31,8 @@ body {
   font-family: var(--font-family);
   background-color: var(--bg-color);
   color: var(--text-color);
-  line-height: 1.5; /* Reverted to 150% per Framer snippet */
-  font-size: 13px; /* Reverted to 13px per Framer snippet */
+  line-height: 1.4;
+  font-size: 14px;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
@@ -54,15 +53,16 @@ h1 {
   color: var(--heading-color);
   font-size: 30px; /* Scaled up from 28px */
   font-weight: 500;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0;
   letter-spacing: -0.02em;
 }
 
 h6 {
   text-transform: uppercase;
-  font-size: 0.8rem; /* Slightly larger labels */
+  font-size: 0.75rem;
   color: var(--label-color);
   font-family: var(--label-font);
+  font-weight: 500;
   letter-spacing: 0.05em;
   margin: 0;
 }
@@ -76,6 +76,7 @@ p {
   font-size: 1.1rem;
   color: var(--text-color);
   max-width: 600px;
+  margin-top: 0;
 }
 
 a {
@@ -86,6 +87,10 @@ a {
 
 a:hover {
   color: var(--heading-color);
+}
+
+.muted{
+  color: var(--label-color);
 }
 
 
@@ -114,7 +119,7 @@ a:hover {
 }
 
 .resume-content li {
-  margin-bottom: 0.5rem;
+  /* margin-bottom: 0.5rem; */
 }
 
 /* Project List specific overrides */
@@ -125,20 +130,11 @@ a:hover {
 }
 
 .project-title {
-  font-weight: 500;
-  color: var(--text-color);
   border-bottom: 1px solid transparent;
 }
 
 .project-title:hover {
     border-bottom-color: var(--text-color);
-}
-
-.project-desc {
-  display: block;
-  color: var(--link-color);
-  font-size: 0.9em;
-  margin-top: 0.25rem;
 }
 
 /* Mobile Responsive */
