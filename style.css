@@ -89,8 +89,13 @@ a:hover {
   color: var(--heading-color);
 }
 
-.muted{
+.muted, .mono {
   color: var(--label-color);
+}
+
+.mono {
+  font-family: var(--label-font);
+  font-size: 0.85rem;
 }
 
 
@@ -218,4 +223,53 @@ a:hover {
     width: 100%;
     height: 100%;
     fill: currentColor;
+}
+
+/* Card Layout (Bookmarks) */
+.card-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0;
+    list-style: none;
+}
+
+.card {
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 16px;
+    transition: all 0.2s ease-in-out;
+    background-color: var(--bg-color);
+}
+
+.card:hover {
+    border-color: var(--label-color);
+    transform: translateY(-2px);
+}
+
+.card a {
+    display: block;
+    font-weight: 500;
+}
+
+.card .mono {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    opacity: 0.7;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.favicon {
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    flex-shrink: 0;
 }
