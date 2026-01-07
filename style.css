@@ -82,7 +82,7 @@ p {
 a {
   color: var(--link-color);
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: color 0.2s ease-in-out;
 }
 
 a:hover {
@@ -130,11 +130,15 @@ a:hover {
 }
 
 .project-title {
-  border-bottom: 1px solid transparent;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px; /* Closer to text than border-bottom */
+  transition: text-decoration-color 0.2s ease-in-out;
 }
 
 .project-title:hover {
-    border-bottom-color: var(--text-color);
+    text-decoration-color: var(--text-color);
 }
 
 /* Mobile Responsive */
@@ -177,7 +181,7 @@ a:hover {
     width: auto;
     filter: grayscale(100%);
     opacity: 0.5;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out;
 }
 
 .logo-list a:hover img {
@@ -203,7 +207,7 @@ a:hover {
     width: 20px; /* Slightly smaller to match icons */
     height: 20px;
     color: var(--label-color);
-    transition: color 0.2s ease;
+    transition: color 0.2s ease-in-out;
 }
 
 .social-list a:hover {
