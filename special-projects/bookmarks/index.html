@@ -27,10 +27,14 @@
             </ul>
         </section>
 
-        <footer class="section text-secondary" style="margin-top: 4rem;">
-             <p style="font-size: 0.875rem;">&copy; 2024 Leroy Almeida</p>
-        </footer>
     </div>
+
+    <footer class="site-footer text-secondary">
+        <div class="footer-container">
+            <p>&copy; <span id="copyright-year">2018-2024</span> Leroy Almeida</p>
+        </div>
+    </footer>
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             fetch('bookmarks.json')
@@ -71,5 +75,6 @@
         });
     </script>
     <script src="../../scripts/font-glitch.js"></script>
+    <script src="../../scripts/dynamic-footer.js"></script>
 </body>
 </html>

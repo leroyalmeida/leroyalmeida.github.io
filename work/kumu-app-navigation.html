@@ -1,164 +1,576 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kumu App Navigation Redesign - Leroy Almeida</title>
-    <meta name="description" content="Redesigning how new and existing users navigate and find key features.">
-    <link rel="stylesheet" href="../style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-</head>
-<body>
+    <meta
+      name="description"
+      content="Redesigning how new and existing users navigate and find key features."
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div class="container">
-        <header>
-            <p><a href="../index.html">← Back to Home</a></p>
-            <h1>Kumu App Navigation Redesign</h1>
-            <p class="lead">Redesigning how new and existing users navigate and find key features and experiences in the app</p>
-            <img src="../images/kumu-app-navigation/image_03.webp" alt="Kumu App Navigation Hero">
-        </header>
+      <header>
+        <p><a href="../index.html">← Back to Home</a></p>
+        <h1>Kumu App Navigation Redesign</h1>
+        <p class="lead muted">
+          Redesigning how new and existing users navigate and find key features
+          and experiences in the app
+        </p>
+      </header>
 
-        <section class="section">
-            <div class="project-meta">
-                <div class="mb-4">
-                    <h5>Problem</h5>
-                    <p>How can we make the app easier to navigate for new and existing users?</p>
-                </div>
-                <div class="mb-4">
-                    <h5>Solution</h5>
-                    <p>Restructured the information architecture of the app using familiar information architecture and navigation patterns</p>
-                </div>
-                <div class="mb-4">
-                    <h5>Impact</h5>
-                    <p>Improved accessibility and increased usage for key features like the Wallet, Profile, Missions, Watchlist, and Klips</p>
-                </div>
-                <div class="mb-4">
-                    <h5>Role</h5>
-                    <p>Lead designer, worked on information architecture, interface design, prototyping, and usability tests</p>
-                </div>
-            </div>
-            
-            <hr style="border: 0; border-top: 1px solid #eee; margin: 2rem 0;">
+      <section class="section">
+        <div class="project-meta">
+          <div class="mb-4">
+            <h4>Problem</h4>
+            <p>
+              How can we make the app easier to navigate for new and existing
+              users?
+            </p>
+          </div>
+          <div class="mb-4">
+            <h4>Solution</h4>
+            <p>
+              Restructured the information architecture of the app using
+              familiar information architecture and navigation patterns
+            </p>
+          </div>
+          <div class="mb-4">
+            <h4>Impact</h4>
+            <p>
+              Improved accessibility and increased usage for key features like
+              the Wallet, Profile, Missions, Watchlist, and Klips
+            </p>
+          </div>
+          <div class="mb-4">
+            <h4>Role</h4>
+            <p>
+              Lead designer, worked on information architecture, interface
+              design, prototyping, and usability tests
+            </p>
+          </div>
+        </div>
+      </section>
 
-            <p>Kumu is the largest social entertainment app in the Philippines. We have +10 million users (82% Millennial and GenZ) visiting 60 million times per month. Our users average over an hour per day on the app, supporting thousands of income-earning Creators in 50+ countries around the world.</p>
-            <img src="../images/kumu-app-navigation/image_04.webp" alt="Kumu Interface Overview">
+      <section class="section">
+        <p>
+          At the time, Kumu was the largest social entertainment app in the
+          Philippines. It had +10 million users (82% Millennial and GenZ)
+          visiting 60 million times per month. Our users average over an hour
+          per day on the app, supporting thousands of income-earning Creators in
+          50+ countries around the world.
+        </p>
+        <p>
+          Surveys ran by the UX research team showed that newly onboarded users
+          downloaded the app because they saw it in social media ads and they
+          heard it being recommended by Filipino celebrities. They heard that it
+          was a livestreaming app but they didn’t understand yet what they could
+          use it for. So, one of the challenges we’ve had has been onboarding
+          new users and helping them experience the fun of making authentic
+          connections in Kumu.
+        </p>
+      </section>
 
-            <p>Surveys ran by the UX research team showed that newly onboarded users downloaded the app because they saw it in social media ads and they heard it being recommended by Filipino celebrities. They heard that it was a livestreaming app but they didn’t understand yet what they could use it for. So, one of the challenges we’ve had has been onboarding new users and helping them experience the fun of making authentic connections in Kumu.</p>
-        </section>
+      <section class="boxed-section">
+        <blockquote>
+          "How might we make the app easier to navigate for both new and
+          existing users?"
+        </blockquote>
+      </section>
 
-        <section class="section">
-            <h2>"How might we make the app easier to navigate for both new and existing users?"</h2>
-        </section>
+      <section class="section">
+        <h2>What We Knew</h2>
 
-        <section class="section">
-            <h2>What We Knew</h2>
-            
-            <h3>New users want to establish a mental model of the app</h3>
-            <p>Looking at app reviews, we saw that “confusion” was a common sentiment from new users. And, based on research conducted by the UX research team, we also learned that new users felt the homepage was overwhelming. They would spend hours scrolling through the homepage and joining streams to try to understand how to use Kumu.</p>
-            <p>This was supported by data too. We saw that one of the first behaviors new users did was to click around, explore the app, and try to get a feel of what Kumu is and what they could do here.</p>
-            
+        <h3>New users want to establish a mental model of the app</h3>
+        <p>
+          Looking at app reviews, we saw that “confusion” was a common sentiment
+          from new users. And, based on research conducted by the UX research
+          team, we also learned that new users felt the homepage was
+          overwhelming. They would spend hours scrolling through the homepage
+          and joining streams to try to understand how to use Kumu.
+        </p>
+        <p>
+          This was supported by data too. We saw that one of the first behaviors
+          new users did was to click around, explore the app, and try to get a
+          feel of what Kumu is and what they could do here.
+        </p>
+
+        <div class="case-study-item">
+          <img
+            src="../images/work/kumu-app-navigation/user-behavior-search.png"
+            alt="A high percentage of new and existing users use Search, the side menu, Missions, and Social TV"
+          />
+          <p class="caption">
+            A high percentage of new and existing users use Search, the side
+            menu, Missions, and Social TV
+          </p>
+        </div>
+        <div class="case-study-item">
+          <img
+            src="../images/work/kumu-app-navigation/user-behavior-explore.png"
+            alt="A high percentage of new users explore Search, Discover, the side menu, Missions, and SocialTV."
+          />
+          <p class="caption">
+            A high percentage of new users explore Search, Discover, the side
+            menu, Missions, and SocialTV.
+          </p>
+        </div>
+
+        <div class="boxed-section">
+          <blockquote>
+            “Daming kailangan aralin pag new users. Pumapasok ako sa streams
+            para matuto. Iniexplain lang niya kung paano gamitin. Masungit din
+            siya so hindi ko po makausap ng maayos.”
+            <br /><span class="text-secondary"
+              >(Translation: You need to learn a lot as a new user. I enter
+              streams to learn. They explain how to use it. But they’re grumpy
+              so you can’t talk to them properly.)</span
+            >
+          </blockquote>
+        </div>
+
+        <h3>Kumu's app information architecture was poor</h3>
+        <p>
+          Even though we provided new users with a quick onboarding tour, there
+          was a lot of jargon left unexplained. When we talked to our users,
+          these were some of the common sentiments:
+        </p>
+        <ul>
+          <li>
+            (From the homepage) What does Following mean? What are Hot, New,
+            Multi, Audio, and Teams? What do the icons in the bottom navigation
+            mean?
+          </li>
+          <li>
+            (From the side menu) What are Campaigns, Klips, Leaderboard, and
+            Missions?
+          </li>
+          <li>
+            (From the Profile menu) This isn’t what a Profile page in a social
+            app usually looks like? Is the Missions here different from the one
+            on the side menu? What about Campaigns and Leaderboard?
+          </li>
+        </ul>
+        <p>
+          We learned that new users were overwhelmed with the variety of
+          features they saw when exploring the app and this made it more
+          difficult for them to understand and experience the value proposition.
+        </p>
+
+        <div class="boxed-section">
+          <blockquote>
+            “Information architecture is the way that we arrange the parts of
+            something to make it understandable.”
+            <br /><span class="text-secondary"
+              >— Abby Covert,
+              <a href="https://www.goodreads.com/en/book/show/23557020"
+                >How to Make Sense of Any Mess</a
+              ></span
+            >
+          </blockquote>
+        </div>
+
+        <div class="before-after-grid">
+          <div class="case-study-item">
+            <img
+              src="../images/work/kumu-app-navigation/homepage-before.webp"
+              alt="Original homepage"
+            />
+            <p class="caption">Homepage</p>
+          </div>
+          <div class="case-study-item">
+            <img
+              src="../images/work/kumu-app-navigation/side-menu-before.webp"
+              alt="Original side menu"
+            />
+            <p class="caption">Side Menu</p>
+          </div>
+          <div class="case-study-item">
+            <img
+              src="../images/work/kumu-app-navigation/profile-menu-before.webp"
+              alt="Original Profile in the main navigation"
+            />
+            <p class="caption">Profile Menu in main navigation</p>
+          </div>
+        </div>
+
+        <h3>Notifications are a critical part of the Kumu experience</h3>
+        <p>
+          When we looked at the data, we saw that the Notifications page (which
+          was still buried in the side menu) had increased usage after we
+          released the “User Followed You” notification. From an average of X
+          users per week, it quickly grew to Y users per week.
+        </p>
+        <p>
+          We looked more into the data and saw that less than 25% of users
+          clicked on the side menu. But, of those who clicked on the side menu,
+          50% clicked Notifications, which had the highest click-thru rate among
+          the menu items.
+        </p>
+
+        <div class="case-study-item">
+          <img
+            src="../images/work/kumu-app-navigation/notification-engagement.png"
+            alt="Weekly engagement chart"
+          />
+          <p class="caption">
+            The sustained week-on-week engagement since new notifications were
+            launched tells us this feature is valuable to users
+          </p>
+        </div>
+        <div class="case-study-item">
+          <img
+            src="../images/work/kumu-app-navigation/side-menu-ctr.png"
+            alt="Side menu click-thru rate chart"
+          />
+          <p class="caption">
+            50% of users who viewed the Side Menu opened the Notifications page
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Design Strategy</h2>
+        <ul>
+          <li>
+            <strong>Remove redundant elements.</strong> Streamline the different
+            menus to eliminate duplicate paths.
+          </li>
+          <li>
+            <strong>Elevate key features.</strong> Bring critical features, like
+            Notifications, to the forefront.
+          </li>
+          <li>
+            <strong>Adopt familiar patterns.</strong> Leverage navigation
+            conventions users already understand.
+          </li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Brainstorming</h2>
+        <p>
+          We had been contemplating how to tackle rearranging our app’s
+          navigation and improve users' mental model of the app for a few months
+          now. Kumu's chief product officer, Crystal Widjaja, came up with a
+          draft for the mobile app's new information architecture.
+        </p>
+
+        <p>
+          Over the next few days, I came up with four other possible options. We
+          essentially had a freeroll so, a few days later, Crystal made the call
+          to go with one of the explorations.
+        </p>
+
+        <div class="case-study-item">
+          <img
+            src="../images/work/kumu-app-navigation/exploration-c.png"
+            alt="Exploration C"
+          />
+          <p class="caption">
+            Crystal made the judgement call and selected Exploration C
+          </p>
+        </div>
+
+        <div class="carousel-grid">
+          <div class="case-study-item">
+            <img
+              src="../images/work/kumu-app-navigation/exploration-a.png"
+              alt="Exploration A"
+            />
+            <p class="caption">Exploration A</p>
+          </div>
+          <div class="case-study-item">
+            <img
+              src="../images/work/kumu-app-navigation/exploration-b.png"
+              alt="Exploration B"
+            />
+            <p class="caption">Exploration B</p>
+          </div>
+          <div class="case-study-item">
+            <img
+              src="../images/work/kumu-app-navigation/exploration-d.png"
+              alt="Exploration D"
+            />
+            <p class="caption">Exploration D</p>
+          </div>
+          <div class="case-study-item">
+            <img
+              src="../images/work/kumu-app-navigation/exploration-e.png"
+              alt="Exploration E"
+            />
+            <p class="caption">Exploration E</p>
+          </div>
+        </div>
+
+        <p>
+          Finally, Crystal selected "Exploration C". How did we know this was
+          the right decision? At this point, it was an educated guess. The
+          selected exploration seems to address the main challenges that we had:
+        </p>
+        <ul>
+          <li>
+            <strong
+              >New users try to establish a mental model of the app.</strong
+            >
+            Exploration C was a familiar layout, not too dissimilar from the
+            information architecture of Twitter, LinkedIn, and Instagram.
+          </li>
+          <li>
+            <strong>The information architecture of the app was poor.</strong>
+            Exploration C consolidated a lot of the redundant entry points under
+            the side menu.
+          </li>
+          <li>
+            <strong
+              >Notifications are a key part of the current customer
+              journey.</strong
+            >
+            Exploration C featured the entry point to Notifications in the main
+            navigation.
+          </li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <p>
+          Since this was still an educated guess, our next step would be to test
+          if the new information architecture solved our problems. And, because
+          this was a massive change in navigation, we also wanted to know if the
+          change might harm any working user flow that we have.
+        </p>
+
+        <ul>
+          <li>Will users know where to access their Profile?</li>
+          <li>Will users know where to find their notifications?</li>
+          <li>
+            Will users know how to configure settings for their notifications?
+          </li>
+          <li>Will users know where to access My Watchlist?</li>
+          <li>Will users know how to add their FB friends?</li>
+          <li>Will users know how to share their profile link?</li>
+          <li>Will users know how to scan their QR code?</li>
+          <li>Will users know how to edit their addresses?</li>
+        </ul>
+
+        <h3>Usability Test Summary</h3>
+        <p>
+          Getting help from the UX research team, here’s a quick rundown of the
+          completion rate of each task:
+        </p>
+        <ul>
+          <li>Accessing Profile - 93.75% completion</li>
+          <li>Accessing Notifications - 93.75% completion rate</li>
+          <li>Accessing Notification Settings - 100% completion rate</li>
+          <li>Accessing My Watchlist - 66.75% completion rate</li>
+          <li>Adding FB friends - 81.25% completion rate</li>
+          <li>Sharing profile link - 68.75% completion</li>
+          <li>Scanning QR code - 87.5% completion rate</li>
+          <li>Editing my address - 81.85% completion rate</li>
+        </ul>
+        <p>
+          Overall, participants shared they had a good experience with the new
+          changes in the new navigation design app.
+        </p>
+        <div class="boxed-section">
+          <blockquote>
+            "All of us are used to seeing notifications here [Menu Tab]. It
+            makes me want to see if I’m gaining more followers, are my friends
+            livestreaming? Notifications won’t get buried anymore."
+            <br />— Participant #2
+          </blockquote>
+        </div>
+        <div class="boxed-section">
+          <blockquote>
+            "The notifications tab at the bottom navigation is very helpful.
+            Before I had difficulty in seeing my notifications because I had to
+            access the Menu and sometimes the profile page."
+            <br />— Participant #7
+          </blockquote>
+        </div>
+
+        <p>
+          On July 1, we released the updated Side Menu, which consolidated
+          feature entry points—including duplicates—from under the Side Menu and
+          the Profile Menu. On July 20, we completed the switch and removed the
+          old Profile Menu entry point in the main navigation—replacing it with
+          Notifications.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Results</h2>
+
+        <div class="case-study-item">
+          <h3>Before</h3>
+          <div class="before-after-grid">
             <div class="case-study-item">
-                <img src="../images/kumu-app-navigation/image_05.webp" alt="User Data Analysis">
+              <img
+                src="../images/work/kumu-app-navigation/homepage-before.webp"
+                alt="Original homepage"
+              />
+              <p class="caption">Homepage</p>
             </div>
-
-            <blockquote>
-                “Daming kailangan aralin pag new users. Pumapasok ako sa streams para matuto. Iniexplain lang niya kung paano gamitin. Masungit din siya so hindi ko po makausap ng maayos.” 
-                <br><span class="text-secondary">(Translation: You need to learn a lot as a new user. I enter streams to learn. They explain how to use it. But they’re grumpy so you can’t talk to them properly.)</span>
-            </blockquote>
-
-            <h3>Kumu's app information architecture was poor</h3>
-            <p>Even though we provided new users with a quick onboarding tour, there was a lot of jargon left unexplained. When we talked to our users, these were some of the common sentiments:</p>
-            <ul>
-                <li>(From the homepage) What does Following mean? What are Hot, New, Multi, Audio, and Teams? What do the icons in the bottom navigation mean?</li>
-                <li>(From the side menu) What are Campaigns, Klips, Leaderboard, and Missions?</li>
-                <li>(From the Profile menu) This isn’t what a Profile page in a social app usually looks like? Is the Missions here different from the one on the side menu? What about Campaigns and Leaderboard?</li>
-            </ul>
-            <p>We learned that new users were overwhelmed with the variety of features they saw when exploring the app and this made it more difficult for them to understand and experience the value proposition.</p>
-            
-            <img src="../images/kumu-app-navigation/image_01.png" alt="Previous Information Architecture">
-
-            <h3>Notifications are a critical part of the Kumu experience</h3>
-            <p>When we looked at the data, we saw that the Notifications page (which was still buried in the side menu) had increased usage after we released the “User Followed You” notification. From an average of X users per week, it quickly grew to Y users per week.</p>
-            <p>We looked more into the data and saw that less than 25% of users clicked on the side menu. But, of those who clicked on the side menu, 50% clicked Notifications, which had the highest click-thru rate among the menu items.</p>
-        </section>
-
-        <section class="section">
-            <h2>Design Strategy</h2>
-            <ul>
-                <li><strong>Remove redundant elements.</strong> Streamline the different menus to eliminate duplicate paths.</li>
-                <li><strong>Elevate key features.</strong> Bring critical features, like Notifications, to the forefront.</li>
-                <li><strong>Adopt familiar patterns.</strong> Leverage navigation conventions users already understand.</li>
-            </ul>
-        </section>
-
-        <section class="section">
-            <h2>Brainstorming</h2>
-            <p>We had been contemplating how to tackle rearranging our app’s navigation and improve users' mental model of the app for a few months now. Kumu's chief product officer, Crystal Widjaja, came up with a draft for the mobile app's new information architecture.</p>
-            <p>Having been frustrated by our not-so-user-friendly navigation, I was also quite eager to share a few other possible design explorations.</p>
-            
             <div class="case-study-item">
-                <img src="../images/kumu-app-navigation/image_02.png" alt="Brainstorming Session">
+              <img
+                src="../images/work/kumu-app-navigation/side-menu-before.webp"
+                alt="Original side menu"
+              />
+              <p class="caption">Side Menu</p>
             </div>
+            <div class="case-study-item">
+              <img
+                src="../images/work/kumu-app-navigation/profile-menu-before.webp"
+                alt="Original Profile Menu"
+              />
+              <p class="caption">Profile Menu</p>
+            </div>
+            <div class="case-study-item">
+              <img
+                src="../images/work/kumu-app-navigation/public-profile-before.png"
+                alt="Original public profile"
+              />
+              <p class="caption">User's public profile</p>
+            </div>
+          </div>
+        </div>
 
-            <p>Finally, Crystal selected "Exploration C". How did we know this was the right decision? At this point, it was an educated guess. The selected exploration seems to address the main challenges that we had:</p>
-            <ul>
-                <li><strong>New users try to establish a mental model of the app.</strong> Exploration C was a familiar layout, not too dissimilar from the information architecture of Twitter, LinkedIn, and Instagram.</li>
-                <li><strong>The information architecture of the app was poor.</strong> Exploration C consolidated a lot of the redundant entry points under the side menu.</li>
-                <li><strong>Notifications are a key part of the current customer journey.</strong> Exploration C featured the entry point to Notifications in the main navigation.</li>
-            </ul>
-        </section>
+        <div class="case-study-item">
+          <h3>After</h3>
+          <div class="before-after-grid">
+            <div class="case-study-item">
+              <img
+                src="../images/work/kumu-app-navigation/homepage-after.png"
+                alt="New homepage"
+              />
+              <p class="caption">Homepage</p>
+            </div>
+            <div class="case-study-item">
+              <img
+                src="../images/work/kumu-app-navigation/side-menu-after.png"
+                alt="New side menu"
+              />
+              <p class="caption">Side Menu</p>
+            </div>
+            <div class="case-study-item">
+              <img
+                src="../images/work/kumu-app-navigation/notifications-after.png"
+                alt="New notifications page"
+              />
+              <p class="caption">Notification page</p>
+            </div>
+            <div class="case-study-item">
+              <img
+                src="../images/work/kumu-app-navigation/public-profile-after.png"
+                alt="New public profile"
+              />
+              <p class="caption">User's public profile</p>
+            </div>
+          </div>
+        </div>
 
-        <section class="section">
-            <h2>Testing Assumptions</h2>
-            <p>Since this was still an educated guess, our next step would be to test if the new information architecture solved our problems. And, because this was a massive change in navigation, we also wanted to know if the change might harm any working user flow that we have.</p>
-            
-            <h3>Usability Test Summary</h3>
-            <p>Getting help from the UX research team, here’s a quick rundown of the completion rate of each task:</p>
-            <ul>
-                <li>Accessing Profile - 93.75% completion</li>
-                <li>Accessing Notifications - 93.75% completion rate</li>
-                <li>Accessing Notification Settings - 100% completion rate</li>
-                <li>Accessing My Watchlist - 66.75% completion rate</li>
-                <li>Adding FB friends - 81.25% completion rate</li>
-                <li>Sharing profile link - 68.75% completion</li>
-                <li>Scanning QR code - 87.5% completion rate</li>
-                <li>Editing my address - 81.85% completion rate</li>
-            </ul>
-            <p>Overall, participants shared they had a good experience with the new changes in the new navigation design app.</p>
-            <blockquote>
-                "All of us are used to seeing notifications here [Menu Tab]. It makes me want to see if I’m gaining more followers, are my friends livestreaming? Notifications won’t get buried anymore."
-                <br>— Participant #2
-            </blockquote>
-        </section>
+        <h3>Impact on Metrics</h3>
+        <div class="case-study-item">
+          <img
+            src="../images/work/kumu-app-navigation/metric-notifications.png"
+            alt="Notifications Metric"
+          />
+          <p class="caption">
+            <strong
+              >Significant increase in views for Notifications page.</strong
+            >
+            July-1 dip was when we consolidated more features in the Side Menu.
+            July-20 increase was when we moved Notifications to the Main
+            Navigation.
+          </p>
+        </div>
+        <div class="case-study-item">
+          <img
+            src="../images/work/kumu-app-navigation/metric-missions.png"
+            alt="Missions Metric"
+          />
+          <p class="caption">Significant increase in views for My Missions</p>
+        </div>
+        <div class="case-study-item">
+          <img
+            src="../images/work/kumu-app-navigation/metric-watchlist-klips.png"
+            alt="Discovery Metric"
+          />
+          <p class="caption">
+            Increase in views for My Watchlist, Klips, and a revenue-generating
+            Ad Banner
+          </p>
+        </div>
+        <div class="case-study-item">
+          <img
+            src="../images/work/kumu-app-navigation/metric-wallet.png"
+            alt="Wallet Metric"
+          />
+          <p class="caption">
+            <strong>Significant increase in usage for Wallet</strong> after the
+            duplicate entry points were consolidated inside the side menu
+          </p>
+        </div>
+        <div class="case-study-item">
+          <img
+            src="../images/work/kumu-app-navigation/metric-profile.png"
+            alt="Profile Metric"
+          />
+          <p class="caption">
+            <strong>Significant increase in views for Profile</strong> by July
+            20 with the new access point
+          </p>
+        </div>
+      </section>
 
-        <section class="section">
-            <h2>Results</h2>
-            <h3>Impact on Metrics</h3>
-            <ul>
-                <li>Significant increase in views for Notifications page.</li>
-                <li>Significant increase in views for My Missions</li>
-                <li>Increase in views for My Watchlist, Klips, and a revenue-generating Ad Banner</li>
-                <li>Significant increase in usage for Wallet after the duplicate entry points were consolidated inside the side menu</li>
-                <li>Significant increase in views for Profile by July 20 with the new access point</li>
-            </ul>
-        </section>
-
-        <section class="section">
-            <h2>Key Learnings</h2>
-            <ul>
-                <li><strong>Design drives alignment and makes ideas concrete:</strong> With UX Research constrained by their backlog, tangible design explorations made abstract navigation problems concrete and rallied stakeholder support without waiting for comprehensive research.</li>
-                <li><strong>Listen to user behavior, not just feedback:</strong> Analytics revealed the importance of notifications despite users not explicitly mentioning it</li>
-                <li><strong>Adopt familiar patterns:</strong> Using navigation conventions from popular apps accelerated user understanding</li>
-                <li><strong>Test rigorously:</strong> Validating with real users prevented potential missteps</li>
-                <li><strong>Implement strategically:</strong> Phased rollout minimized disruption while maximizing learning</li>
-            </ul>
-        </section>
-
-        <footer class="section text-secondary">
-             <p style="font-size: 0.875rem;">&copy; 2024 Leroy Almeida</p>
-        </footer>
+      <section class="section">
+        <h2>Key Learnings</h2>
+        <div class="boxed-section">
+          <ul>
+            <li>
+              <strong>Design drives alignment and makes ideas concrete:</strong>
+              With UX Research constrained by their backlog, tangible design
+              explorations made abstract navigation problems concrete and
+              rallied stakeholder support without waiting for comprehensive
+              research.
+            </li>
+            <li>
+              <strong>Listen to user behavior, not just feedback:</strong>
+              Analytics revealed the importance of notifications despite users
+              not explicitly mentioning it
+            </li>
+            <li>
+              <strong>Adopt familiar patterns:</strong> Using navigation
+              conventions from popular apps accelerated user understanding
+            </li>
+            <li>
+              <strong>Test rigorously:</strong> Validating with real users
+              prevented potential missteps
+            </li>
+            <li>
+              <strong>Implement strategically:</strong> Phased rollout minimized
+              disruption while maximizing learning
+            </li>
+          </ul>
+        </div>
+      </section>
     </div>
+
+    <footer class="site-footer text-secondary">
+      <div class="footer-container">
+        <p>&copy; <span id="copyright-year">2018-2024</span> Leroy Almeida</p>
+      </div>
+    </footer>
+
     <script src="../scripts/font-glitch.js"></script>
-</body>
+    <script src="../scripts/dynamic-footer.js"></script>
+  </body>
 </html>

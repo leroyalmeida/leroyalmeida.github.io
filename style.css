@@ -1,31 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap");
 
 @font-face {
-  font-family: 'Alpha Lyrae';
-  src: url('./fonts/AlphaLyrae-Medium.woff2') format('woff2');
+  font-family: "Alpha Lyrae";
+  src: url("./fonts/AlphaLyrae-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 :root {
-  --bg-color: #FFFFFF;
+  --bg-color: #ffffff;
   --text-color: #334155; /* Slate 700 */
   --heading-color: #334155; /* Slate 700 for main header */
   --label-color: #94a3b8; /* Bluish Gray for labels */
   --link-color: #64748b; /* Slate for links */
   --border-color: #e2e8f0;
 
-  --spacing-unit: 1.5rem;
-  --font-family: "Geist", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --spacing-unit: 1rem;
+  --font-family: "Geist", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
   --label-font: "Geist Mono", monospace;
   --heading-font: "Alpha Lyrae", "Geist", sans-serif;
-  
+
   --max-width: 600px;
 }
-
-
 
 body {
   font-family: var(--font-family);
@@ -38,10 +37,16 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: calc(var(--spacing-unit) * 2);
+  padding: var(--spacing-unit);
 }
 
 header {
@@ -81,15 +86,20 @@ p {
 
 a {
   color: var(--link-color);
-  text-decoration: none;
-  transition: color 0.2s ease-in-out;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px; /* Closer to text than border-bottom */
+  transition: text-decoration-color 0.2s ease-in-out;
 }
 
 a:hover {
   color: var(--heading-color);
+  text-decoration-color: var(--heading-color);
 }
 
-.muted, .mono {
+.muted,
+.mono {
   color: var(--label-color);
 }
 
@@ -97,7 +107,6 @@ a:hover {
   font-family: var(--label-font);
   font-size: 0.85rem;
 }
-
 
 /* Resume Layout Utilities */
 .resume-row {
@@ -124,15 +133,9 @@ a:hover {
 }
 
 .resume-content li {
-  /* margin-bottom: 0.5rem; */
 }
 
 /* Project List specific overrides */
-.title-row {
-   display: flex;
-   justify-content: space-between;
-   align-items: baseline;
-}
 
 .project-title {
   text-decoration: underline;
@@ -143,7 +146,7 @@ a:hover {
 }
 
 .project-title:hover {
-    text-decoration-color: var(--text-color);
+  text-decoration-color: var(--text-color);
 }
 
 /* Mobile Responsive */
@@ -152,7 +155,7 @@ a:hover {
     flex-direction: column;
     gap: 8px;
   }
-  
+
   .resume-label {
     width: 100%;
     margin-bottom: 0.5rem;
@@ -166,110 +169,256 @@ a:hover {
 
 /* Logo List (Worked At/On) */
 .logo-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px 32px; /* Row gap 24px, Column gap 32px */
-    align-items: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px 32px; /* Row gap 24px, Column gap 32px */
+  align-items: center;
+  justify-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .logo-list li {
-    display: flex; /* Remove extra height from li */
-    margin-bottom: 0; /* Override general li margin */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0; /* Override general li margin */
 }
 
 .logo-list img {
-    display: block;
-    height: 20px; /* Reduced height to match Framer visual size */
-    width: auto;
-    filter: grayscale(100%);
-    opacity: 0.5;
-    transition: all 0.3s ease-in-out;
-}
-
-.logo-list a:hover img {
-    filter: grayscale(0%);
-    opacity: 1;
+  display: block;
+  height: 20px; /* Fixed height to keep them consistent */
+  width: auto; /* Width auto to maintain aspect ratio */
+  object-fit: contain;
+  opacity: 0.8;
+  transition: all 0.3s ease-in-out;
 }
 
 /* Social List (Find Me) */
 .social-list {
-    display: flex;
-    gap: 16px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.social-list li {
-    margin-bottom: 0; /* Override general li margin */
+  display: flex;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .social-list a {
-    display: inline-block;
-    width: 20px; /* Slightly smaller to match icons */
-    height: 20px;
-    color: var(--label-color);
-    transition: color 0.2s ease-in-out;
+  display: inline-block;
+  width: 20px; /* Slightly smaller to match icons */
+  height: 20px;
+  color: var(--label-color);
+  transition: color 0.2s ease-in-out;
 }
 
 .social-list a:hover {
-    color: var(--heading-color);
+  color: var(--heading-color);
 }
 
 .social-list svg {
-    width: 100%;
-    height: 100%;
-    fill: currentColor;
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
 }
 
 /* Card Layout (Bookmarks) */
 .card-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    padding: 0;
-    list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0;
+  list-style: none;
 }
 
 .card {
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
-    padding: 16px;
-    transition: all 0.2s ease-in-out;
-    background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 16px;
+  transition: all 0.2s ease-in-out;
+  background-color: var(--bg-color);
 }
 
 .card:hover {
-    border-color: var(--label-color);
-    transform: translateY(-2px);
+  border-color: var(--label-color);
+  transform: translateY(-2px);
 }
 
 .card a {
-    display: block;
-    font-weight: 500;
+  display: block;
+  font-weight: 500;
 }
 
 .card .mono {
-    display: block;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    opacity: 0.7;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  opacity: 0.7;
 }
 
 .card-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
 }
 
 .favicon {
-    width: 16px;
-    height: 16px;
-    border-radius: 2px;
-    flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+/* Case Study Layouts */
+.section {
+  margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+.case-study-item {
+  margin-bottom: calc(var(--spacing-unit) * 3);
+}
+
+.case-study-item h4 {
+  margin-bottom: 1rem;
+  color: var(--heading-color);
+}
+
+.comparison-grid {
+  display: flex;
+  gap: 32px;
+  margin-top: 1.5rem;
+}
+
+.comparison-grid > div {
+  flex: 1;
+}
+
+.comparison-grid p {
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 600px) {
+  .comparison-grid {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+.project-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  border-radius: 6px;
+  border-color: var(--border-color);
+  border-width: 1px;
+  border-style: solid;
+}
+
+.project-meta h4 {
+  margin: 0;
+}
+
+.project-meta p {
+  margin: 0;
+}
+
+/* Footer Styles */
+.site-footer {
+  width: 100%;
+  background-color: var(--bg-color);
+  border-top: 1px solid var(--border-color);
+  margin-top: 128px;
+}
+
+.footer-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0.75rem calc(var(--spacing-unit) * 2);
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--label-color);
+}
+
+.before-after-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.carousel-grid {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  margin: 2rem 0;
+  padding-bottom: 1rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.carousel-grid .case-study-item {
+  flex: 0 0 80%;
+  margin-bottom: 0;
+  scroll-snap-align: center;
+}
+
+.carousel-grid::-webkit-scrollbar {
+  height: 4px;
+}
+
+.carousel-grid::-webkit-scrollbar-track {
+  background: var(--border-color);
+}
+
+.carousel-grid::-webkit-scrollbar-thumb {
+  background: var(--label-color);
+  border-radius: 4px;
+}
+
+.caption {
+  font-size: 12px;
+  color: var(--label-color);
+  margin-top: 0.5rem;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.boxed-section {
+  padding: 2rem;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  margin-bottom: calc(var(--spacing-unit) * 3);
+}
+
+.boxed-section > *:first-child {
+  margin-top: 0;
+}
+
+.boxed-section > *:last-child {
+  margin-bottom: 0;
+}
+
+blockquote {
+  margin: 0;
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .before-after-grid {
+    grid-template-columns: 1fr;
+  }
+  .carousel-grid .case-study-item {
+    flex: 0 0 90%;
+  }
 }
