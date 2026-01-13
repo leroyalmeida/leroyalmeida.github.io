@@ -1,12 +1,12 @@
 /**
- * Applies a random font glitch effect (using stylistic set ss01) to all H1 elements on the page.
+ * Applies a random font glitch effect (using stylistic set ss01) to all H1, H2, and H3 elements on the page.
  */
 document.addEventListener("DOMContentLoaded", () => {
-  const h1s = document.querySelectorAll("h1");
+  const headings = document.querySelectorAll("h1, h2, h3");
 
-  h1s.forEach((h1) => {
-    const text = h1.innerText;
-    h1.innerText = "";
+  headings.forEach((heading) => {
+    const text = heading.innerText;
+    heading.innerText = "";
 
     // Split text into spans
     const spans = [];
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const span = document.createElement("span");
       span.innerText = char;
       span.style.transition = "all 0.1s ease"; // slight transition
-      h1.appendChild(span);
+      heading.appendChild(span);
       spans.push(span);
     }
 
