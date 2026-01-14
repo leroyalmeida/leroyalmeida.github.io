@@ -47,9 +47,68 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&family=Geist:wght@400;500;600&family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
+
+    <style>
+      .issues-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin: 24px 0;
+      }
+      .issues-grid img {
+        width: 100%;
+        aspect-ratio: 1.77778;
+        object-fit: cover;
+        border-radius: 8px;
+        border: 1px solid var(--border-color);
+      }
+      .sitemap-container {
+        background-color: #eeeef3;
+        border-radius: 8px;
+        border: 1px solid var(--border-color);
+        padding: 16px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 12px;
+      }
+      .sitemap-container img {
+        width: 369px;
+        height: auto;
+      }
+      .design-challenge-box {
+        padding: 24px;
+        border: 1px solid var(--border-color);
+        border-radius: 12px;
+        margin: 48px 0;
+        text-align: left;
+      }
+      .design-challenge-box blockquote {
+        font-size: 16px;
+        font-style: italic;
+        line-height: 1.35;
+        margin: 0;
+      }
+      .mobile-mockup-container {
+        background-color: var(
+          --token-7b918f0f-6b96-4f31-9be0-990742304a41,
+          #f1f5f9
+        );
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 24px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 12px;
+      }
+      .mobile-mockup-container img {
+        width: 200px;
+        height: auto;
+      }
+    </style>
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -74,62 +133,79 @@
   <body>
     <div class="container">
       <header>
-        <p><a href="../index.html">← Home</a></p>
-        <h1>Philippine Airlines Website Redesign</h1>
-        <p class="lead muted">
-          Increasing PAL's online revenue by improving content discovery and
-          accessibility
-        </p>
-        <img
-          src="../images/philippine-airlines-website/image_01.png"
-          alt="PAL Redesign Hero"
-        />
+        <a class="back-link" href="../index.html">
+          <svg
+            width="12"
+            height="12"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 12H5M5 12L12 19M5 12L12 5"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <h6 class="mono">Home</h6>
+        </a>
+        <div class="case-study-title">
+          <h1>Philippine Airlines Website</h1>
+          <p>
+            Increasing PAL's online revenue by improving content discovery and
+            accessibility
+          </p>
+        </div>
       </header>
 
-      <section class="section">
-        <div class="project-meta">
-          <div class="mb-4">
-            <h5>Problem</h5>
-            <p>Improve the website so PAL increases online revenue by 20%</p>
-          </div>
-          <div class="mb-4">
-            <h5>Solution</h5>
-            <p>
-              Improve content discovery and overall accessibility especially on
-              mobile
-            </p>
-          </div>
-          <div class="mb-4">
-            <h5>Impact</h5>
-            <p>
-              15% more mobile sessions, 12% more new users, 28% more visits to
-              other pages, 100% more traffic from home page to booking flow
-            </p>
-          </div>
-          <div class="mb-4">
-            <h5>Role</h5>
-            <p>
-              Sole designer, conducted benchmark studies, sitemap evaluations,
-              information re-architecture, interface design, and prototyping
-            </p>
-          </div>
+      <div class="project-summary">
+        <div class="summary-item">
+          <h5>Problem</h5>
+          <p>Improve the website so PAL increases online revenue by 20%</p>
         </div>
+        <div class="summary-item">
+          <h5>Solution</h5>
+          <p>
+            Improve content discovery and overall accessibility especially on
+            mobile
+          </p>
+        </div>
+        <div class="summary-item">
+          <h5>Impact</h5>
+          <p>
+            15% more mobile sessions, 12% more new users, 28% more visits to
+            other pages, 100% more traffic from home page to booking flow
+          </p>
+        </div>
+        <div class="summary-item">
+          <h5>Role</h5>
+          <p>
+            Sole designer, conducted benchmark studies, sitemap evaluations,
+            information re-architecture, interface design, and prototyping
+          </p>
+        </div>
+      </div>
 
-        <hr style="border: 0; border-top: 1px solid #eee; margin: 2rem 0" />
-
+      <section class="case-study-content">
         <p>
-          Philippine Airlines (PAL) is the flag carrier of the Philippines,
-          flying approximately 15 million passengers per year.
+          Philippine Airlines is the flag carrier of the Philippines. It flies
+          approximately 15 million passengers per year.
         </p>
         <p>
           In 2018, PAL wanted to increase their online revenue by 20%. Their
           digital marketing team decided that improving the website can help
           achieve this.
         </p>
-        <p class="text-secondary">
-          "How can we improve the website so PAL increases online revenue by
-          20%?"
-        </p>
+
+        <div class="challenge-box">
+          <blockquote>
+            "How can we improve the website so PAL increases online revenue by
+            20%?"
+          </blockquote>
+        </div>
+
         <p>
           I joined the project when the research was already completed. The
           project team needed support to complete the interaction and visual
@@ -137,106 +213,260 @@
           the lead designer.
         </p>
 
-        <p>
-          <strong>Philippine Airlines' homepage before the redesign:</strong>
-        </p>
-        <img
-          src="../images/philippine-airlines-website/image_02.png"
-          alt="Before Redesign"
-        />
-      </section>
+        <div class="image-container">
+          <div class="image-aspect-box tall">
+            <img
+              src="../images/philippine-airlines-website/image_02.png"
+              alt="Philippine Airlines homepage before the redesign"
+            />
+          </div>
+          <p class="caption">
+            Philippine Airlines' homepage before the redesign
+          </p>
+        </div>
 
-      <section class="section">
-        <h2>Issues</h2>
+        <h2 class="section-title">Issues</h2>
         <p>
           The heuristic evaluation identified several issues, most of which were
-          related to website navigation and accessibility:
+          related to website navigation and accessibility. These issues affected
+          how customers discovered content.
+        </p>
+
+        <div class="issues-grid">
+          <img
+            src="../images/philippine-airlines-website/image_03.png"
+            alt="Issue 1"
+          />
+          <img
+            src="../images/philippine-airlines-website/image_04.png"
+            alt="Issue 2"
+          />
+          <img
+            src="../images/philippine-airlines-website/image_03.png"
+            alt="Issue 3"
+          />
+          <img
+            src="../images/philippine-airlines-website/image_05.png"
+            alt="Issue 4"
+          />
+          <img
+            src="../images/philippine-airlines-website/image_06.png"
+            alt="Issue 5"
+          />
+          <img
+            src="../images/philippine-airlines-website/image_07.png"
+            alt="Issue 6"
+          />
+          <img
+            src="../images/philippine-airlines-website/image_05.png"
+            alt="Issue 7"
+          />
+          <img
+            src="../images/philippine-airlines-website/image_08.png"
+            alt="Issue 8"
+          />
+        </div>
+
+        <p>
+          We also analyzed and benchmarked PAL's sitemap against those of other
+          airlines. By analyzing the sitemap, we learned that:
         </p>
         <ul>
           <li>
-            <strong>Key revenue-generating content</strong>—like baggage
-            information or seat upgrade information—were buried deep within the
-            site.
+            Key revenue-generating content—like baggage information or seat
+            upgrade information—were buried deep within the site.
           </li>
           <li>
-            <strong>Content wasn't always found</strong> where customers expect
-            to find it.
+            Content wasn't always found where customers expect to find it.
           </li>
           <li>
-            <strong>Some pages were repeated redundantly</strong> throughout the
-            website, causing information overload.
+            Some pages were repeated redundantly through out the website. This
+            was information overload for the website's users.
           </li>
         </ul>
-      </section>
 
-      <section class="section">
-        <h2>Design Solutions</h2>
+        <div class="image-container">
+          <div class="sitemap-container">
+            <img
+              src="../images/philippine-airlines-website/image_09.png"
+              alt="Old Sitemap"
+            />
+          </div>
+          <p class="caption">
+            Philippine Airlines' sitemap before the redesign
+          </p>
+        </div>
+
+        <h2 class="section-title">Design Solutions</h2>
 
         <div class="case-study-item">
           <h3>Restructure the information architecture</h3>
           <p>
-            We minimized redundancies (like About Us info) and focused on
-            logical paths. The new structure makes finding information easier
-            from the homepage.
+            In reconstructing PAL’s information architecture, we minimized
+            redundancies—like About Us information—in both main and footer
+            navigations.
           </p>
-          <img
-            src="../images/philippine-airlines-website/image_03.png"
-            alt="New Sitemap"
-          />
+          <p>
+            We finalized a sitemap that focused in providing logical and
+            intuitive paths to accomplishing user tasks.
+          </p>
+          <p>
+            In some cases, finding information still takes a user deeper into
+            the site but, now, the website is structured to make it easier to
+            locate information from the home page.
+          </p>
+          <div class="image-container">
+            <div class="sitemap-container">
+              <img
+                src="../images/philippine-airlines-website/image_10.png"
+                alt="New Sitemap"
+              />
+            </div>
+            <p class="caption">
+              New PAL sitemap. Key actions and information are easier to find.
+            </p>
+          </div>
         </div>
 
         <div class="case-study-item">
           <h3>Make important travel information more discoverable</h3>
           <p>
             The new main navigation focuses on providing everything that a
-            customer might need in a more intuitive location, including
-            self-service content.
+            customer might need in a more intuitive location. Travel Information
+            is also organized in a way that makes sense to customers. The new
+            design provides quick access to previously underexposed self-service
+            content.
           </p>
+          <div class="image-container">
+            <div class="image-aspect-box tall">
+              <img
+                src="../images/philippine-airlines-website/image_11.png"
+                alt="Navigation Design"
+              />
+            </div>
+            <p class="caption">
+              The new website's top navigation contains virtually all
+              information that a customer may need during their customer journey
+              with Philippine Airlines
+            </p>
+          </div>
         </div>
 
         <div class="case-study-item">
           <h3>Place primary actions in an accessible location</h3>
           <p>
-            We identified four key jobs-to-be-done: Booking a flight, Checking
-            in, Managing a booking, Checking flight status. These are now
-            accessible from a single form that is always above the fold.
+            Four key customer jobs-to-be-done when the user visits the website
+            are:
           </p>
+          <ul>
+            <li>Booking a flight</li>
+            <li>Checking in</li>
+            <li>Managing a booking</li>
+            <li>Checking flight status</li>
+          </ul>
+          <p>
+            These four key customer jobs-to-be-done are now accessible from a
+            single location which is always visible above the fold.
+          </p>
+          <div class="image-container">
+            <div class="image-aspect-box tall">
+              <img
+                src="../images/philippine-airlines-website/image_12.png"
+                alt="Key Actions"
+              />
+            </div>
+            <p class="caption">
+              In the new website design, the four key Jobs-to-be-Done (Book
+              Flight, Check In, Manage Booking, and Flight Status) are
+              accessible from a form that is always above the fold
+            </p>
+          </div>
         </div>
 
         <div class="case-study-item">
           <h3>Increase contrast of flight deals vs other promos</h3>
           <p>
-            We split promotions into "Flight Promotions" (cheap trips) and
-            "Travel Extras" (insurance, lounges), making it easier for customers
-            to identify deals.
+            We split the current design’s all-the-promos-are-here section into
+            two distinct sections, Flight Promotions and Travel Extras. Grouping
+            information in this manner makes it easier for customers to identify
+            and understand it.
           </p>
+          <ul>
+            <li>
+              Flight Promotions offers an easy way to discover cheap trips.
+            </li>
+            <li>
+              Travel Extras include promotions for travel insurance and lounges.
+              These provide added revenue for the airlines.
+            </li>
+          </ul>
         </div>
 
         <div class="case-study-item">
           <h3>Improve visibility of revenue-generating airline products</h3>
           <p>
-            The new design emphasizes purchasing extra baggage allowance, seat
-            upgrades, and travel insurance (previously 20% of online revenue) by
-            placing them in consistently visible areas.
+            The new design puts an emphasis on purchasing extra baggage
+            allowance, getting seat upgrades, and buying travel insurances.
           </p>
+          <p>
+            At the time, these three comprised about 20% of PAL's current online
+            revenue.
+          </p>
+          <p>
+            By placing these options in an area that is consistently above the
+            fold in most devices, we hope to increase its accessibility to
+            customers who need it.
+          </p>
+          <div class="image-container">
+            <div class="image-aspect-box tall">
+              <img
+                src="../images/philippine-airlines-website/image_13.png"
+                alt="Revenue Products"
+              />
+            </div>
+            <p class="caption">
+              Philippine Airlines' homepage after the redesign
+            </p>
+          </div>
         </div>
 
         <div class="case-study-item">
           <h3>Design for mobile-first</h3>
           <p>
-            A huge percentage of customers use mobile. The new design ensures
-            accessibility and beauty on mobile, with key actions within thumb
-            reach.
+            During the study, we learned that a huge percentage of customers
+            viewed the website using their mobile phones.
           </p>
-          <img
-            src="../images/philippine-airlines-website/image_04.png"
-            alt="Mobile First Design"
-          />
+          <p>
+            The new design makes sure that the website is accessible—and
+            beautiful —from a mobile view.
+          </p>
+          <p>
+            Key actions (booking a flight, checking in, etc) are within reach of
+            the customers thumbs and provide a quick way to complete key tasks.
+            And below these key actions are the revenue-generating content like
+            baggage allowance, seat upgrades, and travel insurance.
+          </p>
+          <p>
+            Lastly, the navigation sticks to the top to provide quick access to
+            more travel information.
+          </p>
+          <div class="image-container">
+            <div class="mobile-mockup-container">
+              <img
+                src="../images/philippine-airlines-website/image_14.png"
+                alt="Mobile Design"
+              />
+            </div>
+            <p class="caption">
+              The mobile version ensures key tasks are within reach of the
+              thumb.
+            </p>
+          </div>
         </div>
       </section>
 
-      <section class="section">
-        <h2>Key Learnings</h2>
+      <section class="boxed-section">
+        <h2 class="section-title">Key Learnings</h2>
         <p>Comparing 3 months before and after the redesign (n=2.9M):</p>
         <ul>
           <li>
