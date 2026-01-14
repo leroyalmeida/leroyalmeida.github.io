@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: http://leroyalmeida.com/sitemap.xml
+Sitemap: https://leroyalmeida.com/sitemap.xml

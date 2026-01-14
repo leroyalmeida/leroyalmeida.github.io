@@ -1,80 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bookmarks - Leroy Almeida</title>
-    <meta name="description" content="A collection of essays I enjoy">
-    <link rel="stylesheet" href="../../style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <meta
+      name="description"
+      content="A collection of essays and artifacts from the internet that I enjoy."
+    />
+    <link
+      rel="canonical"
+      href="https://leroyalmeida.com/special-projects/bookmarks/index.html"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://leroyalmeida.com/special-projects/bookmarks/index.html"
+    />
+    <meta property="og:title" content="Bookmarks - Leroy Almeida" />
+    <meta
+      property="og:description"
+      content="A collection of essays and artifacts from the internet that I enjoy."
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary" />
+    <meta
+      property="twitter:url"
+      content="https://leroyalmeida.com/special-projects/bookmarks/index.html"
+    />
+    <meta property="twitter:title" content="Bookmarks - Leroy Almeida" />
+    <meta
+      property="twitter:description"
+      content="A collection of essays and artifacts from the internet that I enjoy."
+    />
+
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        /* Styles moved to style.css */
+      /* Styles moved to style.css */
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <header>
-            <a href="../../index.html" class="text-secondary" style="font-size: 0.9rem; margin-bottom: 2rem; display: block;">&larr; Back to Home</a>
-            <h1>Bookmarks</h1>
-            <p class="lead muted">A collection of essays I enjoy</p>
-        </header>
+      <header>
+        <a
+          href="../../index.html"
+          class="text-secondary"
+          style="font-size: 0.9rem; margin-bottom: 2rem; display: block"
+          >&larr; Back to Home</a
+        >
+        <h1>Bookmarks</h1>
+        <p class="lead muted">A collection of essays I enjoy</p>
+      </header>
 
-        <section>
-            <ul class="card-grid" id="bookmarks-list">
-                <!-- Bookmarks will be loaded here via JS -->
-            </ul>
-        </section>
-
+      <section>
+        <ul class="card-grid" id="bookmarks-list">
+          <!-- Bookmarks will be loaded here via JS -->
+        </ul>
+      </section>
     </div>
 
     <footer class="site-footer text-secondary">
-        <div class="footer-container">
-            <p>&copy; <span id="copyright-year">2018-2024</span> Leroy Almeida</p>
-        </div>
+      <div class="footer-container">
+        <p>&copy; <span id="copyright-year">2018-2024</span> Leroy Almeida</p>
+      </div>
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            fetch('bookmarks.json')
-                .then(response => response.json())
-                .then(data => {
-                    const list = document.getElementById('bookmarks-list');
-                    data.forEach(bookmark => {
-                        const li = document.createElement('li');
-                        li.className = 'card';
-                        
-                        const header = document.createElement('div');
-                        header.className = 'card-header';
-                        
-                        const img = document.createElement('img');
-                        img.className = 'favicon';
-                        // Using Google's favicon service
-                        img.src = `https://www.google.com/s2/favicons?domain=${bookmark.displayUrl}&sz=32`;
-                        img.alt = '';
-                        
-                        const a = document.createElement('a');
-                        a.href = bookmark.url;
-                        a.textContent = bookmark.title;
-                        
-                        header.appendChild(img);
-                        header.appendChild(a);
-                        
-                        const span = document.createElement('span');
-                        span.className = 'mono';
-                        span.style.paddingLeft = '28px'; // Align with text after favicon (16px + 12px gap)
-                        span.textContent = bookmark.displayUrl;
-                        
-                        li.appendChild(header);
-                        li.appendChild(span);
-                        list.appendChild(li);
-                    });
-                })
-                .catch(error => console.error('Error loading bookmarks:', error));
-        });
+      document.addEventListener("DOMContentLoaded", () => {
+        fetch("bookmarks.json")
+          .then((response) => response.json())
+          .then((data) => {
+            const list = document.getElementById("bookmarks-list");
+            data.forEach((bookmark) => {
+              const li = document.createElement("li");
+              li.className = "card";
+
+              const header = document.createElement("div");
+              header.className = "card-header";
+
+              const img = document.createElement("img");
+              img.className = "favicon";
+              // Using Google's favicon service
+              img.src = `https://www.google.com/s2/favicons?domain=${bookmark.displayUrl}&sz=32`;
+              img.alt = "";
+
+              const a = document.createElement("a");
+              a.href = bookmark.url;
+              a.textContent = bookmark.title;
+
+              header.appendChild(img);
+              header.appendChild(a);
+
+              const span = document.createElement("span");
+              span.className = "mono";
+              span.style.paddingLeft = "28px"; // Align with text after favicon (16px + 12px gap)
+              span.textContent = bookmark.displayUrl;
+
+              li.appendChild(header);
+              li.appendChild(span);
+              list.appendChild(li);
+            });
+          })
+          .catch((error) => console.error("Error loading bookmarks:", error));
+      });
     </script>
     <script src="../../scripts/font-glitch.js"></script>
     <script src="../../scripts/dynamic-footer.js"></script>
-</body>
+  </body>
 </html>
