@@ -347,25 +347,6 @@ a:hover {
   }
 }
 
-.project-meta {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding: 2rem;
-  border-radius: 6px;
-  border-color: var(--border-color);
-  border-width: 1px;
-  border-style: solid;
-}
-
-.project-meta h4 {
-  margin: 0;
-}
-
-.project-meta p {
-  margin: 0;
-}
-
 /* Footer Styles */
 .site-footer {
   width: 100%;
@@ -432,11 +413,11 @@ a:hover {
 }
 
 .boxed-section {
-  padding: 2rem;
-  border-radius: 6px;
+  padding: 24px;
+  border-radius: 12px;
   border: 1px solid var(--border-color);
-  margin-bottom: calc(var(--spacing-unit) * 3);
-  margin-top: calc(var(--spacing-unit) * 2);
+  margin-bottom: 48px;
+  margin-top: 24px;
 }
 
 .boxed-section > *:first-child {
@@ -517,15 +498,17 @@ blockquote {
 .challenge-box {
   padding: 24px;
   border: 1px solid var(--border-color);
-  border-radius: 8px;
+  border-radius: 12px;
   margin: 48px 0;
+  background-color: transparent;
 }
 
 .challenge-box blockquote {
   font-size: 16px;
   font-style: italic;
-  line-height: 1.35;
+  line-height: 1.4;
   text-align: left;
+  margin: 0;
 }
 
 .image-container {
@@ -534,15 +517,15 @@ blockquote {
 }
 
 .image-aspect-box {
-  background-color: #f1f5f9;
+  background-color: #f8fafc;
   border: 1px solid var(--border-color);
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 400px;
-  padding: 2rem;
+  padding: 24px;
 }
 
 .image-aspect-box.white-bg {
@@ -564,6 +547,37 @@ blockquote {
 .image-aspect-box.tall {
   height: auto;
   min-height: 406px;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.image-grid img {
+  width: 100%;
+  aspect-ratio: 1.77778;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.mockup-container {
+  background-color: #f8fafc;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 32px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.mockup-container img {
+  width: 200px;
+  height: auto;
 }
 
 .section-title {
