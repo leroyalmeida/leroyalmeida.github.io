@@ -100,7 +100,7 @@ ol {
 }
 
 li {
-  margin-bottom: 8px;
+  /* margin-bottom: 8px; */
   line-height: 1.4;
 }
 
@@ -591,7 +591,7 @@ blockquote {
 }
 
 .case-study-content li {
-  margin-bottom: 12px;
+  /* margin-bottom: 12px; */
   line-height: 1.4;
 }
 
