@@ -1,8 +1,8 @@
 /**
- * Applies a random font glitch effect (using stylistic set ss01) to all H1, H2, and H3 elements on the page.
+ * Applies a random font glitch effect (using stylistic set ss01) to h1 elements on the page.
  */
 document.addEventListener("DOMContentLoaded", () => {
-  const headings = document.querySelectorAll("h1, h2, h3");
+  const headings = document.querySelectorAll("h1");
 
   headings.forEach((heading) => {
     const text = heading.innerText;
