@@ -602,3 +602,27 @@ blockquote {
 .case-study-content h3 {
   margin-top: 32px;
 }
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 24px 0;
+  font-size: 14px;
+}
+
+th,
+td {
+  border: 1px solid var(--border-color);
+  padding: 12px;
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.4;
+}
+
+th {
+  background-color: #f8fafc;
+  font-weight: 500;
+  color: var(--heading-color);
+  font-family: var(--font-family);
+}
