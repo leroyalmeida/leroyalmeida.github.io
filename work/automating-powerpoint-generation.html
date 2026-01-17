@@ -21,7 +21,7 @@
     </script>
     <meta
       name="description"
-      content="I shipped a single button - Automating PowerPoint Generation at Axiamatic"
+      content="I Shipped a Single Button: Automating PowerPoint Generation at Axiamatic"
     />
     <link
       rel="canonical"
@@ -40,7 +40,7 @@
     />
     <meta
       property="og:description"
-      content="I shipped a single button - Automating PowerPoint Generation at Axiamatic"
+      content="I Shipped a Single Button: Automating PowerPoint Generation at Axiamatic"
     />
 
     <!-- Twitter -->
@@ -55,7 +55,7 @@
     />
     <meta
       property="twitter:description"
-      content="I shipped a single button - Automating PowerPoint Generation at Axiamatic"
+      content="I Shipped a Single Button: Automating PowerPoint Generation at Axiamatic"
     />
 
     <link rel="stylesheet" href="../style.css" />
@@ -170,10 +170,16 @@
           feature that exports dashboards to PowerPoint.
         </p>
         <p>
-          I thought it was a mistake. I raised the concern once, clearly. The
-          response was direct: customer commitments override strategic purity.
-          This customer was blocking on this feature, and we were going to build
-          it.
+          I thought it was a mistake, and I said so. The feature doubled down on
+          dashboards when leadership had just committed to simplifying them. I
+          asked the question that mattered: were we building for the deliverable
+          (a PowerPoint file) or for the generation (AI reasoning and
+          synthesis)? The first felt like traditional BI tooling. The second
+          would advance our direction.
+        </p>
+        <p>
+          The response was clear: this customer wouldn't adopt without it.
+          Customer commitments override strategic purity.
         </p>
         <p>That's when the real design work started.</p>
       </section>
@@ -181,22 +187,24 @@
       <section class="section">
         <h2 class="section-title">The spec that couldn't make up its mind</h2>
         <p>
-          The product doc had a tell. The title said "[redacted customer name]
-          Steering Committee Reporting," framing it as a solution for one
-          specific customer. But the user flow diagram showed template
-          selection, dashboard configuration, and mapping interfaces, all
-          hallmarks of a generic platform feature.
+          The product doc had a tell. The title said "[redacted] Steering
+          Committee Reporting," singular and specific. But the user interaction
+          diagram showed template selection, dashboard configuration, and
+          mapping interfaces—plural, generic, platform-shaped.
         </p>
         <p>
-          That ambiguity wasn't cosmetic. A customer-specific solution means
-          hardcoded templates, zero configuration UI, and a timeline measured in
-          weeks. A platform feature means selection interfaces, mapping logic,
-          and months of work. The interaction model depends entirely on which
-          one you're building, and the spec was describing both.
+          Those two framings required completely different designs. A
+          customer-specific solution means hardcoded templates, zero
+          configuration UI, and a timeline measured in weeks. A platform feature
+          means selection interfaces, mapping logic, and months of work. The
+          spec was describing both, which meant it was describing neither.
         </p>
         <p>
-          I pulled in a PM and designer from another team to gut-check my
-          reading. They had the same questions. The contradiction was real.
+          I asked two designers about the spec. Both flagged the same tension
+          I'd seen: one questioned whether it would scale beyond this customer,
+          the other suggested keeping scope to a POC/MVP. Both asked whether
+          in-product editing belonged in the first version. That gave me
+          confidence to escalate.
         </p>
         <p>
           That gave me confidence to bring pointed questions to my PM. Not
