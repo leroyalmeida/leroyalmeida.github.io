@@ -486,11 +486,13 @@ blockquote {
   margin-bottom: 48px;
 }
 
-.summary-item h5 {
+.summary-item .label {
   font-family: var(--font-family);
   font-size: 14px;
   font-weight: 500;
   color: var(--label-color);
+  text-transform: none;
+  letter-spacing: normal;
   margin: 0;
 }
 
