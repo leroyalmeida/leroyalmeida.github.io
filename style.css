@@ -372,7 +372,11 @@ a:hover {
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   margin-top: 1.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+
+.before-after-grid.cols-3 {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .carousel-grid {
@@ -474,7 +478,7 @@ blockquote {
 .project-summary {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 8px;
   padding: 16px;
   border: 1px solid var(--border-color);
   border-radius: 8px;
@@ -486,7 +490,7 @@ blockquote {
   font-size: 14px;
   font-weight: 500;
   color: var(--label-color);
-  margin: 0 0 4px 0;
+  margin: 0;
 }
 
 .summary-item p {
@@ -581,7 +585,7 @@ blockquote {
 }
 
 .section-title {
-  font-size: 24px;
+  font-size: 20px;
   margin-bottom: 16px;
 }
 
@@ -625,4 +629,21 @@ th {
   font-weight: 500;
   color: var(--heading-color);
   font-family: var(--font-family);
+}
+
+.table-container {
+  overflow-x: auto;
+  margin: 24px 0;
+}
+
+.table-container table {
+  margin: 0;
+}
+
+.tradeoff-table .selected-row {
+  background-color: #f0fdf4;
+}
+
+.tradeoff-table .selected-row td {
+  border-color: #86efac;
 }
