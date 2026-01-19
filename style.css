@@ -10,7 +10,7 @@
   --bg-color: #ffffff;
   --text-color: #334155; /* Slate 700 */
   --heading-color: #334155; /* Slate 700 for main header */
-  --label-color: #94a3b8; /* Bluish Gray for labels */
+  --label-color: #64748b; /* Slate 500, 5.6:1 contrast ratio */
   --link-color: #64748b; /* Slate for links */
   --border-color: #e2e8f0;
 
@@ -125,6 +125,37 @@ a {
 a:hover {
   color: var(--heading-color);
   text-decoration-color: var(--heading-color);
+}
+
+/* Focus States */
+:focus-visible {
+  outline: 2px solid var(--heading-color);
+  outline-offset: 2px;
+}
+
+a:focus-visible {
+  text-decoration-color: var(--heading-color);
+}
+
+.card:focus-visible {
+  border-color: var(--heading-color);
+  outline: none;
+}
+
+/* Skip Link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  padding: 8px 16px;
+  background: var(--heading-color);
+  color: var(--bg-color);
+  z-index: 100;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
 }
 
 .muted,
@@ -465,6 +496,14 @@ blockquote {
   letter-spacing: 0;
 }
 
+.back-link svg {
+  color: var(--label-color);
+}
+
+.back-link:hover {
+  color: var(--heading-color);
+}
+
 .case-study-title {
   margin-bottom: 48px;
 }
@@ -644,4 +683,15 @@ th {
 
 .tradeoff-table .selected-row td {
   border-color: #86efac;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

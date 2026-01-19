@@ -2,6 +2,9 @@
  * Applies a random font glitch effect (using stylistic set ss01) to h1 elements on the page.
  */
 document.addEventListener("DOMContentLoaded", () => {
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReducedMotion) return;
+
   const headings = document.querySelectorAll("h1");
 
   headings.forEach((heading) => {
