@@ -159,7 +159,7 @@
       </section>
 
       <section class="section">
-        <h2>The feature nobody asked for</h2>
+        <h2>When customers and strategy collide</h2>
         <p>
           Our CTO had just announced a pivot: simplify dashboards, make AI the
           primary entry point, stop competing with BI tools. Two weeks later,
@@ -167,14 +167,12 @@
           thing: automated PowerPoint generation from dashboards.
         </p>
         <p>
-          The irony wasn't lost on anyone. We'd committed to moving away from
+          The tension was immediate. We'd committed to moving away from
           dashboard-centric design, and now we were being asked to build a
           feature that exports dashboards to PowerPoint.
         </p>
         <p>
-          I thought it was a mistake, and I said so. The feature doubled down on
-          dashboards when leadership had just committed to simplifying them. I
-          asked the question that mattered: were we building for the deliverable
+          I raised the question that mattered: were we building for the deliverable
           (a PowerPoint file) or for the generation (AI reasoning and
           synthesis)? The first felt like traditional BI tooling. The second
           would advance our direction.
@@ -187,37 +185,34 @@
       </section>
 
       <section class="section">
-        <h2>The spec that couldn't decide</h2>
+        <h2>Aligning on what we're actually building</h2>
         <p>
-          The product doc had a tell. The title said "[redacted] Steering
+          The product doc reflected an early-stage tension. The title said "[redacted] Steering
           Committee Reporting," singular and specific. But the user interaction
           diagram showed template selection, dashboard configuration, and
-          mapping interfaces—plural, generic, platform-shaped.
+          mapping interfaces. Plural, generic, platform-shaped.
         </p>
         <p>
           Those two framings required completely different designs. A
           customer-specific solution means hardcoded templates, zero
           configuration UI, and a timeline measured in weeks. A platform feature
-          means selection interfaces, mapping logic, and months of work. The
-          spec was describing both, which meant it was describing neither.
+          means selection interfaces, mapping logic, and months of work. We
+          needed to resolve which one we were building.
         </p>
         <p>
-          I asked two designers about the spec. Both flagged the same tension
-          I'd seen: one questioned whether it would scale beyond this customer,
-          the other suggested keeping scope to a POC/MVP. Both asked whether
-          in-product editing belonged in the first version. That gave me
-          confidence to escalate.
+          I talked through the spec with a few colleagues. They saw the same
+          tension: one questioned whether it would scale beyond this customer,
+          another suggested keeping scope to a POC/MVP. Both asked whether
+          in-product editing belonged in the first version.
         </p>
         <p>
-          That gave me confidence to bring pointed questions to my PM. Not
+          That helped me frame the right questions for my PM. Not
           open-ended "can you clarify the scope" questions, but specific ones:
-          "The flow shows 'Select Dashboards' but scope says customer-specific.
-          Which is the source of truth?"
+          "Is this a platform feature or a customer-specific solution?"
         </p>
         <p>
-          The answer clarified everything. We'd build a hardcoded MVP for this
-          one customer. One button, zero configuration. If it validated the
-          pattern, we'd generalize later.
+          We aligned on a hardcoded MVP for this one customer. One button, zero
+          configuration. If it validated the pattern, we'd generalize later.
         </p>
         <p>Now I had something I could actually design.</p>
       </section>
