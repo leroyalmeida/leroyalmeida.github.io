@@ -308,6 +308,21 @@ a:focus-visible {
   font-weight: 500;
 }
 
+.card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-link:hover {
+  text-decoration: none;
+}
+
+.card-title {
+  font-weight: 500;
+  color: var(--link-color);
+}
+
 .card-header a:hover {
   text-decoration-color: transparent;
 }

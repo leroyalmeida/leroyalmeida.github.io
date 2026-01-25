@@ -111,6 +111,10 @@
               const li = document.createElement("li");
               li.className = "card";
 
+              const a = document.createElement("a");
+              a.href = bookmark.url;
+              a.className = "card-link";
+
               const header = document.createElement("div");
               header.className = "card-header";
 
@@ -120,20 +124,21 @@
               img.src = `https://www.google.com/s2/favicons?domain=${bookmark.displayUrl}&sz=32`;
               img.alt = "";
 
-              const a = document.createElement("a");
-              a.href = bookmark.url;
-              a.textContent = bookmark.title;
+              const title = document.createElement("span");
+              title.className = "card-title";
+              title.textContent = bookmark.title;
 
               header.appendChild(img);
-              header.appendChild(a);
+              header.appendChild(title);
 
               const span = document.createElement("span");
               span.className = "mono";
               span.style.paddingLeft = "28px"; // Align with text after favicon (16px + 12px gap)
               span.textContent = bookmark.displayUrl;
 
-              li.appendChild(header);
-              li.appendChild(span);
+              a.appendChild(header);
+              a.appendChild(span);
+              li.appendChild(a);
               list.appendChild(li);
             });
           })
