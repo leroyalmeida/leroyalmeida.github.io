@@ -180,7 +180,8 @@ a:focus-visible {
 /* Skip Link */
 .skip-link {
   position: absolute;
-  top: -40px;
+  top: 0;
+  transform: translateY(-100%);
   left: 0;
   padding: 8px 16px;
   background: var(--heading-color);
@@ -190,7 +191,7 @@ a:focus-visible {
 }
 
 .skip-link:focus {
-  top: 0;
+  transform: none;
 }
 
 .muted,
