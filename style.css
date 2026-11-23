@@ -7,14 +7,15 @@
 }
 
 /* Dark is the default theme. Contrast vs --bg-color (#0a0a0a):
-   text 11.7:1, heading 16.9:1, label/link 7.7:1 (6.9:1 on surface-hover) */
+   text 8.3:1, heading 19:1, label 6.1:1, link 16:1 */
 :root {
   color-scheme: dark;
   --bg-color: #0a0a0a;
-  --text-color: #c7c7c7;
-  --heading-color: #ededed;
-  --label-color: #a1a1a1;
-  --link-color: #a1a1a1;
+  --text-color: #a8a8a8; /* body, 8.3:1 */
+  --heading-color: #fafafa; /* headings, 19:1 */
+  --label-color: #8f8f8f; /* labels, captions, 6.1:1 */
+  --link-color: #e5e5e5; /* links, 16:1 */
+  --emphasis-color: #fafafa; /* bold text, matches headings */
   --border-color: #262626;
   --surface-color: #141414; /* image boxes, table headers, mockups */
   --surface-hover: #171717; /* card hover */
@@ -37,10 +38,11 @@
 :root[data-theme="light"] {
   color-scheme: light;
   --bg-color: #ffffff;
-  --text-color: #334155; /* Slate 700, 10.4:1 */
-  --heading-color: #334155;
+  --text-color: #64748b; /* Slate 500 body, 4.8:1 */
+  --heading-color: #334155; /* Slate 700 headings, 10.4:1 */
   --label-color: #64748b; /* Slate 500, 4.8:1 on white, 4.6:1 on surface */
-  --link-color: #64748b;
+  --link-color: #334155; /* Slate 700 links, 10.4:1 */
+  --emphasis-color: #334155; /* Slate 700 bold text */
   --border-color: #e2e8f0;
   --surface-color: #f8fafc;
   --surface-hover: #fafafa;
@@ -138,6 +140,12 @@ li {
   max-width: var(--max-width);
   margin-top: 0;
   line-height: 1.5;
+}
+
+strong,
+b {
+  color: var(--emphasis-color);
+  font-weight: 600;
 }
 
 a {
@@ -248,7 +256,7 @@ a:focus-visible {
 
 /* Utility */
 .text-secondary {
-  color: var(--link-color);
+  color: var(--label-color);
 }
 
 /* Logo List (Worked At/On) */
@@ -284,6 +292,10 @@ a:focus-visible {
 /* Social List (Find Me) */
 .social-list {
   display: flex;
+  align-items: center;
+  /* Label sits on the first body line plus .resume-label padding; this height
+     puts the icon centers level with the label's capital letters. */
+  min-height: calc(1.6rem + 0.5rem);
   gap: 8px;
   list-style: none;
   padding: 0;
@@ -291,7 +303,7 @@ a:focus-visible {
 }
 
 .social-list a {
-  display: inline-block;
+  display: flex;
   width: 20px; /* Slightly smaller to match icons */
   height: 20px;
   color: var(--label-color);
