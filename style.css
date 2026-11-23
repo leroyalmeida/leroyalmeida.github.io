@@ -6,13 +6,23 @@
   font-display: swap;
 }
 
+/* Dark is the default theme. Contrast vs --bg-color (#0a0a0a):
+   text 8.3:1, heading 19:1, label 6.1:1, link 16:1 */
 :root {
-  --bg-color: #ffffff;
-  --text-color: #334155; /* Slate 700 */
-  --heading-color: #334155; /* Slate 700 for main header */
-  --label-color: #64748b; /* Slate 500, 5.6:1 contrast ratio */
-  --link-color: #64748b; /* Slate for links */
-  --border-color: #e2e8f0;
+  color-scheme: dark;
+  --bg-color: #0a0a0a;
+  --text-color: #a8a8a8; /* body, 8.3:1 */
+  --heading-color: #fafafa; /* headings, 19:1 */
+  --label-color: #8f8f8f; /* labels, captions, 6.1:1 */
+  --link-color: #e5e5e5; /* links, 16:1 */
+  --emphasis-color: #fafafa; /* bold text, matches headings */
+  --border-color: #262626;
+  --surface-color: #141414; /* image boxes, table headers, mockups */
+  --surface-hover: #171717; /* card hover */
+  --surface-white: #f5f5f5; /* screenshots that need a light backdrop */
+  --success-bg: #052e16;
+  --success-border: #166534;
+  --logo-filter: grayscale(1) invert(1);
 
   --spacing-unit: 1rem;
   --font-family:
@@ -21,15 +31,33 @@
   --label-font: "Geist Mono", monospace;
   --heading-font: "Alpha Lyrae", "Geist", sans-serif;
 
-  --max-width: 600px;
+  --max-width: 640px;
+}
+
+/* Light theme, kept for a future toggle */
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg-color: #ffffff;
+  --text-color: #64748b; /* Slate 500 body, 4.8:1 */
+  --heading-color: #334155; /* Slate 700 headings, 10.4:1 */
+  --label-color: #64748b; /* Slate 500, 4.8:1 on white, 4.6:1 on surface */
+  --link-color: #334155; /* Slate 700 links, 10.4:1 */
+  --emphasis-color: #334155; /* Slate 700 bold text */
+  --border-color: #e2e8f0;
+  --surface-color: #f8fafc;
+  --surface-hover: #fafafa;
+  --surface-white: #ffffff;
+  --success-bg: #f0fdf4;
+  --success-border: #86efac;
+  --logo-filter: none;
 }
 
 body {
   font-family: var(--font-family);
   background-color: var(--bg-color);
   color: var(--text-color);
-  line-height: 1.4;
-  font-size: 14px;
+  line-height: 1.6;
+  font-size: 16px;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
@@ -54,7 +82,7 @@ header {
 h1 {
   font-family: var(--heading-font);
   color: var(--heading-color);
-  font-size: 30px; /* Scaled up from 28px */
+  font-size: 34px;
   font-weight: 500;
   margin-bottom: 0;
   letter-spacing: -0.02em;
@@ -93,7 +121,7 @@ h6,
 p {
   margin-bottom: var(--spacing-unit);
   color: var(--text-color);
-  line-height: 1.4;
+  line-height: 1.6;
 }
 
 ul,
@@ -103,15 +131,21 @@ ol {
 
 li {
   /* margin-bottom: 8px; */
-  line-height: 1.4;
+  line-height: 1.6;
 }
 
 .lead {
   font-size: 1.1rem;
   color: var(--text-color);
-  max-width: 600px;
+  max-width: var(--max-width);
   margin-top: 0;
-  line-height: 1.35;
+  line-height: 1.5;
+}
+
+strong,
+b {
+  color: var(--emphasis-color);
+  font-weight: 600;
 }
 
 a {
@@ -173,6 +207,7 @@ a:focus-visible {
 .resume-row {
   display: flex;
   flex-direction: row;
+  align-items: baseline; /* label sits on the first line of text */
   gap: 16px;
   margin-bottom: 24px; /* Tighter spacing per Framer snippet */
 }
@@ -180,7 +215,17 @@ a:focus-visible {
 .resume-label {
   width: 120px;
   flex-shrink: 0;
-  padding-top: 0.2rem; /* Adjusted for 1.5 line-height */
+}
+
+/* Icon rows have no text baseline, so center the label on the first row of
+   icons instead: both get a 20px line at the top of the row. */
+.resume-row:has(.logo-list, .social-list) {
+  align-items: flex-start;
+}
+
+.resume-row:has(.logo-list, .social-list) .resume-label .label {
+  display: block;
+  line-height: 20px;
 }
 
 .resume-content {
@@ -222,7 +267,7 @@ a:focus-visible {
 
 /* Utility */
 .text-secondary {
-  color: var(--link-color);
+  color: var(--label-color);
 }
 
 /* Logo List (Worked At/On) */
@@ -251,12 +296,14 @@ a:focus-visible {
   width: auto; /* Width auto to maintain aspect ratio */
   object-fit: contain;
   opacity: 0.8;
+  filter: var(--logo-filter);
   transition: all 0.3s ease-in-out;
 }
 
 /* Social List (Find Me) */
 .social-list {
   display: flex;
+  align-items: center;
   gap: 8px;
   list-style: none;
   padding: 0;
@@ -264,7 +311,7 @@ a:focus-visible {
 }
 
 .social-list a {
-  display: inline-block;
+  display: flex;
   width: 20px; /* Slightly smaller to match icons */
   height: 20px;
   color: var(--label-color);
@@ -299,7 +346,7 @@ a:focus-visible {
 }
 
 .card:hover {
-  background-color: #fafafa;
+  background-color: var(--surface-hover);
   transform: translateY(-2px);
 }
 
@@ -332,7 +379,7 @@ a:focus-visible {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  opacity: 0.7;
+  opacity: 0.85; /* keeps >=4.5:1 on dark bg */
 }
 
 .card-header {
@@ -419,6 +466,109 @@ a:focus-visible {
   color: var(--label-color);
 }
 
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* Theme picker: footer button + popover menu (scripts/theme.js) */
+.theme-picker {
+  position: relative;
+}
+
+.theme-button {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  margin-right: -8px; /* optically align the icon with the content edge */
+  padding: 0;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--label-color);
+  cursor: pointer;
+  transition:
+    color 150ms ease,
+    background-color 150ms ease;
+}
+
+.theme-button:hover,
+.theme-button[aria-expanded="true"] {
+  color: var(--heading-color);
+  background-color: var(--surface-color);
+}
+
+.theme-button:focus-visible,
+.theme-option:focus-visible {
+  outline: 2px solid var(--link-color);
+  outline-offset: 2px;
+}
+
+.theme-menu {
+  position: absolute;
+  right: -8px;
+  bottom: calc(100% + 8px);
+  z-index: 50;
+  min-width: 152px;
+  padding: 4px;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  background-color: var(--bg-color);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.24);
+}
+
+.theme-menu[hidden] {
+  display: none;
+}
+
+.theme-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 8px 10px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text-color);
+  font: inherit;
+  font-size: 0.875rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.theme-option:hover,
+.theme-option:focus-visible {
+  background-color: var(--surface-color);
+  color: var(--heading-color);
+}
+
+.theme-option[aria-checked="true"] {
+  color: var(--heading-color);
+}
+
+.theme-option-label {
+  flex: 1;
+}
+
+.theme-option-check {
+  display: flex;
+  visibility: hidden;
+}
+
+.theme-option[aria-checked="true"] .theme-option-check {
+  visibility: visible;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-button {
+    transition: none;
+  }
+}
+
 .before-after-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -461,7 +611,7 @@ a:focus-visible {
 }
 
 .caption {
-  font-size: 12px;
+  font-size: 13px;
   color: var(--label-color);
   margin-top: 0.5rem;
   text-align: center;
@@ -487,8 +637,8 @@ a:focus-visible {
 blockquote {
   margin: 0;
   font-style: italic;
-  font-size: 1.1rem;
-  line-height: 1.35;
+  font-size: 1.125rem;
+  line-height: 1.5;
 }
 
 @media (max-width: 600px) {
@@ -529,10 +679,10 @@ blockquote {
 }
 
 .case-study-title p {
-  font-size: 16px;
+  font-size: 18px;
   color: var(--label-color);
   margin-top: 8px;
-  line-height: 1.35;
+  line-height: 1.5;
 }
 
 .project-summary {
@@ -547,17 +697,17 @@ blockquote {
 
 .summary-item .label {
   font-family: var(--font-family);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
-  color: var(--label-color);
+  color: var(--heading-color);
   text-transform: none;
   letter-spacing: normal;
   margin: 0;
 }
 
 .summary-item p {
-  font-size: 14px;
-  line-height: 1.4;
+  font-size: 16px;
+  line-height: 1.6;
   margin: 0;
 }
 
@@ -570,9 +720,9 @@ blockquote {
 }
 
 .challenge-box blockquote {
-  font-size: 16px;
+  font-size: 18px;
   font-style: italic;
-  line-height: 1.4;
+  line-height: 1.5;
   text-align: left;
   margin: 0;
 }
@@ -583,7 +733,7 @@ blockquote {
 }
 
 .image-aspect-box {
-  background-color: #f8fafc;
+  background-color: var(--surface-color);
   border: 1px solid var(--border-color);
   border-radius: 12px;
   overflow: hidden;
@@ -595,7 +745,7 @@ blockquote {
 }
 
 .image-aspect-box.white-bg {
-  background-color: #fff;
+  background-color: var(--surface-white);
 }
 
 .image-aspect-box img {
@@ -631,7 +781,7 @@ blockquote {
 }
 
 .mockup-container {
-  background-color: #f8fafc;
+  background-color: var(--surface-color);
   border: 1px solid var(--border-color);
   border-radius: 12px;
   padding: 32px 0;
@@ -653,7 +803,7 @@ blockquote {
 
 .case-study-content li {
   /* margin-bottom: 12px; */
-  line-height: 1.4;
+  line-height: 1.6;
 }
 
 .case-study-content li p {
@@ -669,7 +819,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin: 24px 0;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 th,
@@ -678,11 +828,11 @@ td {
   padding: 12px;
   text-align: left;
   vertical-align: top;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 th {
-  background-color: #f8fafc;
+  background-color: var(--surface-color);
   font-weight: 500;
   color: var(--heading-color);
   font-family: var(--font-family);
@@ -698,11 +848,11 @@ th {
 }
 
 .tradeoff-table .selected-row {
-  background-color: #f0fdf4;
+  background-color: var(--success-bg);
 }
 
 .tradeoff-table .selected-row td {
-  border-color: #86efac;
+  border-color: var(--success-border);
 }
 
 /* Reduced Motion */

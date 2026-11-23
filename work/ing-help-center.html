@@ -1,7 +1,8 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <script src="../scripts/theme.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ING Help Center - Leroy Almeida</title>
     <link rel="icon" type="image/png" href="../favicon.png" />
@@ -27,7 +28,7 @@
       rel="canonical"
       href="https://leroyalmeida.github.io/work/ing-help-center.html"
     />
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#0a0a0a" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article" />
@@ -54,6 +55,10 @@
     />
 
     <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../styles/toc.css" />
+    <link rel="stylesheet" href="../styles/strewn.css" />
+    <script src="../scripts/toc.js" defer></script>
+    <script src="../scripts/strewn.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -101,7 +106,7 @@
               stroke-linejoin="round"
             />
           </svg>
-          <span class="label mono">Home</span>
+          <span class="label mono">Back</span>
         </a>
         <div class="case-study-title">
           <h1>ING Help Center</h1>
@@ -140,34 +145,22 @@
       </div>
 
       <section>
-        <p>ING Philippines' has two 24/7-customer service channels.</p>
         <p>
-          First is In-app Messages. This functions a lot like emails or SMS
-          messages where customers can send a message and can come back to it
-          later. These in-app messages are usually responded to within 24 hours.
+          ING Philippines has two 24/7 customer service channels. In-app
+          Messages work like email: customers send a message and get a reply,
+          usually within 24 hours. Live Chat is for urgent concerns, where a
+          customer care agent helps resolve the issue in real time.
         </p>
         <p>
-          The second channel is Live Chat. This is the channel for urgent
-          concerns where customers can get the help of a customer care agent to
-          resolve their issues.
+          The problem was that customers often waited ~10 minutes or more to
+          reach an agent on Live Chat. That's a bad experience when you're
+          trying to report fraudulent or unauthorized transactions.
         </p>
         <p>
-          The problem with Live Chat is customers often wait ~10 minutes (or
-          more) to talk to a customer care agent. This wait is a very unpleasant
-          experience, especially if you have an urgent issue that is
-          time-critical, like reporting fraudulent or unauthorized transactions.
-        </p>
-        <p>
-          Another problem is that reaching out via Live Chat became the
-          preferred channel. This happened because customers were often unable
-          to find solutions in the FAQ or in the website. And, since there is no
-          prioritization functionality in the chat, a lot of the "trivial"
-          queries sent through the Live Chat occupied customer agents' time and
-          effort.
-        </p>
-        <p>
-          Because of the growing concerns around providing quality customer
-          service, ING's leadership challenged us with the following:
+          Live Chat had also become the default channel, because customers
+          couldn't find answers in the FAQ or on the website. With no way to
+          prioritize chats, "trivial" queries took up agents' time. So ING's
+          leadership challenged us with this:
         </p>
       </section>
 
@@ -184,12 +177,12 @@
           <li>
             <strong>Primary:</strong> When a user with an issue contacts
             support, I want to address their issue as fast as possible so that
-            they can get back to doing whatever they need to get done.
+            they can get back to whatever they need to get done.
           </li>
           <li>
             <strong>Secondary:</strong> When a user contacts the bank about an
-            issue, I want the experience to be pleasant and seamless so that
-            they feel that they are taken care of by ING.
+            issue, I want the experience to be pleasant so that they feel taken
+            care of by ING.
           </li>
         </ul>
       </section>
@@ -199,367 +192,276 @@
         <ul>
           <li>
             <strong>Provide support as fast as possible:</strong> Customers
-            should not be spending too much time waiting for an answer.
+            shouldn't spend long waiting for an answer.
           </li>
           <li>
-            <strong>Provide correct and helpful answers the first time:</strong>
-            We don't want customers repeatedly coming back for the same issue.
-            As much as possible, we want to solve it the first time around.
+            <strong>Get it right the first time:</strong> We don't want
+            customers coming back for the same issue.
           </li>
           <li>
-            <strong>Minimize the time it takes to provide a solution:</strong>
-            We want to resolve the issue as fast as possible. If the issue has
-            no true solution, we try to alleviate the customer's concern.
+            <strong>Minimize the time to a solution:</strong> If an issue has no
+            true solution, we try to ease the customer's concern.
           </li>
           <li>
             <strong
               >Drive activation, retention, and engagement metrics:</strong
             >
-            Our solution should prove that it can impact the metrics that
-            matter.
+            The solution should move the metrics that matter.
           </li>
         </ul>
       </section>
 
       <section>
-        <h2>Issues</h2>
+        <h2>Why customers ended up waiting</h2>
 
-        <h3>Frequently Asked Questions (FAQs) are not easily accessible</h3>
+        <h3>FAQs were hard to find</h3>
         <p>
-          When we interviewed a few customers, 11 out of 12 said that they'd
-          look at the available self-service options first before reaching out
-          to customer support.
-        </p>
-        <p>
-          But when using the ING app, customers often went to ING's
-          communication channels, Live Chat and Send a Message, and barely used
-          the self-service option.
-        </p>
-        <p>
-          When I investigated why customers barely used FAQs, I learned that the
-          entry point to FAQs was barely noticeable by customers. There were
-          several reasons for this:
+          In interviews, 11 out of 12 customers said they'd try self-service
+          before contacting support. But in the app, they went straight to Live
+          Chat and Send a Message and barely touched the FAQs. When I dug into
+          why, the FAQ entry point turned out to be nearly invisible:
         </p>
         <ul>
           <li>
-            <strong>Poor placement:</strong> The entry point was at the top
-            right of the screen. This part of the screen is often overlooked.
+            <strong>Poor placement:</strong> It sat at the top right of the
+            screen, an often-overlooked spot.
           </li>
           <li>
-            <strong>Poor contrast:</strong> The thin line icon contrasted
-            horribly against the bright orange background of the header. It even
-            failed contrast tests, yikes.
+            <strong>Poor contrast:</strong> The thin line icon on the bright
+            orange header failed contrast tests. Yikes.
           </li>
           <li>
             <strong>The floating action button has more affordance:</strong> The
-            call-to-action for the communication channels is a very visible
-            bright orange button contrasting against a white background. It is
-            also placed at the bottom left of the screen which is very near to
-            the thumbs making it very easy to click. tldr; very very very easy
-            to click.
+            button for the messaging channels was bright orange on white, at the
+            bottom left within easy reach of the thumb. Very, very easy to tap.
           </li>
         </ul>
 
-        <div class="image-container">
-          <div class="image-aspect-box">
-            <img src="../images/ing-help-center/01.webp" alt="ING Help Center showing poor visibility of FAQ entry point" />
-          </div>
-          <p class="caption">
-            The entry point to FAQs was poorly placed and had low contrast
-            against the orange header
-          </p>
+        <div class="strewn">
+          <figure>
+            <img
+              src="../images/ing-help-center/01.webp"
+              alt="ING Help Center showing poor visibility of FAQ entry point"
+            />
+            <figcaption>
+              The entry point to FAQs was poorly placed and had low contrast
+              against the orange header
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              src="../images/ing-help-center/02.webp"
+              alt="ING Help Center with messaging options more prominent than self-service"
+            />
+            <figcaption>
+              When opening Help Center, the messaging options are more prominent
+              than self-service options
+            </figcaption>
+          </figure>
         </div>
 
-        <div class="image-container">
-          <div class="image-aspect-box">
-            <img src="../images/ing-help-center/02.webp" alt="ING Help Center with messaging options more prominent than self-service" />
-          </div>
-          <p class="caption">
-            When opening Help Center, the messaging options are more prominent
-            than self-service options
-          </p>
-        </div>
-
-        <h3>Self-service content and structure are not updated</h3>
+        <h3>Self-service content was out of date</h3>
         <p>
-          The content in the app's FAQ section was made by the Marketing team.
-          They made it in anticipation of what customers might ask. It also
-          hasn't been updated since the app was launched two years ago.
-        </p>
-        <p>
-          The Help content in the app was also different from that in the
-          website, because the website was more frequently updated by the
-          Marketing team.
+          Marketing wrote the app's FAQs before launch, guessing at what
+          customers might ask, and hadn't updated them in the two years since.
+          The website's help content was updated more often, so the two no
+          longer matched.
         </p>
 
-        <h3>
-          Chat transcripts between bank and the customer are not automatically
-          saved
-        </h3>
+        <h3>Chat transcripts weren't saved automatically</h3>
         <p>
-          As a regulatory requirement, the bank needs to be able to keep records
-          of its communications with a customer.
-        </p>
-        <p>
-          Because the chat tool doesn't automatically save the transcript of a
-          conversation between bank and customer, agents need to copy and record
-          this manually. This creates a lot of extra work for customer agents
-          and adds an unnecessary 2-3 minutes to their average handling time.
+          Regulations require the bank to keep records of its conversations
+          with customers. The chat tool didn't save transcripts, so agents
+          copied them by hand, adding 2-3 minutes to their average handling
+          time.
         </p>
 
-        <h3>Agents can only talk to one customer at a time</h3>
+        <h3>Agents could only talk to one customer at a time</h3>
         <p>
-          The existing chat platform allowed an agent to speak to only one
-          customer at a time. The bank usually had 3-4 customer care agents
-          available at any time and these agents could answer queries at an
-          average handling time of ~15 minutes. This meant that, if more than 4
-          customers sent a question via Live Chat at the same time, some of
-          these customers would need to wait to talk to a customer care agent.
+          The bank usually had 3-4 agents available, each averaging ~15 minutes
+          per chat. If more than 4 customers reached out at once, the rest had
+          to wait.
         </p>
 
-        <h3>
-          Customer's messages are only received by the bank once a "connection"
-          has been established
-        </h3>
+        <h3>Messages only arrived once a "connection" was made</h3>
         <p>
-          This was a technical limitation of the chat platform we were using. As
-          an effect of this limitation and the previous cited issue—i.e., being
-          able to talk to only customer at a time—customer's often need to
-          actively wait for an agent to be connected.
-        </p>
-        <p>
-          This "active waiting time" meant that customers needed to keep their
-          app session alive by tapping on the screen. Otherwise, they get
-          disconnected from the chat and they have to reconnect and queue again.
+          Because of a technical limitation of the chat platform, customers had
+          to actively wait for an agent to connect, tapping the screen to keep
+          their session alive. If the session timed out, they were disconnected
+          and had to queue again.
         </p>
       </section>
 
       <section>
-        <h2>Solutions</h2>
+        <h2>Five fixes, weighed by impact and effort</h2>
         <p>
-          There wasn't one solution that would solve all the issues we have. The
-          leadership team wanted to have a chatbot but it wasn't something that
-          could be implemented quickly.
+          No single fix would solve everything. Leadership wanted a chatbot, but
+          that couldn't ship quickly. So we looked at a range of improvements
+          and judged each one on how well it served our jobs to be done, how
+          much it changed the existing product, and how much effort it took to
+          build.
         </p>
-        <p>
-          So, we looked at several improvements which varied in terms of impact
-          and effort required. When thinking about possible solutions, we
-          considered the following:
-        </p>
-        <ul>
-          <li>How effective is it against the jobs-to-be done we set?</li>
-          <li>What's the level of change necessary to our existing product?</li>
-          <li>What's the effort to build this?</li>
-        </ul>
 
         <h3>Make FAQs more accessible</h3>
         <p>
-          I redesigned the FAQs to be the first touchpoint for customers looking
-          to get support. This way, customers are encouraged to look for answers
-          to their issues first before contacting support. This is aligned with
-          our guiding principle of providing support as fast as possible and
-          minimizing the time to provide a solution.
+          I redesigned Help Center so FAQs are the first thing customers see,
+          encouraging them to look for answers before contacting support.
         </p>
         <p>
           A few stakeholders wanted to actively discourage customers from using
-          Live Chat. I disagreed with this. We should not discourage customers
-          from immediately reaching out to get support from agents.
-        </p>
-        <p>
-          While we want customers to self-serve first, we also recognize that
-          there are occasions where getting human assistance is better—like,
-          reporting a fraud or blocking a card. In these kinds of
-          "high-touchpoint, high-urgency" scenarios, customers should be getting
-          the correct help as fast as possible.
+          Live Chat. I disagreed. We want customers to self-serve first, but
+          for "high-touchpoint, high-urgency" cases like reporting fraud or
+          blocking a card, they should reach a human as fast as possible.
         </p>
         <p class="muted">
-          This solution was a 2/5 on the level-of-change scale, a 2/5 on the
-          effort scale, and a 5/5 on the impact scale.
+          Level of change 2/5, effort 2/5, impact 5/5.
         </p>
 
-        <div class="image-container">
-          <div class="image-aspect-box">
+        <div class="strewn">
+          <figure>
             <img src="../images/ing-help-center/03.webp" alt="Iterations" />
-          </div>
-          <p class="caption">Iterations of the Help Center page</p>
-        </div>
-
-        <div class="image-container">
-          <div class="image-aspect-box">
+            <figcaption>Iterations of the Help Center page</figcaption>
+          </figure>
+          <figure>
             <img src="../images/ing-help-center/04.webp" alt="Self-service" />
-          </div>
-          <p class="caption">
-            Self-service options are now the first thing customers see when they
-            visit Help Center
-          </p>
+            <figcaption>
+              Self-service options are now the first thing customers see when
+              they visit Help Center
+            </figcaption>
+          </figure>
         </div>
 
         <h3>Improve Help content and structure</h3>
         <p>
-          We studied how different apps and digital banks structure their help
-          sections. We looked at apps like Grab, Citibank, Revolut to see how
-          they structured their Help content. We did this to understand what
-          patterns already exist and are well-understood by our customers.
-        </p>
-        <p>
-          And then we analyzed the current state of our Help content—what
-          customers were frequently asking and what was currently on our
-          website—and compared it to what we wanted the structure to be.
+          We studied how apps like Grab, Citibank, and Revolut structure their
+          help sections, to learn which patterns our customers already
+          understood. Then we compared what customers frequently asked and
+          what was on our website against the structure we wanted.
         </p>
         <p class="muted">
-          This solution was a 1/5 on the level-of-change scale, a 2/5 on the
-          effort scale, and a 3/5 on the impact scale. This was also a
-          pre-requisite to the Chatbot effort.
+          Level of change 1/5, effort 2/5, impact 3/5. This was also a
+          prerequisite for the chatbot.
         </p>
 
-        <div class="image-container">
-          <div class="image-aspect-box white-bg">
+        <div class="strewn">
+          <figure
+            data-left="0.06"
+            data-top="0.18"
+            data-width="0.58"
+            data-rotate="-1.5"
+          >
             <img src="../images/ing-help-center/05.webp" alt="Benchmarking" />
-          </div>
-          <p class="caption">
-            I cross-referenced what we currently had in the app with what we had
-            in the website and benchmarked it against Help content from other
-            commonly used financial apps
-          </p>
-        </div>
-
-        <div class="image-container">
-          <div class="image-aspect-box white-bg tall">
+            <figcaption>
+              I cross-referenced what we had in the app with what we had on the
+              website and benchmarked it against Help content from other
+              commonly used financial apps
+            </figcaption>
+          </figure>
+          <figure
+            data-left="0.7"
+            data-top="0.02"
+            data-width="0.19"
+            data-rotate="1.5"
+          >
             <img
               src="../images/ing-help-center/06_information architecture.webp"
               alt="IA"
             />
-          </div>
-          <p class="caption">
-            With help from our UX writer, I restructured the information
-            architecture of our Help content for both app and the website
-          </p>
+            <figcaption>
+              With help from our UX writer, I restructured the information
+              architecture of our Help content for both the app and the website
+            </figcaption>
+          </figure>
         </div>
 
         <h3>Add chat history</h3>
         <p>
-          Customer experience-wise, adding chat history allowed customers to
-          view their past chats with the bank. This was helpful because,
-          previously, chat conversations containing instructions or possible
-          solutions would disappear when the chat ended. Now they are kept in a
-          single, easy-to-access location.
+          Previously, chats with instructions or solutions disappeared when
+          they ended. Chat history keeps them in one place for customers, and
+          lets agents see past conversations without leaving the current one.
         </p>
         <p>
-          For banking operations, adding chat history allowed agents to view
-          past conversations the customer had with the bank without navigating
-          away from their current conversation with the customer.
-        </p>
-        <p>
-          Adding chat history also reduced each agent's after-chat work like
-          copying the chat transcript or re-sending instructions to customers
-          via in-app message so that it didn't disappear after the chat ended.
-          In total, after-chat work took up ~1 hour of each agent's time every
-          day.
-        </p>
-        <p>
-          Overall, this improvement helped decrease the average handling time
-          which, in effect, allowed customer agents to service more customers
-          per day.
+          It also cut agents' after-chat work, like copying transcripts or
+          re-sending instructions by in-app message, which took ~1 hour of each
+          agent's day. Lower handling time meant agents could help more
+          customers per day.
         </p>
         <p class="muted">
-          This solution was a 2/5 on the level-of-change scale, a 3/5 on the
-          effort scale, and a 5/5 on the impact scale.
+          Level of change 2/5, effort 3/5, impact 5/5.
         </p>
 
-        <div class="image-container">
-          <div class="image-aspect-box">
+        <div class="strewn">
+          <figure>
             <img
               src="../images/ing-help-center/07_add chat history.webp"
               alt="Chat History"
             />
-          </div>
-          <p class="caption">
-            Customers can now keep track of their previews chats with the bank
-          </p>
+            <figcaption>
+              Customers can now keep track of their previous chats with the
+              bank
+            </figcaption>
+          </figure>
         </div>
 
         <h3>Make the chat asynchronous</h3>
         <p>
-          We want to eliminate the time our customers spend actively waiting for
-          an agent to get connected to them. Customers should be able to put
-          aside their phone and continue on with their life while waiting for a
-          response from the bank.
-        </p>
-        <p>
-          Synchronous chat means that customers and customer care agents have to
-          be "connected" to send or receive messages successfully. Making the
-          chat asynchronous means that customers can send their messages without
-          waiting for an agent to get connected and that agents—once they are
-          available and are connected to the customer—can read the messages the
-          customer sent.
+          We wanted to eliminate active waiting, so customers could put their
+          phone down while waiting for the bank. With asynchronous chat,
+          customers send messages without waiting for an agent to connect, and
+          the agent reads them once they're available.
         </p>
         <p class="muted">
-          This solution was a 5/5 on the level-of-change scale, a 5/5 on the
-          effort scale, and a 5/5 on the impact scale.
+          Level of change 5/5, effort 5/5, impact 5/5.
         </p>
 
-        <div class="image-container">
-          <div class="image-aspect-box">
+        <div class="strewn">
+          <figure>
             <img
               src="../images/ing-help-center/08_Make chat async.webp"
               alt="Async Chat"
             />
-          </div>
-          <p class="caption">
-            Asynchronous chat allows customers to move in and out of their chats
-            without the session getting disconnected or timing out
-          </p>
+            <figcaption>
+              Asynchronous chat allows customers to move in and out of their
+              chats without the session getting disconnected or timing out
+            </figcaption>
+          </figure>
         </div>
 
         <h3>Add a chatbot</h3>
         <p>
-          We made a chatbot! (This was a lot of work, so it really needs a
-          separate case study.)
+          We made a chatbot! (It was a lot of work and really needs its own
+          case study.)
         </p>
         <p>
-          Customers still tend to reach out to customer support even if answers
-          to their questions are available in the FAQs section.
+          Customers still reached out to support even when the answer was in
+          the FAQs. The chatbot surfaces relevant FAQs right in the
+          conversation. This is the main reason we restructured our Help
+          content: it had to be concise and reusable across Help Center, the
+          website, and the chatbot. Since Live Chat also integrates with FB
+          Messenger, the ideal end state is the chatbot surfacing FAQs there
+          too.
         </p>
         <p>
-          Adding a chatbot allowed ING to surface relevant FAQs in a user's chat
-          conversation with the bank. This aligns with our guiding principle of
-          providing support as fast as possible.
-        </p>
-        <p>
-          And, this was actually one of the main reasons why we needed to
-          restructure our Help content. We needed Help content that was concise
-          and reusable across the Help Center, the website, AND the chatbot.
-        </p>
-        <p>
-          ING Philippines' Live Chat functionality also integrates with FB
-          Messenger. In the ideal end state, the chatbot is be able to surface
-          FAQs in FB Messenger as well.
-        </p>
-        <p>
-          Finally, adding a chatbot allowed prioritization of customer issues or
-          concerns by "filtering" inquiries that are answerable through the
-          FAQs. With the chatbot, we could provide faster support to concerns
-          like someone hacking a customer account over less urgent ones like
-          inquiries about a delayed check deposit. This will help minimize the
-          time to provide customer's a resolution.
+          The chatbot also lets us prioritize by filtering out questions the
+          FAQs can answer, so urgent concerns like a hacked account get faster
+          help than a question about a delayed check deposit.
         </p>
         <p class="muted">
-          This solution was a 5/5 on the level-of-change scale, a 5/5 on the
-          effort scale, and a 5/5 on the impact scale.
+          Level of change 5/5, effort 5/5, impact 5/5.
         </p>
 
-        <div class="image-container">
-          <div class="image-aspect-box">
+        <div class="strewn">
+          <figure>
             <img
               src="../images/ing-help-center/09_add chatbot.webp"
               alt="Chatbot"
             />
-          </div>
-          <p class="caption">
-            Chatbot surfaces FAQs that are relevant to the customer's inquiry. A
-            feedback mechanism is present in case the surfaced FAQ isn't helpful
-            and the customer requires further assistance
-          </p>
+            <figcaption>
+              The chatbot surfaces FAQs relevant to the customer's inquiry, with
+              a feedback option if the answer isn't helpful and they need more
+              assistance
+            </figcaption>
+          </figure>
         </div>
       </section>
 
@@ -567,12 +469,12 @@
         <h2>Key learnings</h2>
         <ul>
           <li>
-            Having product analytics would have allowed us to measure early if
-            we were on the right track.
+            Product analytics would have told us early whether we were on the
+            right track.
           </li>
           <li>
             Sitting beside the customer care team is one of the fastest ways to
-            learn about gaps.
+            find gaps.
           </li>
           <li>
             Collaborate with designers, engineers, and product stakeholders
@@ -583,12 +485,12 @@
             features.
           </li>
           <li>
-            Micro-interactions are extremely helpful in communicating small,
-            important nuances.
+            Micro-interactions are great for communicating small, important
+            nuances.
           </li>
           <li>
-            For customer support features, it's important that the experience is
-            fast and the communication is clear.
+            For customer support features, the experience has to be fast and
+            the communication clear.
           </li>
         </ul>
       </section>
@@ -602,5 +504,6 @@
 
     <script src="../scripts/font-glitch.js"></script>
     <script src="../scripts/dynamic-footer.js"></script>
+    <script src="../scripts/back-link.js"></script>
   </body>
 </html>
