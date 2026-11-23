@@ -26,7 +26,7 @@
       rel="canonical"
       href="https://leroyalmeida.github.io/work/kumu-app-navigation.html"
     />
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#0a0a0a" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article" />
@@ -60,6 +60,10 @@
 
     <link rel="icon" type="image/png" href="../favicon.png" />
     <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../styles/toc.css" />
+    <link rel="stylesheet" href="../styles/strewn.css" />
+    <script src="../scripts/toc.js" defer></script>
+    <script src="../scripts/strewn.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -152,34 +156,27 @@
       <section class="section">
         <p>
           At the time, Kumu was the largest social entertainment app in the
-          Philippines. It had +10 million users (82% Millennial and GenZ)
-          visiting 60 million times per month. Our users average over an hour
-          per day on the app, supporting thousands of income-earning Creators in
-          50+ countries around the world.
+          Philippines: 10+ million users (82% Millennial and GenZ), 60 million
+          visits a month, and over an hour a day per user, supporting thousands
+          of income-earning Creators in 50+ countries.
         </p>
         <p>
-          Surveys run by the UX research team showed that newly onboarded users
-          downloaded the app because they saw it in social media ads and they
-          heard it being recommended by Filipino celebrities. They heard that it
-          was a livestreaming app but they didn't understand yet what they could
-          use it for. So, one of our challenges has been onboarding
-          new users and helping them experience the fun of making authentic
-          connections in Kumu.
+          New users came from social media ads and celebrity recommendations.
+          They knew Kumu was a livestreaming app but not what to use it for, so
+          onboarding them was one of our biggest challenges.
         </p>
 
-        <h2>Why this mattered for business</h2>
+        <h2>Why confused users cost money</h2>
         <p>
-          Confused new users meant lost revenue opportunities. Users who
-          couldn't find key features like Wallet, Missions, or Notifications
-          were less likely to engage with monetization touchpoints or build the
-          habits that drive retention. With Kumu investing heavily in user
-          acquisition through celebrity partnerships and social media ads, every
-          churned user represented wasted marketing spend.
+          Users who couldn't find Wallet, Missions, or Notifications were less
+          likely to spend or build habits that drive retention. With Kumu
+          spending heavily on acquisition, every churned user was wasted
+          marketing money.
         </p>
         <p>
-          Our hypothesis: improving the information architecture would increase
-          feature adoption and reduce new user churn by making the app's value
-          proposition clearer from the first session.
+          Our hypothesis: a better information architecture would raise feature
+          adoption and reduce new user churn by making the app's value clear
+          from the first session.
         </p>
       </section>
 
@@ -191,43 +188,39 @@
       </div>
 
       <section class="section">
-        <h2>What We Knew</h2>
+        <h2>What research and data told us</h2>
 
         <h3>
           New users want to establish a mental model of the app
         </h3>
         <p>
-          Looking at app reviews, we saw that “confusion” was a common sentiment
-          from new users. And, based on research conducted by the UX research
-          team, we also learned that new users felt the homepage was
-          overwhelming. They would spend hours scrolling through the homepage
-          and joining streams to try to understand how to use Kumu.
-        </p>
-        <p>
-          This was supported by data too. We saw that one of the first things
-          new users did was click around, explore the app, and try to get a
-          feel of what Kumu is and what they could do here.
+          “Confusion” kept coming up in app reviews. UX research found new users
+          felt the homepage was overwhelming and spent hours scrolling and
+          joining streams to figure Kumu out. Analytics showed the same thing:
+          new users' first move was clicking around to explore.
         </p>
 
-        <div class="case-study-item">
-          <img
-            src="../images/kumu-app-navigation/user-behavior-search.png"
-            alt="A high percentage of new and existing users use Search, the side menu, Missions, and Social TV"
-          />
-          <p class="caption">
-            A high percentage of new and existing users use Search, the side
-            menu, Missions, and Social TV
-          </p>
-        </div>
-        <div class="case-study-item">
-          <img
-            src="../images/kumu-app-navigation/user-behavior-explore.png"
-            alt="A high percentage of new users explore Search, Discover, the side menu, Missions, and Social TV."
-          />
-          <p class="caption">
-            A high percentage of new users explore Search, Discover, the side
-            menu, Missions, and Social TV.
-          </p>
+        <div class="strewn">
+          <figure data-left="0.02" data-top="0.04" data-width="0.6">
+            <img
+              src="../images/kumu-app-navigation/user-behavior-search.png"
+              alt="A high percentage of new and existing users use Search, the side menu, Missions, and Social TV"
+            />
+            <figcaption>
+              A high percentage of new and existing users use Search, the side
+              menu, Missions, and Social TV
+            </figcaption>
+          </figure>
+          <figure data-left="0.38" data-top="0.3" data-width="0.6">
+            <img
+              src="../images/kumu-app-navigation/user-behavior-explore.png"
+              alt="A high percentage of new users explore Search, Discover, the side menu, Missions, and Social TV."
+            />
+            <figcaption>
+              A high percentage of new users explore Search, Discover, the side
+              menu, Missions, and Social TV.
+            </figcaption>
+          </figure>
         </div>
 
         <div class="challenge-box">
@@ -246,65 +239,40 @@
         <h3>
           Kumu's app information architecture was poor
         </h3>
-        <div class="before-after-grid cols-3">
-          <div class="case-study-item">
+        <div class="strewn">
+          <figure>
             <img
               src="../images/kumu-app-navigation/homepage-before.webp"
               alt="Original homepage"
             />
-            <p class="caption">Homepage</p>
-          </div>
-          <div class="case-study-item">
+            <figcaption>Homepage</figcaption>
+          </figure>
+          <figure>
             <img
               src="../images/kumu-app-navigation/side-menu-before.webp"
               alt="Original side menu"
             />
-            <p class="caption">Side Menu</p>
-          </div>
-          <div class="case-study-item">
+            <figcaption>Side Menu</figcaption>
+          </figure>
+          <figure>
             <img
               src="../images/kumu-app-navigation/profile-menu-before.webp"
               alt="Original Profile in the main navigation"
             />
-            <p class="caption">Profile Menu in main navigation</p>
-          </div>
+            <figcaption>Profile Menu in main navigation</figcaption>
+          </figure>
         </div>
 
         <p>
-          Screenshots above show what new users would’ve seen on the Homepage,
-          the Side Menu, and the Profile Menu. Notice duplicate menu items like
-          Campaigns, Missions, and Leaderboard.
+          Campaigns, Missions, and Leaderboard each appeared in more than one of
+          these menus, and our onboarding tour left the jargon unexplained.
+          Users asked what Following, Hot, Multi, Klips, and Campaigns meant,
+          and whether the Missions in the Profile menu was different from the
+          one in the side menu.
         </p>
         <p>
-          Even though we provided new users with a quick onboarding tour, there
-          was a lot of jargon left unexplained. When we talked to our users,
-          these were some of the common sentiments:
-        </p>
-        <ul>
-          <li>
-            (From the homepage) What does Following mean? What are Hot, New,
-            Multi, Audio, and Teams? What do the icons in the bottom navigation
-            mean?
-          </li>
-          <li>
-            (From the side menu) What are Campaigns, Klips, Leaderboard, and
-            Missions?
-          </li>
-          <li>
-            (From the Profile menu) This isn’t what a Profile page in a social
-            app usually looks like? Is the Missions here different from the one
-            on the side menu? What about Campaigns and Leaderboard?
-          </li>
-        </ul>
-        <p>
-          We learned that new users were overwhelmed with the variety of
-          features they saw when exploring the app and this made it more
-          difficult for them to understand and experience the value proposition.
-        </p>
-        <p>
-          Our hypothesis was that, to make the app easier to understand for new
-          users, we needed to improve core navigation and steer users toward key
-          jobs-to-be-done.
+          The sheer number of features buried the value proposition. We needed
+          to fix core navigation and steer users toward key jobs-to-be-done.
         </p>
 
         <div class="challenge-box">
@@ -324,106 +292,99 @@
           Notifications are a critical part of the Kumu experience
         </h3>
         <p>
-          When we looked at the data, we saw that the Notifications page (which
-          was still buried in the side menu) had increased usage after we
-          released the “User Followed You” notification.
+          Notifications usage went up after we released the “User Followed You”
+          notification, even though the page was still buried in the side menu.
+          Fewer than 25% of users opened the side menu, but 50% of those who did
+          clicked Notifications, the highest click-through rate of any item.
         </p>
 
-        <div class="case-study-item">
-          <img
-            src="../images/kumu-app-navigation/notification-engagement.png"
-            alt="Weekly engagement chart"
-          />
-          <p class="caption">
-            The sustained week-on-week engagement since new notifications were
-            launched tells us this feature is valuable to users
-          </p>
-        </div>
-
-        <p>
-          We looked more into the data and saw that less than 25% of users
-          clicked on the side menu. But, of those who clicked on the side menu,
-          50% clicked Notifications, which had the highest click-thru rate among
-          the menu items.
-        </p>
-
-        <div class="case-study-item">
-          <img
-            src="../images/kumu-app-navigation/side-menu-ctr.png"
-            alt="Side menu click-thru rate chart"
-          />
-          <p class="caption">
-            50% of users who viewed the Side Menu opened the Notifications page
-          </p>
+        <div class="strewn">
+          <figure data-left="0.02" data-top="0.04" data-width="0.6">
+            <img
+              src="../images/kumu-app-navigation/notification-engagement.png"
+              alt="Weekly engagement chart"
+            />
+            <figcaption>
+              Sustained week-on-week engagement since the new notifications
+              launched told us the feature was valuable to users
+            </figcaption>
+          </figure>
+          <figure data-left="0.38" data-top="0.3" data-width="0.6">
+            <img
+              src="../images/kumu-app-navigation/side-menu-ctr.png"
+              alt="Side menu click-thru rate chart"
+            />
+            <figcaption>
+              50% of users who viewed the Side Menu opened the Notifications
+              page
+            </figcaption>
+          </figure>
         </div>
       </section>
 
       <section class="section">
-        <h2>Design Strategy</h2>
-        <p>Knowing what we know, this was the emergent strategy:</p>
+        <h2>Design strategy</h2>
         <ul>
           <li>
-            <strong>Remove redundant elements.</strong> Streamline the different
-            menus to eliminate duplicate paths.
+            <strong>Remove redundant elements.</strong> Streamline the menus to
+            eliminate duplicate paths.
           </li>
           <li>
-            <strong>Elevate key features.</strong> Bring critical features, like
-            Notifications, to the forefront.
+            <strong>Bring key features forward.</strong> Put critical features,
+            like Notifications, in the main navigation.
           </li>
           <li>
-            <strong>Adopt familiar patterns.</strong> Leverage navigation
-            conventions users already understand.
+            <strong>Adopt familiar patterns.</strong> Use navigation conventions
+            users already understand.
           </li>
         </ul>
       </section>
 
       <section class="section">
-        <h2>Exploring solutions</h2>
+        <h2>Five explorations, one pick</h2>
         <p>
-          We had been contemplating how to tackle rearranging the app's
-          navigation for a few months. Kumu's Chief Product Officer came up with
-          an initial draft for a new information architecture. Over the next few
-          days, I developed four additional explorations to give us options to
-          evaluate.
+          Kumu's Chief Product Officer drafted an initial information
+          architecture, and over the next few days I developed four more
+          explorations so we had real options to compare.
         </p>
 
-        <div class="carousel-grid">
-          <div class="case-study-item">
+        <div class="strewn">
+          <figure>
             <img
               src="../images/kumu-app-navigation/exploration-a.png"
               alt="Exploration A"
             />
-            <p class="caption">Exploration A</p>
-          </div>
-          <div class="case-study-item">
+            <figcaption>Exploration A</figcaption>
+          </figure>
+          <figure>
             <img
               src="../images/kumu-app-navigation/exploration-b.png"
               alt="Exploration B"
             />
-            <p class="caption">Exploration B</p>
-          </div>
-          <div class="case-study-item">
+            <figcaption>Exploration B</figcaption>
+          </figure>
+          <figure>
             <img
               src="../images/kumu-app-navigation/exploration-c.png"
               alt="Exploration C"
             />
-            <p class="caption">Exploration C</p>
-          </div>
-          <div class="case-study-item">
+            <figcaption>Exploration C</figcaption>
+          </figure>
+          <figure>
             <img
               src="../images/kumu-app-navigation/exploration-d.png"
               alt="Exploration D"
             />
-            <p class="caption">Exploration D</p>
-          </div>
+            <figcaption>Exploration D</figcaption>
+          </figure>
         </div>
 
         <h3>Evaluating the tradeoffs</h3>
         <p>
-          I evaluated each exploration against three criteria based on our
-          research findings: familiarity (does it use patterns users already
-          know?), simplification (does it reduce redundant entry points?), and
-          feature elevation (does it surface Notifications prominently?).
+          I scored each one against three criteria from the research:
+          familiarity (does it use patterns users know?), simplification (does
+          it cut redundant entry points?), and feature elevation (does it
+          surface Notifications?).
         </p>
 
         <div class="table-container">
@@ -479,67 +440,43 @@
         </div>
 
         <p>
-          Based on this analysis, I recommended Exploration C. It scored highest
-          across all three criteria: it mirrored the information architecture of
-          apps like Instagram, Twitter, and LinkedIn that our users already
-          understood; it consolidated redundant entry points under a cleaner
-          side menu; and it gave Notifications a prominent spot in the main
-          navigation. This aligned with the CPO's strategic direction, and we
-          decided to move forward with validation testing.
+          I recommended Exploration C, the only one that met all three. It
+          mirrored Instagram, Twitter, and LinkedIn, which our users already
+          knew, and it fit the CPO's strategic direction, so we moved on to
+          testing.
         </p>
 
-        <div class="case-study-item">
-          <img
-            src="../images/kumu-app-navigation/exploration-c.png"
-            alt="Exploration C - the recommended approach"
-          />
-          <p class="caption">
-            Exploration C: Recommended for its balance of familiarity,
-            simplification, and feature elevation
-          </p>
+        <div class="strewn">
+          <figure>
+            <img
+              src="../images/kumu-app-navigation/exploration-c.png"
+              alt="Exploration C - the recommended approach"
+            />
+            <figcaption>
+              Exploration C: Recommended for its balance of familiarity,
+              simplification, and feature elevation
+            </figcaption>
+          </figure>
         </div>
       </section>
 
       <section class="section">
-        <h2>Validation</h2>
+        <h2>Testing before a big switch</h2>
         <p>
-          Since this was still an educated guess, our next step would be to test
-          if the new information architecture solved our problems. And, because
-          this was a massive change in navigation, we also wanted to know if the
-          change might harm existing user flows.
+          This was a massive change built on an educated guess, so with the UX
+          research team we tested whether it worked without breaking existing
+          flows. Task completion rates:
         </p>
         <ul>
-          <li>Will users know where to access their Profile?</li>
-          <li>Will users know where to find their notifications?</li>
-          <li>
-            Will users know how to configure settings for their notifications?
-          </li>
-          <li>Will users know where to access My Watchlist?</li>
-          <li>Will users know how to add their FB friends?</li>
-          <li>Will users know how to share their profile link?</li>
-          <li>Will users know how to scan their QR code?</li>
-          <li>Will users know how to edit their addresses?</li>
+          <li>Accessing Profile: 93.75%</li>
+          <li>Accessing Notifications: 93.75%</li>
+          <li>Accessing Notification Settings: 100%</li>
+          <li>Accessing My Watchlist: 66.75%</li>
+          <li>Adding FB friends: 81.25%</li>
+          <li>Sharing profile link: 68.75%</li>
+          <li>Scanning QR code: 87.5%</li>
+          <li>Editing my address: 81.25%</li>
         </ul>
-
-        <h3>Usability Test Summary</h3>
-        <p>
-          Getting help from the UX research team, here’s a quick rundown of the
-          completion rate of each task:
-        </p>
-        <ul>
-          <li>Accessing Profile - 93.75% completion rate</li>
-          <li>Accessing Notifications - 93.75% completion rate</li>
-          <li>Accessing Notification Settings - 100% completion rate</li>
-          <li>Accessing My Watchlist - 66.75% completion rate</li>
-          <li>Adding FB friends - 81.25% completion rate</li>
-          <li>Sharing profile link - 68.75% completion rate</li>
-          <li>Scanning QR code - 87.5% completion rate</li>
-          <li>Editing my address - 81.25% completion rate</li>
-        </ul>
-        <p>
-          Overall, participants shared they had a good experience with the
-          navigation redesign.
-        </p>
         <div class="challenge-box">
           <blockquote>
             "All of us are used to seeing notifications here [Menu Tab]. It
@@ -557,209 +494,187 @@
           </blockquote>
         </div>
 
-        <h3>Addressing lower completion rates</h3>
+        <h3>Accepting two weaker results</h3>
         <p>
-          Two tasks showed lower completion rates: Accessing My Watchlist
-          (66.75%) and Sharing profile link (68.75%). I assessed these results
-          against our core objectives and determined they were acceptable risks
-          for launch.
+          I judged the lower scores on Watchlist (66.75%) and profile link
+          sharing (68.75%) acceptable for launch. Watchlist was mostly used by
+          power users who would adapt, and link sharing was an edge case. The
+          primary flows all cleared our success threshold.
         </p>
         <p>
-          Watchlist was a secondary feature primarily used by power users who
-          would adapt to the new location. Profile link sharing was an edge case
-          that didn't impact the core navigation goals of reducing confusion and
-          elevating Notifications. The primary flows (accessing Profile at
-          93.75%, Notifications at 93.75%, and Notification Settings at 100%)
-          all exceeded
-          our success threshold, validating that the redesign achieved its main
-          objectives.
-        </p>
-
-        <p>
-          On July 1, we released the updated Side Menu, which consolidated
-          feature entry points (including duplicates) from under the Side Menu and
-          the Profile Menu. On July 20, we completed the switch and removed the
-          old Profile Menu entry point in the main navigation, replacing it with
-          Notifications.
+          We shipped in two phases: on July 1, a Side Menu that consolidated
+          entry points from both old menus; on July 20, Notifications replaced
+          the Profile Menu in the main navigation.
         </p>
       </section>
 
       <section class="section">
         <h2>Results</h2>
 
-        <div class="case-study-item">
-          <h3>Before</h3>
-          <div class="before-after-grid">
-            <div class="case-study-item">
-              <img
-                src="../images/kumu-app-navigation/homepage-before.webp"
-                alt="Original homepage"
-              />
-              <p class="caption">Homepage</p>
-            </div>
-            <div class="case-study-item">
-              <img
-                src="../images/kumu-app-navigation/side-menu-before.webp"
-                alt="Original side menu"
-              />
-              <p class="caption">Side Menu</p>
-            </div>
-            <div class="case-study-item">
-              <img
-                src="../images/kumu-app-navigation/profile-menu-before.webp"
-                alt="Original Profile Menu"
-              />
-              <p class="caption">Profile Menu</p>
-            </div>
-            <div class="case-study-item">
-              <img
-                src="../images/kumu-app-navigation/public-profile-before.png"
-                alt="Original public profile"
-              />
-              <p class="caption">User's public profile</p>
-            </div>
-          </div>
+        <h3>Before</h3>
+        <div class="strewn">
+          <figure>
+            <img
+              src="../images/kumu-app-navigation/homepage-before.webp"
+              alt="Original homepage"
+            />
+            <figcaption>Homepage</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="../images/kumu-app-navigation/side-menu-before.webp"
+              alt="Original side menu"
+            />
+            <figcaption>Side Menu</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="../images/kumu-app-navigation/profile-menu-before.webp"
+              alt="Original Profile Menu"
+            />
+            <figcaption>Profile Menu</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="../images/kumu-app-navigation/public-profile-before.png"
+              alt="Original public profile"
+            />
+            <figcaption>User's public profile</figcaption>
+          </figure>
         </div>
 
-        <div class="case-study-item">
-          <h3>After</h3>
-          <div class="before-after-grid">
-            <div class="case-study-item">
-              <img
-                src="../images/kumu-app-navigation/homepage-after.png"
-                alt="New homepage"
-              />
-              <p class="caption">Homepage</p>
-            </div>
-            <div class="case-study-item">
-              <img
-                src="../images/kumu-app-navigation/side-menu-after.png"
-                alt="New side menu"
-              />
-              <p class="caption">Side Menu</p>
-            </div>
-            <div class="case-study-item">
-              <img
-                src="../images/kumu-app-navigation/notifications-after.png"
-                alt="New notifications page"
-              />
-              <p class="caption">Notifications page</p>
-            </div>
-            <div class="case-study-item">
-              <img
-                src="../images/kumu-app-navigation/public-profile-after.png"
-                alt="New public profile"
-              />
-              <p class="caption">User's public profile</p>
-            </div>
-          </div>
+        <h3>After</h3>
+        <div class="strewn">
+          <figure>
+            <img
+              src="../images/kumu-app-navigation/homepage-after.png"
+              alt="New homepage"
+            />
+            <figcaption>Homepage</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="../images/kumu-app-navigation/side-menu-after.png"
+              alt="New side menu"
+            />
+            <figcaption>Side Menu</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="../images/kumu-app-navigation/notifications-after.png"
+              alt="New notifications page"
+            />
+            <figcaption>Notifications page</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="../images/kumu-app-navigation/public-profile-after.png"
+              alt="New public profile"
+            />
+            <figcaption>User's public profile</figcaption>
+          </figure>
         </div>
 
-        <h3>Impact on Metrics</h3>
-        <div class="case-study-item">
-          <img
-            src="../images/kumu-app-navigation/metric-notifications.png"
-            alt="Notifications Metric"
-          />
-          <p class="caption">
-            <strong
-              >Notifications views more than doubled after moving to main
-              navigation.</strong
-            >
-            The July-1 dip was when we consolidated features in the Side Menu.
-            The July-20 spike was when Notifications moved to the main
-            navigation bar.
-          </p>
+        <h3>Impact on metrics</h3>
+        <div class="strewn">
+          <figure data-left="0.02" data-top="0.04" data-width="0.6">
+            <img
+              src="../images/kumu-app-navigation/metric-notifications.png"
+              alt="Notifications Metric"
+            />
+            <figcaption>
+              <strong
+                >Notifications views more than doubled after moving to main
+                navigation.</strong
+              >
+              The July-1 dip was when we consolidated features in the Side Menu.
+              The July-20 spike was when Notifications moved to the main
+              navigation bar.
+            </figcaption>
+          </figure>
+          <figure data-left="0.38" data-top="0.3" data-width="0.6">
+            <img
+              src="../images/kumu-app-navigation/metric-profile.png"
+              alt="Profile Metric"
+            />
+            <figcaption>
+              <strong>Profile views jumped noticeably by July 20</strong> as
+              users discovered the new access point via their avatar in the
+              header
+            </figcaption>
+          </figure>
         </div>
-        <div class="case-study-item">
-          <img
-            src="../images/kumu-app-navigation/metric-missions.png"
-            alt="Missions Metric"
-          />
-          <p class="caption">
-            My Missions views increased substantially with improved
-            discoverability in the side menu
-          </p>
-        </div>
-        <div class="case-study-item">
-          <img
-            src="../images/kumu-app-navigation/metric-watchlist-klips.png"
-            alt="Discovery Metric"
-          />
-          <p class="caption">
-            My Watchlist and Klips both saw meaningful upticks, along with a
-            revenue-generating Ad Banner that benefited from increased side menu
-            traffic
-          </p>
-        </div>
-        <div class="case-study-item">
-          <img
-            src="../images/kumu-app-navigation/metric-wallet.png"
-            alt="Wallet Metric"
-          />
-          <p class="caption">
-            <strong
-              >Wallet usage increased substantially once duplicate entry points
-              were consolidated.</strong
-            >
-            Users no longer had to guess which path led to their wallet.
-          </p>
-        </div>
-        <div class="case-study-item">
-          <img
-            src="../images/kumu-app-navigation/metric-profile.png"
-            alt="Profile Metric"
-          />
-          <p class="caption">
-            <strong>Profile views jumped noticeably by July 20</strong> as users
-            discovered the new access point via their avatar in the header
-          </p>
+        <div class="strewn">
+          <figure data-left="0.02" data-top="0.02" data-width="0.55">
+            <img
+              src="../images/kumu-app-navigation/metric-wallet.png"
+              alt="Wallet Metric"
+            />
+            <figcaption>
+              <strong
+                >Wallet usage increased substantially once duplicate entry
+                points were consolidated.</strong
+              >
+              Users no longer had to guess which path led to their wallet.
+            </figcaption>
+          </figure>
+          <figure data-left="0.43" data-top="0.12" data-width="0.55">
+            <img
+              src="../images/kumu-app-navigation/metric-missions.png"
+              alt="Missions Metric"
+            />
+            <figcaption>
+              My Missions views increased substantially with improved
+              discoverability in the side menu
+            </figcaption>
+          </figure>
+          <figure data-left="0.2" data-top="0.42" data-width="0.55">
+            <img
+              src="../images/kumu-app-navigation/metric-watchlist-klips.png"
+              alt="Discovery Metric"
+            />
+            <figcaption>
+              My Watchlist and Klips both saw meaningful upticks, along with a
+              revenue-generating Ad Banner that benefited from increased side
+              menu traffic
+            </figcaption>
+          </figure>
         </div>
       </section>
 
       <section class="boxed-section">
-        <h2>Key Learnings</h2>
+        <h2>Key learnings</h2>
         <div>
           <ul class="key-learning-list">
             <li>
-              <strong>Moving forward under ambiguity:</strong> We didn't have
-              perfect data on user navigation patterns, but the cost of inaction
-              was higher than the cost of testing a well-reasoned hypothesis.
-              Usability testing validated our approach with 93%+ completion on
-              core tasks.
+              <strong>Moving forward under ambiguity:</strong> Our data wasn't
+              perfect, but doing nothing cost more than testing a well-reasoned
+              hypothesis, and testing backed it with 93%+ completion on core
+              tasks.
             </li>
             <li>
-              <strong>Design as a research tool:</strong> With UX Research
-              constrained by their backlog, I used tangible design explorations
-              to make abstract navigation problems concrete. This generated
-              stakeholder alignment faster than waiting for comprehensive
-              research and gave us artifacts to test against.
+              <strong>Design as a research tool:</strong> With UX Research's
+              backlog full, concrete explorations got stakeholders aligned
+              faster and gave us something to test.
             </li>
             <li>
-              <strong>Behavioral data over stated preferences:</strong>
-              Analytics revealed Notifications' importance even though users
-              didn't explicitly ask for it. The 50% click-through rate from the
-              side menu signaled latent demand we could unlock through better
-              placement.
+              <strong>Behavioral data over stated preferences:</strong> Users
+              never asked for Notifications, but its 50% click-through from the
+              side menu showed demand that better placement could unlock.
             </li>
             <li>
               <strong>Strategic prioritization in testing:</strong> Not every
-              task needed 90%+ completion. Accepting lower rates on secondary
-              features (Watchlist, profile sharing) let us ship confidently
-              while protecting the core navigation improvements.
+              task needed 90%+ completion, only the core ones.
             </li>
             <li>
-              <strong>Phased rollout as risk management:</strong> Releasing the
-              side menu consolidation two weeks before the navigation bar change
-              let us isolate variables and build confidence before the
-              higher-stakes update.
+              <strong>Phased rollout as risk management:</strong> Shipping the
+              side menu change two weeks before the navigation bar change let
+              us isolate variables before the higher-stakes update.
             </li>
             <li>
-              <strong>Knowing when to ship:</strong> With more time, I would
-              have explored improving Watchlist discoverability. But the core
-              navigation wins were substantial enough to justify shipping, and
-              waiting for perfection would have delayed value for millions of
-              users.
+              <strong>Knowing when to ship:</strong> With more time, I'd have
+              improved Watchlist discoverability, but waiting would have
+              delayed the core wins for millions of users.
             </li>
           </ul>
         </div>

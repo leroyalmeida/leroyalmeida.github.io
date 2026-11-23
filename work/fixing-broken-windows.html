@@ -27,7 +27,7 @@
       rel="canonical"
       href="https://leroyalmeida.github.io/work/fixing-broken-windows.html"
     />
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#0a0a0a" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article" />
@@ -57,6 +57,10 @@
     />
 
     <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../styles/toc.css" />
+    <link rel="stylesheet" href="../styles/strewn.css" />
+    <script src="../scripts/toc.js" defer></script>
+    <script src="../scripts/strewn.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -125,524 +129,361 @@
 
       <section class="section">
         <p>
-          In 1982, James Wilson and George Kelling wrote about an idea that
-          later became known as the Broken Window Theory. This theory suggests
-          that visible signs of disorder, such as broken windows in a
-          neighborhood, can contribute to an increase in crime and a decline in
-          community well-being.
+          In 1982, James Wilson and George Kelling described what became known
+          as the Broken Window Theory: visible signs of disorder, like a broken
+          window left unfixed, tell people nobody cares about a place. That
+          sense of neglect makes worse behavior easier. Fix the small things
+          quickly and a neighborhood feels orderly and safe again.
         </p>
         <p>
-          The theory says that if a broken window isn't fixed in a building, it
-          shows that nobody cares about that place. This can make people think
-          the area is neglected and lacks control, which makes it easier for
-          serious crimes and bad behavior to happen.
-        </p>
-        <p>
-          And, that if communities take care of small signs of disorder and fix
-          broken windows, graffiti, or other signs of neglect quickly, they can
-          make things more orderly and in control. This can stop bad behavior
-          and make people feel safer and better.
-        </p>
-        <p>
-          Just like disorder in a neighborhood is bad, ignoring small problems
-          in a digital product can convey a sense of neglect, contribute to a
-          negative perception of the product, and make the user experience
-          worse.
-        </p>
-        <p>
-          In UX, we can think of these as small usability issues—elements that
-          make the user experience less smooth or confusing. Things like unclear
-          buttons, broken links, or inconsistent design elements.
+          Digital products work the same way. Unclear buttons, broken links and
+          inconsistent design elements are small on their own, but together they
+          make a product feel neglected and the experience worse.
         </p>
       </section>
 
       <section class="section">
-        <h2>Why fixing broken windows matters</h2>
-        <p>
-          Fixing these broken windows has remarkable potential in product
-          development:
-        </p>
+        <h2>Why small fixes matter</h2>
         <ul>
           <li>
-            <strong>User satisfaction.</strong> Even small inefficiencies can
-            compound frustration for users who perform repetitive actions daily.
-            Fixing these seemingly insignificant issues is powerful. Often more
-            so than creating new features.
+            <strong>User satisfaction.</strong> Small inefficiencies compound
+            for people who repeat the same actions daily. Fixing them is often
+            worth more than a new feature.
           </li>
           <li>
-            <strong>Usability and trust.</strong> When we address minor issues,
-            we make the product easier to use and signal that we care about
-            quality. This builds trust and loyalty. Users see their feedback
-            acknowledged and acted upon.
+            <strong>Usability and trust.</strong> Fixing minor issues shows we
+            care about quality, and users see their feedback acted on.
           </li>
           <li>
-            <strong>Business impact.</strong> When users encounter fewer
-            obstacles, they engage more, retain longer, and recommend the
-            product to others. Quality improvements directly influence growth
-            metrics.
+            <strong>Business impact.</strong> Fewer obstacles means people
+            engage more and stay longer.
           </li>
         </ul>
       </section>
 
       <section class="section">
-        <h2>How we identified broken windows</h2>
+        <h2>Finding the broken windows</h2>
         <p>
-          At Kumu, we didn't stumble upon these issues randomly. We built a
-          systematic process to surface quality problems that users had learned
-          to live with.
-        </p>
-        <p>
-          <strong>App store reviews.</strong> We analyzed user reviews from the
-          iOS App Store and Google Play Store, looking for recurring complaints
-          and friction points. These reviews often captured frustrations that
-          users experienced repeatedly but never formally reported. Comments
-          like "why is this so hard to find?" or "I keep accidentally tapping
-          the wrong button."
-        </p>
-        <p>
-          <strong>User research synthesis.</strong> We reviewed findings from
-          user research sessions, specifically looking for moments of
-          hesitation, mis-taps, and workarounds. These micro-frictions rarely
-          surfaced in post-session feedback but were visible in observed
-          behavior.
-        </p>
-        <p>
-          <strong>Heuristic audit.</strong> We conducted a systematic review
-          against basic usability heuristics—consistency, visibility, error
-          prevention, accessibility. This caught issues like contrast failures
-          and inconsistent button styles that no single user would report but
-          that degraded overall perception.
-        </p>
-        <p>
-          This combination of qualitative feedback and systematic review gave us
-          a comprehensive picture of where broken windows existed across the
-          product.
-        </p>
-      </section>
-
-      <section class="section">
-        <h2>From audit to alignment</h2>
-        <p>
-          These fixes weren't arbitrary improvements. They were guided by a
-          design system we created for Kumu.
-        </p>
-        <p>
-          The design system was unified across iOS and Android, defining
-          standards for color, typography, iconography, and component behavior.
-          It gave us a clear benchmark: when the live product deviated from the
-          system, that was a broken window.
+          At Kumu we used three sources to surface problems users had learned
+          to live with:
         </p>
         <ul>
           <li>
-            <strong>Icon consistency.</strong> The system specified a single
-            icon style and rules for outline vs filled states. The audit
-            revealed the app used multiple icon sets.
+            <strong>App store reviews.</strong> We went through iOS and Google
+            Play reviews for recurring complaints like "why is this so hard to
+            find?" or "I keep accidentally tapping the wrong button."
           </li>
           <li>
-            <strong>Button standards.</strong> The system defined Kumu Blue
-            (#499CE4) as the primary action color with no gradients. The audit
-            found buttons in various colors and gradient styles.
+            <strong>User research synthesis.</strong> We looked back through
+            research sessions for hesitation, mis-taps and workarounds that
+            people never mentioned but clearly did.
+          </li>
+          <li>
+            <strong>Heuristic audit.</strong> We reviewed the app against
+            consistency, visibility, error prevention and accessibility. This
+            caught contrast failures and inconsistent buttons that no single
+            user would report.
+          </li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>A design system as the benchmark</h2>
+        <p>
+          The fixes were guided by a design system we created for Kumu, unified
+          across iOS and Android, covering color, typography, iconography and
+          component behavior. Anywhere the live product deviated from it was a
+          broken window.
+        </p>
+        <ul>
+          <li>
+            <strong>Icon consistency.</strong> The system specified one icon
+            style with rules for outline vs filled states. The app used several
+            icon sets.
+          </li>
+          <li>
+            <strong>Button standards.</strong> The system made Kumu Blue
+            (#499CE4) the primary action color, with no gradients. The app had
+            buttons in many colors and gradient styles.
           </li>
           <li>
             <strong>Contrast requirements.</strong> The system set minimum
-            contrast ratios for text and interactive elements. The audit
-            identified screens that failed these standards.
+            contrast ratios for text and interactive elements. Several screens
+            failed them.
           </li>
         </ul>
         <p>
-          Having an established system transformed the audit from subjective
-          ("this feels inconsistent") to objective ("this doesn't match the
-          spec"). It also made prioritization easier. We weren't asking for
-          design preferences, we were asking to align the product with
-          agreed-upon standards.
+          This turned the audit from subjective ("this feels inconsistent") to
+          objective ("this doesn't match the spec"), and made prioritization
+          easier: we were asking to meet agreed standards, not arguing taste.
         </p>
       </section>
 
       <section class="section">
-        <h2>Fixing broken windows at Kumu</h2>
+        <h2>The fixes, before and after</h2>
         <p>
-          Below are some of the highest-impact fixes we made, organized by
-          theme. Each category targeted a clear success metric:
+          The highest-impact fixes targeted three things: fewer "Where do I
+          find X?" complaints, better legibility and accessibility, and less
+          confusion around primary actions.
         </p>
-        <ul>
-          <li>
-            <strong>Navigation clarity:</strong> Reduce "Where do I find X?"
-            complaints
-          </li>
-          <li>
-            <strong>Contrast & accessibility:</strong> Improve legibility and
-            meet accessibility standards
-          </li>
-          <li>
-            <strong>Consistency:</strong> Reduce user confusion around primary
-            actions and interface patterns
-          </li>
-        </ul>
 
-        <div class="case-study-item">
-          <h4>Navigation icons</h4>
-          <div class="comparison-grid">
-            <div>
-              <img
-                src="../images/fixing-broken-windows/image_03.png"
-                alt="Before: Navigation Icons"
-              />
-              <span class="label">Before</span>
-              <p>
-                Customer feedback and usability testing revealed that users were
-                unfamiliar with our menu icons and relied on trial and error to
-                find the desired content.
-              </p>
-            </div>
-            <div>
-              <img
-                src="../images/fixing-broken-windows/image_04.png"
-                alt="After: Navigation Icons"
-              />
-              <span class="label">After</span>
-              <p>
-                Persistently showing menu items' labels enabled a more
-                understandable navigation experience.
-              </p>
-            </div>
-          </div>
-          <p>
-            <strong>Outcome:</strong> Navigation-related complaints decreased
-            after launch.
-          </p>
+        <h4>Navigation icons</h4>
+        <p>
+          Feedback and usability testing showed users didn't recognize our menu
+          icons and found content by trial and error. We made the menu labels
+          always visible. Navigation-related complaints went down after launch.
+        </p>
+        <div class="strewn">
+          <figure>
+            <img
+              src="../images/fixing-broken-windows/image_03.png"
+              alt="Before: Navigation Icons"
+            />
+            <figcaption>Before: icon-only menu items</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="../images/fixing-broken-windows/image_04.png"
+              alt="After: Navigation Icons"
+            />
+            <figcaption>After: labels always visible</figcaption>
+          </figure>
         </div>
 
-        <div class="case-study-item">
-          <h4>Contrast & legibility</h4>
-          <div class="comparison-grid">
-            <div>
-              <img
-                src="../images/fixing-broken-windows/image_05.png"
-                alt="Before: Low contrast text"
-              />
-              <span class="label">Before</span>
-              <p>
-                Users had difficulty reading low-contrast text. They also
-                confused unselected toggles for disabled toggles because the
-                grays were too light.
-              </p>
-            </div>
-            <div>
-              <img
-                src="../images/fixing-broken-windows/image_06.png"
-                alt="After: Improved contrast"
-              />
-              <span class="label">After</span>
-              <p>
-                We removed tiny, low-contrast text and went from light grays to
-                darker ones (for both font and toggles). These went a long way
-                toward legibility and usability.
-              </p>
-            </div>
-          </div>
-          <p>
-            <strong>Outcome:</strong> Passed WCAG AA contrast requirements
-            across core UI elements.
-          </p>
+        <h4>Contrast and legibility</h4>
+        <p>
+          Users struggled to read low-contrast text and mistook unselected
+          toggles for disabled ones because the grays were too light. We
+          removed tiny, low-contrast text and moved to darker grays for both
+          text and toggles. Core UI elements now pass WCAG AA contrast.
+        </p>
+        <div class="strewn">
+          <figure>
+            <img
+              src="../images/fixing-broken-windows/image_05.png"
+              alt="Before: Low contrast text"
+            />
+            <figcaption>Before: light grays, tiny text</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="../images/fixing-broken-windows/image_06.png"
+              alt="After: Improved contrast"
+            />
+            <figcaption>After: darker grays for text and toggles</figcaption>
+          </figure>
         </div>
 
-        <div class="case-study-item">
-          <h4>Notifications</h4>
-          <div class="comparison-grid">
-            <div>
-              <img
-                src="../images/fixing-broken-windows/image_07.png"
-                alt="Before: Buried notification settings"
-              />
-              <span class="label">Before</span>
-              <p>
-                Users frequently complained that Kumu's notifications were
-                spammy. Configuring their Notification Settings was possible but
-                the feature was buried deep under Profile Settings.
-              </p>
-            </div>
-            <div>
-              <img
-                src="../images/fixing-broken-windows/image_08.png"
-                alt="After: Accessible notification settings"
-              />
-              <span class="label">After</span>
-              <p>
-                By adding an access point to Notification Settings at the
-                top-right of the Notifications page, notification preferences
-                was always just a tap away.
-              </p>
-            </div>
-          </div>
-          <p>
-            <strong>Outcome:</strong> "How do I turn off notifications?"
-            complaints decreased.
-          </p>
+        <h4>Notifications</h4>
+        <p>
+          Users often called Kumu's notifications spammy. They could change
+          them, but Notification Settings was buried under Profile Settings. We
+          added a shortcut at the top-right of the Notifications page, so
+          preferences were always one tap away. "How do I turn off
+          notifications?" complaints went down.
+        </p>
+        <div class="strewn">
+          <figure>
+            <img
+              src="../images/fixing-broken-windows/image_07.png"
+              alt="Before: Buried notification settings"
+            />
+            <figcaption>Before: settings buried under Profile</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="../images/fixing-broken-windows/image_08.png"
+              alt="After: Accessible notification settings"
+            />
+            <figcaption>After: settings shortcut on the Notifications page</figcaption>
+          </figure>
         </div>
 
-        <div class="case-study-item">
-          <h4>Video posts</h4>
-          <div class="comparison-grid">
-            <div>
-              <img
-                src="../images/fixing-broken-windows/image_09.png"
-                alt="Before: Video posts with white margins"
-              />
-              <span class="label">Before</span>
-              <p>
-                When scrolling through the feed, users saw large, white margins
-                in video posts and had to tap on the videos to watch them.
-              </p>
-            </div>
-            <div>
-              <img
-                src="../images/fixing-broken-windows/image_10.png"
-                alt="After: Full-width auto-playing videos"
-              />
-              <span class="label">After</span>
-              <p>
-                Videos were resized to fill the screen's width and configured to
-                auto-play when scrolled into view.
-              </p>
-            </div>
-          </div>
-          <p>
-            <strong>Outcome:</strong> Video engagement (watch time) increased.
-          </p>
+        <h4>Video posts</h4>
+        <p>
+          Video posts in the feed had large white margins, and users had to tap
+          to play them. We resized videos to the full screen width and set them
+          to auto-play when scrolled into view. Watch time went up.
+        </p>
+        <div class="strewn">
+          <figure>
+            <img
+              src="../images/fixing-broken-windows/image_09.png"
+              alt="Before: Video posts with white margins"
+            />
+            <figcaption>Before: white margins, tap to play</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="../images/fixing-broken-windows/image_10.png"
+              alt="After: Full-width auto-playing videos"
+            />
+            <figcaption>After: full-width, auto-playing video</figcaption>
+          </figure>
         </div>
 
-        <div class="case-study-item">
-          <h4>Icon consistency</h4>
-          <div class="comparison-grid">
-            <div>
-              <img
-                src="../images/fixing-broken-windows/image_11.png"
-                alt="Before: Inconsistent icon styles"
-              />
-              <span class="label">Before</span>
-              <p>
-                Kumu used different icon styles across its interface. This
-                created an inconsistent experience, degrading brand perception.
-              </p>
-            </div>
-            <div>
-              <img
-                src="../images/fixing-broken-windows/image_12.png"
-                alt="After: Consistent icon style"
-              />
-              <span class="label">After</span>
-              <p>
-                Icons were redrawn in a consistent style. Guidelines
-                standardized when to use an outline icon (unselected states) vs
-                a filled icon (selected states). Even updating just the most
-                visible icons (e.g. navigation icons) was a significant
-                improvement. (An 80/20 effort.)
-              </p>
-            </div>
-          </div>
+        <h4>Icon consistency</h4>
+        <p>
+          Kumu mixed icon styles across the interface, which made it feel
+          inconsistent and hurt the brand. We redrew icons in one style:
+          outline for unselected, filled for selected. Updating just the most
+          visible ones, like navigation, was an 80/20 win.
+        </p>
+        <div class="strewn">
+          <figure>
+            <img
+              src="../images/fixing-broken-windows/image_11.png"
+              alt="Before: Inconsistent icon styles"
+            />
+            <figcaption>Before: mixed icon styles</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="../images/fixing-broken-windows/image_12.png"
+              alt="After: Consistent icon style"
+            />
+            <figcaption>After: one style, outline vs filled for state</figcaption>
+          </figure>
         </div>
 
-        <div class="case-study-item">
-          <h4>Button consistency</h4>
-          <div class="comparison-grid">
-            <div>
-              <img
-                src="../images/fixing-broken-windows/image_13.png"
-                alt="Before: Inconsistent button styles"
-              />
-              <span class="label">Before</span>
-              <p>
-                Kumu's primary button style varied greatly across the app
-                interface, creating inconsistency.
-              </p>
-            </div>
-            <div>
-              <img
-                src="../images/fixing-broken-windows/image_14.png"
-                alt="After: Standardized button style"
-              />
-              <span class="label">After</span>
-              <p>
-                Kumu Blue (#499CE4) was standardized as the <em>only</em> color
-                of primary buttons—no more gradients. A consistently designed
-                and more recognizable primary button reduced users' cognitive
-                load.
-              </p>
-            </div>
-          </div>
-
-          <div class="comparison-grid">
-            <div>
-              <img
-                src="../images/fixing-broken-windows/image_15.png"
-                alt="Before: More inconsistent buttons"
-              />
-              <span class="label">Before</span>
-              <p>
-                Kumu's primary button style varied greatly across the app
-                interface, creating inconsistency.
-              </p>
-            </div>
-            <div>
-              <img
-                src="../images/fixing-broken-windows/image_16.png"
-                alt="After: More standardized buttons"
-              />
-              <span class="label">After</span>
-              <p>
-                Kumu Blue (#499CE4) was standardized as the <em>only</em> color
-                of primary buttons—no more gradients. A consistently designed
-                and more recognizable primary button reduced users' cognitive
-                load.
-              </p>
-            </div>
-          </div>
+        <h4>Button consistency</h4>
+        <p>
+          The primary button looked different all over the app. We made Kumu
+          Blue (#499CE4) the <em>only</em> primary button color and dropped the
+          gradients. A consistent, recognizable primary button reduced users'
+          cognitive load.
+        </p>
+        <div class="strewn">
+          <figure>
+            <img
+              src="../images/fixing-broken-windows/image_13.png"
+              alt="Before: Inconsistent button styles"
+            />
+            <figcaption>Before: primary buttons in mixed styles</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="../images/fixing-broken-windows/image_14.png"
+              alt="After: Standardized button style"
+            />
+            <figcaption>After: Kumu Blue, no gradients</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="../images/fixing-broken-windows/image_15.png"
+              alt="Before: More inconsistent buttons"
+            />
+            <figcaption>Before: more mixed button styles</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="../images/fixing-broken-windows/image_16.png"
+              alt="After: More standardized buttons"
+            />
+            <figcaption>After: standardized primary buttons</figcaption>
+          </figure>
         </div>
 
-        <div class="case-study-item">
-          <h4>Livestream controls — Minimize/Close</h4>
-          <div class="comparison-grid">
-            <div>
-              <img
-                src="../images/fixing-broken-windows/image_17.png"
-                alt="Before: Minimize and Close buttons too close"
-              />
-              <span class="label">Before</span>
-              <p>
-                Kumu's livestream interface had the Minimize and the Close
-                actions beside each other, which frequently caused users to
-                accidentally close a livestream when they intended to minimize
-                it.
-              </p>
-            </div>
-            <div>
-              <img
-                src="../images/fixing-broken-windows/image_18.png"
-                alt="After: Separated controls"
-              />
-              <span class="label">After</span>
-              <p>
-                Minimize (far left) and Close actions (inside kebab menu) were
-                separated. Users were given two options to close a stream, but
-                both required two taps to perform: (1) tap Minimize then tap
-                Close, or (2) tap kebab then tap Close livestream.
-              </p>
-            </div>
-          </div>
-          <p><strong>Outcome:</strong> Accidental stream exits decreased.</p>
+        <h4>Livestream controls: Minimize and Close</h4>
+        <p>
+          Minimize and Close sat side by side in the livestream interface, so
+          users often closed a stream when they meant to minimize it. We moved
+          Minimize to the far left and Close into a kebab menu, so closing
+          always takes two taps. Accidental stream exits went down.
+        </p>
+        <div class="strewn">
+          <figure>
+            <img
+              src="../images/fixing-broken-windows/image_17.png"
+              alt="Before: Minimize and Close buttons too close"
+            />
+            <figcaption>Before: Minimize and Close side by side</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="../images/fixing-broken-windows/image_18.png"
+              alt="After: Separated controls"
+            />
+            <figcaption>After: Minimize on the left, Close in the kebab menu</figcaption>
+          </figure>
         </div>
 
-        <div class="case-study-item">
-          <h4>Livestream controls — Like/Gift</h4>
-          <div class="comparison-grid">
-            <div>
-              <img
-                src="../images/fixing-broken-windows/image_19.png"
-                alt="Before: Like and Gift buttons too close"
-              />
-              <span class="label">Before</span>
-              <p>
-                Kumu's livestream interface had the Like and the Gift actions
-                beside each other, which frequently caused users to accidentally
-                send a gift (which cost money) when they were just spamming the
-                livestream with likes.
-              </p>
-            </div>
-            <div>
-              <img
-                src="../images/fixing-broken-windows/image_20.png"
-                alt="After: Improved button layout"
-              />
-              <span class="label">After</span>
-              <p>
-                Icon buttons were increased in size for better usability and
-                updated to align with the new designs. The Like button was
-                removed and replaced with the ability to double-tap anywhere on
-                the screen to "like" the livestream.
-              </p>
-            </div>
-          </div>
-          <p>
-            <strong>Outcome:</strong> Accidental gift sends (and related refund
-            requests) decreased.
-          </p>
+        <h4>Livestream controls: Like and Gift</h4>
+        <p>
+          Like and Gift were also side by side, so users spamming likes would
+          accidentally send gifts, which cost money. We enlarged the icon
+          buttons, removed Like, and let viewers double-tap anywhere instead. Accidental gift sends and the
+          refund requests they caused went down.
+        </p>
+        <div class="strewn">
+          <figure>
+            <img
+              src="../images/fixing-broken-windows/image_19.png"
+              alt="Before: Like and Gift buttons too close"
+            />
+            <figcaption>Before: Like and Gift side by side</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="../images/fixing-broken-windows/image_20.png"
+              alt="After: Improved button layout"
+            />
+            <figcaption>After: larger buttons, double-tap to like</figcaption>
+          </figure>
         </div>
 
-        <div class="case-study-item">
-          <h4>Gradient removal</h4>
-          <div class="comparison-grid">
-            <div>
-              <img
-                src="../images/fixing-broken-windows/image_21.png"
-                alt="Before: Poor contrast gradients"
-              />
-              <span class="label">Before</span>
-              <p>
-                Kumu's user interface featured gradients based on its brand
-                colors. These gradients often provided poor contrast when used
-                as background to white text.
-              </p>
-            </div>
-            <div>
-              <img
-                src="../images/fixing-broken-windows/image_22.png"
-                alt="After: Solid colors with good contrast"
-              />
-              <span class="label">After</span>
-              <p>
-                We removed gradients from the interface and used solid, brand
-                colors that provided good contrast. We used larger buttons to
-                improve usability as well.
-              </p>
-            </div>
-          </div>
+        <h4>Gradient removal</h4>
+        <p>
+          The UI used brand-color gradients that often gave poor contrast
+          behind white text. We replaced them with solid brand colors that
+          contrast well, and made buttons larger.
+        </p>
+        <div class="strewn">
+          <figure>
+            <img
+              src="../images/fixing-broken-windows/image_21.png"
+              alt="Before: Poor contrast gradients"
+            />
+            <figcaption>Before: gradients behind white text</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="../images/fixing-broken-windows/image_22.png"
+              alt="After: Solid colors with good contrast"
+            />
+            <figcaption>After: solid brand colors, larger buttons</figcaption>
+          </figure>
         </div>
 
-        <div class="case-study-item">
-          <h4>Wallet dark mode</h4>
-          <div class="comparison-grid">
-            <div>
-              <img
-                src="../images/fixing-broken-windows/image_23.png"
-                alt="Before: Inconsistent dark mode"
-              />
-              <span class="label">Before</span>
-              <p>
-                The Wallet screen was the only screen in our whole app that used
-                dark mode. No one knew why. It felt very inconsistent with the
-                whole experience. The copy also used brand colors which
-                contrasted poorly against the dark interface.
-              </p>
-            </div>
-            <div>
-              <img
-                src="../images/fixing-broken-windows/image_24.png"
-                alt="After: Consistent light mode"
-              />
-              <span class="label">After</span>
-              <p>
-                Dark mode was removed from the Wallet. Solid brand colors were
-                used instead of gradients. Brand colors were also not used in
-                the copy, prioritizing color contrast and readability.
-              </p>
-            </div>
-          </div>
+        <h4>Wallet dark mode</h4>
+        <p>
+          The Wallet was the only dark-mode screen in the app, and no one knew
+          why. Its brand-colored copy was also hard to read. We moved it to
+          light mode, used solid colors instead of gradients, and kept brand
+          colors out of the text.
+        </p>
+        <div class="strewn">
+          <figure>
+            <img
+              src="../images/fixing-broken-windows/image_23.png"
+              alt="Before: Inconsistent dark mode"
+            />
+            <figcaption>Before: the only dark-mode screen in the app</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="../images/fixing-broken-windows/image_24.png"
+              alt="After: Consistent light mode"
+            />
+            <figcaption>After: light mode, solid colors, readable copy</figcaption>
+          </figure>
         </div>
       </section>
 
       <section class="section">
         <p>
-          Incremental improvements are key to success in product development. By
-          recognizing that addressing broken windows with these quick wins can
-          yield significant results, we can enhance user satisfaction, improve
-          usability, boost engagement, and build trust.
-        </p>
-
-        <p>
-          Getting into the habit of constantly fixing broken windows can improve
-          your brand, set you apart from competitors, and show users that you
-          listen to them and that they can trust you. Most importantly, it helps
-          improve your product and the lives of your users.
+          None of these were big projects, but together they made the app
+          easier to use and showed users we were listening.
         </p>
       </section>
 
@@ -651,39 +492,34 @@
         <ul class="key-learning-list">
           <li>
             <strong>Small inefficiencies almost always go unreported.</strong>
-            Users get accustomed to friction—a sort of "learned helplessness."
-            Relying exclusively on direct feedback misses problems users have
-            stopped complaining about. Identifying these requires proactive
-            research: reviewing app store comments, analyzing user research
-            sessions, and conducting systematic audits.
+            Users get used to friction and stop complaining, so you have to go
+            looking: reviews, research sessions, audits.
           </li>
           <li>
             <strong>Accessibility improvements benefit everyone.</strong> Better
-            contrast and larger touch targets improve usability for all users,
-            not just those with specific needs. Framing accessibility as
-            universal usability made it easier to prioritize.
+            contrast and larger touch targets help all users, and framing them
+            that way made them easier to prioritize.
           </li>
           <li>
-            <strong>A design system makes quality objective.</strong> Without a
-            system, quality discussions become debates about preference. With a
-            system, they become alignment checks. "Does this match the spec?" is
-            easier to prioritize than "I think this looks better."
+            <strong>A design system makes quality objective.</strong> Without
+            one, quality discussions are debates about taste. "Does this match
+            the spec?" is easier to prioritize than "I think this looks
+            better."
           </li>
           <li>
-            <strong>Quality work requires a business case.</strong>
-            Design changes like these often seem like vanity work. Getting them
-            prioritized requires reframing: not "design cleanup" but "reducing
-            user friction" and "building trust." Connect fixes to user
-            complaints and observed behavior.
+            <strong>Quality work needs a business case.</strong> Changes like
+            these can look like vanity work. Reframing them as "reducing user
+            friction" and tying each fix to real complaints and observed
+            behavior got them prioritized.
           </li>
           <li>
             <strong
               >Creating organizational change is harder than fixing UI.</strong
             >
-            The fixes shown here took a few weeks to design and implement.
-            Getting leadership buy-in to prioritize quality over new features
-            required sustained effort—presenting user feedback, demonstrating
-            the value of consistency, and showing results over time.
+            The fixes took a few weeks to design and build. Getting leadership
+            to prioritize quality over new features took sustained effort:
+            presenting user feedback, showing the value of consistency, and
+            showing results over time.
           </li>
         </ul>
       </section>
