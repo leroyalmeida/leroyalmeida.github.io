@@ -207,6 +207,7 @@ a:focus-visible {
 .resume-row {
   display: flex;
   flex-direction: row;
+  align-items: baseline; /* label sits on the first line of text */
   gap: 16px;
   margin-bottom: 24px; /* Tighter spacing per Framer snippet */
 }
@@ -214,7 +215,17 @@ a:focus-visible {
 .resume-label {
   width: 120px;
   flex-shrink: 0;
-  padding-top: 0.2rem; /* Adjusted for 1.5 line-height */
+}
+
+/* Icon rows have no text baseline, so center the label on the first row of
+   icons instead: both get a 20px line at the top of the row. */
+.resume-row:has(.logo-list, .social-list) {
+  align-items: flex-start;
+}
+
+.resume-row:has(.logo-list, .social-list) .resume-label .label {
+  display: block;
+  line-height: 20px;
 }
 
 .resume-content {
@@ -293,9 +304,6 @@ a:focus-visible {
 .social-list {
   display: flex;
   align-items: center;
-  /* Label sits on the first body line plus .resume-label padding; this height
-     puts the icon centers level with the label's capital letters. */
-  min-height: calc(1.6rem + 0.5rem);
   gap: 8px;
   list-style: none;
   padding: 0;
@@ -458,6 +466,109 @@ a:focus-visible {
   color: var(--label-color);
 }
 
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* Theme picker: footer button + popover menu (scripts/theme.js) */
+.theme-picker {
+  position: relative;
+}
+
+.theme-button {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  margin-right: -8px; /* optically align the icon with the content edge */
+  padding: 0;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--label-color);
+  cursor: pointer;
+  transition:
+    color 150ms ease,
+    background-color 150ms ease;
+}
+
+.theme-button:hover,
+.theme-button[aria-expanded="true"] {
+  color: var(--heading-color);
+  background-color: var(--surface-color);
+}
+
+.theme-button:focus-visible,
+.theme-option:focus-visible {
+  outline: 2px solid var(--link-color);
+  outline-offset: 2px;
+}
+
+.theme-menu {
+  position: absolute;
+  right: -8px;
+  bottom: calc(100% + 8px);
+  z-index: 50;
+  min-width: 152px;
+  padding: 4px;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  background-color: var(--bg-color);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.24);
+}
+
+.theme-menu[hidden] {
+  display: none;
+}
+
+.theme-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 8px 10px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text-color);
+  font: inherit;
+  font-size: 0.875rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.theme-option:hover,
+.theme-option:focus-visible {
+  background-color: var(--surface-color);
+  color: var(--heading-color);
+}
+
+.theme-option[aria-checked="true"] {
+  color: var(--heading-color);
+}
+
+.theme-option-label {
+  flex: 1;
+}
+
+.theme-option-check {
+  display: flex;
+  visibility: hidden;
+}
+
+.theme-option[aria-checked="true"] .theme-option-check {
+  visibility: visible;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-button {
+    transition: none;
+  }
+}
+
 .before-after-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -588,7 +699,7 @@ blockquote {
   font-family: var(--font-family);
   font-size: 15px;
   font-weight: 500;
-  color: var(--label-color);
+  color: var(--heading-color);
   text-transform: none;
   letter-spacing: normal;
   margin: 0;
