@@ -1,0 +1,367 @@
+/* Strewn image piles
+   Authoring:  <div class="strewn"><figure><img …><figcaption>…</figcaption></figure>…</div>
+   Without JS the pile is a plain grid. scripts/strewn.js adds .is-scattered
+   (desktop pointer, >=700px) to lay the figures out as an overlapping collage,
+   or .is-enhanced only (touch / narrow) to keep the grid but open the viewer. */
+
+.strewn {
+  --strewn-max: 1040px;
+  --strewn-gutter: 64px;
+  --strewn-radius: 8px;
+  --strewn-shadow:
+    0 1px 2px rgb(0 0 0 / 0.18), 0 8px 24px -8px rgb(0 0 0 / 0.35);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.strewn > figure {
+  margin: 0;
+  min-width: 0;
+}
+
+.strewn img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--strewn-radius);
+  border: 1px solid var(--border-color);
+}
+
+.strewn figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: var(--label-color);
+}
+
+@media (max-width: 699px) {
+  .strewn {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Enhanced (any mode): figures are buttons that open the viewer */
+.strewn.is-enhanced > figure {
+  cursor: zoom-in;
+  border-radius: var(--strewn-radius);
+}
+
+.strewn.is-enhanced > figure:focus-visible {
+  outline: 2px solid var(--heading-color);
+  outline-offset: 3px;
+}
+
+/* ---------- Scattered collage ---------- */
+
+/* When the left TOC is showing (>=1100px, see toc.css), keep piles clear of
+   it on both sides: TOC left (40px) + TOC width + 32px breathing room. */
+@media (min-width: 1100px) {
+  .strewn {
+    --strewn-gutter: calc(
+      2 * (72px + min(200px, (100vw - var(--max-width, 640px)) / 2 - 72px))
+    );
+  }
+}
+
+.strewn.is-scattered {
+  --strewn-w: max(
+    min(var(--max-width, 640px), calc(100vw - 32px)),
+    min(var(--strewn-max), calc(100vw - var(--strewn-gutter)))
+  );
+  display: block;
+  position: relative;
+  width: var(--strewn-w);
+  margin: 2.5rem 0 2.5rem calc(50% - var(--strewn-w) / 2);
+  aspect-ratio: 1 / var(--height, 0.5);
+  container-type: inline-size;
+  transition: opacity 0.3s ease;
+}
+
+.strewn.is-scattered.is-pending {
+  opacity: 0;
+}
+
+.strewn.is-scattered > figure {
+  --lift: 1;
+  --tilt: 1;
+  position: absolute;
+  left: calc(var(--left) * 100%);
+  top: calc(var(--top) * 100cqw);
+  width: calc(var(--width) * 100%);
+  aspect-ratio: var(--ratio, 1.333);
+  transform: translate(calc(var(--dx, 0) * 1px), calc(var(--dy, 0) * 1px))
+    rotate(calc(var(--r, 0deg) * var(--tilt)))
+    scale(calc(var(--grow, 1) * var(--lift)));
+  transform-origin: 50% 50%;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.strewn.is-scattered > figure:hover,
+.strewn.is-scattered > figure:focus-visible {
+  --lift: 1.02;
+  --tilt: 0;
+  z-index: 9999 !important;
+}
+
+.strewn.is-scattered > figure.is-dragging {
+  --lift: 1.02;
+  --tilt: 0;
+  cursor: grabbing;
+  transition: none;
+  z-index: 10000 !important;
+}
+
+.strewn.is-scattered > figure.is-resizing {
+  transition: none;
+  z-index: 10000 !important;
+}
+
+.strewn.is-scattered img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: var(--surface-color, var(--bg-color));
+  box-shadow: var(--strewn-shadow);
+  pointer-events: none;
+}
+
+/* caption lives in the tooltip + viewer in scattered mode */
+.strewn.is-scattered figcaption {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  margin: 0;
+}
+
+.strewn-handle {
+  display: none;
+}
+
+.strewn.is-scattered .strewn-handle {
+  display: block;
+  position: absolute;
+  right: -6px;
+  bottom: -6px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--bg-color);
+  border: 1px solid var(--label-color);
+  cursor: nwse-resize;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  touch-action: none;
+}
+
+.strewn.is-scattered .strewn-handle::after {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border-right: 1.5px solid var(--label-color);
+  border-bottom: 1.5px solid var(--label-color);
+}
+
+.strewn.is-scattered > figure:hover .strewn-handle,
+.strewn.is-scattered > figure.is-resizing .strewn-handle {
+  opacity: 1;
+}
+
+.strewn.is-scattered > figure.is-dragging .strewn-handle {
+  opacity: 0;
+}
+
+/* ---------- Cursor tooltip ---------- */
+
+.strewn-tooltip {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10001;
+  max-width: 260px;
+  padding: 6px 9px;
+  border-radius: 6px;
+  background: #111;
+  color: #f2f2f2;
+  border: 1px solid rgb(255 255 255 / 0.08);
+  font-size: 0.8125rem;
+  line-height: 1.35;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.12s ease;
+}
+
+.strewn-tooltip.is-visible {
+  opacity: 1;
+}
+
+/* ---------- Viewer dialog ---------- */
+
+.strewn-viewer {
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #ededed;
+  overflow: hidden;
+}
+
+.strewn-viewer::backdrop {
+  background: transparent;
+}
+
+.strewn-viewer__inner {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 64px 80px;
+  background: rgb(0 0 0 / 0.92);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.strewn-viewer.is-open .strewn-viewer__inner {
+  opacity: 1;
+}
+
+.strewn-viewer__stage {
+  margin: 0;
+  display: grid;
+  grid-template-columns: minmax(0, auto) minmax(180px, 260px);
+  align-items: center;
+  gap: 32px;
+  max-width: 100%;
+  max-height: 100%;
+  transform: scale(0.97);
+  transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.strewn-viewer.is-open .strewn-viewer__stage {
+  transform: none;
+}
+
+.strewn-viewer__img {
+  display: block;
+  max-width: 100%;
+  max-height: calc(100dvh - 128px);
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.strewn-viewer__caption {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: #ededed;
+}
+
+.strewn-viewer__count {
+  display: block;
+  margin-top: 0.75rem;
+  font-size: 0.8125rem;
+  color: #a1a1a1;
+  font-variant-numeric: tabular-nums;
+}
+
+.strewn-viewer__btn {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid rgb(255 255 255 / 0.16);
+  background: rgb(20 20 20 / 0.9);
+  color: #ededed;
+  font: inherit;
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.strewn-viewer__btn:hover {
+  background: #262626;
+}
+
+.strewn-viewer__btn:focus-visible {
+  outline: 2px solid #ededed;
+  outline-offset: 2px;
+}
+
+.strewn-viewer__btn[hidden] {
+  display: none;
+}
+
+.strewn-viewer__prev {
+  left: 20px;
+  top: 50%;
+  translate: 0 -50%;
+}
+
+.strewn-viewer__next {
+  right: 20px;
+  top: 50%;
+  translate: 0 -50%;
+}
+
+.strewn-viewer__close {
+  right: 20px;
+  top: 20px;
+}
+
+@media (max-width: 899px) {
+  .strewn-viewer__inner {
+    padding: 72px 16px 88px;
+  }
+
+  .strewn-viewer__stage {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    gap: 16px;
+  }
+
+  .strewn-viewer__img {
+    max-height: calc(100dvh - 260px);
+  }
+
+  .strewn-viewer__prev,
+  .strewn-viewer__next {
+    top: auto;
+    bottom: 20px;
+    translate: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .strewn.is-scattered,
+  .strewn.is-scattered > figure,
+  .strewn-tooltip,
+  .strewn-viewer__inner,
+  .strewn-viewer__stage {
+    transition: none;
+  }
+
+  .strewn.is-scattered > figure:hover,
+  .strewn.is-scattered > figure:focus-visible {
+    --tilt: 1;
+  }
+}

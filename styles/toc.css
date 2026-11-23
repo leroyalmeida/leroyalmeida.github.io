@@ -1,0 +1,91 @@
+/* Table of contents — quiet list of h2s in the left gutter (desktop only) */
+
+.toc-target {
+  scroll-margin-top: 48px;
+}
+
+/* Focus is moved to the heading on TOC click; don't draw a ring around it */
+.toc-target:focus {
+  outline: none;
+}
+
+.toc {
+  display: none;
+}
+
+@media (min-width: 1100px) {
+  .toc {
+    --toc-column: var(--max-width, 640px);
+    --toc-gap: 48px;
+    display: block;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    /* Pinned to the left edge; strewn.css reserves this width so image
+       piles never slide underneath. Keep --toc-left/--toc-width in sync. */
+    left: 40px;
+    width: min(200px, calc((100vw - var(--toc-column)) / 2 - 72px));
+    max-height: calc(100vh - 96px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: none;
+    z-index: 10;
+  }
+
+  .toc::-webkit-scrollbar {
+    display: none;
+  }
+
+  .toc__list {
+    list-style: none;
+    margin: 0;
+    padding: 4px; /* room for focus outlines inside overflow box */
+  }
+
+  .toc__item {
+    margin: 0;
+    padding: 0;
+  }
+
+  .toc__item + .toc__item {
+    margin-top: 10px;
+  }
+
+  .toc__link {
+    display: block;
+    font-family: var(--font-family, inherit);
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 400;
+    color: var(--label-color);
+    opacity: 0.7;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+    border-radius: 2px;
+    transition:
+      color 200ms ease,
+      opacity 200ms ease;
+  }
+
+  .toc__link:hover {
+    color: var(--text-color);
+    opacity: 1;
+  }
+
+  .toc__link[aria-current="true"] {
+    color: var(--heading-color);
+    opacity: 1;
+  }
+
+  .toc__link:focus-visible {
+    outline: 2px solid var(--heading-color);
+    outline-offset: 2px;
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toc__link {
+    transition: none;
+  }
+}

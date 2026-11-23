@@ -6,13 +6,22 @@
   font-display: swap;
 }
 
+/* Dark is the default theme. Contrast vs --bg-color (#0a0a0a):
+   text 11.7:1, heading 16.9:1, label/link 7.7:1 (6.9:1 on surface-hover) */
 :root {
-  --bg-color: #ffffff;
-  --text-color: #334155; /* Slate 700 */
-  --heading-color: #334155; /* Slate 700 for main header */
-  --label-color: #64748b; /* Slate 500, 5.6:1 contrast ratio */
-  --link-color: #64748b; /* Slate for links */
-  --border-color: #e2e8f0;
+  color-scheme: dark;
+  --bg-color: #0a0a0a;
+  --text-color: #c7c7c7;
+  --heading-color: #ededed;
+  --label-color: #a1a1a1;
+  --link-color: #a1a1a1;
+  --border-color: #262626;
+  --surface-color: #141414; /* image boxes, table headers, mockups */
+  --surface-hover: #171717; /* card hover */
+  --surface-white: #f5f5f5; /* screenshots that need a light backdrop */
+  --success-bg: #052e16;
+  --success-border: #166534;
+  --logo-filter: grayscale(1) invert(1);
 
   --spacing-unit: 1rem;
   --font-family:
@@ -21,15 +30,32 @@
   --label-font: "Geist Mono", monospace;
   --heading-font: "Alpha Lyrae", "Geist", sans-serif;
 
-  --max-width: 600px;
+  --max-width: 640px;
+}
+
+/* Light theme, kept for a future toggle */
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg-color: #ffffff;
+  --text-color: #334155; /* Slate 700, 10.4:1 */
+  --heading-color: #334155;
+  --label-color: #64748b; /* Slate 500, 4.8:1 on white, 4.6:1 on surface */
+  --link-color: #64748b;
+  --border-color: #e2e8f0;
+  --surface-color: #f8fafc;
+  --surface-hover: #fafafa;
+  --surface-white: #ffffff;
+  --success-bg: #f0fdf4;
+  --success-border: #86efac;
+  --logo-filter: none;
 }
 
 body {
   font-family: var(--font-family);
   background-color: var(--bg-color);
   color: var(--text-color);
-  line-height: 1.4;
-  font-size: 14px;
+  line-height: 1.6;
+  font-size: 16px;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
@@ -54,7 +80,7 @@ header {
 h1 {
   font-family: var(--heading-font);
   color: var(--heading-color);
-  font-size: 30px; /* Scaled up from 28px */
+  font-size: 34px;
   font-weight: 500;
   margin-bottom: 0;
   letter-spacing: -0.02em;
@@ -93,7 +119,7 @@ h6,
 p {
   margin-bottom: var(--spacing-unit);
   color: var(--text-color);
-  line-height: 1.4;
+  line-height: 1.6;
 }
 
 ul,
@@ -103,15 +129,15 @@ ol {
 
 li {
   /* margin-bottom: 8px; */
-  line-height: 1.4;
+  line-height: 1.6;
 }
 
 .lead {
   font-size: 1.1rem;
   color: var(--text-color);
-  max-width: 600px;
+  max-width: var(--max-width);
   margin-top: 0;
-  line-height: 1.35;
+  line-height: 1.5;
 }
 
 a {
@@ -251,6 +277,7 @@ a:focus-visible {
   width: auto; /* Width auto to maintain aspect ratio */
   object-fit: contain;
   opacity: 0.8;
+  filter: var(--logo-filter);
   transition: all 0.3s ease-in-out;
 }
 
@@ -299,7 +326,7 @@ a:focus-visible {
 }
 
 .card:hover {
-  background-color: #fafafa;
+  background-color: var(--surface-hover);
   transform: translateY(-2px);
 }
 
@@ -332,7 +359,7 @@ a:focus-visible {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  opacity: 0.7;
+  opacity: 0.85; /* keeps >=4.5:1 on dark bg */
 }
 
 .card-header {
@@ -461,7 +488,7 @@ a:focus-visible {
 }
 
 .caption {
-  font-size: 12px;
+  font-size: 13px;
   color: var(--label-color);
   margin-top: 0.5rem;
   text-align: center;
@@ -487,8 +514,8 @@ a:focus-visible {
 blockquote {
   margin: 0;
   font-style: italic;
-  font-size: 1.1rem;
-  line-height: 1.35;
+  font-size: 1.125rem;
+  line-height: 1.5;
 }
 
 @media (max-width: 600px) {
@@ -529,10 +556,10 @@ blockquote {
 }
 
 .case-study-title p {
-  font-size: 16px;
+  font-size: 18px;
   color: var(--label-color);
   margin-top: 8px;
-  line-height: 1.35;
+  line-height: 1.5;
 }
 
 .project-summary {
@@ -547,7 +574,7 @@ blockquote {
 
 .summary-item .label {
   font-family: var(--font-family);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
   color: var(--label-color);
   text-transform: none;
@@ -556,8 +583,8 @@ blockquote {
 }
 
 .summary-item p {
-  font-size: 14px;
-  line-height: 1.4;
+  font-size: 16px;
+  line-height: 1.6;
   margin: 0;
 }
 
@@ -570,9 +597,9 @@ blockquote {
 }
 
 .challenge-box blockquote {
-  font-size: 16px;
+  font-size: 18px;
   font-style: italic;
-  line-height: 1.4;
+  line-height: 1.5;
   text-align: left;
   margin: 0;
 }
@@ -583,7 +610,7 @@ blockquote {
 }
 
 .image-aspect-box {
-  background-color: #f8fafc;
+  background-color: var(--surface-color);
   border: 1px solid var(--border-color);
   border-radius: 12px;
   overflow: hidden;
@@ -595,7 +622,7 @@ blockquote {
 }
 
 .image-aspect-box.white-bg {
-  background-color: #fff;
+  background-color: var(--surface-white);
 }
 
 .image-aspect-box img {
@@ -631,7 +658,7 @@ blockquote {
 }
 
 .mockup-container {
-  background-color: #f8fafc;
+  background-color: var(--surface-color);
   border: 1px solid var(--border-color);
   border-radius: 12px;
   padding: 32px 0;
@@ -653,7 +680,7 @@ blockquote {
 
 .case-study-content li {
   /* margin-bottom: 12px; */
-  line-height: 1.4;
+  line-height: 1.6;
 }
 
 .case-study-content li p {
@@ -669,7 +696,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin: 24px 0;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 th,
@@ -678,11 +705,11 @@ td {
   padding: 12px;
   text-align: left;
   vertical-align: top;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 th {
-  background-color: #f8fafc;
+  background-color: var(--surface-color);
   font-weight: 500;
   color: var(--heading-color);
   font-family: var(--font-family);
@@ -698,11 +725,11 @@ th {
 }
 
 .tradeoff-table .selected-row {
-  background-color: #f0fdf4;
+  background-color: var(--success-bg);
 }
 
 .tradeoff-table .selected-row td {
-  border-color: #86efac;
+  border-color: var(--success-border);
 }
 
 /* Reduced Motion */
