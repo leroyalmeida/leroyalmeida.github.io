@@ -111,7 +111,7 @@
               stroke-linejoin="round"
             />
           </svg>
-          <span class="label mono">Home</span>
+          <span class="label mono">Back</span>
         </a>
         <div class="case-study-title">
           <h1>I Shipped a Single Button</h1>
@@ -119,86 +119,112 @@
         </div>
       </header>
 
-      <!-- <div class="project-summary">
+      <div class="project-summary">
         <div class="summary-item">
-          <h5>Problem</h5>
+          <span class="label">Problem</span>
           <p>
-            Strategic customer blocked adoption due to lack of automated
-            PowerPoint reporting.
+            A strategic customer wouldn't adopt without automated PowerPoint
+            reporting, right after we'd decided to move away from dashboards.
           </p>
         </div>
         <div class="summary-item">
-          <h5>Solution</h5>
+          <span class="label">Solution</span>
           <p>
-            Shipped a single, hardcoded button with zero configuration to
-            validate the pattern without derailment of strategy.
+            A single button with hardcoded templates and zero configuration,
+            to test demand without pulling the product off strategy.
           </p>
         </div>
         <div class="summary-item">
-          <h5>Timeline</h5>
+          <span class="label">Timeline</span>
           <p>3 weeks</p>
         </div>
         <div class="summary-item">
-          <h5>Role</h5>
+          <span class="label">Role</span>
           <p>
-            Senior Designer, worked on scope definition, stakeholder management,
-            and interface design.
+            Senior Designer, worked on scope definition, stakeholder
+            management, and interface design.
           </p>
         </div>
-      </div> -->
+      </div>
 
       <section class="section">
         <p>
-          On paper, this project was a configuration flow, a template library
-          and drag-and-drop mapping. Instead, I shipped a single button.
+          Axiamatic is an AI-native risk intelligence platform. A key customer
+          asked for a way to turn their dashboards into a PowerPoint deck
+          automatically.
         </p>
         <p>
-          This case study is about why that was the harder call, and what it
-          takes to design for learning instead of scale.
+          The spec called for a configuration flow, a template library, and a
+          drag-and-drop screen for mapping dashboards to slides. I shipped a
+          single button.
+        </p>
+        <p>
+          This case study is about why cutting it down was harder than building
+          the full version, and what it takes to design a first version meant to
+          teach us something before it has to scale.
         </p>
       </section>
 
       <section class="section">
         <h2>A customer ask that cut against our strategy</h2>
         <p>
-          Our CTO had just announced a pivot: simplify dashboards, make AI the
-          primary entry point, stop competing with BI tools. Two weeks later,
-          our most strategic customer said they wouldn't adopt without
-          automated PowerPoint generation from dashboards.
+          Our CTO had just announced a pivot: simplify dashboards, make the AI
+          assistant the place users start, and stop competing with BI tools.
+          Two weeks later, our most strategic customer said they wouldn't adopt
+          without automated PowerPoint generation from their dashboards. We had
+          just committed to moving away from dashboards, and now we were being
+          asked to export them.
         </p>
         <p>
-          I raised the question that mattered: were we building for the
-          deliverable (a PowerPoint file) or for the generation (AI reasoning
-          and synthesis)? The first is traditional BI tooling. The second
-          advances our direction. The answer was clear: this customer wouldn't
-          adopt without it, and customer commitments override strategic
-          purity.
+          So I asked what we were really building. Was the value in the file
+          itself, or in the AI pulling the data together and writing the
+          summary? If it was the file, we were building a BI feature, the kind
+          of thing the pivot told us to stop competing on. If it was the
+          AI-written analysis, the feature moved our new direction forward. We
+          were building it either way: the customer wouldn't adopt without the
+          export, and a commitment to a key customer outweighed staying strictly
+          on strategy. The question still set up the next one, which was how
+          much of it to build.
         </p>
       </section>
 
       <section class="section">
-        <h2>Platform feature or one-customer MVP?</h2>
+        <h2>Built for one customer, or for everyone?</h2>
         <p>
-          The product doc pulled two ways. The title said "[redacted] Steering
-          Committee Reporting," singular and specific. The interaction diagram
-          showed template selection, dashboard configuration and mapping
-          interfaces: plural, generic, platform-shaped.
+          The spec pulled two ways. Its title, "[redacted] Steering Committee
+          Reporting," described one report for one customer's steering
+          committee. Its interaction diagram showed screens for choosing
+          templates, configuring dashboards, and mapping dashboards to slides,
+          which is what you'd draw for a feature every customer could set up on
+          their own.
         </p>
         <p>
-          A customer-specific solution means hardcoded templates, no
-          configuration UI, and weeks of work. A platform feature means
-          selection interfaces, mapping logic, and months.
+          Those lead to very different amounts of work. For one customer, we
+          already knew which dashboards they used and what their deck needed to
+          show. We could hardcode the templates around that and skip the
+          configuration UI entirely, because there was nothing for the customer
+          to choose. That's weeks of work.
+        </p>
+        <p>
+          A feature for every customer is a different problem. Every customer
+          has different dashboards and wants different slides, so the product
+          can't know in advance what goes where. Customers need screens to pick
+          a template and their dashboards, and we need mapping logic that puts
+          the right data on the right slide and handles the cases where they
+          don't fit. Designing, building, and testing that takes months.
         </p>
         <p>
           I talked the spec through with a few colleagues, and they saw the
-          same tension. One questioned whether it would scale beyond this customer,
-          another suggested a POC/MVP, and both asked whether in-product
-          editing belonged in v1. That let me ask my PM something specific:
-          "Is this a platform feature or a customer-specific solution?"
+          same tension. One doubted it would work beyond this customer, another
+          suggested keeping it to a POC or MVP, and both asked whether
+          in-product editing belonged in v1. That gave me a specific question
+          for my PM: "Is this a platform feature or a customer-specific
+          solution?"
         </p>
         <p>
-          We aligned on a hardcoded MVP for this one customer. One button, zero
-          configuration. If it validated the pattern, we'd generalize later.
+          We agreed on a hardcoded MVP for this one customer: one button, zero
+          configuration. If it got used, we'd build the version for every
+          customer later.
         </p>
       </section>
 
@@ -206,44 +232,47 @@
         <h2>What I cut, and why</h2>
         <p>
           Even scoped to one customer, I could have built configuration,
-          preview and editing as if for a platform. I argued for the minimum
-          that would tell us whether anyone wanted this at all, and had to make
-          the case for each cut.
+          preview, and editing as if this were a platform feature. I argued for
+          the smallest version that would tell us whether anyone wanted it, and
+          I had to make the case for each cut.
         </p>
 
         <p>
           <strong>Preview before download.</strong> The spec treated it as a
-          given, but we had no evidence users wanted it. It meant more UI, more
-          edge cases and a longer timeline. Shipping without it tests the same
-          assumption for free: if users complain, we've learned something; if
-          not, we've saved weeks.
+          given, but we had no evidence users needed to see the deck before
+          downloading it. It meant more UI, more edge cases, and a longer
+          timeline. Shipping without it tests that assumption for free: if users
+          complain, we've learned they need it, and if they don't, we've saved
+          weeks.
         </p>
 
         <p>
           <strong>In-product editing.</strong> The spec listed it as a "future
-          consideration," which is how scope creep sneaks in. I pushed to drop
-          it entirely. Users can edit in PowerPoint, which they already know
-          and we don't have to build.
+          consideration," which is how scope creep gets in. I pushed to drop it
+          entirely. Users can edit the deck in PowerPoint, which they already
+          know and we don't have to build.
         </p>
 
         <p>
-          <strong>Discoverability.</strong> The instinct is to promote new
-          features. I argued for the opposite: one button on one dashboard, no
-          promotion, no AI assistant suggestions. If it works, we scale
-          discoverability. If it doesn't, the failure stays cheap.
+          <strong>Discoverability.</strong> Teams usually want to promote a new
+          feature. I argued for one button on one dashboard, with no
+          announcement and no prompts from the AI assistant. If it works, we
+          make it easier to find. If it doesn't, only a few people ever saw it,
+          and we can remove it without anyone missing it.
         </p>
 
         <p>
-          What remained: a button that generates a four-slide PowerPoint deck
+          What was left: a button that generates a four-slide PowerPoint deck
           from hardcoded templates and AI-written summaries.
         </p>
         <p>
-          This was the harder path. Every cut was a conversation: explaining
-          that obvious isn't the same as validated, pushing back on assumptions
-          already written into the spec, and going against the team's launch
-          instincts. It meant being precise about what we were trading away and
-          how we'd know if we were wrong, and resisting "while we're at it,"
-          which is how small projects become big ones.
+          Cutting was harder than building would have been. Preview felt
+          obvious to stakeholders, so I had to explain that obvious isn't the
+          same as validated. Editing was already in the spec, so removing it
+          meant arguing with a written assumption. I also had to say exactly
+          what we were giving up, how we'd know if I was wrong, and keep
+          pushing back on "while we're at it," which is how small projects
+          become big ones.
         </p>
       </section>
 
@@ -251,37 +280,37 @@
         <h2>How we'll know if it worked</h2>
         <p>The MVP is scoped and designed. Now we see if the bet pays off.</p>
         <p>
-          <strong>What success looks like:</strong> The customer generates their
-          weekly deck on their own. Prep time drops below 15 minutes, with zero
-          support involvement for four consecutive weeks.
+          It works if the customer generates their weekly deck on their own,
+          preparing it takes less than 15 minutes, and they go four consecutive
+          weeks without needing help from our support team.
         </p>
         <p>
-          <strong>What failure looks like:</strong> Abandonment after two
-          attempts. Decks that need 30+ minutes of editing. Users going back to
-          building decks by hand.
+          It fails if they give up after two tries, if each deck needs 30+
+          minutes of editing, or if people go back to building decks by hand.
         </p>
         <p>
-          <strong>What we're learning either way:</strong> Do users want all
-          four slides or a subset? Do they edit text more than visuals? What do
-          they add by hand after generation? Each answer shapes the generalized
-          version, if we build one.
+          Either way, we learn what the version for every customer should be. Do
+          users want all four slides or a subset? Do they edit the text more
+          than the visuals? What do they add by hand after the deck is
+          generated?
         </p>
       </section>
 
       <section class="section">
         <h2>The version I'm not building yet</h2>
         <p>
-          Designing a minimal first step means knowing the likely second one,
-          so I've already explored generalizing it. The core challenge is
-          mapping: how do customers say which dashboards feed which slides
-          when both sides are flexible?
+          Designing a small first step means knowing the likely second one, so
+          I've already explored the version for every customer. The hard problem
+          is mapping: how does a customer say which dashboard feeds which slide,
+          when every customer has different dashboards and wants different
+          slides?
         </p>
 
         <table>
           <thead>
             <tr>
               <th>Approach</th>
-              <th>Mechanism</th>
+              <th>How it works</th>
               <th>Trade-off</th>
             </tr>
           </thead>
@@ -289,62 +318,64 @@
             <tr>
               <td>Template-driven</td>
               <td>
-                Templates define required dashboard types upfront, and users
-                pick from compatible options
+                Each template defines the dashboard types it needs, and users
+                pick from compatible dashboards
               </td>
               <td>
-                Simple for users but rigid for us, requiring a maintained
-                taxonomy of template-to-dashboard relationships
+                Simple for users but rigid for us: we'd have to maintain the
+                list of which templates work with which dashboards
               </td>
             </tr>
             <tr>
               <td>AI-assisted</td>
               <td>
-                Users select dashboards and templates independently, then the AI
-                proposes a mapping for review
+                Users pick dashboards and templates independently, then the AI
+                proposes a mapping for them to review
               </td>
               <td>
-                Flexible and aligned with our product direction, but complex to
-                build and dependent on AI quality
+                Flexible and in line with our product direction, but complex to
+                build and only as good as the AI's suggestions
               </td>
             </tr>
             <tr>
               <td>Manual mapping</td>
               <td>Users drag and drop dashboards onto specific slides</td>
               <td>
-                Maximum control but high cognitive load, and doesn't use the AI
-                that's supposed to differentiate us
+                Full control but a lot of work for users, and it ignores the AI
+                that's supposed to set us apart
               </td>
             </tr>
           </tbody>
         </table>
 
         <p>
-          I'd recommend AI-assisted mapping. It's the only approach that
-          advances our assistant-first bet instead of contradicting it. That
-          recommendation stays on the shelf until the core pattern is
-          validated.
+          I'd recommend AI-assisted mapping, since it's the only option that
+          builds on our move toward an AI assistant instead of working against
+          it. That recommendation stays on the shelf until we know the first
+          version gets used.
         </p>
       </section>
 
       <section class="boxed-section">
         <h2>Key learnings</h2>
         <p>
-          I started out skeptical this should exist. Building dashboard export
-          right after moving away from dashboards felt like backsliding.
+          I started out skeptical this should exist. Building a dashboard
+          export right after moving away from dashboards felt like backsliding.
         </p>
         <p>
-          What I learned is that strategic alignment isn't binary. This feature
-          contradicts our stated direction and unblocks a critical customer.
-          Both are true. The skill is holding that tension long enough to find
-          the version that serves the customer without derailing the strategy.
+          I learned that a feature can go against our stated direction and
+          still be the right thing to build, because it unblocks a critical
+          customer. The work was finding a version that served the customer
+          without pulling the product off course.
         </p>
         <p>
           Here, that version was very small: no configuration, no preview, no
-          editing, no promotion. Just enough to learn whether the pattern has
-          legs, and to let the results decide what comes next.
+          editing, no promotion. It was just enough to find out whether the
+          idea is worth building out, and to let the results decide what comes
+          next.
         </p>
       </section>
+
     </div>
 
     <footer class="site-footer text-secondary">
@@ -355,5 +386,6 @@
 
     <script src="../scripts/font-glitch.js"></script>
     <script src="../scripts/dynamic-footer.js"></script>
+    <script src="../scripts/back-link.js"></script>
   </body>
 </html>
